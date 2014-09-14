@@ -1,0 +1,146 @@
+<html><body>
+
+<script type="text/javascript">
+
+var debug="",Solved=false;
+
+function Solve(Geo){var check=filter(true),input=new Array();if(check){eval("input=["+document.getElementById("Data").value+"]");
+debug="<center><hr /><h4>Analyze data</h4>"+input+"<hr />";var s=FindSeqences(input,Geo),fs="";debug+="<h4>Sequences</h4>"+s+"<hr />";
+s=DecodeSequences(s,Geo);debug+="<h4>Decoded Sequences</h4>"+s+"<hr />";
+if(Solved){debug+="<h4>Program has determined there was enough data and problem was solved correctly.</h4><hr />";}
+else{debug+="<h4>There may not be enough data for the Program to solve the problem.</h4>";
+if(Geo){debug+="<h4>Alternatively the solution might not be just an set of Geo Sequences</h4>";}
+else{debug+="<h4>Alternatively the solution might not be just an set of Power Sequences</h4>";};debug+="<hr />";}
+debug+="<h4>As An Equation</h4>"+CreateEquationStr(s,Geo)+"<hr />";fs=CreateFunctionStr(s,Geo);
+debug+="<h4>As An Function</h4>"+fs+"<hr />";debug+="<h4>evaluating Math function</h4>";
+try{eval(fs);debug+="<h4>function evaluated successfully</h4><hr />";
+try{debug+="<h4>runing function -"+(input.length+5)+" though "+(input.length+5)+"</h4>";
+debug+="<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
+for(var i=-(input.length+5);i<=input.length+5;i++){debug+="<tr><td><center>"+i+"</center></td><td><center>"+f(i)+"</center></td><td><center>"+input[i-1]+"</center></td></tr>";}
+debug+="</table>";}catch(e){debug+="Error well running the function="+e+"";}}catch(e){debug+="Error well evaluating the function="+e+"";}
+debug+="<hr /></center>";window.frames[0].document.body.innerHTML=debug;}}
+
+//************************initialize main functions and variables*************************
+
+var SMat=new Array(),PMat=new Array();
+
+//************************calculate the Sequence Breaking matrices************************
+
+function AdjustSequenceMat(size){var r=new Array();if(SMat.length>0)
+{r=r.concat(SMat[SMat.length-1]);};while(SMat.length-1<size){for(var i=0;i<r.length-1;i++)
+{r[i]+=r[i+1];};if(r.length<2){r[r.length]=1;}else{r=([1]).concat(r);};
+SMat[SMat.length]=new Array();SMat[SMat.length-1]=SMat[SMat.length-1].concat(r);}}
+
+//**********break the Sequence of powers store the values to the Power matrices***********
+
+function AdjustPowSequenceMat(size){AdjustSequenceMat(size);var o=[1],v=0,P=PMat.length+1;
+while(PMat.length<size){o=[1];for(var i1=2;i1<=P;i1++){v=Math.pow(i1,P);
+for(var i2=i1-1;i2>0;v-=Math.pow(i2,P)*SMat[i1][i2],v=-v,i2--);(v<0)&&(v=-v);o[o.length]=v;};
+PMat[PMat.length]=new Array();PMat[PMat.length-1]=PMat[PMat.length-1].concat(o);P++;}}
+
+//*****************Configures the Matrices for faster and better decoding*****************
+
+function ConfigDecodeMat(X,Geo){var t1=new Array(),t2=new Array();if(Geo){t1=t1.concat(SMat[X+1]);
+t1.splice(0,1);return(t1);}else{if(X==0){return([1]);};t1=t1.concat(PMat[X-1]);t1=t1.concat([0]);
+t2=t2.concat(PMat[X-1]);t2=[0].concat(t2);for(var i=0;i<X+1;t2[i]+=t1[i],i++);return(t2);};return(-1);}
+
+//*********************************return an scaled matrix********************************
+
+function ScaleMat(Mat,Scale){var Mat2=new Array();for(var i=Mat.length-1;i>-1;i--)
+{Mat2[i]=Mat[i]*Scale;};return(Mat2);}
+
+//*****************************Remove an matrix from the data*****************************
+
+function RemoveMat(Mat1,Mat2){for(var i=Math.min(Mat1.length,Mat2.length)-1;i>-1;i--)
+{Mat1[i]-=Mat2[i];};return(Mat1);}
+
+//****************************sum up Sequence data though matrix**************************
+
+function sum(S,Mat){var out=0;for(var i=0;i<Math.min(S.length,Mat.length);i++)
+{out+=(S[i]*Mat[i]);};return(out);}
+
+//*********************************filter out 0 place values******************************
+
+function FilterZero(D){for(var i=0;i<D.length;D[i]=D[i],i++);
+for(var i1=D.length-1;i1>0;i1--){if(D[i1]==0){D.splice(i1,1);}else{i1=-1;}};return(D);}
+
+//**************************************flip an matrix************************************
+
+function Reverse(data){var temp=new Array();
+for(var i=data.length-1;i>=0;temp[temp.length]=data[i],i--);return(temp);}
+
+//********************************find any Sequences or geo*******************************
+
+function FindSeqences(data,Geo){var D=new Array();if(Geo){AdjustPowSequenceMat(data.length);D=PMat;}
+else{AdjustSequenceMat(data.length);D=SMat;};var out=new Array(),val=0,re=0;for(var i=0;i<data.length;i++)
+{val=sum(out,D[i]);re=data[i]-val;out[i]=re/D[i][i];};
+
+if(parseFloat((out[out.length-1]).toPrecision(12))==0){Solved=true;}else{Solved=false;}
+
+out=FilterZero(out);return(out);}
+
+//**********************************Decode Sequence data**********************************
+
+function DecodeSequences(data,Geo){var out=new Array(),D=new Array(),scale=0;
+if(Geo){AdjustSequenceMat(data.length);}else{AdjustPowSequenceMat(data.length);}
+for(var i=data.length-1;i>=0;i--){if(data[i]!=0){D=ConfigDecodeMat(i,Geo);
+scale=(data[i]/D[D.length-1]);D=ScaleMat(D,scale);data=RemoveMat(data,D);
+out[out.length]=scale;}else{out[out.length]=0;}};out=Reverse(out);return(out);}
+
+//*******************************Create the function string*******************************
+
+function CreateFunctionStr(data,Geo){var out="";if(data[0]!=0){out=data[0]+"+";}
+for(var i=1;i<data.length;i++){if(data[i]!=0){if(i==1&!Geo){out+="X";}else{out+="Math.pow(";}
+if(Geo){out+=(i+1)+",X)";}else if(i!=1){out+="X,"+i+")";};if(data[i]!=1){out+="*"+data[i];};
+out+="+";}};return("f=(function(X){return("+out.substring(0,out.length-1)+");});");}
+
+//*********************create an string as an math equation result************************
+
+function CreateEquationStr(data,Geo){var out="";if(data[0]!=0){out=data[0]+"+";}
+for(var i=1;i<data.length;i++){if(data[i]!=0){if(Geo){out+=(i+1)+"^X";}else{if(i==1&!Geo)
+{out+="X";}else{out+="X^"+i;}};if(data[i]!=1){out+="*"+data[i];};out+="+";}}
+return(out.substring(0,out.length-1));}
+
+//*****************filter the users input for the correct input format********************
+
+function filter(f)
+{
+var num=false,singlepoint=false,data=document.getElementById("Data").value,v=0,data2="";
+
+if(f){var i=data.length-1;for(;i>0;i-=2){if(data.charCodeAt(i-1)!=13&data.charCodeAt(i)!=10){i++;break;}};
+data=data.substring(0,i);i=data.length;for(;i>0;i--){if(data.substring(i,i-1)!=","){break;}};data=data.substring(0,i);}
+
+for(var i=0;i<data.length;i++){v=data.charCodeAt(i);
+if((v>=48&v<=57)|v==45){data2+=String.fromCharCode(v);num=true;}
+else if(v==46){if(num&!singlepoint){singlepoint=true;data2+=String.fromCharCode(v);}
+else if(!num){window.frames[0].document.body.innerHTML="<center><h1>Error enter an number before the decimal point</h1></center>";
+document.getElementById("Data").value=data2;return(false);}
+else if(singlepoint){window.frames[0].document.body.innerHTML="<center><h1>Error double decimal point numbers are not allowed</h1></center>";
+document.getElementById("Data").value=data2;return(false);}}
+else if(v==44){if(num){singlepoint=false;num=false;data2+=String.fromCharCode(v);}
+else{window.frames[0].document.body.innerHTML="<center><h1>Error number value missing</h1></center>";
+document.getElementById("Data").value=data2;return(false);}}
+else if(v==13&data.charCodeAt(i+1)==10){if(!num){data2+=String.fromCharCode(v);data2+=String.fromCharCode(10);i++;}
+else{window.frames[0].document.body.innerHTML="<center><h1>Error Numbers can not be broken up into separate lines you may use the enter key only after an comma when entering an new number</h1></center>";
+document.getElementById("Data").value=data2;return(false);}}
+else{window.frames[0].document.body.innerHTML="<center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed just numbers and after each number you put an comma except for the last number you enter in the text input<br /><br /><br />after you enter the number data click one of the solve buttons<br /><br /><br />enter the Number Data in the text input below and type the numbers in the correct format</center>";
+document.getElementById("Data").value=data2;return(false);}}
+document.getElementById("Data").value=data2;
+window.frames[0].document.body.innerHTML="<center><h1>Math Tool By Damian Recoskie</h1><center>";return(true);}
+</script>
+
+<iframe id="d" width="100%" height="50%" src="javascript:document.write('<center><h1>Math Tool By Damian Recoskie</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed just numbers and after each number you put an comma except for the last number you enter in the text input<br /><br /><br />after you enter the number data click one of the solve buttons<br /><br /><br />enter the Number Data in the text input below and type the numbers in the correct format</center>')">
+</iframe>
+
+<textarea style="width:100%;height:40%;" onkeyup="filter(false)" id="Data"></textarea>
+
+<br />
+
+<center>
+
+<input type="button" value="solve as powers" onclick="Solve(false)" />
+<input type="button" value="solve as Geo" onclick="Solve(true)" />
+
+</center>
+
+</body></html>
