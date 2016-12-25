@@ -10,7 +10,7 @@ Solve as Powers:
 
 Solves an set of numbers as Sums to the next number as Summation inside Summation as each pow is another dimension added up by the last dimension geometrically any number of times.
 
-To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. Circles,, and curves, gravity, quadratics, polynomials, and wave functions.
+To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. Circles, and curves, gravity, quadratics, polynomials, and wave functions.
 
 ------------------------------------------------------------------------------------------------------------------
 Solve as Geo:
