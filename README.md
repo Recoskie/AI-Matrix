@@ -2,7 +2,7 @@
 An program to artificially solve all kinds of data.
 ------------------------------------------------------------------------------------------------------------------
 
-To improve performance of functions that use loops to calculate results, and more.
+The Matrix can be used to improve performance of functions that use loops to calculate results, and more into simple calculations.
 
 ------------------------------------------------------------------------------------------------------------------
 Solve as Powers:
@@ -40,14 +40,14 @@ Any set of data solved as powers will only solve properly if it is plus one numb
 Geo:
 ------------------------------------------------------------------------------------------------------------------
 
-The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last multiple to the last sum is calculated in reverse.
+The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than, but all that will happen is that the numbers in the set higher up will cancel out till 0 when the last multiple to the last sum is calculated in reverse.
 
 ------------------------------------------------------------------------------------------------------------------
 Geo&Pow:
 ------------------------------------------------------------------------------------------------------------------
 
-This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest Power plus Highest Geo in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out.
+This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest Power plus Highest Geo in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
 
 ------------------------------------------------------------------------------------------------------------------
-Suffers from fractional error as computers can not do perfect float arithmetic.
+Suffers from fractional error as computers can not do perfect float arithmetic thus we end up with terms that sould be 0, but are at the value of EPSILON.
 ------------------------------------------------------------------------------------------------------------------
