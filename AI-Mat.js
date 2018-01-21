@@ -8,7 +8,9 @@ var AI_Mat = {
   Three main matrices that are adjusted for faster decoding and encoding.
   ***********************************************************************************/
 
-  SMat: [], CMat: [], PMat: [],
+  SMat: [],
+  CMat: [],
+  PMat: [],
 
   /***********************************************************************************
   Operator check for when creating functions. Not all operators are supported by all web browsers.
@@ -118,7 +120,7 @@ var Set = function( str, radix )
 
   //Note base conversion does not happen If FL64 is not loaded.
 
-  if ( str.constructor == String ) { d = str.split(","); for ( var i = 0, radix = radix || 10; i < d.length; d[ i ] = parseFloat( d[ i++ ], radix ) ); }
+  if ( str.constructor == String ) { d = str.replace(/(?:\r\n|\r|\n)/g,"").split(","); for ( var i = 0, radix = radix || 10; i < d.length; d[ i ] = parseFloat( d[ i++ ], radix ) ); }
 
   //Arrayed arguments.
   
@@ -356,6 +358,6 @@ Inherit operations from Arrays, and FL64 library if loaded otherwise functions d
 ***********************************************************************************/
 
 for (var i = 0, a = ["reverse", "splice", "slice", "divP", "reduce", "valueOf", "getFract", "avgFract", "bits", "bitAnd", "bitOr", "bitXor", "bitNot", "bitRsh", "bitLsh", "toPattern", "err"], c = ""; i < a.length; i++)
-{ c += "Set.prototype." + a[i] + " = function( arg ) { return( new Set( Array.from( this )." + a[i] + "( arg ) ) ); };\r\n"; }
+{ c += "Set.prototype." + a[i] + " = function( arg ) { return( Array.prototype." + a[i] + " ? new Set( Array.from( this )." + a[i] + "( arg ) ) : this ); };\r\n"; }
 for (var i = 0, a = ["shift", "unshift", "push", "pop"]; i < a.length; i++) { c += "Set.prototype." + a[i] + " = Array.prototype." + a[i] + ";\r\n"; }
 eval(c); c = undefined; i = undefined; a = undefined;
