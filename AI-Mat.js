@@ -246,7 +246,7 @@ function DSet( seq, geo, DSeq, DGeo )
 
   //Decode Geo sequence data.
 
-  if ( DGeo ) { for ( var i = this.geo.length - 1; i > 0; i-- ) { if ( this.geo[ i ] !== 0 ) { this.geo[ i ] /= AI_Mat.SMat[ i + 1 ][ i + 1 ]; for ( var i2 = i - 1; i2 > -1; i2-- ) { this.geo[ i2 ] -= this.geo[ i ] * AI_Mat.SMat[ i + 1 ][ i2 + 1 ]; } } } this.geo.unshift(0); this.geo.pop(); }
+  if ( DGeo ) { for ( var i = this.geo.length - 1; i > -1; i-- ) { if ( this.geo[ i ] !== 0 ) { this.geo[ i ] /= AI_Mat.SMat[ i + 1 ][ i + 1 ]; for ( var i2 = i - 1; i2 > -1; i2-- ) { this.geo[ i2 ] -= this.geo[ i ] * AI_Mat.SMat[ i + 1 ][ i2 + 1 ]; } } } this.geo.unshift(0); }
 }
 
 /***********************************************************************************
