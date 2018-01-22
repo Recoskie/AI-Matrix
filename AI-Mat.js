@@ -136,7 +136,7 @@ var Set = function( str, radix )
 }
 
 /***********************************************************************************
-Convert set to an geo/seq-sequence set. The mode setting is, for code reuse.
+Convert set to an geo/seq-sequence set.
 ***********************************************************************************/
 
 Set.prototype.gen = function() {
