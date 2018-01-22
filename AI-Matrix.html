@@ -1,896 +1,156 @@
 <html>
 
-<body background="Bg/bg.jpg" text="#FFFFFF">
+<head>
+  <script src="AI-Mat.js" type="text/javascript"></script>
+  
   <script type="text/javascript">
-    //************************initialize main functions and variables*************************
-
-    var SMat = new Array(),
-      CMat = new Array(),
-      PMat = new Array();
-    var debug = "",
-      sumsd = "",
-      Solved = false;
-
-    /***************************************Solve data****************************************
-    Mode 0 will solve the set of numbers as Sums to the next number as Summation inside Summation to infinity.
-    To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up incrementing values to infinity.
-    ******************************************************************************************
-    Mode 1 will solve things that multiply by 10 per value, or by twos or both sets are existent in the data.
-    ******************************************************************************************
-    Mode 2 Will solve the data as both.
+    /*****************************************************************************************
+    If user decides to load the external Float number library with the matrix.
+    Or if user wants an debug view of the Matrix.
     *****************************************************************************************/
 
-    function Solve(Mode)
+    function Setup() { document.getElementById("LoadFL").checked = false; document.getElementById("CDebug").checked = false; }
+
+    var head = document.getElementsByTagName("head")[0];
+
+    var script1 = document.createElement("script"), script2, script3;
+
+    /*****************************************************************************************
+    The double precision library is not mandatory, but is an nice enhancement to the Matrix.
+    *****************************************************************************************/
+
+    script1.type = "text/javascript"; script1.src = "https://rawgit.com/Recoskie/Fl64/58d28aa2f47b0dd114a90411c1a4c9e6ad2ac981/FL64.js"; 
+
+    script1.onload = function() { document.getElementById("Load").innerHTML = ""; alert("loaded!"); };
+
+    script1.onerror = function() { document.getElementById("LoadFL").checked = false; alert("Error Unable to load FL 64..."); };
+	
+    function LoadFL64() { head.appendChild( script1 ); }
+
+    /*****************************************************************************************
+    Load the debugged or reload the non debugged Matrix.
+    *****************************************************************************************/
+
+    function LoadDebug( sw )
     {
-      var Geo = Mode & 1;
-
-      var check = filter(true),
-        input = new Array();
-
-      var PF = [],
-        SF = [],
-        t = [];
-
-      var nm = -1,
-        nmval = Infinity;
-
-      var fs = "";
-
-      if (check)
+      if( sw )
       {
-        eval("input=[" + document.getElementById("Data").value + "]");
+        var script3 = document.createElement("script");
 
-        debug = "<center>";
+        script3.type = "text/javascript"; script3.src = "AI-MatD.js";
 
-        DText("Given results from math function, or measurements = ");
-        DCText(input, "00AFFF");
-        DLine();
+        try { head.removeChild( script2 ); } catch( e ) { };
 
-        AdjustCentralMat(input.length);
+        script3.onload = function() { document.getElementById("Debug").innerHTML = "Enabled"; alert("loaded!"); };
 
-        for (var n = 0; n < input.length; n++)
-        {
-          //Sequence.
+        script3.onerror = function() { document.getElementById("Debug").innerHTML = "Disabled"; document.getElementById("CDebug").checked = false; alert("Error Unable to load AI-Mat-Debug..."); };
 
-          SF = FindSeqences(input, Geo);
-
-          DText("Sequences = ");
-          DCText(SF, "FF0000");
-          DLine();
-
-          if (Mode >= 2)
-          {
-
-            DText("Split sequences");
-            DLine();
-
-            for (var len = SF.length - 1; len > -1; len--)
-            {
-              t[len] = SF.slice(len, SF.length);
-              t[len] = SplitSeqGeo(t[len], Geo);
-            }
-
-            DShowMat(t);
-
-            //Find geo set.
-
-            nmval = SF[SF.length - 1];
-            nm = -1;
-
-            for (var i1 = 0, i2 = t.length - 1; i1 < t.length; i1++, i2--)
-            {
-              if (Math.abs(t[i1][i2]) <= nmval)
-              {
-                nm = i1;
-                nmval = Math.abs(t[i1][i2]);
-              }
-            }
-
-            //Decode Geo.
-
-            if (nm > 0 && nm < (SF.length - 1))
-            {
-
-              if (Math.floor(t[nm][0]) === 0)
-              {
-                t[nm][0] = t[nm + 1][0];
-              }
-
-              t = t[nm];
-
-              var nnm = SF.length - 3;
-              nm = (SF.length - 2) - nm;
-
-              if (typeof PF[nm] === 'undefined')
-              {
-                PF[nm] = 0;
-              }
-
-              DText("Geo = " + t);
-              DLine();
-              DText("Central Matrix");
-              DLine();
-
-              DShowMat(CMat);
-
-              DText("De-multi-matrix\r\n\r\n");
-              DSelElm(CMat[nnm], nm, "000000");
-              DText(" (Matrix point)\r\n");
-              DText("\"" + t[0] + "\"");
-              DText(" (Data point)\r\n");
-              DText(t[0] + "/" + CMat[nnm][nm] + " = " + (t[0] / CMat[nnm][nm]) + " (Point Scale size to Data Point)\r\n\r\n");
-              DText("Data points " + input + " to be Subtract by \"" + (nm + 2) + "^x*" + (t[0] / CMat[nnm][nm]) + "\"\r\n\r\n");
-
-              var Factor = t[0] / CMat[nnm][nm];
-
-              for (var i = 1; i < input.length + 1; i++)
-              {
-                input[i - 1] -= Math.pow((nm + 2), i) * Factor;
-              }
-
-              PF[nm] += Factor;
-
-              DText("Data Points after Subtraction = " + input + "\r\n");
-            }
-            else
-            {
-              PF.unshift(0);
-              break;
-            }
-          }
-          else
-          {
-            break;
-          }
-        }
-
-        //Decode summable sequences.
-
-        SF = DecodeSequences(SF, Geo);
-
-        //Factors change depending on mode.
-
-        if (Mode === 1)
-        {
-          var t = PF;
-          PF = SF;
-          SF = [0];
-        }
-        if (Mode === 3)
-        {
-          var t = PF;
-          PF = SF;
-          SF = t;
-        }
-
-        //results.
-
-        DHText("Sequences n^X", 4);
-        DCText(PF, "00AFFF");
-        DHText("Sequences X^n", 4);
-        DCText(SF, "00AFFF");
-
-        var fs = "";
-
-        DHText("As An Function", 4);
-        DText("<table><tr><td>" + (fs = CreateFunction(SF, PF)) + "</td></tr></table>");
-      }
-
-      DLine();
-      DHText("Evaluating Math function", 4);
-
-      try
-      {
-        eval(fs);
-        eval("input=[" + document.getElementById("Data").value + "]");
-
-        DHText("Function evaluated successfully", 4);
-        DLine();
-
-        try
-        {
-          DComparision(f, input, 5);
-        }
-        catch (e)
-        {
-          DText("Error well running the function=" + e + "");
-        }
-      }
-      catch (e)
-      {
-        DText("Error well evaluating the function=" + e + "");
-      }
-
-      DLine();
-      debug += "</center>";
-
-      window.frames[0].document.body.innerHTML = debug;
-
-    }
-
-    //************************calculate the Sequence Breaking matrices************************
-
-    function AdjustSequenceMat(size)
-    {
-      var r = new Array();
-
-      if (SMat.length > 0)
-      {
-        r = r.concat(SMat[SMat.length - 1]);
-      }
-
-      while (SMat.length - 1 < size)
-      {
-        for (var i = 0; i < r.length - 1; i++)
-        {
-          r[i] += r[i + 1];
-        }
-
-        if (r.length < 2)
-        {
-          r[r.length] = 1;
-        }
-        else
-        {
-          r = ([1]).concat(r);
-        }
-
-        SMat[SMat.length] = new Array();
-        SMat[SMat.length - 1] = SMat[SMat.length - 1].concat(r);
-      }
-    }
-
-    //**********break the Sequence of powers store the values to the Power matrices***********
-
-    function AdjustPowSequenceMat(size)
-    {
-      AdjustSequenceMat(size);
-
-      var o = [1],
-        v = 0,
-        P = PMat.length + 1;
-
-      while (PMat.length < size)
-      {
-        o = [1];
-
-        for (var i1 = 2; i1 <= P; i1++)
-        {
-          v = Math.pow(i1, P);
-
-          for (var i2 = i1 - 1; i2 > 0; v -= Math.pow(i2, P) * SMat[i1][i2], v = -v, i2--);
-
-          if (v < 0)
-          {
-            v = -v;
-          }
-
-          o[o.length] = v;
-        }
-
-        PMat[PMat.length] = new Array();
-        PMat[PMat.length - 1] = PMat[PMat.length - 1].concat(o);
-        P++;
-      }
-    }
-
-    //*******************Calculate the central matrix of both SMat, and PMat*******************
-
-    function AdjustCentralMat(size)
-    {
-      var c = CMat.length;
-
-      AdjustPowSequenceMat(size + 1);
-
-      while (c < size)
-      {
-        CMat[c] = [];
-
-        for (var i = 1; i < (c + 2); i++)
-        {
-          CMat[c][i - 1] = PMat[i][i] * Math.pow(i, c - (i - 1));
-        }
-
-        c++;
-      }
-    }
-
-    //*****************Configures the Matrices for faster and better decoding*****************
-
-    function ConfigDecodeMat(X, Geo)
-    {
-      var t1 = new Array(),
-        t2 = new Array();
-
-      DText("<tr><td>Mat + Mat+1 :</td><td>");
-
-      if (Geo)
-      {
-        t1 = t1.concat(SMat[X + 1]);
-        t1.splice(0, 1);
-
-        DSelElm(t1, (t1.length - 1), "00FF00");
-        DText("</td></tr>");
-
-        return (t1);
+        head.appendChild( script3 );
       }
       else
       {
-        if (X === 0)
-        {
-          DCText("\"1\"", "00FF00");
-          DText("</td></tr>");
-          return ([1]);
-        }
+        var script2 = document.createElement("script");
 
-        t1 = t1.concat(PMat[X - 1]);
-        t1 = t1.concat([0]);
+        script2.type = "text/javascript"; script2.src = "AI-Mat.js";
 
-        t2 = t2.concat(PMat[X - 1]);
-        t2 = [0].concat(t2);
+        try { head.removeChild( script3 ); } catch( e ) { };
 
-        DText("(" + t1 + ") +" + " (" + t2 + ") = ");
+        script2.onload = function() { document.getElementById("Debug").innerHTML = "Disabled"; alert("loaded!"); };
 
-        for (var i = 0; i < X + 1; t2[i] += t1[i], i++);
+        script2.onerror = function() { document.getElementById("Debug").innerHTML = "Enabled";  document.getElementById("CDebug").checked = true; alert("Error Unable to load AI-Mat..."); };
 
-        DSelElm(t2, (t1.length - 1), "00FF00");
-        DText("</td></tr>");
-
-        return (t2);
+        head.appendChild( script2 );
       }
-
-      return (-1);
     }
 
-    //*********************************return an scaled matrix********************************
+    /*****************************************************************************************
+    Information on external libraries and what they do.
+    *****************************************************************************************/
 
-    function ScaleMat(Mat, Scale)
+    function FL64Info()
     {
-      var Mat2 = new Array();
+      var w = window.open("", "_blank", "toolbar=0,location=0,menubar=0");
 
-      DText("<tr><td>Resize Mat to the point size:</td><td>");
-
-      DCText("(" + Mat + ")", "00FF00");
-      DText("*");
-      DCText(Scale, "00AFFF");
-
-      for (var i = Mat.length - 1; i > -1; i--)
-      {
-        Mat2[i] = Mat[i] * Scale;
-      }
-
-      DText(" = " + Mat2 + "</td></tr>");
-
-      return (Mat2);
+      w.document.body.innerHTML = "No information yet.";
     }
 
-    //*****************************Remove an matrix from the data*****************************
-
-    function RemoveMat(Mat1, Mat2)
+    function DebugInfo()
     {
-      DText("<tr><td>Remove Sequence from points:</td><td>");
-      DText("(");
-      DCText(Mat1, "FF0000");
-      DText(") - (" + Mat2 + ") = ");
+      var w = window.open("", "_blank", "toolbar=0,location=0,menubar=0");
 
-      for (var i = Math.min(Mat1.length, Mat2.length) - 1; i > -1; i--)
-      {
-        Mat1[i] -= Mat2[i];
-      }
-
-      DCText(Mat1, "FF0000");
-      DText("</td></tr>");
-
-      return (Mat1);
+      w.document.body.innerHTML = "The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br />\
+        The matrix can solve all sums in all dimensions or logarithmic values.<br />\
+        The debug value in the AI matix is read and then displayed along with the results.<br />\
+        However the extra work involved as running slows down the AI solving abilities so one has the debug value and the other does not.<br /><br />\
+        The debug version is still in the makings.";
     }
 
-    //****************************sum up Sequence data though matrix**************************
+    /*****************************************************************************************
+    Solve data.
+    *****************************************************************************************/
 
-    function sum(S, Mat)
+    function Solve( Mode )
     {
-      var out = 0;
-      sumsd = "";
+      var input = [];
 
-      for (var i = 0; i < Math.min(S.length, Mat.length); i++)
+      var out = "<center>";
+
+      //Create an new set of data.
+
+      try { input = new Set( document.getElementById("Data").value ); } catch( e )
       {
-        sumsd += "(\"" + Mat[i] + "\" * " + S[i] + "(Point" + i + "))";
-
-        out += S[i] * Mat[i];
-
-        if (i < (Math.min(S.length, Mat.length) - 1))
-        {
-          sumsd += "+";
-        }
+        out += "<h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
       }
 
-      return (out);
-    }
+      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( input + "" ).replace(/\r\n/g,"<br />");
 
-    //*********************************filter out 0 place values******************************
+      //Analyze data.
 
-    function FilterZero(D)
-    {
-      for (var i = 0; i < D.length; D[i] = D[i], i++);
+      var d = Mode === 2 ? input.gen() : Mode === 0 ? input.seq() : input.geo();
 
-      for (var i1 = D.length - 1; i1 > 0; i1--)
+      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace(/\r\n/g,"<br />");
+
+      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace(/\r\n/g,"<br />");
+
+      out += "<h1>ASCII Math String.</h1><br />" + ( d + "" ).replace(/\r\n/g,"<br />");
+
+      var f = d.getFunc();
+
+      out += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + ( ( f + "" ).replace(/ /g,"&nbsp;") ).replace(/\r\n/g,"<br />") + "</td></tr></table>";
+
+      out += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
+
+      out += "<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
+
+      for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        if (D[i1] === 0)
-        {
-          D.splice(i1, 1);
-        }
-        else
-        {
-          i1 = -1;
-        }
+        out += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input [ Mode === 1 ? i - 1 : i  ] + "</center></td></tr>";
       }
 
-      return (D);
-    }
+      out += "</table></center>";
 
-    //**************************************flip an matrix************************************
+      //Update output.
 
-    function Reverse(data)
-    {
-      var temp = new Array();
-
-      for (var i = data.length - 1; i >= 0; temp[temp.length] = data[i], i--);
-
-      return (temp);
-    }
-
-    //********************************find any Sequences or geo*******************************
-
-    function FindSeqences(data, Geo)
-    {
-      var D = new Array();
-
-      if (Geo)
-      {
-        AdjustPowSequenceMat(data.length);
-        D = PMat;
-      }
-      else
-      {
-        AdjustSequenceMat(data.length);
-        D = SMat;
-      }
-
-      var out = new Array(),
-        val = 0,
-        re = 0;
-
-      DLine();
-      DText("Sequence Matrix");
-      DLine();
-      DShowMat(D);
-
-      for (var i = 0; i < data.length; i++)
-      {
-        DCText(data[i], "00AFFF");
-
-        if (i !== 0)
-        {
-          DText(" - ");
-        }
-
-        val = sum(out, D[i]);
-
-        DText(sumsd);
-
-        re = data[i] - val;
-
-        DText(" = " + re + "");
-
-        out[i] = re / D[i][i];
-
-        DText(" &divide; \"" + D[i][i] + "\" = ");
-        DCText(out[i], "FF0000");
-        DText("(Point" + i + ")\r\n\r\n");
-      }
-
-      if (parseFloat((out[out.length - 1]).toPrecision(12)) === 0)
-      {
-        Solved = true;
-      }
-      else
-      {
-        Solved = false;
-      }
-
-      out = FilterZero(out);
-
-      DLine();
-
-      return (out);
-    }
-
-    //**********************Convert Sequence to Geo, or Geo to sequence***********************
-
-    function SplitSeqGeo(Data, Geo)
-    {
-      var D = [],
-        temp = [];
-
-      if (Geo)
-      {
-        AdjustSequenceMat(Data.length);
-        D = PMat;
-      }
-      else
-      {
-        AdjustPowSequenceMat(Data.length);
-        D = SMat;
-      }
-
-      while (Data.length > 0)
-      {
-        for (var i = 0; i < Data.length - 1; i++)
-        {
-          Data[i] = Data[i + 1] - sum(Data, D[i]);
-        }
-
-        temp[temp.length] = Data[0];
-
-        Data.pop();
-      }
-
-      return (temp);
-    }
-
-    //**********************************Decode Sequence data**********************************
-
-    function DecodeSequences(data, Geo)
-    {
-      var out = new Array(),
-        D = new Array(),
-        scale = 0;
-
-      if (Geo)
-      {
-        AdjustSequenceMat(data.length);
-        DLine();
-        DText("Decode Matrix");
-        DLine();
-        DShowMat(SMat);
-      }
-      else
-      {
-        AdjustPowSequenceMat(data.length);
-        DLine();
-        DText("Decode Matrix");
-        DLine();
-        DShowMat(PMat);
-      }
-
-      debug += "<table border=\"1\">";
-
-      for (var i = data.length - 1; i >= 0; i--)
-      {
-        if (data[i] != 0)
-        {
-          D = ConfigDecodeMat(i, Geo);
-
-          scale = (data[i] / D[D.length - 1]);
-
-          DText("<tr><td>Calculate point Size :</td><td>");
-          DCText(data[i], "FF0000");
-          DText(" &divide; ");
-          DCText(D[D.length - 1], "00FF00");
-          DText(" = ");
-          DCText(scale, "00AFFF");
-          DText("</td></tr>");
-
-          D = ScaleMat(D, scale);
-
-          data = RemoveMat(data, D);
-
-          out[out.length] = scale;
-
-          debug += "<tr><td colspan=\"2\"><hr /></td></tr>";
-        }
-        else
-        {
-          out[out.length] = 0;
-        }
-      }
-
-      DText("</table>");
-
-      out = Reverse(out);
-
-      return (out);
-    }
-
-    //*******************************Create the function string*******************************
-
-    function CreateFunction(Pow, Geo)
-    {
-      var out = "function f( X )\r\n{\r\n";
-
-      if (Pow[0] !== 0 && typeof Pow[0] !== 'undefined')
-      {
-        out += "  var out = " + Pow[0] + ";\r\n";
-      }
-      else if (Geo[0] !== 0 && typeof Geo[0] !== 'undefined')
-      {
-        out += "  var out = " + Geo[0] + ";\r\n";
-      }
-      else
-      {
-        out += "  var out = 0;\r\n";
-      }
-
-      //Pow.
-
-      for (var i = 1; i < Pow.length; i++)
-      {
-        if (Pow[i] !== 0 && typeof Pow[i] !== 'undefined')
-        {
-          if (Pow[i] < 0)
-          {
-            Pow[i] = -Pow[i];
-            out += "  out -= ";
-          }
-          else
-          {
-            out += "  out += ";
-          }
-
-          if (i > 1)
-          {
-            out += "Math.pow( ";
-          }
-          out += "X";
-          if (i > 1)
-          {
-            out += ", " + i + ")";
-          }
-
-          if (Pow[i] !== 1)
-          {
-            out += " * " + Pow[i] + ";\r\n";
-          }
-          else
-          {
-            out += ";\r\n";
-          }
-        }
-      }
-
-      //Geo.
-
-      for (var i = 1; i < Geo.length; i++)
-      {
-        if (Geo[i] !== 0 && typeof Geo[i] !== 'undefined')
-        {
-          if (Geo[i] < 0)
-          {
-            Geo[i] = -Geo[i];
-            out += "  out -= ";
-          }
-          else
-          {
-            out += "  out += ";
-          }
-
-          out += "Math.pow( " + (i + 1) + ", X ) ";
-
-          if (Geo[i] !== 1)
-          {
-            out += "*" + Geo[i] + ";\r\n";
-          }
-          else
-          {
-            out += ";\r\n";
-          }
-        }
-      }
-
-      out += "  return(out);\r\n";
-      out += "}";
-
-      return (out);
-    }
-
-    //*****************filter the users input for the correct input format********************
-
-    function filter(f)
-    {
-      var num = false,
-        singlepoint = false,
-        data = document.getElementById("Data").value,
-        v = 0,
-        data2 = "";
-
-      if (f)
-      {
-        var i = data.length - 1;
-
-        for (; i > 0; i -= 2)
-        {
-          if (data.charCodeAt(i - 1) != 13 & data.charCodeAt(i) != 10)
-          {
-            i++;
-            break;
-          }
-        }
-
-        data = data.substring(0, i);
-        i = data.length;
-
-        for (; i > 0; i--)
-        {
-          if (data.substring(i, i - 1) != ",")
-          {
-            break;
-          }
-        }
-
-        data = data.substring(0, i);
-      }
-
-      for (var i = 0; i < data.length; i++)
-      {
-        v = data.charCodeAt(i);
-
-        if ((v >= 48 & v <= 57) | v == 45)
-        {
-          data2 += String.fromCharCode(v);
-          num = true;
-        }
-        else if (v == 46)
-        {
-          if (num & !singlepoint)
-          {
-            singlepoint = true;
-            data2 += String.fromCharCode(v);
-          }
-          else if (!num)
-          {
-            window.frames[0].document.body.innerHTML = "<center><h1>Error enter an number before the decimal point</h1></center>";
-            document.getElementById("Data").value = data2;
-            return (false);
-          }
-          else if (singlepoint)
-          {
-            window.frames[0].document.body.innerHTML = "<center><h1>Error double decimal point numbers are not allowed</h1></center>";
-            document.getElementById("Data").value = data2;
-            return (false);
-          }
-        }
-        else if (v == 44)
-        {
-          if (num)
-          {
-            singlepoint = false;
-            num = false;
-            data2 += String.fromCharCode(v);
-          }
-          else
-          {
-            window.frames[0].document.body.innerHTML = "<center><h1>Error number value missing</h1></center>";
-            document.getElementById("Data").value = data2;
-            return (false);
-          }
-        }
-        else if (v == 13 & data.charCodeAt(i + 1) == 10)
-        {
-          if (!num)
-          {
-            data2 += String.fromCharCode(v);
-            data2 += String.fromCharCode(10);
-            i++;
-          }
-          else
-          {
-            window.frames[0].document.body.innerHTML = "<center><h1>Error Numbers can not be broken up into separate lines you may use the enter key only after an comma when entering an new number</h1></center>";
-            document.getElementById("Data").value = data2;
-            return (false);
-          }
-        }
-        else
-        {
-          window.frames[0].document.body.innerHTML = "<center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed just numbers and after each number you put an comma except for the last number you enter in the text input<br /><br /><br />after you enter the number data click one of the solve buttons<br /><br /><br />enter the Number Data in the text input below and type the numbers in the correct format</center>";
-          document.getElementById("Data").value = data2;
-          return (false);
-        }
-      }
-
-      document.getElementById("Data").value = data2;
-
-      return (true);
-    }
-
-    //**************************************Debug output**************************************
-
-    function DText(str)
-    {
-      debug += ((str + "").replace(/ /g, "&nbsp;")).replace(/\r\n/g, "<br />");
-    }
-
-    function DCText(str, c)
-    {
-      debug += "<span style=\"color:#" + c + "\">" + ((str + "").replace(/ /g, "&nbsp;")).replace(/\r\n/g, "<br />") + "</span>";
-    }
-
-    function DHText(str, h)
-    {
-      debug += "<h" + h + ">" + str + "</h" + h + ">";
-    }
-
-    function DLine()
-    {
-      debug += "<hr />";
-    }
-
-    //*****************************Generate an table of an Matrix*****************************
-
-    function DShowMat(Mat)
-    {
-      var ml = Mat.length;
-
-      debug += "<table border = \"1\">";
-
-      for (var i1 = 0; i1 < ml; i1++)
-      {
-        debug += "<tr>";
-
-        for (var i2 = 0; i2 < ml; i2++)
-        {
-          if (typeof Mat[i1][i2] == 'undefined')
-          {
-            debug += "<td>\"X\"</td>";
-          }
-          else
-          {
-            debug += "<td>\"" + Mat[i1][i2] + "\"</td>";
-          }
-        }
-
-        debug += "</tr>";
-      }
-
-      debug += "</table><hr />";
-    }
-
-    //**********************Show the Comparison of the data to function***********************
-
-    function DComparision(f, data, s)
-    {
-      DHText("Comparing function to user input from -" + (data.length + s) + " though " + (data.length + 5), 4);
-
-      debug += "<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
-
-      for (var i = -(data.length + 5); i <= data.length + 5; i++)
-      {
-        debug += "<tr><td><center>" + i + "</center></td><td><center>" + f(i) + "</center></td><td><center>" + data[i - 1] + "</center></td></tr>";
-      }
-
-      debug += "</table>";
-    }
-
-    //******************************Quote an element of an array******************************
-
-    function DSelElm(ar, el, c)
-    {
-      if (ar.length !== 1)
-      {
-        DText(ar.slice(0, el) + ",");
-      }
-      DCText("\"" + ar[el] + "\"", c);
-      if (el !== ar.length)
-      {
-        DText("," + ar.slice(ar.length, ar.length) + "");
-      }
+      window.frames[0].document.body.innerHTML = out;
     }
   </script>
+  
+</head>
 
+<body background="Bg/bg.jpg" text="#FFFFFF" onload="Setup();">
   <table height="100%" width="100%">
 
     <tr>
       <td height="1px;">
         <center>
           <h1>By Damian Recoskie</h1>
+          <hr />
+          <table>
+            <tr>
+              <td><div id = "Load">Load FL64:<input id="LoadFL" type="checkbox" onclick="LoadFL64( this.checked );" checked="false" /><input type="button" onclick="FL64Info();" value="What is FL64?" /></div></td>
+              <td>Debug Mode:</td> <td><div id = "Debug">Disabled</div></td><td><input id="CDebug" type="checkbox" onclick="LoadDebug( this.checked );" checked="false" /><input type="button" onclick="DebugInfo();" value="What is Debug Mode?" /></td>
+            </tr>
+          </table>
         </center>
       </td>
     </tr>
@@ -898,7 +158,7 @@
     <tr>
       <td height="100%">
         <img src="Bg/bg2.gif" style="max-height:30%;width:auto;position:absolute;left:50%;transform:translate(-50%, 20%);z-index:-1;">
-        <iframe id="d" width="100%" height="100%" src="javascript:(function(){document.body.innerHTML='<center>Each number in an set is separated by an comma.<br /><br /><br />Example use:<br /><br /><br />10,20,30<br /><br /><br />If you decide to add another number it should look like this.<br /><br /><br />10,20,30,40<br /><br /><br />The only format that is supported is just numbers separated by commas. No words or any letters just numbers.<br /><br /><br />After you enter the number data click one of the solve buttons.</center>'; document.body.text = '#FFFFFF'; })()"></iframe>
+        <iframe id="d" width="100%" height="100%" src="javascript:(function(){document.write('<body text=\'#FFFFFF\'><center>Each number in an set is separated by an comma.<br /><br /><br />Example use:<br /><br /><br />10,20,30<br /><br /><br />If you decide to add another number it should look like this.<br /><br /><br />10,20,30,40<br /><br /><br />The only format that is supported is just numbers separated by commas. No words or any letters yet.<br /><br /><br />After you enter the number data click one of the solve buttons.</center><script>window.stop();</script></body>'); })()"></iframe>
       </td>
     </tr>
 
@@ -908,7 +168,7 @@
         <table style="height:100%;">
           <tr>
             <td width="100%">
-              <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" onkeyup="filter(false)" id="Data">Enter Numbers here.</textarea>
+              <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" id="Data">Enter Numbers here.</textarea>
             </td>
 
             <td>
