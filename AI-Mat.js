@@ -331,21 +331,22 @@ DSet.prototype.getFunc = function()
       }
       else
       {
-        if ( !sw && i === 1 ) { code += " x " + d[ 1 ].toString("*", true); } else { code += " " + d[ 0 ].toString("", false); }
+        if ( !sw && i === 1 ) { code += " x " + d[ 1 ].toString("*", true); } else if( !sw ) { code += " " + d[ 0 ].toString("", false); }
+        else { code += " " + d[ i ].toString("", false); }
       }
 
       code += ";\r\n";
     }
   }
-
-  eval(code += "  return( o );\r\n};"); return ( f );
+  
+  eval( code += "  return( o );\r\n};" ); return ( f );
 }
 
 /***********************************************************************************
 An simplistic forum for code generation.
 ***********************************************************************************/
 
-Number.prototype.toString = function( v, s ) { var o = this; if (s < 0) { o = -o; } return ((v ? v + " " : "") + o + ""); }
+if( !Number.prototype.getFract ) { Number.prototype.toString = function( v, s ) { var o = this; if ( s && o < 0 ) { o = -o; } return ( ( v ? v + " " : "" ) + o + "" ); } }
 
 /***********************************************************************************
 Array.from compatibility to older web browsers.
