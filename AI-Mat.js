@@ -272,22 +272,23 @@ DSet.prototype.toString = function()
 
   //Construct Sequence data into code.
 
-  var code = "";
+  var code = "", f = "", sw = false, init = false, d = this.seq;
 
-  for ( var i = 0; i < this.seq.length; i++ )
+  for ( var i = 0; i < d.length || !sw; i++ )
   {
-    if ( this.seq[i].valueOf() !== 0 )
+    if ( i === d.length ) { sw = true; d = this.geo; i = 0; }
+    
+    if ( d[ i ].valueOf() !== 0 )
     {
-      if ( i !== 0 ) { code += "X^" + i + "*"; }; code += this.seq[i].toString() + "+";
+      if( init ){ code += d[ i ] < 0 ? "-" : "+"; f = d[ i ].toString( "*", true ); } else { f = d[ i ].toString( i < 1 ? "" : "*", i < 1  ); init = true; }
+      
+      if( i > 1 ) { code += !sw ? "X^" + i : i + "^X"; } else if( i === 1 ) { code += "X"; }
+      
+      code += f;
     }
   }
 
-  for ( var i = 0; i < this.geo.length; i++ )
-  {
-    if ( this.geo[ i ].valueOf() !== 0 ) { code += i + "^X"; code += "*" + this.geo[i].toString() + "+"; }
-  }
-
-  return ( code.substring( 0, code.length - 1 ) );
+  return ( code.replace( / /g, "" ) );
 }
 
 /***********************************************************************************
