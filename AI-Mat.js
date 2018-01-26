@@ -16,7 +16,7 @@ var AI_Mat = {
   Operator check for when creating functions. Not all operators are supported by all web browsers.
   ***********************************************************************************/
 
-  Exp: (function() { try { eval("0 ** 0"); return (true); } catch (e) { return (false); } })(),
+  Exp: ( function() { try { eval( "0 ** 0" ); return ( true ); } catch ( e ) { return ( false ); } } )(),
 
   /***********************************************************************************
   Adjust three main matrices as necessary.
