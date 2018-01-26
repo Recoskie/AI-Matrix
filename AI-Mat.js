@@ -353,7 +353,7 @@ if( !Number.prototype.getFract ) { Number.prototype.toString = function( v, s ) 
 Array.from compatibility to older web browsers.
 ***********************************************************************************/
 
-if ( !Array.from ) { Array.from = function(s) { var a = []; for (var i = 0; i < s.length; a.push( s[ i++ ] ) ); return ( a ); } }
+if ( !Array.from ) { Array.from = function( s ) { var a = []; for ( var i = 0; i < s.length; a[ i ] = s[ i++ ] ); return ( a ); } }
 
 /***********************************************************************************
 Inherit operations from Arrays, and FL64 library if loaded otherwise functions do not exist when called on data type set.
@@ -362,4 +362,4 @@ Inherit operations from Arrays, and FL64 library if loaded otherwise functions d
 for (var i = 0, a = ["reverse", "splice", "slice", "divP", "reduce", "valueOf", "getFract", "avgFract", "bits", "bitAnd", "bitOr", "bitXor", "bitNot", "bitRsh", "bitLsh", "toPattern", "err"], c = ""; i < a.length; i++)
 { c += "Set.prototype." + a[i] + " = function( arg ) { return( Array.prototype." + a[i] + " ? new Set( Array.from( this )." + a[i] + "( arg ) ) : this ); };\r\n"; }
 for (var i = 0, a = ["shift", "unshift", "push", "pop"]; i < a.length; i++) { c += "Set.prototype." + a[i] + " = Array.prototype." + a[i] + ";\r\n"; }
-eval(c); c = undefined; i = undefined; a = undefined;
+eval( c ); c = undefined; i = undefined; a = undefined;
