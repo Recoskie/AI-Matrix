@@ -91,7 +91,7 @@
 
     function Solve( Mode )
     {
-      var input = [], b = [];
+      var input = [], b = [], dmode = document.getElementById("CDebug").checked;
 
       var out = "<center>";
 
@@ -108,16 +108,30 @@
       //Analyze data.
 
       var d = Mode === 2 ? input.gen() : Mode === 0 ? input.seq() : input.geo();
+      
+      //Matrix Debug output.
+      
+      if( dmode ) { out += AI_Mat.debug; AI_Mat.debug = ""; }
+      
+      //Show the data.
 
       out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace(/\r\n/g,"<br />");
 
       out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace(/\r\n/g,"<br />");
+      
+      //Display the data math string.
 
-      out += "<h1>ASCII Math String.</h1><br />" + d + "" );
+      out += "<h1>ASCII Math String.</h1><br />" + d + "";
+      
+      //Compile to function.
 
       var f = d.getFunc();
+      
+      //Function to string then replacement is done for proper HTML display.
 
       out += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + ( ( f + "" ).replace(/ /g,"&nbsp;") ).replace(/\r\n/g,"<br />") + "</td></tr></table>";
+      
+      //Execute the math function in an loop. Compare and display the results.
 
       out += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
 
