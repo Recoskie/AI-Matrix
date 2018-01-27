@@ -37,7 +37,7 @@
       {
         var script3 = document.createElement("script");
 
-        script3.type = "text/javascript"; script3.src = "AI-MatD.js";
+        script3.type = "text/javascript"; script3.src = "AI-Mat-Debug.js";
 
         try { head.removeChild( script2 ); } catch( e ) { };
 
@@ -103,7 +103,7 @@
         return;
       }
 
-      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( input + "" ).replace(/\r\n/g,"<br />");
+      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( input + "" ).replace(/= /g,"= <font color=\"#00AFFF\">").replace(/\r\n/g,"</font><br />");
 
       //Analyze data.
 
@@ -115,9 +115,9 @@
       
       //Show the data.
 
-      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace(/\r\n/g,"<br />");
+      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace( /\r\n/g, "<br />" );
 
-      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace(/\r\n/g,"<br />");
+      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace( /\r\n/g, "<br />" );
       
       //Display the data math string.
 
