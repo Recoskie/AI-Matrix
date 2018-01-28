@@ -115,9 +115,9 @@
       
       //Show the data.
 
-      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace( /\r\n/g, "<br />" );
+      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace(/= /g,"= <font color=\"#00FF00\">").replace(/\r\n/g,"</font><br />");
 
-      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace( /\r\n/g, "<br />" );
+      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace(/= /g,"= <font color=\"#00FF00\">").replace(/\r\n/g,"</font><br />");
       
       //Display the data math string.
 
