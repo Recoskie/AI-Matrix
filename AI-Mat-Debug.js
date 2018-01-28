@@ -8,7 +8,9 @@ var AI_Mat = {
   Three main matrices that are adjusted for faster decoding and encoding.
   ***********************************************************************************/
 
-  SMat: [], CMat: [], PMat: [],
+  SMat: [],
+  CMat: [],
+  PMat: [],
   
   /***********************************************************************************
   Debug output.
@@ -327,13 +329,26 @@ function DSet( seq, geo, DSeq, DGeo )
   if ( DSeq )
   {
     AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + ( this.seq + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr /><h2>Decode Matrix.</h2><hr />";
+    
     AI_Mat.showMat( AI_Mat.PMat );
     
-    for ( var i = this.seq.length - 1; i > 1; i-- )
+    AI_Mat.debug += "<table border ='1px;'>";
+    
+    for ( var i = this.seq.length - 1; i > 0; i-- )
     {
       if ( this.seq[ i ] !== 0 )
       {
+        AI_Mat.debug += "<tr><td colspan='2' ><center><h2>Data Point" + i + ".</h2></center></td></tr>"
+        
+        AI_Mat.debug += "<tr><td>Remaining data length vect:</td><td>" + ( Array.from( this.seq ).splice(0, i + 1 ) + "" ).fontcolor( "#FF0000" ) + "</td><tr>";
+        AI_Mat.debug += "<tr><td>Mat row to remaining data length vect:</td><td>" + AI_Mat.PMat[ i - 1 ] + "</td></tr>";
+        AI_Mat.debug += "<tr><td>Last col divided by last value in vect is data Point size:</td><td>" + ( this.seq[ i ] + "" ).fontcolor("#FF0000") + " / ";
+        
         this.seq[ i ] /= AI_Mat.PMat[ i - 1 ][ i - 1 ];
+        
+        AI_Mat.debug += AI_Mat.PMat[ i - 1 ][ i - 1 ] + " = " + ( this.seq[ i ] + "" ).fontcolor("#00FF00") + "(Data Point)</td></tr>";
+
+        AI_Mat.debug += "<tr><td>Subtract data by mat row vect:</td><td>(" + ( Array.from( this.seq ).splice(0, i + 1 ) + "" ).fontcolor( "#FF0000" ) + ") - (" + AI_Mat.PMat[ i - 1 ] + ") * " + ( this.seq[ i ] + "" ).fontcolor("#00FF00") + "(Data Point)</td></tr>";
         
         for ( var i2 = i - 1; i2 > 0; i2-- )
         {
@@ -341,6 +356,11 @@ function DSet( seq, geo, DSeq, DGeo )
         }
       }
     }
+    
+    AI_Mat.debug += "<tr><td colspan='2' ><center><h2>Data Point0.</h2></center></td></tr>"
+    AI_Mat.debug += "<tr><td>Remaining point.</td><td>" + ( this.seq[ 0 ] + "" ).fontcolor("#00FF00") + "(Data Point)</td></tr>";
+    
+    AI_Mat.debug += "</table>";
   }
 
   //Decode Geo sequence data.
@@ -348,13 +368,25 @@ function DSet( seq, geo, DSeq, DGeo )
   if ( DGeo )
   {
     AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + ( this.geo + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr /><h2>Decode Matrix.</h2><hr />";
+    
     AI_Mat.showMat( AI_Mat.SMat );
+    
+    AI_Mat.debug += "<table border ='1px;'>";
     
     for ( var i = this.geo.length - 1; i > -1; i-- )
     {
       if ( this.geo[ i ] !== 0 )
       {
+        AI_Mat.debug += "<tr><td colspan='2' ><center><h2>Data Point" + i + ".</h2></center></td></tr>"
+        
+        AI_Mat.debug += "<tr><td>Remaining data length vect:</td><td>" + ( Array.from( this.geo ).splice(0, i + 1 ) + "" ).fontcolor( "#FF0000" ) + "</td><tr>";
+        AI_Mat.debug += "<tr><td>Mat row to remaining data length vect:</td><td>" + AI_Mat.SMat[ i + 1 ] + "</td></tr>";
+        AI_Mat.debug += "<tr><td>Last col divided by last value in vect is data Point size:</td><td>" + ( this.geo[ i ] + "" ).fontcolor("#FF0000") + " / ";
+        
         this.geo[ i ] /= AI_Mat.SMat[ i + 1 ][ i + 1 ];
+        
+        AI_Mat.debug += AI_Mat.SMat[ i + 1 ][ i + 1 ] + " = " + ( this.geo[ i ] + "" ).fontcolor("#00FF00") + "(Data Point)</td></tr>";
+        AI_Mat.debug += "<tr><td>Subtract data by mat row vect:</td><td>(" + ( Array.from( this.geo ).splice(0, i + 1 ) + "" ).fontcolor( "#FF0000" ) + ") - (" + AI_Mat.SMat[ i + 1 ] + ") * " + ( this.geo[ i ] + "" ).fontcolor("#00FF00") + "(Data Point)</td></tr>";
         
         for ( var i2 = i - 1; i2 > -1; i2-- )
         {
@@ -362,6 +394,8 @@ function DSet( seq, geo, DSeq, DGeo )
         }
       }
     }
+    
+    AI_Mat.debug += "</table>";
     
     this.geo.unshift(0);
   }
@@ -461,7 +495,6 @@ DSet.prototype.getFunc = function()
   
   eval( code += "  return( o );\r\n};" ); return ( f );
 }
-
 /***********************************************************************************
 HTML format function for browsers that do not support the formating for debug output.
 ***********************************************************************************/
