@@ -134,31 +134,66 @@ var AI_Mat = {
   showMat: function( Mat )
   {
     var ml = Mat.length;
-
-    AI_Mat.debug += "<table border = \"1\">";
+    
+    //Max col length.
+    
+    for( var i1 = 0, col = 1; i1 < Mat.length; col = Math.max( col, Mat[ i1++ ].length ) );
+    
+    //Debug output.
 
     for ( var i1 = 0; i1 < ml; i1++ )
     {
-      AI_Mat.debug += "<tr>";
+      AI_Mat.debug += "<div id=\"container\">\r\n";
       
-      for (var i2 = 0; i2 < ml; i2++)
+      for ( var i2 = 0, i3 = 0, sp = col / Mat[ i1 ].length; i2 < col; i2 += sp, i3++ )
       {
-        if (typeof Mat[i1][i2] == 'undefined')
-        {
-          AI_Mat.debug += "<td>\"X\"</td>";
-        }
-        else
-        {
-          AI_Mat.debug += "<td>\"" + Mat[i1][i2] + "\"</td>";
-        }
+        AI_Mat.debug += "<div";
+        
+        if( i1 === 0 ) { AI_Mat.debug += " style='position:relative;margin-left:-25px;left:50%;'"; }
+        
+        AI_Mat.debug += "><center>\"" + Mat[ i1 ][ i3 ] + "\"</center></div>\r\n";
       }
 
-      AI_Mat.debug += "</tr>";
+      AI_Mat.debug += "<span></span></div><hr />\r\n";
     }
-
-    AI_Mat.debug += "</table><hr />";
   }
 };
+
+  /*****************************************************************************************
+  This is an style script for debug mode.
+  *****************************************************************************************/
+
+AI_Mat.toString = function()
+{
+  var t = this.debug; this.debug = "";
+  
+  return("<style>\
+  #container\
+  {\
+    text-align: justify;\
+    -ms-text-justify: distribute-all-lines;\
+    text-justify: distribute-all-lines;\
+    width:100%;\
+  }\
+  #container>div\
+  {\
+    width: 50px;\
+    height: 50px;\
+    vertical-align: top;\
+    display: inline-block;\
+    *display: inline;\
+    zoom: 1;\
+    border-style:solid;\
+  }\
+  span\
+  {\
+    width: 100%;\
+    display: inline-block;\
+    font-size: 0;\
+    line-height: 0;\
+  }\
+  </style>" + t );
+}
 
 /***********************************************************************************
 An new set can be numbers per argument, or array of numbers, or set( string, radix ).
@@ -521,3 +556,4 @@ for (var i = 0, a = ["reverse", "splice", "slice", "divP", "reduce", "valueOf", 
 { c += "Set.prototype." + a[i] + " = function( arg ) { return( Array.prototype." + a[i] + " ? new Set( Array.from( this )." + a[i] + "( arg ) ) : this ); };\r\n"; }
 for (var i = 0, a = ["shift", "unshift", "push", "pop"]; i < a.length; i++) { c += "Set.prototype." + a[i] + " = Array.prototype." + a[i] + ";\r\n"; }
 eval( c ); c = undefined; i = undefined; a = undefined;
+       
