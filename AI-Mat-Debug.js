@@ -96,19 +96,33 @@ var AI_Mat = {
 
   D_Seq_G: function( s, el )
   {
-    var o = [], s = s.slice( 0 );
+    var o = [], s = s.slice( 0 ), sw = false; while ( el-- > 0 ) { s.shift(); };
     
-    while ( el-- > 0 ) { s.shift(); };
+    AI_Mat.debug += "<table border='1'><tr><td rowspan='"+(s.length+1)+"'>Row" + s.length + "</td></tr>";
     
     while ( s.length > 0 )
     {
+      AI_Mat.debug += "<tr><td><center>";
+      
       for ( var i = 0, l = s.length - 1; i < l; i++ )
       {
-        s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ], false );
+        AI_Mat.debug += ( s[ i + 1 ] + "" ).fontcolor( sw ? "#00AFFF" : "FF0000" ) + " - ";
+        
+        s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ], true );
+        
+        AI_Mat.debug += " = " + ( s[ i ] + "" ).fontcolor( sw ? "FF0000" : "#00AFFF" ) + "(Point" + i + ")<br />";
       }
+      
+      sw = !sw;
+      
+      if( l === 0 ){ AI_Mat.debug += ( s[ 0 ] + "" ).fontcolor( sw ? "FF0000" : "#00AFFF" ) + "(Point0)"; }
+      
+      AI_Mat.debug += "</center></td><td>Data Point  = " + ( s[ 0 ] + "" ).fontcolor("#00FF00") + "(Point0)</td></tr>";
       
       o[ o.length ] = s[ 0 ]; s.pop();
     }
+    
+    AI_Mat.debug += "</table>";
     
     return ( o );
   },
@@ -134,9 +148,11 @@ var AI_Mat = {
       debug_data[ debug_data.length ] = out.slice(0);
     }
     
+    debug_data[ debug_data.length ] = temp;
+    
     //Show the layers in debug output.
     
-    AI_Mat.showMat( debug_data ); debug_data = undefined;
+    AI_Mat.debug += "<hr />"; AI_Mat.showMat( debug_data ); debug_data = undefined;
 
     //If we have not went though all dimensions without 0 terminating.
 
@@ -148,7 +164,7 @@ var AI_Mat = {
       
       //Debug output.
       
-      AI_Mat.debug += "<h2>Geo Sequence detected layer" + this.y + ".</h2><hr />Data = " + ( out + "" ).fontcolor("#00FF00");
+      AI_Mat.debug += "<h2>Geo Sequence detected Row" + this.y + ".</h2><hr />Data Before zero termination = " + ( out + "" ).fontcolor("#00FF00");
       
       AI_Mat.debug += "<hr /><h2>Central Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.CMat );
 
@@ -157,7 +173,7 @@ var AI_Mat = {
 
       this.x = out[ 0 ] / this.CMat[ this.y - 1 ][ s.length - this.y ];
       
-      AI_Mat.debug += "<h2>Central Matrix alignment.</h2><hr />DataPoint0 / CMat["+ ( this.y - 1 ) + "][" + ( s.length - this.y ) + "] = " + this.x + "";
+      AI_Mat.debug += "<h2>Central Matrix alignment.</h2><hr /><h2>DataPoint0 / CMat[Row" + this.y + "-1][Data length - Row" + this.y + "] = " + this.x + "</h2>";
     }
 
     return ( this );
