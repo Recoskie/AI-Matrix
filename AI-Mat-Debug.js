@@ -94,7 +94,24 @@ var AI_Mat = {
   Calculates sums stacked geometrically into an reduced set.
   ***********************************************************************************/
 
-  D_Seq_G: function( s, el ) { var o = [], s = s.slice( 0 ); while ( el-- > 0 ) { s.shift(); }; while ( s.length > 0 ) { for ( var i = 0, l = s.length - 1; i < l; i++ ) { s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ], false ); }; o[ o.length ] = s[ 0 ]; s.pop(); }; return ( o ); },
+  D_Seq_G: function( s, el )
+  {
+    var o = [], s = s.slice( 0 );
+    
+    while ( el-- > 0 ) { s.shift(); };
+    
+    while ( s.length > 0 )
+    {
+      for ( var i = 0, l = s.length - 1; i < l; i++ )
+      {
+        s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ], false );
+      }
+      
+      o[ o.length ] = s[ 0 ]; s.pop();
+    }
+    
+    return ( o );
+  },
 
   /***********************************************************************************
   Find smallest geo point stacked in sums.
@@ -107,8 +124,19 @@ var AI_Mat = {
     var i = s.length - 1;
     var out = AI_Mat.D_Seq_G(s, i);
     var temp = out.slice(0);
+    
+    var debug_data = [];
 
-    while ( i > -1 && ( Math.abs( temp[ 0 ] | temp[ 1 ] ) !== 0 ) ) { out = temp.slice( 0 ); i -= 1; temp = AI_Mat.D_Seq_G( s, i ).reverse(); }
+    while ( i > -1 && ( Math.abs( temp[ 0 ] | temp[ 1 ] ) !== 0 ) )
+    {
+      out = temp.slice( 0 ); i -= 1; temp = AI_Mat.D_Seq_G( s, i ).reverse();
+      
+      debug_data[ debug_data.length ] = out.slice(0);
+    }
+    
+    //Show the layers in debug output.
+    
+    AI_Mat.showMat( debug_data ); debug_data = undefined;
 
     //If we have not went though all dimensions without 0 terminating.
 
@@ -117,11 +145,19 @@ var AI_Mat = {
       //The number of dimensions before 0 termination is the geo rise.
 
       this.y = out.length + 1;
+      
+      //Debug output.
+      
+      AI_Mat.debug += "<h2>Geo Sequence detected layer" + this.y + ".</h2><hr />Data = " + ( out + "" ).fontcolor("#00FF00");
+      
+      AI_Mat.debug += "<hr /><h2>Central Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.CMat );
 
       //The central matrix is both expansion and sequence combined at the center.
       //Dividing by the rise and seq length will result in the geo size.
 
       this.x = out[ 0 ] / this.CMat[ this.y - 1 ][ s.length - this.y ];
+      
+      AI_Mat.debug += "<h2>Central Matrix alignment.</h2><hr />DataPoint0 / CMat["+ ( this.y - 1 ) + "][" + ( s.length - this.y ) + "] = " + this.x + "";
     }
 
     return ( this );
@@ -145,11 +181,11 @@ var AI_Mat = {
     {
       AI_Mat.debug += "<div id=\"container\">\r\n";
       
-      for ( var i2 = 0, i3 = 0, sp = col / Mat[ i1 ].length; i2 < col; i2 += sp, i3++ )
+      for ( var i2 = 0, i3 = 0, sp = col / Mat[ i1 ].length; Math.round( i2 ) < col; i2 += sp, i3++ )
       {
         AI_Mat.debug += "<div";
         
-        if( i1 === 0 ) { AI_Mat.debug += " style='position:relative;margin-left:-25px;left:50%;'"; }
+        if( sp === col ) { AI_Mat.debug += " style='position:relative;margin-left:-25px;left:50%;'"; }
         
         AI_Mat.debug += "><center>\"" + Mat[ i1 ][ i3 ] + "\"</center></div>\r\n";
       }
@@ -176,8 +212,8 @@ var AI_Mat = {
     }\
     #container>div\
     {\
-      width: 50px;\
-      height: 50px;\
+      min-width: 50px;\
+      min-height: 50px;\
       vertical-align: top;\
       display: inline-block;\
       *display: inline;\
@@ -243,7 +279,9 @@ Set.prototype.gen = function() {
     SData = this.seq( false ).seq;
 
     //Find Geometric point in sequence.
-
+    
+    AI_Mat.debug += "<hr /><h2>Geo sequence data.</h2><hr />" + ( SData + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr />";
+    
     g = AI_Mat.FindGeo( SData );
 
     //Record decoded point and remove it from set.
@@ -255,10 +293,6 @@ Set.prototype.gen = function() {
       if ( g.y === 2 ) { SData = this.seq( false ).seq; }
     }
   }
-  
-  //Debug Output of sequences.
-  
-  //this.seq( true ).seq;
 
   //Return both data sets as decoded sets.
 
@@ -283,21 +317,21 @@ Set.prototype.seq = function( DSeq )
   
   //Debug output.
 
-  if( DSeq ) { AI_Mat.debug += "<hr /><h2>Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat ); }
+  AI_Mat.debug += "<hr /><h2>Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
 
   //Calculate Xn down the rows of the matrix summing the cols to calculate the next Xn value. High performance.
 
   for ( var i = 0, v = 0, l = this.length, SData = []; i < l; i++ )
   {
-    if( DSeq ) { AI_Mat.debug += ( this[ i ] + "" ).fontcolor("00AFFF"); if ( i !== 0 ) { AI_Mat.debug += " - "; } }
+    AI_Mat.debug += ( this[ i ] + "" ).fontcolor("00AFFF"); if ( i !== 0 ) { AI_Mat.debug += " - "; }
     
-    SData[ i ] = this[ i ] - AI_Mat.sum( SData, AI_Mat.SMat[ i ], DSeq );
+    SData[ i ] = this[ i ] - AI_Mat.sum( SData, AI_Mat.SMat[ i ], true );
     
-    if( DSeq ) { AI_Mat.debug += " = " + SData[ i ] + " &divide; \"" + AI_Mat.SMat[ i ][ i ] + "\" = "; }
+    AI_Mat.debug += " = " + SData[ i ] + " &divide; \"" + AI_Mat.SMat[ i ][ i ] + "\" = ";
     
     SData[ i ] /= AI_Mat.SMat[ i ][ i ];
     
-    if( DSeq ) { AI_Mat.debug += ( SData[ i ] + "" ).fontcolor("FF0000") + "(Point" + i + ")<br /><br />"; }
+    AI_Mat.debug += ( SData[ i ] + "" ).fontcolor("FF0000") + "(Point" + i + ")<br /><br />";
   }
 
   //Return Sequenced values.
@@ -319,21 +353,21 @@ Set.prototype.geo = function( DGeo )
   
   //Debug output.
 
-  if( DGeo ) { AI_Mat.debug += "<hr /><h2>Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat ); }
+  AI_Mat.debug += "<hr /><h2>Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
   
   //Calculate Xn down the rows of the matrix summing the cols to calculate the next Xn value. High performance.
 
   for ( var i = 0, v = 0, l = this.length, PData = []; i < l; i++ )
   {
-    if( DGeo ) { AI_Mat.debug += ( this[ i ] + "" ).fontcolor("00AFFF"); if ( i !== 0 ) { AI_Mat.debug += " - "; } }
+    AI_Mat.debug += ( this[ i ] + "" ).fontcolor("00AFFF"); if ( i !== 0 ) { AI_Mat.debug += " - "; }
     
-    PData[ i ] = this[ i ] - AI_Mat.sum( PData, AI_Mat.PMat[ i ], DGeo );
+    PData[ i ] = this[ i ] - AI_Mat.sum( PData, AI_Mat.PMat[ i ], true );
     
-    if( DGeo ) { AI_Mat.debug += " = " + PData[ i ] + " &divide; \"" + AI_Mat.PMat[ i ][ i ] + "\" = "; }
+    AI_Mat.debug += " = " + PData[ i ] + " &divide; \"" + AI_Mat.PMat[ i ][ i ] + "\" = ";
     
     PData[ i ] /= AI_Mat.PMat[ i ][ i ];
     
-    if( DGeo ) { AI_Mat.debug += ( PData[ i ] + "" ).fontcolor("FF0000") + "(Point" + i + ")<br /><br />"; }
+    AI_Mat.debug += ( PData[ i ] + "" ).fontcolor("FF0000") + "(Point" + i + ")<br /><br />";
   }
 
   //Return Sequenced values.
