@@ -94,7 +94,7 @@ var AI_Mat = {
   Calculates sums stacked geometrically into an reduced set.
   ***********************************************************************************/
 
-  D_Seq_G: function( s, el ) { var o = [], s = s.slice( 0 ); while ( el-- > 0 ) { s.shift(); }; while ( s.length > 0 ) { for ( var i = 0, l = s.length - 1; i < l; i++ ) { s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ] ); }; o[ o.length ] = s[ 0 ]; s.pop(); }; return ( o ); },
+  D_Seq_G: function( s, el ) { var o = [], s = s.slice( 0 ); while ( el-- > 0 ) { s.shift(); }; while ( s.length > 0 ) { for ( var i = 0, l = s.length - 1; i < l; i++ ) { s[ i ] = s[ i + 1 ] - AI_Mat.sum( s, AI_Mat.SMat[ i ], false ); }; o[ o.length ] = s[ 0 ]; s.pop(); }; return ( o ); },
 
   /***********************************************************************************
   Find smallest geo point stacked in sums.
@@ -156,44 +156,44 @@ var AI_Mat = {
 
       AI_Mat.debug += "<span></span></div><hr />\r\n";
     }
-  }
-};
-
+  },
+  
   /*****************************************************************************************
   This is an style script for debug mode.
   *****************************************************************************************/
-
-AI_Mat.toString = function()
-{
-  var t = this.debug; this.debug = "";
   
-  return("<style>\
-  #container\
-  {\
-    text-align: justify;\
-    -ms-text-justify: distribute-all-lines;\
-    text-justify: distribute-all-lines;\
-    width:100%;\
-  }\
-  #container>div\
-  {\
-    width: 50px;\
-    height: 50px;\
-    vertical-align: top;\
-    display: inline-block;\
-    *display: inline;\
-    zoom: 1;\
-    border-style:solid;\
-  }\
-  span\
-  {\
-    width: 100%;\
-    display: inline-block;\
-    font-size: 0;\
-    line-height: 0;\
-  }\
-  </style>" + t );
-}
+  toString: function()
+  {
+    var t = this.debug; this.debug = "";
+    
+    return("<style>\
+    #container\
+    {\
+      text-align: justify;\
+      -ms-text-justify: distribute-all-lines;\
+      text-justify: distribute-all-lines;\
+      width:100%;\
+    }\
+    #container>div\
+    {\
+      width: 50px;\
+      height: 50px;\
+      vertical-align: top;\
+      display: inline-block;\
+      *display: inline;\
+      zoom: 1;\
+      border-style:solid;\
+    }\
+    span\
+    {\
+      width: 100%;\
+      display: inline-block;\
+      font-size: 0;\
+      line-height: 0;\
+    }\
+    </style>" + t );
+  }
+};
 
 /***********************************************************************************
 An new set can be numbers per argument, or array of numbers, or set( string, radix ).
@@ -258,7 +258,7 @@ Set.prototype.gen = function() {
   
   //Debug Output of sequences.
   
-  this.seq( true ).seq;
+  //this.seq( true ).seq;
 
   //Return both data sets as decoded sets.
 
@@ -556,4 +556,3 @@ for (var i = 0, a = ["reverse", "splice", "slice", "divP", "reduce", "valueOf", 
 { c += "Set.prototype." + a[i] + " = function( arg ) { return( Array.prototype." + a[i] + " ? new Set( Array.from( this )." + a[i] + "( arg ) ) : this ); };\r\n"; }
 for (var i = 0, a = ["shift", "unshift", "push", "pop"]; i < a.length; i++) { c += "Set.prototype." + a[i] + " = Array.prototype." + a[i] + ";\r\n"; }
 eval( c ); c = undefined; i = undefined; a = undefined;
-       
