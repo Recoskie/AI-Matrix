@@ -553,26 +553,11 @@ DSet.prototype.getFunc = function()
 
     if ( d[ i ].valueOf() !== 0 )
     {
-      if ( !init )
-      {
-        code += "  var o =";
-        init = true;
-      }
-      else
-      {
-        if ( d[ i ] < 0 ) { code += "  o -="; } else { code += "  o +="; }
-      }
+      if ( !init ) { code += "  var o = "; init = true; } else { if ( d[ i ] < 0 ) { code += "  o -="; } else { code += "  o +="; } }
 
-      if ( i > 1 )
-      {
-        if ( !sw ) { if ( AI_Mat.Exp ) { code += " x ** " + i + " " + d[ i ].toString("*", true); } else { code += " Math.pow( x, " + i + " ) " + d[ i ].toString("*", true); } }
-        else { if ( AI_Mat.Exp ) { code += " " + i + " ** x " + this.geo[ i ].toString("*", true); } else { code += " Math.pow( " + i + ", x ) " + this.geo[ i ].toString("*", true); } }
-      }
-      else
-      {
-        if ( !sw && i === 1 ) { code += " x " + d[ 1 ].toString("*", true); } else if( !sw ) { code += " " + d[ 0 ].toString("", false); }
-        else { code += " " + d[ i ].toString("", false); }
-      }
+      if ( i > 1 ) { code += String.toExp( "x", i, sw ) + d[ i ].toString("*", true); }
+      
+      else { code += ( !sw && i === 1 ) ? "x " + d[ 1 ].toString("*", true) : d[ i ].toString("", false); }
 
       code += ";\r\n";
     }
@@ -580,6 +565,7 @@ DSet.prototype.getFunc = function()
   
   eval( code += "  return( o );\r\n};" ); return ( f );
 }
+
 /***********************************************************************************
 HTML format function for browsers that do not support the formating for debug output.
 ***********************************************************************************/
@@ -587,10 +573,16 @@ HTML format function for browsers that do not support the formating for debug ou
 if( !String.prototype.fontcolor ) { String.prototype.fontcolor = function( c ) { return( "<font color=\"" + c + "\">" + this + "</font>" ); } }
 
 /***********************************************************************************
-An simplistic forum for code generation.
+An simplistic forum for number to string with an combined operation for code generation if FL64 is not loaded.
 ***********************************************************************************/
 
 if( !Number.prototype.getFract ) { Number.prototype.toString = function( v, s ) { var o = this; if ( s && o < 0 ) { o = -o; } return ( ( v ? v + " " : "" ) + o + "" ); } }
+
+/***********************************************************************************
+Another simplistic forum for exponential function to code.
+***********************************************************************************/
+
+String.toExp = function( s1, s2, Order ) { Order && ( s2 = [ s1, s1 = s2 ][ 0 ] ); return( AI_Mat.Exp ? s1 + " ** " + s2 + " " : "Math.pow( " + s1 + ", " + s2 + ") " ); };
 
 /***********************************************************************************
 Array.from compatibility to older web browsers.
