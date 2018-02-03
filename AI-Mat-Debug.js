@@ -17,6 +17,12 @@ var AI_Mat = {
   ***********************************************************************************/
 
   debug: "",
+  
+  /***********************************************************************************
+  Enable, or disable error correction.
+  ***********************************************************************************/
+  
+  ErrCorrect: false,
 
   /***********************************************************************************
   Operator check for when creating functions. Not all operators are supported by all web browsers.
@@ -484,7 +490,10 @@ function DSet( seq, geo, DSeq, DGeo )
     
     this.geo.unshift(0);
   }
-
+  
+  //Is not filtered. Set already filtered if error correction is disabled.
+  
+  this.isFiltered = !AI_Mat.ErrCorrect;
 }
 
 /***********************************************************************************
@@ -492,10 +501,43 @@ Filter out error in geo and seq data.
 ***********************************************************************************/
 
 DSet.prototype.filter = function()
-{  
+{
+  //EPSILON Filter.
+  
+  if( !this.isFiltered )
+  {
+    this.isFiltered = true;
+    
+    //Calculate the log data of each term.
+    
+    for( var i = 0, l = []; i < this.seq.length; l[i] = ( ( Math.log( Math.abs( this.seq[i++] ) ) / 0.6931471805599453 ) + 0.5 ) & -1 );
+    for( var i = 0; i < this.geo.length; l[l.length] = ( ( Math.log( Math.abs( this.geo[i++] ) ) / 0.6931471805599453 ) + 0.5 ) & -1 );
+    
+    //Remove terms outside of data.
+    
+    for( var i = 0, avg = 0; i < l.length; avg += l[i++] ); avg /= l.length; for( i = 0; i < l.length; i++ )
+    {
+      if( l[i] < avg && l[i] < 0 ) { if( i < this.seq.length ) { this.seq[ i ] = 0; } else { this.geo[ i - this.seq.length ] = 0; } }
+    }
+    
+    //Dynamic epsilon error correction if Remaining data is to be converted to very close exact fractions.
+    
+    if ( Number.prototype.getFract )
+    { 
+      for( var i = this.seq.length - 1, err = Math.pow( 2, ( Math.abs( avg ) ) ); i > -1; err += Math.pow( 2, Math.abs( avg ) + ( i-- ) ) )
+      {
+        this.seq[i] = ( this.seq[ i ] + 0 ).getFract( err );
+      }
+      for( var i = this.geo.length - 1, err = Math.pow( 2, ( Math.abs( avg ) ) ); i > -1; err += Math.pow( 2, Math.abs( avg ) + ( i-- ) ) )
+      {
+        this.geo[i] = ( this.geo[ i ] + 0 ).getFract( err );
+      }
+    }
+  }
+  
   //For general use convert to best average faction if FL64 is loaded.
 
-  if ( Number.prototype.avgFract ) { this.seq = this.seq.avgFract(); this.geo = this.geo.avgFract(); }
+  if ( Number.prototype.avgFract ) { this.geo = this.geo.avgFract(); }
 }
 
 /***********************************************************************************
