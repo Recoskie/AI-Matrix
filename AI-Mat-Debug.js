@@ -553,7 +553,7 @@ DSet.prototype.getFunc = function()
 
     if ( d[ i ].valueOf() !== 0 )
     {
-      if ( !init ) { code += "  var o = "; init = true; } else { if ( d[ i ] < 0 ) { code += "  o -="; } else { code += "  o +="; } }
+      if ( !init ) { code += "  var o = "; init = true; } else { if ( d[ i ] < 0 ) { code += "  o -= "; } else { code += "  o += "; } }
 
       if ( i > 1 ) { code += String.toExp( "x", i, sw ) + d[ i ].toString("*", true); }
       
