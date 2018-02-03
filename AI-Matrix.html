@@ -9,7 +9,12 @@
     Or if user wants an debug view of the Matrix.
     *****************************************************************************************/
 
-    function Setup() { document.getElementById("LoadFL").checked = false; document.getElementById("CDebug").checked = false; }
+    function Setup()
+    {
+      document.getElementById("LoadFL").checked = false;
+      document.getElementById("CDebug").checked = false;
+      document.getElementById("ErrC").checked = false;
+    }
 
     var head = document.getElementsByTagName("head")[0];
 
@@ -92,7 +97,9 @@
     function Solve( Mode )
     {
       var input = [], b = [], dmode = document.getElementById("CDebug").checked;
-
+      
+      AI_Mat.ErrCorrect = document.getElementById("ErrC").checked;
+      
       var out = "<center>";
 
       //Create an new set of data.
@@ -163,7 +170,8 @@
           <table>
             <tr>
               <td><div id = "Load">Load FL64:<input id="LoadFL" type="checkbox" onclick="LoadFL64( this.checked );" checked="false" /><input type="button" onclick="FL64Info();" value="What is FL64?" /></div></td>
-              <td>Debug Mode:</td> <td><div id = "Debug">Disabled</div></td><td><input id="CDebug" type="checkbox" onclick="LoadDebug( this.checked );" checked="false" /><input type="button" onclick="DebugInfo();" value="What is Debug Mode?" /></td>
+              <td>Debug Mode:</td> <td><div id = "Debug">Disabled</div></td><td><input id="CDebug" type="checkbox" onclick="LoadDebug( this.checked );" /><input type="button" onclick="DebugInfo();" value="What is Debug Mode?" /></td>
+              <td>Error Correction:<input id="ErrC" type="checkbox" /></td>
             </tr>
           </table>
         </center>
