@@ -1,8 +1,10 @@
-# Artificially solve all kinds of multi dimensional data.
+# Artificially solve all kinds of multidimensional data.
 
 **AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
 
-* Analyze multidimensional sequence data. See example bellow.<br />
+Below are very basic example uses without phase shifting, or solving continued functions in data. <br />
+
+* Analyze multidimensional sequence data. See example bellow. <br />
 
 ```javascript
 //Random dimensional values.
@@ -65,8 +67,9 @@ var s = new Set( d );
 
 alert( s + "" );
 
-/*
+/*---------------------------------------------------------
 My random three dimensional data is as follows.
+-----------------------------------------------------------
 X0 = 5.55582670474409
 X1 = 11.25513255148574
 X2 = 10.20096199304021
@@ -74,7 +77,7 @@ X3 = -4.50364051777721
 X4 = -39.7556305281513
 X5 = -102.4519635852667
 X6 = -199.4895952363082
-*/
+---------------------------------------------------------*/
 
 //Sequence each dimension.
 
@@ -88,8 +91,9 @@ var My_func = d.getFunc();
 
 alert( My_func );
 
-/*
+/*---------------------------------------------------------
 My function that calculates and produces the same data is.
+-----------------------------------------------------------
 function( x )
 {
   var o = 911/1639+5;
@@ -98,7 +102,7 @@ function( x )
   o -= x ** 3 * ( 7940 / 53113 + 1 );
   return( o );
 }
-*/
+---------------------------------------------------------*/
 ```
 
 Also the Matrix can be used to improve performance of functions that use loops to calculate results into simple calculations.
@@ -172,8 +176,9 @@ var s = new Set( d );
 
 alert( s + "" );
 
-/*
+/*---------------------------------------------------------
 My random dimensional data is as follows.
+-----------------------------------------------------------
 X0 = 59.1382464275191
 X1 = 210.6470138800445
 X2 = 770.992716524155
@@ -181,7 +186,7 @@ X3 = 2881.43000209669
 X4 = 10942.58772236329
 X5 = 42069.9346433353
 X6 = 163276.4510588926
-*/
+---------------------------------------------------------*/
 
 //Sequence each dimension.
 
@@ -195,9 +200,9 @@ var My_func = d.getFunc();
 
 alert( My_func );
 
-/*
+/*---------------------------------------------------------
 My function that calculates and produces the same data is.
-
+-----------------------------------------------------------
 function( x )
 {
   var o = 2 ** x * ( 4078 / 7685 + 1 );
@@ -205,7 +210,7 @@ function( x )
   o += 4 ** x * ( 179 / 2439 + 9 );
   return( o );
 }
-*/
+---------------------------------------------------------*/
 ```
 
 # Solve as seq:
@@ -228,18 +233,17 @@ Solves data as both set types.
 
 ## seq:
 
-
 Any set of data solved as powers will only solve properly if it is plus one number higher than the number of sumitations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
 
-# geo:
+## geo:
 
 The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than, but all that will happen is that the numbers in the set higher up will cancel out till 0 when the last multiple to the last sum is calculated in reverse.
 
-# gen:
+## gen:
 
 This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest sequence dimension plus Highest Geo dimension in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
 
-# Suffers from epsilon error.
+## Suffers from epsilon error.
 
 Computers can not do perfect float arithmetic thus we end up with data that should be 0 in alignment, but are at the value of EPSILON.
 
