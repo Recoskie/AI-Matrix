@@ -110,11 +110,9 @@ For more information on what types of things this applies to see section [Solve 
 
 * Analyze multidimensional geometric data. <br />
 
-Not only can stuff be dimensional inside each other we also have expanding horizontal dimensions. It is funny that positional number systems count the same way (Not by chance). <br />
+Not only can stuff be dimensional inside each other we also have expanding horizontal dimensions. <br />
 
-We call these geometric sequence. The same is true with quantities in counting. We count by one to the tens column then the tens is times ten then we have hundreds times ten to thousands. <br />
-
-Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric sequences. Also the matrix uses the decode matrix as the sequence matrix then the sequence matrix to decode in reverse. <br />
+The matrix uses the decode matrix as the sequence matrix then the sequence matrix to decode in reverse. <br />
 
 ```javascript
 //Random dimensional values.
@@ -213,38 +211,45 @@ function( x )
 ---------------------------------------------------------*/
 ```
 
-# Solve as seq:
+It is funny that positional number systems count the same way (Not by chance). <br />
 
-Solves an set of numbers as Sums to the next number as Summation inside Summation as each pow is another dimension added up by the last dimension geometrically any number of times.
+These are called geometric sequences. The same is true with quantities in counting. We count by one to the tens column. Conunt by ten then the tens is times ten then we have hundreds times ten to thousands. <br />
 
-To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. It allows the break down combinations of any mix of Circles, curves, gravity, quadratics, polynomials, and even wave function combinations.
+Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric sequences. 
 
-# Solve as geo:
+# Types of data.
 
-Solve things that multiply by two per value, or by three, or both sets are existent in the data.
-Cell growth, Base number conversion. Binary digits are in multiples of twos, and Decimal is in multiples of 10 per value.
-Basically Number patterns rather then Curves. Also chemical cell growth.
-
-# Solve as Geo, and Seq:
-
-Solves data as both set types.
-
-# Accuracy notes.
+## Solve as seq:
+  > Solves an set of numbers as Sums to the next number as Summation inside Summation as each pow is another dimension added up by the last dimension geometrically any number of times.
+  >
+  > To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. It allows the break down combinations of any mix of Circles, curves, gravity, quadratics, polynomials, and even wave function combinations.
+  >
+## Solve as geo:
+  >
+  > Solve things that multiply by two per value, or by three, or both sets are existent in the data.
+  > Cell growth, Base number conversion. Binary digits are in multiples of twos, and Decimal is in multiples of ten per value.
+  > Basically Number patterns rather then Curves. Also chemical cell growth.
+  >
+## Solve as Geo, and Seq:
+  >
+  > Solves data as both set types.
+  >
+# Accuracy.
 
 ## seq:
-
-Any set of data solved as powers will only solve properly if it is plus one number higher than the number of sumitations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
-
+  >
+  > Any set of data solved as powers will only solve properly if it is plus one number higher than the number of sumitations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
+  >
 ## geo:
-
-The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than, but all that will happen is that the numbers in the set higher up will cancel out till 0 when the last multiple to the last sum is calculated in reverse.
-
+  >
+  > The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than, but all that will happen is that the numbers in the set higher up will cancel out till 0 when the last multiple to the last sum is calculated in reverse.
+  >
 ## gen:
-
-This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest sequence dimension plus Highest Geo dimension in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
-
+  >
+  > This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest sequence dimension plus Highest Geo dimension in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
+  >
 ## Suffers from epsilon error.
-
-Computers can not do perfect float arithmetic thus we end up with data that should be 0 in alignment, but are at the value of EPSILON.
-
-As of version 6 this has been fixed. Thus Float values are also epsilon corrected if the FL64 library is loaded on the same page as the AI matrix. The values are converted to fractions with an dynamic constraint to stop at error range.
+  >
+  > Computers can not do perfect float arithmetic thus we end up with data that should be 0 in alignment, but are at the value of EPSILON.
+  >
+  > As of version 6 this has been fixed. Thus Float values are also epsilon corrected if the FL64 library is loaded on the same page as the AI matrix. The values are converted to fractions with an dynamic constraint to stop at error range.
