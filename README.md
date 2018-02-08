@@ -2,7 +2,7 @@
 
 **AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
 
-Below are very basic example uses without phase shifting, or solving continued functions in data. <br />
+Below are very basic example uses without phase shifting, or solving continued functions in data, or fractaling. <br />
 
 * Analyze multidimensional sequence data. See example bellow. <br />
 
@@ -265,7 +265,7 @@ catch( e )
 }
 ```
 
-When displying an set of data the array index and value is shown in any message output function.
+### When displaying an set of data the array index and value is shown in any message output function.
 
 ```Javascript
 //Create an basic set.
@@ -285,7 +285,7 @@ X2 = 30
 ---------------------------------------------------------*/
 ```
 
-Sets are the same as arrays.
+### Sets are the same as arrays.
 
 ```Javascript
 //Create an basic set.
@@ -323,7 +323,7 @@ If FL64 is loaded all float number binary operations and error correction, and f
 
 <a href="https://github.com/Recoskie/Fl64">FL64 library Main page and Reference.</a>
 
-<a href="https://github.com/Recoskie/Fl64#vectorarray-based-operations">FL64 libaray Set/Array implementation.</a>
+<a href="https://github.com/Recoskie/Fl64#vectorarray-based-operations">FL64 library Set/Array implementation.</a>
 
 ```Javascript
 //Create an basic set.
@@ -431,38 +431,137 @@ X2 = 3.36542208899635e-308
 ---------------------------------------------------------*/
 ```
 
+### Decoding data.
+
+Sets have three functions "seq, geo, gen".
+In which we multidimensionally solve as sequences, or as geometric data, or both.
+If you already have an idea of the type of data you are analyzing then you can solve as "geo", or "seq" otherwise "generic".
+
+```Javascript
+var s = new Set( 0, -899.857142857143, -13167.42857142857, -49732.7142857143,
+  -52989.7142857143, 290003.571428571, 1898645.142857143, 6871669, 19337225.14285714,
+  46635599.5714286 );
+
+/*---------------------------------------------------------
+Error correction is set false by default.
+---------------------------------------------------------*/
+
+AI_Mat.ErrCorrect = true;
+
+/*---------------------------------------------------------
+Seq, and Geo Sequence Data.
+---------------------------------------------------------*/
+
+var Data = s.gen();
+
+/*---------------------------------------------------------
+Displaying the data results in an ASCII math string of the sequence data.
+---------------------------------------------------------*/
+
+alert( Data );
+
+/*---------------------------------------------------------
+Output.
+-----------------------------------------------------------
+X^2*797017/5579118-X^4*911+X^7*11
+---------------------------------------------------------*/
+
+/*---------------------------------------------------------
+You can make an function of the Data, or use array of functions. Depending on what you are building.
+---------------------------------------------------------*/
+
+var My_func1 = Data.getFunc();
+
+/*---------------------------------------------------------
+You can display the function as string and pass values to it.
+---------------------------------------------------------*/
+
+alert( "My function\r\n" + My_func1 + "\r\nPass value 9 = " + My_func1( 9 ) + "" );
+
+//The data contains an set called "seq" containing the value of each dimensional sequence.
+
+alert( Data.seq );
+
+/*---------------------------------------------------------
+Output.
+-----------------------------------------------------------
+X0 = 0
+X1 = 0
+X2 = 797017÷5579118
+X3 = 0
+X4 = -911
+X5 = 0
+X6 = 0
+X7 = 11
+X8 = 0
+X9 = 0
+---------------------------------------------------------*/
+
+//The data contains an set called "geo" containing the value of each expanding dimensional sequence.
+
+alert( Data.geo );
+
+/*---------------------------------------------------------
+Output.
+-----------------------------------------------------------
+X0 = 0
+X1 = 0
+X2 = 0
+X3 = 0
+X4 = 0
+X5 = 0
+X6 = 0
+X7 = 0
+X8 = 0
+X9 = 0
+---------------------------------------------------------*/
+
+//The sets can also be solved again.
+
+var Data2 = Data.seq.gen();
+var Data3 = Data.geo.gen();
+
+alert( Data2 );
+alert( Data3 );
+
+//You can fractal data if you like.
+//Do not forget the sets in data also support all FL64 operations.
+```
+
+Also see other examples like Solve as <a href="https://github.com/Recoskie/AI-Matrix#artificially-solve-all-kinds-of-multidimensional-data">Seq, or Geo</a> at the beginning.
+
 # Types of data.
 
-## Solve as seq:
+### Solve as seq:
   > Solves an set of numbers as Sums to the next number as Summation inside Summation as each pow is another dimension added up by the last dimension geometrically any number of times.
   >
   > To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. It allows the break down combinations of any mix of Circles, curves, gravity, quadratics, polynomials, and even wave function combinations.
   >
-## Solve as geo:
+### Solve as geo:
   >
   > Solve things that multiply by two per value, or by three, or both sets are existent in the data.
   > Cell growth, Base number conversion. Binary digits are in multiples of twos, and Decimal is in multiples of ten per value.
   > Basically Number patterns rather then Curves. Also chemical cell growth.
   >
-## Solve as Geo, and Seq:
+### Solve as Geo, and Seq:
   >
   > Solves data as both set types.
   >
 # Accuracy.
 
-## seq:
+### seq:
   >
   > Any set of data solved as powers will only solve properly if it is plus one number higher than the number of sumitations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
   >
-## geo:
+### geo:
   >
   > The same concept as Powers except we are going "number" to the power of X. The largest number to the power of X will be plus one to number of results needed. You can go higher than, but all that will happen is that the numbers in the set higher up will cancel out till 0 when the last multiple to the last sum is calculated in reverse.
   >
-## gen:
+### gen:
   >
   > This solves both backwards, and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest sequence dimension plus Highest Geo dimension in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers, and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
   >
-## Suffers from epsilon error.
+### Suffers from epsilon error.
   >
   > Computers can not do perfect float arithmetic thus we end up with data that should be 0 in alignment, but are at the value of EPSILON.
   >
