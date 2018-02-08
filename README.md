@@ -215,7 +215,219 @@ It is funny that positional number systems count the same way (Not by chance). <
 
 These are called geometric sequences. The same is true with quantities in counting. We count by one to the tens column. Conunt by ten then the tens is times ten then we have hundreds times ten to thousands. <br />
 
-Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric sequences. 
+Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric sequences.
+
+# Basic library use, and reference.
+
+There are four methods for loading data. For fractional base number conversion the <a href="https://github.com/Recoskie/Fl64/blob/master/FL64.js">FL64 libaray</a> needs to be loaded.
+
+```Javascript
+//Method one on creating an set
+
+var s = new Set( 10, 20, 30 );
+
+//Method two. Data generated from an algorithm or from file.
+
+var data = [ 10, 20, 30 ];
+
+s = new Set( data );
+
+//Method three. Text input data.
+//Text can have line brakes and fractional numbers.
+
+var strs = "10,20,30";
+
+s = null;
+
+try
+{
+  s = new Set( strs );
+}
+catch( e )
+{
+  alert( e ); //The error output is "Improper set format" if there are values other an numbers.
+}
+
+//Numbers do not have to be in decimal if FL64 library is loaded for fraction base conversion. 
+//If FL64 is not loaded on the same page "Improper set format" will be returned.
+
+var strs = "1010.1,1011.01,1100.11";
+
+s = null;
+
+try
+{
+  s = new Set( strs, 2 ); //Base 2 fractional numbers.
+}
+catch( e )
+{
+  alert( e ); //The error output is "Improper set format" if there are values other an numbers.
+}
+```
+
+When displying an set of data the array index and value is shown in any message output function.
+
+```Javascript
+//Create an basic set.
+
+var s = new Set( 10, 20, 30 );
+
+//Dispaly the set.
+
+alert( s );
+
+/*----------------------------------
+Output.
+------------------------------------
+X0 = 10
+X1 = 20
+X2 = 30
+----------------------------------*/
+```
+
+Sets are the same as arrays.
+
+```Javascript
+//Create an basic set.
+
+var s = new Set( 10, 20, 30 );
+
+//Display the set array length.
+
+alert( s.length ); //outputs 3.
+
+//Add array element one to element two.
+
+s[ 0 ] += s[ 1 ];
+
+//Iterate through array and add by iterated value.
+
+for( var i = 0; i < s.length; i++ ) { s[ i ] += i; }
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 30
+X1 = 21
+X2 = 32
+----------------------------------*/
+```
+
+### Sets also suport Array methods: reverse(), splice(), shift(), unshift(), push(), pop().
+
+If FL64 is loaded all float number binary operations and error correction, and fraction conversion functions are then applied to array. This allows Sets to use them all FL64 operations.
+
+<a href="https://github.com/Recoskie/Fl64/blob/master/FL64.js">FL64 libaray.</a>
+
+```Javascript
+//Create an basic set.
+
+var s = new Set( 10, 20.5, 30.2 );
+
+//Convert all number in set to their exact binary representation in the computers memory.
+
+s = s.bits();
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 0100000000100100000000000000000000000000000000000000000000000000
+X1 = 0100000000110100100000000000000000000000000000000000000000000000
+X2 = 0100000000111110001100110011001100110011001100110011001100110011
+----------------------------------*/
+
+//Manipulate mantissa bits in element one.
+
+s[ 0 ].mantissa += Math.pow(2,32);
+
+//Add value by one.
+
+s[ 0 ] += 1;
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 11.00000762939453
+X1 = 0100000000110100100000000000000000000000000000000000000000000000
+X2 = 0100000000111110001100110011001100110011001100110011001100110011
+----------------------------------*/
+
+//Convert second value to fraction.
+
+s[ 1 ] = s[ 1 ].getFract();
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 11.00000762939453
+X1 = 1÷2+20
+X2 = 0100000000111110001100110011001100110011001100110011001100110011
+----------------------------------*/
+
+//Convert all values in set to fraction.
+
+s = s.getFract();
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 1÷131072+11
+X1 = 1÷2+20
+X2 = 1÷5+30
+----------------------------------*/
+
+//Xor all 64 bit's of double precision numbers by element one.
+
+s = s.bitXor( s[ 0 ] + 0 );
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 0000000000000000000000000000000000000000000000000000000000000000
+X1 = 0000000000010010100000000000000100000000000000000000000000000000
+X2 = 0000000000011000001100110011001000110011001100110011001100110011
+----------------------------------*/
+
+//Show as numbers.
+
+s = s.valueOf();
+
+//Display output.
+
+alert( s );
+
+/*----------------------------------
+Output is as follows.
+------------------------------------
+X0 = 0
+X1 = 2.57274377089474e-308
+X2 = 3.36542208899635e-308
+----------------------------------*/
+```
 
 # Types of data.
 
