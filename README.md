@@ -528,6 +528,16 @@ alert( Data3 );
 
 Also see other examples like Solve as <a href="https://github.com/Recoskie/AI-Matrix#artificially-solve-all-kinds-of-multidimensional-data">Seq, or Geo</a> at the beginning.
 
+# AI Matrix Debug Script.
+  >
+  > The AI matrix debug script is the same as the regular script. <br /><br />
+  > However the matrix has an **AI_Mat.debug** value that is written to after every operation. <br /><br />
+  > To Display the Debug output simply call **AI_Mat.toString()**. <br /><br />
+  > Another method is to just add AI_Mat to string as **var out = AI_Mat + "";**. <br /><br />
+  > The non debug version of the AI matrix will give back no debug data, but you can also call the same **AI_Mat.toString()** function between both without error, for compatibility. <br /><br />
+  > The debug data is in HTML format, so you will want to write it to the innerHTML of an DIV element, or use document.write. <br /><br />
+  > Note that as soon as the debug data is added to an string, or toString is used the debug data resets. <br />
+  >
 # Types of data.
 
 ### Solve as seq:
