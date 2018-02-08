@@ -321,7 +321,9 @@ X2 = 32
 
 If FL64 is loaded all float number binary operations and error correction, and fraction conversion functions are then applied to array. This allows Sets to use them all FL64 operations.
 
-<a href="https://github.com/Recoskie/Fl64">FL64 libaray.</a>
+<a href="https://github.com/Recoskie/Fl64">FL64 library Main page and Reference.</a>
+
+<a href="https://github.com/Recoskie/Fl64#vectorarray-based-operations">FL64 libaray Set/Array implementation.</a>
 
 ```Javascript
 //Create an basic set.
