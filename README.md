@@ -245,7 +245,7 @@ try
 }
 catch( e )
 {
-  alert( e ); //The error output is "Improper set format" if there are values other an numbers.
+  alert( e ); //The error output is "Improper set format" if there are values other than numbers.
 }
 
 //Numbers do not have to be in decimal if FL64 library is loaded for fraction base conversion. 
@@ -261,7 +261,7 @@ try
 }
 catch( e )
 {
-  alert( e ); //The error output is "Improper set format" if there are values other an numbers.
+  alert( e ); //The error output is "Improper set format" if FL64 is not loaded, or there are values other than base 2 numbers.
 }
 ```
 
