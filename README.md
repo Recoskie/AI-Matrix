@@ -25,7 +25,7 @@ function Dimensional_data( x )
   
   for( var i1 = 0; i1 < x; i1++ )
   {
-     //Can add subtract value it dose not matter.
+     //Can add subtract value it does not matter.
   
      out += r1;
   
