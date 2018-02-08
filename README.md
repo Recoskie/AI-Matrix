@@ -2,7 +2,9 @@
 
 **AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
 
-Below are very basic example uses without phase shifting, or solving continued functions in data, or fractaling. <br />
+Below are very basic example uses without phase shifting, solving continued functions in data, or fractaling. <br />
+
+<a href="https://github.com/Recoskie/AI-Matrix#basic-library-use-and-reference">Skip to Reference, and use.</a>
 
 * Analyze multidimensional sequence data. See example bellow. <br />
 
