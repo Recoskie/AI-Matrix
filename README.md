@@ -219,7 +219,7 @@ Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric se
 
 # Basic library use, and reference.
 
-There are four methods for loading data. For fractional base number conversion the <a href="https://github.com/Recoskie/Fl64/blob/master/FL64.js">FL64 libaray</a> needs to be loaded.
+There are four methods for loading data. For fractional base number conversion the <a href="https://github.com/Recoskie/Fl64">FL64 libaray</a> needs to be loaded.
 
 ```Javascript
 //Method one on creating an set
@@ -321,7 +321,7 @@ X2 = 32
 
 If FL64 is loaded all float number binary operations and error correction, and fraction conversion functions are then applied to array. This allows Sets to use them all FL64 operations.
 
-<a href="https://github.com/Recoskie/Fl64/blob/master/FL64.js">FL64 libaray.</a>
+<a href="https://github.com/Recoskie/Fl64">FL64 libaray.</a>
 
 ```Javascript
 //Create an basic set.
