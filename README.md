@@ -319,7 +319,7 @@ X2 = 32
 
 ### Sets also suport Array methods: reverse(), splice(), shift(), unshift(), push(), pop().
 
-If FL64 is loaded all float number binary operations and error correction, and fraction conversion functions are then applied to array. This allows Sets to use them all FL64 operations.
+If FL64 is loaded all float number binary operations and error correction, and fraction conversion functions are then applied to array. This allows Sets to use all FL64 operations.
 
 <a href="https://github.com/Recoskie/Fl64">FL64 library Main page and Reference.</a>
 
