@@ -514,7 +514,7 @@ X8 = 0
 X9 = 0
 ---------------------------------------------------------*/
 
-//The sets can also be solved again.
+//The sets can also be solved again resulting in an function that produces the dimensions for the sequence.
 
 var Data2 = Data.seq.gen();
 var Data3 = Data.geo.gen();
@@ -522,7 +522,7 @@ var Data3 = Data.geo.gen();
 alert( Data2 );
 alert( Data3 );
 
-//You can fractal data if you like.
+//You can branch it out as many times as you like. You can fractal data if you like.
 //Do not forget the sets in data also support all FL64 operations.
 ```
 
