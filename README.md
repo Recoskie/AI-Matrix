@@ -114,7 +114,7 @@ For more information on what types of things this applies to see section [Solve 
 
 Not only can stuff be dimensional inside each other we also have expanding horizontal dimensions. <br />
 
-The matrix uses the decode matrix as the sequence matrix then the sequence matrix to decode in reverse. <br />
+The matrix uses the decode matrix as the sequence matrix then the sequence matrix to decode. In reverse. <br />
 
 ```javascript
 //Random dimensional values.
@@ -213,11 +213,7 @@ function( x )
 ---------------------------------------------------------*/
 ```
 
-It is funny that positional number systems count the same way (Not by chance). <br />
-
-These are called geometric sequences. The same is true with quantities in counting. We count by one to the tens column. Conunt by ten then the tens is times ten then we have hundreds times ten to thousands. <br />
-
-Binary is 2, 4, 8, 16 as it doubles. Note the data can be an mix of geometric sequences.
+For more information on what types of things this applies to see section [Solve as geo.](#solve-as-geo)
 
 # Basic library use, and reference.
 
@@ -540,10 +536,11 @@ Also see other examples like Solve as <a href="https://github.com/Recoskie/AI-Ma
   > To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. It allows the break down combinations of any mix of Circles, curves, gravity, quadratics, polynomials, and even wave function combinations.
   >
 ### Solve as geo:
-  >
+  >  
   > Solve things that multiply by two per value, or by three, or both sets are existent in the data.
-  > Cell growth, Base number conversion. Binary digits are in multiples of twos, and Decimal is in multiples of ten per value.
-  > Basically Number patterns rather then Curves. Also chemical cell growth.
+  > Formation of cells and expanded growth, or crystal formation.
+  > Base number conversion. Binary digits are in multiples of twos, and Decimal is in multiples of ten per value.
+  > Positional Number patterns.
   >
 ### Solve as Geo, and Seq:
   >
