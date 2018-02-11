@@ -5,16 +5,19 @@
   
   <script type="text/javascript">
     /*****************************************************************************************
+    Reset the option boxes onload.
+    *****************************************************************************************/
+    
+    function Setup()
+    {
+      document.getElementById("DMode").options[0].selected=true;
+      document.getElementById("EMode").options[0].selected=true;
+    }
+    
+    /*****************************************************************************************
     If user decides to load the external Float number library with the matrix.
     Or if user wants an debug view of the Matrix.
     *****************************************************************************************/
-
-    function Setup()
-    {
-      document.getElementById("LoadFL").checked = false;
-      document.getElementById("CDebug").checked = false;
-      document.getElementById("ErrC").checked = false;
-    }
 
     var head = document.getElementsByTagName("head")[0];
 
@@ -26,9 +29,9 @@
 
     script1.type = "text/javascript"; script1.src = "https://rawgit.com/Recoskie/Fl64/38caf1e043f7da1137bb12a05d08e10c60a4bd37/FL64.js"; 
 
-    script1.onload = function() { document.getElementById("Load").innerHTML = ""; alert("loaded!"); };
+    script1.onload = function() { document.getElementById("LoadFL64").deleteCell(0); alert("loaded!"); };
 
-    script1.onerror = function() { document.getElementById("LoadFL").checked = false; alert("Error Unable to load FL 64..."); };
+    script1.onerror = function() { alert("Error Unable to load FL 64..."); };
 	
     function LoadFL64() { head.appendChild( script1 ); }
 
@@ -36,8 +39,10 @@
     Load the debugged or reload the non debugged Matrix.
     *****************************************************************************************/
 
-    function LoadDebug( sw )
+    function LoadDebug()
     {
+      var sw = document.getElementById("DMode").value == "true";
+      
       if( sw )
       {
         var script3 = document.createElement("script");
@@ -46,9 +51,9 @@
 
         try { head.removeChild( script2 ); } catch( e ) { };
 
-        script3.onload = function() { document.getElementById("Debug").innerHTML = "Enabled"; alert("loaded!"); };
+        script3.onload = function() { alert("loaded!"); };
 
-        script3.onerror = function() { document.getElementById("Debug").innerHTML = "Disabled"; document.getElementById("CDebug").checked = false; alert("Error Unable to load AI-Mat-Debug..."); };
+        script3.onerror = function() { document.getElementById("DMode").options[0].selected=true; alert("Error Unable to load AI-Mat-Debug..."); };
 
         head.appendChild( script3 );
       }
@@ -60,9 +65,9 @@
 
         try { head.removeChild( script3 ); } catch( e ) { };
 
-        script2.onload = function() { document.getElementById("Debug").innerHTML = "Disabled"; alert("loaded!"); };
+        script2.onload = function() { alert("loaded!"); };
 
-        script2.onerror = function() { document.getElementById("Debug").innerHTML = "Enabled";  document.getElementById("CDebug").checked = true; alert("Error Unable to load AI-Mat..."); };
+        script2.onerror = function() { document.getElementById("DMode").options[1].selected=true; alert("Error Unable to load AI-Mat..."); };
 
         head.appendChild( script2 );
       }
@@ -98,11 +103,11 @@
 
     function Solve( Mode )
     {
-      var input = [], b = [], dmode = document.getElementById("CDebug").checked;
+      AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
       
-      AI_Mat.ErrCorrect = document.getElementById("ErrC").checked;
+      var input = [], b = [], out = "<center>";
       
-      var out = "<center>";
+      var DMode = document.getElementById("DMode").value == "true";
 
       //Create an new set of data.
 
@@ -112,7 +117,7 @@
         return;
       }
 
-      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( dmode ? input.fontcolor("#00AFFF") : input.toString().html() );
+      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() );
 
       //Analyze data.
 
@@ -124,9 +129,9 @@
       
       //Show the data.
 
-      out += "<h1>Sequence data.</h1><br />" + ( dmode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
+      out += "<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
 
-      out += "<h1>Geo Sequence data.</h1><br />" + ( dmode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
+      out += "<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
       
       //Display the data math string.
 
@@ -161,7 +166,7 @@
   
 </head>
 
-<body background="Bg/bg.jpg" text="#FFFFFF" onload="Setup();">
+<body background="Bg/bg.jpg" text="#FFFFFF" onload="Setup()">
   <table height="100%" width="100%">
 
     <tr>
@@ -169,11 +174,26 @@
         <center>
           <h1>By Damian Recoskie</h1>
           <hr />
-          <table>
-            <tr>
-              <td><div id = "Load">Load FL64:<input id="LoadFL" type="checkbox" onclick="LoadFL64( this.checked );" checked="false" /><input type="button" onclick="FL64Info();" value="What is FL64?" /></div></td>
-              <td>Debug Mode:</td> <td><div id = "Debug">Disabled</div></td><td><input id="CDebug" type="checkbox" onclick="LoadDebug( this.checked );" /><input type="button" onclick="DebugInfo();" value="What is Debug Mode?" /></td>
-              <td>Error Correction:<input id="ErrC" type="checkbox" /></td>
+          <table border="1px">
+            <tr id="LoadFL64">
+              <td>
+                <input type="button" value="Load FL64." onclick="LoadFL64();" /><input type="button" value="?" onclick="FL64Info();" />
+              </td>
+              <td>
+                Debug Mode:
+                <select id="DMode" onchange="LoadDebug();">
+                  <option value="false" selected="selected">Disable</option>
+                  <option value="true">Enable</option>
+                </select>
+                <input type="button" value="?" onclick="DebugInfo();" />
+              </td>
+              <td>
+                Error Correction:
+                <select id="EMode">
+                  <option value="false" selected="selected">Disable</option>
+                  <option value="true">Enable</option>
+                </select>
+              </td>
             </tr>
           </table>
         </center>
