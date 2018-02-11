@@ -378,6 +378,24 @@ DSet.prototype.getFunc = function()
 }
 
 /***********************************************************************************
+Convert set to HTML seting and color for each element.
+***********************************************************************************/
+
+Set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace(/= /g,"= <font color=\"" + c + "\">").replace(/\r\n/g,"</font><br />") ); }
+
+/***********************************************************************************
+HTML format function for browsers that do not support the formating for debug output.
+***********************************************************************************/
+
+if( !String.prototype.fontcolor ) { String.prototype.fontcolor = function( c ) { return( "<font color=\"" + c + "\">" + this + "</font>" ); } }
+
+/***********************************************************************************
+Convert String to html.
+***********************************************************************************/
+
+String.prototype.html = function() { return( ( this.replace(/ /g,"&nbsp;") ).replace(/\r\n/g,"<br />") ); }
+
+/***********************************************************************************
 An simplistic forum for number to string with an combined operation for code generation if FL64 is not loaded.
 ***********************************************************************************/
 
