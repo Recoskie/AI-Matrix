@@ -74,14 +74,16 @@
 
     function FL64Info()
     {
-      var w = window.open("", "_blank", "toolbar=0,location=0,menubar=0");
+      var w = window.open("", "_blank", "location=0");
 
-      w.document.body.innerHTML = "No information yet.";
+      w.document.body.innerHTML = "FL64 is used to convert float values to fractions when displaying any decoded data as an function, or as an ASCII Math string.<br />\
+        If Error correction is enabled then the float values are converted back to fractions using an dynamic error range to further make the values more accurate and to cut out epsilon error.<br />\
+        <a href=\"https://github.com/Recoskie/Fl64\">Github link</a> to the full documentation of the FL64 library.";
     }
 
     function DebugInfo()
     {
-      var w = window.open("", "_blank", "toolbar=0,location=0,menubar=0");
+      var w = window.open("", "_blank", "location=0");
 
       w.document.body.innerHTML = "The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br />\
         The matrix can solve all sums in all dimensions or logarithmic values.<br />\
@@ -110,7 +112,7 @@
         return;
       }
 
-      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( input + "" ).replace(/= /g,"= <font color=\"#00AFFF\">").replace(/\r\n/g,"</font><br />");
+      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( dmode ? input.fontcolor("#00AFFF") : input.toString().html() );
 
       //Analyze data.
 
@@ -122,9 +124,9 @@
       
       //Show the data.
 
-      out += "<h1>Sequence data.</h1><br />" + ( d.seq + "" ).replace(/= /g,"= <font color=\"#00FF00\">").replace(/\r\n/g,"</font><br />");
+      out += "<h1>Sequence data.</h1><br />" + ( dmode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
 
-      out += "<h1>Geo Sequence data.</h1><br />" + ( d.geo + "" ).replace(/= /g,"= <font color=\"#00FF00\">").replace(/\r\n/g,"</font><br />");
+      out += "<h1>Geo Sequence data.</h1><br />" + ( dmode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
       
       //Display the data math string.
 
@@ -134,9 +136,9 @@
 
       var f = d.getFunc();
       
-      //Function to string then replacement is done for proper HTML display.
+      //Function to string then to HTML.
 
-      out += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + ( ( f + "" ).replace(/ /g,"&nbsp;") ).replace(/\r\n/g,"<br />") + "</td></tr></table>";
+      out += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + f.toString().html() + "</td></tr></table>";
       
       //Execute the math function in an loop. Compare and display the results.
 
