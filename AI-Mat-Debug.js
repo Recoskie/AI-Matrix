@@ -302,7 +302,7 @@ Set.prototype.gen = function() {
 
     //Find Geometric point in sequence.
     
-    AI_Mat.debug += "<hr /><h2>Geo sequence data.</h2><hr />" + ( SData + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr />";
+    AI_Mat.debug += "<hr /><h2>Geo sequence data.</h2><hr />" + SData.fontcolor("#FF0000") + "<hr />";
     
     g = AI_Mat.FindGeo( SData );
 
@@ -419,7 +419,7 @@ function DSet( seq, geo, DSeq, DGeo )
 
   if ( DSeq )
   {
-    AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + ( this.seq + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr /><h2>Decode Matrix.</h2><hr />";
+    AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + this.seq.fontcolor("#FF0000") + "<hr /><h2>Decode Matrix.</h2><hr />";
     
     AI_Mat.showMat( AI_Mat.PMat );
     
@@ -458,7 +458,7 @@ function DSet( seq, geo, DSeq, DGeo )
 
   if ( DGeo )
   {
-    AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + ( this.geo + "" ).replace(/= /g,"= <font color=\"#FF0000\">").replace(/\r\n/g,"</font><br />") + "<hr /><h2>Decode Matrix.</h2><hr />";
+    AI_Mat.debug += "<hr /><h2>Data</h2><hr />" + this.geo.fontcolor("#FF0000") + "<hr /><h2>Decode Matrix.</h2><hr />";
     
     AI_Mat.showMat( AI_Mat.SMat );
     
@@ -609,10 +609,22 @@ DSet.prototype.getFunc = function()
 }
 
 /***********************************************************************************
+Convert set to HTML seting and color for each element.
+***********************************************************************************/
+
+Set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace(/= /g,"= <font color=\"" + c + "\">").replace(/\r\n/g,"</font><br />") ); }
+
+/***********************************************************************************
 HTML format function for browsers that do not support the formating for debug output.
 ***********************************************************************************/
 
 if( !String.prototype.fontcolor ) { String.prototype.fontcolor = function( c ) { return( "<font color=\"" + c + "\">" + this + "</font>" ); } }
+
+/***********************************************************************************
+Convert String to html.
+***********************************************************************************/
+
+String.prototype.html = function() { return( ( this.replace(/ /g,"&nbsp;") ).replace(/\r\n/g,"<br />") ); }
 
 /***********************************************************************************
 An simplistic forum for number to string with an combined operation for code generation if FL64 is not loaded.
