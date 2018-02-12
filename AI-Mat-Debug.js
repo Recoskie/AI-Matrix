@@ -537,7 +537,7 @@ DSet.prototype.filter = function()
   
   //For general use convert to best average faction if FL64 is loaded.
 
-  if ( Number.prototype.avgFract ) { this.geo = this.geo.avgFract(); }
+  if ( Number.prototype.avgFract ) { this.seq = this.seq.avgFract(); this.geo = this.geo.avgFract(); }
 }
 
 /***********************************************************************************
