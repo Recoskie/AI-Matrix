@@ -10,8 +10,8 @@
     
     function Setup()
     {
-      document.getElementById("DMode").options[0].selected=true;
-      document.getElementById("EMode").options[0].selected=true;
+      document.getElementById("DMode").options[0].selected = true;
+      document.getElementById("EMode").options[0].selected = true;
     }
     
     /*****************************************************************************************
@@ -103,21 +103,19 @@
 
     function Solve( Mode )
     {
-      AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
+      var DMode = document.getElementById("DMode").value == "true"; AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
       
-      var input = [], b = [], out = "<center>";
-      
-      var DMode = document.getElementById("DMode").value == "true";
+      var input = [], output = "<center>";
 
       //Create an new set of data.
 
-      try { input = new Set( document.getElementById("Data").value ); b = new Set( input ); } catch( e )
+      try { input = new Set( document.getElementById("Data").value ); } catch( e )
       { 
-        window.frames[0].document.body.innerHTML = out + "<h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
+        window.frames[0].document.body.innerHTML = "<center></center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
         return;
       }
 
-      out += "<h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() );
+      output += "<h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() );
 
       //Analyze data.
 
@@ -125,17 +123,17 @@
       
       //Matrix Debug output.
       
-      out += AI_Mat + "";
+      output += AI_Mat + "";
       
       //Show the data.
 
-      out += "<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
+      output += "<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
 
-      out += "<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
+      output += "<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
       
       //Display the data math string.
 
-      out += "<h1>ASCII Math String.</h1><br />" + d + "";
+      output += "<h1>ASCII Math String.</h1><br />" + d + "";
       
       //Compile to function.
 
@@ -143,24 +141,24 @@
       
       //Function to string then to HTML.
 
-      out += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + f.toString().html() + "</td></tr></table>";
+      output += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + f.toString().html() + "</td></tr></table>";
       
       //Execute the math function in an loop. Compare and display the results.
 
-      out += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
+      output += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
 
-      out += "<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
+      output += "<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
 
-      for ( var i = -( b.length + 5 ); i <= b.length + 5; i++ )
+      for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        out += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + b [ Mode === 1 ? i - 1 : i  ] + "</center></td></tr>";
+        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ Mode === 1 ? i - 1 : i  ] + "</center></td></tr>";
       }
 
-      out += "</table></center>";
+      output += "</table></center>";
 
       //Update output.
 
-      window.frames[0].document.body.innerHTML = out;
+      window.frames[0].document.body.innerHTML = output;
     }
   </script>
   
