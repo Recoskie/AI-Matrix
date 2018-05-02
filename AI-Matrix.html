@@ -151,7 +151,7 @@
 
       for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ Mode === 1 ? i - 1 : i  ] + "</center></td></tr>";
+        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ i + ( ( Mode === 2 ) ? 0 : -1 ) ] + "</center></td></tr>";
       }
 
       output += "</table></center>";
