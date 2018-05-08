@@ -42,6 +42,7 @@ var AI_Mat = {
       this.SMat[ this.SMat.length - 1 ] = this.SMat[ this.SMat.length - 1 ].concat( r );
     }
   },
+  
   adjustPMat: function( size )
   {
     this.adjustSMat( size );
@@ -237,12 +238,12 @@ Set.prototype.gen = function( set )
 {
   //Adjust the matrix as necessary.
 
-  AI_Mat.adjustSMat(this.length); AI_Mat.adjustPMat(this.length);
+  AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
 
   //Debug output.
 
-  AI_Mat.debug += "<hr /><h2>Current Sequence^Alignment Matrix.</h2><hr />"; AI_Mat.showMat(AI_Mat.SMat);
-  AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat(AI_Mat.PMat);
+  AI_Mat.debug += "<hr /><h2>Current Sequence^Alignment Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
+  AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
 
   //Run Sequence function.
 
@@ -261,9 +262,9 @@ Set.prototype.gen = function( set )
 
     var f = "AI_Mat.SGeq[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
     f += AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length ), false ) + "\r\n  ";
-    f += "var g = s.slice( " + (c1 + 1) + ", " + this.length + " ); s.length = " + ( c1 + 1 ) + "; s = s.slice( 0, " + ( c1 + 1 ) + " );\r\n\r\n";
-    f += AI_Mat.MkS( "g", AI_Mat.PMat.slice(0, c2 - 2 ), true ) + "\r\n";
-    f += AI_Mat.MkD( "g", AI_Mat.SMat.slice(0, c2 - 1 ), false ) + "  ";
+    f += "var g = s.slice( " + ( c1 + 1 ) + ", " + this.length + " ); s.length = " + ( c1 + 1 ) + "; s = s.slice( 0, " + ( c1 + 1 ) + " );\r\n\r\n";
+    f += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 2 ), true ) + "\r\n";
+    f += AI_Mat.MkD( "g", AI_Mat.SMat.slice( 0, c2 - 1 ), false ) + "  ";
 
     for ( var i1 = 0; i1 < c2 - 1; f += "g[" + i1 + "] /= " + Math.pow( i1 + 1, c1 + 1 ) + "; ", i1++ ); f += "\r\n";
 
@@ -287,7 +288,7 @@ Set.prototype.gen = function( set )
 
     eval(f); f = null; c1 = null; c2 = null;
 
-    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeq[this.length].toString().html() + "";
+    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeq[ this.length ].toString().html() + "";
 
     //Call function.
 
@@ -393,10 +394,7 @@ Set.prototype.geo = function()
 Set to string.
 ***********************************************************************************/
 
-Set.prototype.toString = function( radix )
-{
-  for ( var i = 0, str = ""; i < this.length; str += "X" + i + " = " + this[ i++ ].toString( radix ) + "\r\n"); return ( str );
-}
+Set.prototype.toString = function( radix ) { for ( var i = 0, str = ""; i < this.length; str += "X" + i + " = " + this[ i++ ].toString( radix ) + "\r\n" ); return ( str ); }
 
 /***********************************************************************************
 DSet is the decoding of Seq, or Geo, or both. Takes two sets. The first set can be 0 if not used.
@@ -406,8 +404,7 @@ DSet is the decoding of Seq, or Geo, or both. Takes two sets. The first set can 
 
 function DSet( seq, geo )
 {
-  this.seq = new Set( seq || [ 0 ] );
-  this.geo = new Set( geo || [ 0 ] );
+  this.seq = new Set( seq || [ 0 ] ); this.geo = new Set( geo || [ 0 ] );
 
   //Is not filtered. Set already filtered if error correction is disabled.
 
@@ -453,11 +450,7 @@ DSet.prototype.filter = function()
 
   //For general use convert to best average faction if FL64 is loaded.
   
-  else if ( Number.prototype.avgFract )
-  {
-    this.seq = this.seq.avgFract();
-    this.geo = this.geo.avgFract();
-  }
+  else if ( Number.prototype.avgFract ) { this.seq = this.seq.avgFract(); this.geo = this.geo.avgFract(); }
 }
 
 /***********************************************************************************
@@ -489,7 +482,7 @@ DSet.prototype.toString = function()
     }
   }
 
-  return (code.replace(/ /g, ""));
+  return ( code.replace( / /g, "") );
 }
 
 /***********************************************************************************
@@ -510,99 +503,60 @@ DSet.prototype.getFunc = function()
 
   var code = "var f = function( x )\r\n{\r\n";
 
-  for (var i = 0; i < d.length || !sw; i++)
+  for ( var i = 0; i < d.length || !sw; i++ )
   {
     if ( i === d.length ) { sw = true; d = this.geo; i = 0; }
 
     if ( d[ i ].valueOf() !== 0 )
     {
-      if ( !init )
-      {
-        code += "  var o = ";
-        code += ( String.toExp( "x", i, sw ) === "1" ? d[ i ].toString( "", false ) : String.toExp( "x", i, sw ) + d[ i ].toString( "*", false ) ) + ";\r\n";
-        init = true;
-      }
-      else
-      {
-        if ( d[ i ] < 0 ) { code += "  o -= "; } else { code += "  o += "; }
+      if ( !init ) { code += "  var o = "; init = true; } else { if ( d[ i ] < 0 ) { code += "  o -= "; } else { code += "  o += "; } }
 
-        code += ( String.toExp( "x", i, sw ) === "1" ? d[ i ].toString( "", true ) : String.toExp( "x", i, sw ) + d[ i ].toString( "*", true ) ) + ";\r\n";
-      }
+      if ( i > 1 ) { code += String.toExp( "x", i, sw ) + d[ i ].toString( "*", true ); }
+      
+      else { code += ( !sw && i === 1 ) ? "x " + d[ 1 ].toString( "*", true ) : d[ i ].toString( "", false ); }
+
+      code += ";\r\n";
     }
   }
-
-  eval( code + "\r\n  return( o );\r\n};" ); return ( f );
+  
+  eval( code += "  return( o );\r\n};" ); return ( f );
 }
 
 /***********************************************************************************
-Convert set to HTML setting and color for each element.
+Convert set to HTML seting and color for each element.
 ***********************************************************************************/
 
-Set.prototype.fontcolor = function( c )
-{
-  return ( ( this + "" ).replace( /= /g, "= <font color=\"" + c + "\">" ).replace( /\r\n/g, "</font><br />" ) );
-}
-
-/***********************************************************************************
-Another simplistic forum for exponential function to code.
-***********************************************************************************/
-
-String.toExp = function( s1, s2, Order )
-{
-  Order && ( s2 = [ s1, s1 = s2 ][ 0 ] );
-
-  //Special cases.
-
-  if ( !Order ) { if ( s2 === 0 ) { return ( "1" ); } else if ( s2 === 1 ) { return ( s1 + " " ); } }
-  else { if ( s1 === 0 ) { return ( "0 " ); } else if ( s1 === 1 ) { return ( "1" ); } }
-
-  //To exp.
-
-  return ( AI_Mat.Exp ? s1 + " ** " + s2 + " " : "Math.pow( " + s1 + ", " + s2 + ") " );
-};
+Set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace( /= /g, "= <font color=\"" + c + "\">" ).replace( /\r\n/g, "</font><br />" ) ); }
 
 /***********************************************************************************
 HTML format function for browsers that do not support the formatting for debug output.
 ***********************************************************************************/
 
-if ( !String.prototype.fontcolor )
-{
-  String.prototype.fontcolor = function( c ) { return ( "<font color=\"" + c + "\">" + this + "</font>" ); }
-}
+if( !String.prototype.fontcolor ) { String.prototype.fontcolor = function( c ) { return( "<font color=\"" + c + "\">" + this + "</font>" ); } }
 
 /***********************************************************************************
 Convert String to html.
 ***********************************************************************************/
 
-String.prototype.html = function() { return ( ( this.replace( / /g, "&nbsp;" ) ).replace( /\r\n/g, "<br />" ) ); }
+String.prototype.html = function() { return( ( this.replace( / /g, "&nbsp;" ) ).replace( /\r\n/g, "<br />" ) ); }
 
 /***********************************************************************************
 An simplistic forum for number to string with an combined operation for code generation if FL64 is not loaded.
 ***********************************************************************************/
 
-if ( !Number.prototype.getFract )
-{
-  Number.prototype.toString = function( v, s ) { var o = this; if ( s && o < 0 ) { o = -o; } return ( ( v ? v + " " : "" ) + o + "" ); }
-}
+if( !Number.prototype.getFract ) { Number.prototype.toString = function( v, s ) { var o = this; if ( s && o < 0 ) { o = -o; } return ( ( v ? v + " " : "" ) + o + "" ); } }
 
 /***********************************************************************************
 Another simplistic forum for exponential function to code.
 ***********************************************************************************/
 
-String.toExp = function( s1, s2, Order )
-{
-  Order && ( s2 = [ s1, s1 = s2 ][ 0 ] );
-  return ( AI_Mat.Exp ? s1 + " ** " + s2 + " " : "Math.pow( " + s1 + ", " + s2 + ") " );
-};
+String.toExp = function( s1, s2, Order ) { Order && ( s2 = [ s1, s1 = s2 ][ 0 ] ); return( AI_Mat.Exp ? s1 + " ** " + s2 + " " : "Math.pow( " + s1 + ", " + s2 + ") " ); };
 
 /***********************************************************************************
 Array.from compatibility to older web browsers.
 ***********************************************************************************/
 
-if ( !Array.from )
-{
-  Array.from = function( s ) { var a = []; for ( var i = 0; i < s.length; a[ i ] = s[ i++ ]); return ( a ); }
-}
+if ( !Array.from ) { Array.from = function( s ) { var a = []; for ( var i = 0; i < s.length; a[ i ] = s[ i++ ] ); return ( a ); } }
 
 /***********************************************************************************
 Inherit operations from Arrays, and FL64 library if loaded otherwise functions do not exist when called on data type set.
