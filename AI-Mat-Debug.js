@@ -266,7 +266,7 @@ Set.prototype.gen = function( set )
     f += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 2 ), true ) + "\r\n";
     f += AI_Mat.MkD( "g", AI_Mat.SMat.slice( 0, c2 - 1 ), false ) + "  ";
 
-    for ( var i1 = 0; i1 < c2 - 1; f += "g[" + i1 + "] /= " + Math.pow( i1 + 1, c1 + 1 ) + "; ", i1++ ); f += "\r\n";
+    for ( var i1 = 1; i1 < c2 - 1; f += "g[" + i1 + "] /= " + Math.pow( i1 + 1, c1 + 1 ) + "; ", i1++ ); f += "\r\n";
 
     for ( var i1 = 0; i1 < c1 + 1; i1++ )
     {
