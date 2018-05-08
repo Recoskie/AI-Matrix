@@ -497,7 +497,7 @@ DSet.prototype.getFunc = function()
 
   //If function had been initialized.
 
-  var init = false, d = this.seq, sw = false;
+  var init = false, s = false, d = this.seq, sw = false;
 
   //Construct Sequence data into code.
 
@@ -511,11 +511,11 @@ DSet.prototype.getFunc = function()
     {
       if ( !init ) { code += "  var o = "; init = true; } else { if ( d[ i ] < 0 ) { code += "  o -= "; } else { code += "  o += "; } }
 
-      if ( i > 1 ) { code += String.toExp( "x", i, sw ) + d[ i ].toString( "*", true ); }
+      if ( i > 1 ) { code += String.toExp( "x", i, sw ) + d[ i ].toString( "*", s ); }
       
-      else { code += ( !sw && i === 1 ) ? "x " + d[ 1 ].toString( "*", true ) : d[ i ].toString( "", false ); }
+      else { code += ( !sw && i === 1 ) ? "x " + d[ 1 ].toString( "*", s ) : d[ i ].toString( "", s ); }
 
-      code += ";\r\n";
+      code += ";\r\n"; s = init;
     }
   }
   
