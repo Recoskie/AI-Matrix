@@ -93,6 +93,21 @@ var AI_Mat = {
 
     return ( o );
   },
+  
+  /***********************************************************************************
+  Compile an spiral decode for sequenced matrix.
+  ***********************************************************************************/
+  
+  MkSp: function( n, size )
+  {
+    if( size-- <= 1 ) { return( "" ); }
+
+    var o = " var sp1 = " + n + "[" + ( size - 1 ) + "], sp2 = " + n + "[" + size + "];\r\n";
+
+    for( var i = size; i > 1; o += " " + n + "[" + i-- + "] -= sp2; sp2 = ( sp1 += sp2 ) - sp2;\r\n" );
+
+    o += " " + n + "[1] -= sp2; " + n + "[0] -= sp1;"; return ( o );
+  },
 
   /***********************************************************************************
   Compile an matrix into an be-sequenced code for faster performance.
@@ -123,6 +138,7 @@ var AI_Mat = {
   ***********************************************************************************/
 
   Seq: [], SGeq: [], Geq: [],
+  SeqSp : [],
 
   /*****************************************************************************************
   Debug output not supported.
@@ -215,7 +231,7 @@ Set.prototype.gen = function( set )
 
     f += AI_Mat.MkD( "s", AI_Mat.PMat.slice( 0, c1 ) );
 
-    f += "   s.unshift( 0 ); g.unshift( 0 ); return( new DSet( s, g ) );\r\n};";
+    f += "   s.unshift( 0 ); g.unshift( 0 ); return( new DSet( s, g, [ 0, 0 ] ) );\r\n};";
 
     eval( f ); f = null; c1 = null; c2 = null;
 
@@ -252,11 +268,47 @@ Set.prototype.seq = function()
     eval( "AI_Mat.Seq[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n\
 	" + AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length ), false ) + "\r\n\
 	" + AI_Mat.MkD( "s", AI_Mat.PMat.slice( 0, this.length - 1 ), true ) + "\r\n\
-	  return( new DSet( s, [ 0 ] ) );\r\n}" );
+	  return( new DSet( s, [ 0 ], [ 0, 0 ] ) );\r\n}" );
 
     //Call function.
 
     t = AI_Mat.Seq[ this.length ]( this );
+  }
+
+  //Return Sequenced values.
+
+  return ( t );
+};
+
+/***********************************************************************************
+Decode all dimensional sequences along set plus spiral.
+***********************************************************************************/
+
+Set.prototype.seqsp = function()
+{
+  //Run Sequence function.
+
+  var t = 0; if ( t = AI_Mat.SeqSp[ this.length ] ) { t = t( this ); }
+
+  //Else setup function for first time use.
+  
+  else
+  {
+    //Adjust the matrix as necessary.
+
+    AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
+
+    //Create function.
+
+    eval( "AI_Mat.SeqSp[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n\
+	" + AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length ), false ) + "\r\n\
+  " + AI_Mat.MkSp( "s", this.length ) + "\r\n\r\n\
+	" + AI_Mat.MkD( "s", AI_Mat.PMat.slice( 0, this.length - 3 ), true ) + "\r\n\
+	  return( new DSet( s, [ 0 ], [ sp1, sp2 ] ) );\r\n}" );
+
+    //Call function.
+
+    t = AI_Mat.SeqSp[ this.length ]( this );
   }
 
   //Return Sequenced values.
@@ -287,7 +339,7 @@ Set.prototype.geo = function()
     eval( "AI_Mat.Geq[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n\
 	" + AI_Mat.MkS( "s", AI_Mat.PMat.slice( 0, this.length ), false ) + "\r\n  s.unshift( 0 );\r\n\r\n\
 	" + AI_Mat.MkD( "s", AI_Mat.SMat.slice( 0, this.length + 1 ), false ) + "\r\n\
-	  s[ 0 ] = 0; return( new DSet( [ 0 ], s ) );\r\n}" );
+	  s[ 0 ] = 0; return( new DSet( [ 0 ], s, [ 0, 0 ] ) );\r\n}" );
 
     //Call function.
 
@@ -311,9 +363,9 @@ DSet is the decoding of Seq, or Geo, or both. Takes two sets. The first set can 
 
 //Create two new sets that are in point format that are to be decoded.
 
-function DSet( seq, geo )
+function DSet( seq, geo, sp )
 {
-  this.seq = new Set( seq || [ 0 ] ); this.geo = new Set( geo || [ 0 ] );
+  this.seq = new Set( seq || [ 0 ] ); this.geo = new Set( geo || [ 0 ] ); this.sp = sp || [ 0, 0 ];
 
   //Is not filtered. Set already filtered if error correction is disabled.
 
@@ -411,6 +463,13 @@ DSet.prototype.getFunc = function()
 
   var code = "var f = function( x )\r\n{\r\n";
 
+  //Spiral sequence.
+  
+  if( this.sp[0] !== 0 && this.sp[1] !== 0 )
+  {
+    code += "  for( var i = 0, o = " + this.sp[1] + ", t = " + this.sp[0] + "; i < x; o = ( t += o ) - o, i++ ); \r\n\r\n"; init = true; s = true;
+  }
+
   for ( var i = 0; i < d.length || !sw; i++ )
   {
     if ( i === d.length ) { sw = true; d = this.geo; i = 0; }
@@ -431,7 +490,7 @@ DSet.prototype.getFunc = function()
 }
 
 /***********************************************************************************
-Convert set to HTML seting and color for each element.
+Convert set to HTML setting and color for each element.
 ***********************************************************************************/
 
 Set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace( /= /g, "= <font color=\"" + c + "\">" ).replace( /\r\n/g, "</font><br />" ) ); }

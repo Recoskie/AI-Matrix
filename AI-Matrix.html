@@ -119,7 +119,9 @@
 
       //Analyze data.
 
-      var d = Mode === 2 ? input.gen() : Mode === 0 ? input.seq() : input.geo();
+      var d = null;
+      
+      if ( Mode === 3 ) { d = input.seqsp(); } else if ( Mode === 2 ) { d = input.gen(); } else if ( Mode === 1 ) { d = input.geo(); } else { d = input.seq(); }
       
       //Matrix Debug output.
       
@@ -222,6 +224,17 @@
                 <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src='Buttons/geo-sum_pressed.gif'" onmouseup="this.src='Buttons/geo-sum.gif'" onclick="Solve(2)" />
 
                 <input type="image" src="Buttons/geo.gif" onmousedown="this.src='Buttons/geo_pressed.gif'" onmouseup="this.src='Buttons/geo.gif'" onclick="Solve(1)" />
+
+              </center>
+            </td>
+            <td>
+              <center>
+
+                <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)" />
+                
+                <div style="width:218;height:125px;"></div>
+                
+                <div style="width:185px;height:85;"></div>
 
               </center>
             </td>
