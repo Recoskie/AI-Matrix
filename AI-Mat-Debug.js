@@ -566,7 +566,7 @@ DSet.prototype.getFunc = function()
 
   //Spiral sequence.
   
-  if( this.sp[0] !== 0 && this.sp[1] !== 0 )
+  if( this.sp[0] !== 0 || this.sp[1] !== 0 )
   {
     code += "  for( var i = 0, o = " + this.sp[1] + ", t = " + this.sp[0] + "; i < x; o = ( t += o ) - o, i++ ); \r\n\r\n"; init = true; s = true;
   }
