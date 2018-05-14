@@ -138,7 +138,7 @@ var AI_Mat = {
   ***********************************************************************************/
 
   Seq: [], SGeq: [], Geq: [],
-  SeqSp: [],
+  SeqSp: [], GeqSp: [],
 
   /***********************************************************************************
   Output the table of an matrix.
@@ -215,8 +215,15 @@ var AI_Mat = {
 Setup an few Basic sequence functions.
 ***********************************************************************************/
 
-AI_Mat.SGeq[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( s, [ 0 ] ) ); };
-AI_Mat.SGeq[ 2 ] = function( s ) { var s = s.slice( 0 ); s[ 1 ] = s[ 1 ] - s[ 0 ]; s[ 0 ] -= s[ 1 ]; return ( new DSet( s, [ 0 ] ) ); }
+AI_Mat.SGeq[ 0 ] = function( s ) { return ( new DSet( [ 0 ], [ 0 ], [ 0, 0 ] ) ); };
+AI_Mat.SGeq[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); };
+AI_Mat.SGeq[ 2 ] = function( s ) { var s = s.slice( 0 ); s[ 1 ] = s[ 1 ] - s[ 0 ]; s[ 0 ] -= s[ 1 ]; return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); }
+
+AI_Mat.SeqSp[ 0 ] = function( s ) { return ( new DSet( [ 0 ], [ 0 ], [ 0, 0 ] ) ); };
+AI_Mat.SeqSp[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); };
+
+AI_Mat.GeqSp[ 0 ] = function( s ) { return ( new DSet( [ 0 ], [ 0 ], [ 0, 0 ] ) ); };
+AI_Mat.GeqSp[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( [ 0 ], s, [ 0, 0 ] ) ); };
 
 /***********************************************************************************
 An new set can be numbers per argument, or array of numbers, or set( string, radix ).
@@ -445,6 +452,80 @@ Set.prototype.geo = function()
   }
 
   AI_Mat.debug += "<hr /><h4>Note that you can copy the de-seqence function code if you wish to use it in any project.</h4><hr />";
+
+  //Return Sequenced values.
+
+  return ( t );
+};
+
+/***********************************************************************************
+Decode all dimensional geo expansion sequences along set plus spiral.
+***********************************************************************************/
+
+Set.prototype.geosp = function()
+{
+  //Adjust the matrix as necessary.
+
+  AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
+
+  //Debug output.
+
+  AI_Mat.debug += "<hr /><h2>Current Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
+  AI_Mat.debug += "<hr /><h2>Current Alingment Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
+  
+  //Run Sequence function.
+
+  var t = 0; if ( t = AI_Mat.GeqSp[ this.length ] ) { AI_Mat.debug += "<hr /><h2>Using Sequence function.</h2><hr />" + t.toString().html() + ""; t = t( this ); }
+
+  //Else setup function for first time use.
+  
+  else
+  {
+    //Adjust the matrix as necessary.
+
+    AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
+
+    //Create function.
+    
+    var code = "AI_Mat.GeqSp[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
+    
+    //Top spiral.
+    
+    for( var i = 0; i < this.length - 2; code += "  s[" + i + "] = s[" + ( i + 2 ) + "] - ( s[" + i + "] + s[" + ( i + 1 ) + "] );\r\n", i++ ); code += "\r\n";
+    
+    //Sequence matrix.
+    
+    code += AI_Mat.MkS( "s", AI_Mat.PMat.slice( 0, this.length - 2 ), false ) + "\r\n";
+    
+    //Aling decode matrix.
+
+    for( var i = 1, c = -1, b = 2, SMatSp = []; i < this.length - 1; SMatSp[ i - 1 ] = AI_Mat.SMat[ i ].map( x => x * c ), SMatSp[ i - 1 ].shift(), c += b, b += 2, i++ );
+
+    var temp = AI_Mat.MkD( "s", SMatSp, false ); for( var i = 0, i2 = this.length - 3, s = temp.split( "\r\n" ), temp = ""; i < s.length - 1; i++, i2-- )
+    {
+      temp += s[ i ] + " s[" + ( this.length - 2 ) + "] -= s[" + i2 + "] * " + Math.pow( i2 + 1, this.length - 1 ) + "; s[" + ( this.length - 1 ) + "] -= s[" + i2 + "] * " + Math.pow( i2 + 1, this.length ) + ";\r\n";
+    }
+    
+    code += temp + "\r\n"; temp = null;
+    
+    //Bottom spiral.
+    
+    code += "  var sp1 = s[" + ( this.length - 2 ) + "], sp2 = s[" + ( this.length - 1 ) + "];\r\n";
+    for( var i = 0; i < this.length - 1; code += "  sp1 = ( sp2 - ( sp2 = sp1 ) );\r\n", i++ );
+    code += "  s.unshift( 0 ); s.pop(); s.pop();\r\n";
+    
+    //Create function.
+    
+    eval( code + "\r\n  return( new DSet( [ 0 ], s, [ sp2, sp1 ] ) );\r\n}" );
+    
+    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.GeqSp[ this.length ].toString().html() + "";
+
+    //Call function.
+
+    t = AI_Mat.GeqSp[ this.length ]( this );
+  }
+  
+  AI_Mat.debug += "<hr /><h4>Note that you can copy the de-Sequence function code if you wish to use it in any project.</h4><hr />";
 
   //Return Sequenced values.
 
