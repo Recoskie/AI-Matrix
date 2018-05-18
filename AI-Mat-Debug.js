@@ -138,7 +138,7 @@ var AI_Mat = {
   ***********************************************************************************/
 
   Seq: [], SGeq: [], Geq: [],
-  SeqSp: [], GeqSp: [],
+  SeqSp: [], SGeqSp: [], GeqSp: [],
 
   /***********************************************************************************
   Output the table of an matrix.
@@ -254,78 +254,6 @@ var Set = function( str, radix )
 }
 
 /***********************************************************************************
-Decode all dimensional sequences, and geo expansion along set.
-***********************************************************************************/
-
-Set.prototype.gen = function( set )
-{
-  //Adjust the matrix as necessary.
-
-  AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
-
-  //Debug output.
-
-  AI_Mat.debug += "<hr /><h2>Current Sequence^Alignment Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
-  AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
-
-  //Run Sequence function.
-
-  var t = 0; if ( t = AI_Mat.SGeq[ this.length ] ) { AI_Mat.debug += "<hr /><h2>Using Sequence function.</h2><hr />" + t.toString().html() + ""; t = t( this ); }
-
-  //Else setup function for first time use.
-  
-  else
-  {
-    //Center align.
-
-    var c1 = Math.floor( this.length / 2 );
-    var c2 = this.length - c1;
-
-    //Create function.
-
-    var f = "AI_Mat.SGeq[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
-    f += AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length ), false ) + "\r\n  ";
-    f += "var g = s.slice( " + ( c1 + 1 ) + ", " + this.length + " ); s.length = " + ( c1 + 1 ) + "; s = s.slice( 0, " + ( c1 + 1 ) + " );\r\n\r\n";
-    f += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 2 ), true ) + "\r\n";
-    f += AI_Mat.MkD( "g", AI_Mat.SMat.slice( 0, c2 - 1 ), false ) + "  ";
-
-    for ( var i1 = 1; i1 < c2 - 1; f += "g[" + i1 + "] /= " + Math.pow( i1 + 1, c1 + 1 ) + "; ", i1++ ); f += "\r\n";
-
-    for ( var i1 = 0; i1 < c1 + 1; i1++ )
-    {
-      f += "  s[" + i1 + "] -= ";
-
-      for ( var i2 = 0; i2 < c2 - 1; i2++ )
-      {
-        f += "g[" + i2 + "]" + ( ( Math.pow( i2 + 1, i1 ) !== 1 ) ? " * " + Math.pow( i2 + 1, i1 ) : "") + ( ( i2 < c2 - 2 ) ? " + " : "" );
-      }
-
-      f += ";\r\n";
-    }
-
-    f += "\r\n  g.unshift( s.shift() );\r\n\r\n";
-
-    f += AI_Mat.MkD( "s", AI_Mat.PMat.slice( 0, c1 ) );
-
-    f += "   s.unshift( 0 ); g.unshift( 0 ); return( new DSet( s, g, [ 0, 0 ] ) );\r\n};";
-
-    eval(f); f = null; c1 = null; c2 = null;
-
-    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeq[ this.length ].toString().html() + "";
-
-    //Call function.
-
-    t = AI_Mat.SGeq[ this.length ]( this );
-  }
-
-  AI_Mat.debug += "<hr /><h4>Note that you can copy the de-sequence function code if you wish to use it in any project.</h4><hr />";
-
-  //Return Sequenced values.
-
-  return ( t );
-}
-
-/***********************************************************************************
 Decode all dimensional sequences along set.
 ***********************************************************************************/
 
@@ -415,6 +343,197 @@ Set.prototype.seqsp = function()
 };
 
 /***********************************************************************************
+Decode all dimensional sequences, and geo expansion along set.
+***********************************************************************************/
+
+Set.prototype.gen = function( set )
+{
+  //Adjust the matrix as necessary.
+
+  AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
+
+  //Debug output.
+
+  AI_Mat.debug += "<hr /><h2>Current Sequence^Alignment Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
+  AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
+
+  //Run Sequence function.
+
+  var t = 0; if ( t = AI_Mat.SGeq[ this.length ] ) { AI_Mat.debug += "<hr /><h2>Using Sequence function.</h2><hr />" + t.toString().html() + ""; t = t( this ); }
+
+  //Else setup function for first time use.
+  
+  else
+  {
+    //Center align.
+
+    var c1 = Math.floor( this.length / 2 );
+    var c2 = this.length - c1;
+
+    //Create function.
+
+    var f = "AI_Mat.SGeq[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
+    f += AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length ), false ) + "\r\n  ";
+    f += "var g = s.slice( " + ( c1 + 1 ) + ", " + this.length + " ); s.length = " + ( c1 + 1 ) + "; s = s.slice( 0, " + ( c1 + 1 ) + " );\r\n\r\n";
+    f += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 2 ), true ) + "\r\n";
+    f += AI_Mat.MkD( "g", AI_Mat.SMat.slice( 0, c2 - 1 ), false ) + "  ";
+
+    for ( var i1 = 1; i1 < c2 - 1; f += "g[" + i1 + "] /= " + Math.pow( i1 + 1, c1 + 1 ) + "; ", i1++ ); f += "\r\n";
+
+    for ( var i1 = 0; i1 < c1 + 1; i1++ )
+    {
+      f += "  s[" + i1 + "] -= ";
+
+      for ( var i2 = 0; i2 < c2 - 1; i2++ )
+      {
+        f += "g[" + i2 + "]" + ( ( Math.pow( i2 + 1, i1 ) !== 1 ) ? " * " + Math.pow( i2 + 1, i1 ) : "") + ( ( i2 < c2 - 2 ) ? " + " : "" );
+      }
+
+      f += ";\r\n";
+    }
+
+    f += "\r\n  g.unshift( s.shift() );\r\n\r\n";
+
+    f += AI_Mat.MkD( "s", AI_Mat.PMat.slice( 0, c1 ) );
+
+    f += "   s.unshift( 0 ); g.unshift( 0 ); return( new DSet( s, g, [ 0, 0 ] ) );\r\n};";
+
+    eval(f); f = null; c1 = null; c2 = null;
+
+    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeq[ this.length ].toString().html() + "";
+
+    //Call function.
+
+    t = AI_Mat.SGeq[ this.length ]( this );
+  }
+
+  AI_Mat.debug += "<hr /><h4>Note that you can copy the de-sequence function code if you wish to use it in any project.</h4><hr />";
+
+  //Return Sequenced values.
+
+  return ( t );
+}
+
+/***********************************************************************************
+Decode all dimensional sequences, and geo expansion along set plus spiral.
+***********************************************************************************/
+
+Set.prototype.gensp = function()
+{
+  //Adjust the matrix as necessary.
+
+  AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
+  
+  //Debug output.
+
+  AI_Mat.debug += "<hr /><h2>Current Sequence^Alignment Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.SMat );
+  AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
+  
+  //Run Sequence function.
+
+  var t = 0;
+  
+  if( this.length < 5 ) { return( this.geosp() ); }
+  
+  if ( t = AI_Mat.SGeqSp[ this.length ] ) { AI_Mat.debug += "<hr /><h2>Using Sequence function.</h2><hr />" + t.toString().html() + ""; t = t( this ); }
+
+  //Else setup function for first time use.
+  
+  else
+  {
+    //Center align.
+
+    var c1 = Math.floor( ( this.length - 2 ) / 2 );
+    var c2 = this.length - c1;
+
+    var code = "AI_Mat.SGeqSp[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
+    
+    //Top spiral.
+
+    for( var i = 0; i < this.length - 2; code += "  s[" + i + "] = s[" + ( i + 2 ) + "] - ( s[" + i + "] + s[" + ( i + 1 ) + "] );\r\n", i++ ); code += "\r\n";
+    
+    code += AI_Mat.MkS( "s", AI_Mat.SMat.slice( 0, this.length - 2 ), false ) + "\r\n";
+
+    //create the two sets between center alignment.
+
+    code += "  var sp1 = s[" + ( this.length - 2 ) + "], sp2 = s[" + ( this.length - 1 ) + "], g = []; s.length = " + ( this.length - 2 ) + "; g = s.slice( " + ( c1 + 1 ) + ", " + ( this.length - 2 ) + " ); s.length = " + ( c1 + 1 ) + "; s = s.slice( 0, " + ( c1 + 1 ) + " );\r\n\r\n";
+
+    //Decode geo
+
+    code += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 4 ), true ) + "\r\n";
+
+    //Adjust geo decode matrix.
+
+    for( var i = 0, c = 1, b = 4, SMatSp = []; i < c2 - 3; SMatSp[ i ] = AI_Mat.SMat[ i ].map( x => x * c * Math.pow( i + 1, c1 + 1 ) ), c += b, b += 2, i++ );
+
+    var temp = AI_Mat.MkD( "g", SMatSp, false ); for( var i = 0, i2 = c2 - 4, s = temp.split( "\r\n" ), temp = ""; i < c2 - 3; i++, i2-- )
+    {
+      temp += s[ i ] + " sp1 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 2 ) + "; sp2 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 1 ) + ";\r\n";
+    }
+    
+    code += temp + "\r\n"; temp = "";
+
+    //Remove geo from seq.
+
+    for ( var i1 = 0; i1 < c1 + 1; i1++ )
+    {
+      code += "  s[" + i1 + "] -= ";
+
+      for ( var i2 = 0, c = 1, b = 4; i2 < c2 - 3; i2++, c += b, b += 2 )
+      {
+        code += "g[" + i2 + "]" + ( ( Math.pow( i2 + 1, i1 ) * c !== 1 ) ? " * " + Math.pow( i2 + 1, i1 ) * c : "") + ( ( i2 < c2 - 4 ) ? " + " : "" );
+      }
+
+      code += ";\r\n";
+    }
+
+    code += "\r\n";
+
+    //Adjust Seq decode matrix.
+
+    for( var i1 = 0, PMatSp = [ [ -1 ] ]; i1 < c1; i1++ )
+    {
+      PMatSp[ i1 + 1 ] = [];
+      for( var i2 = 0; i2 < AI_Mat.PMat[ i1 ].length; i2++ )
+      {
+        PMatSp[ i1 + 1 ][ i2 ] = ( AI_Mat.PMat[ i1 ][ i2 + 2 ] || 0 ) + ( ( AI_Mat.PMat[ i1 ][ i2 + 1 ] || 0 ) - AI_Mat.PMat[ i1 ][ i2 ] );
+      }
+
+      PMatSp[ i1 + 1 ].unshift( ( AI_Mat.PMat[ i1 ][ 0 ] || 0 ) + ( AI_Mat.PMat[ i1 ][ 1 ] || 0 ) );
+    }
+
+    temp = AI_Mat.MkD( "s", PMatSp, false ); for( var i = 0, i2 = c1, s = temp.split( "\r\n" ), temp = ""; i < c1 + 1; i++, i2-- )
+    {
+      temp += s[ i ] + " sp1 -= s[" + i2 + "] * " + Math.pow( this.length - 2, i2 ) + "; sp2 -= s[" + i2 + "] * " + Math.pow( this.length - 1, i2 ) + ";\r\n";
+    }
+    
+    code += temp + "\r\n"; temp = null;
+    
+    //Bottom spiral.
+
+    for( var i = 0; i < this.length - 2; code += "  sp1 = ( sp2 - ( sp2 = sp1 ) );\r\n", i++ );
+    
+    //Create function.
+    
+    code += "\r\n  g.unshift( s.shift() ); g.unshift(0); s.unshift(0);\r\n";
+    
+    eval( code + "\r\n  return( new DSet( s, g, [ sp2, sp1 ] ) );\r\n}" );
+    
+    AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeqSp[ this.length ].toString().html() + "";
+
+    //Call function.
+
+    t = AI_Mat.SGeqSp[ this.length ]( this );
+  }
+  
+  AI_Mat.debug += "<hr /><h4>Note that you can copy the de-sequence function code if you wish to use it in any project.</h4><hr />";
+
+  //Return Sequenced values.
+
+  return ( t );
+};
+
+/***********************************************************************************
 Decode all dimensional geo expansion sequences along set.
 ***********************************************************************************/
 
@@ -481,10 +600,6 @@ Set.prototype.geosp = function()
   
   else
   {
-    //Adjust the matrix as necessary.
-
-    AI_Mat.adjustSMat( this.length ); AI_Mat.adjustPMat( this.length );
-
     //Create function.
     
     var code = "AI_Mat.GeqSp[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
@@ -649,7 +764,7 @@ DSet.prototype.getFunc = function()
   
   if( this.sp[0] !== 0 || this.sp[1] !== 0 )
   {
-    code += "  for( var i = 0, o = " + this.sp[1] + ", t = " + this.sp[0] + "; i < x; o = ( t += o ) - o, i++ ); \r\n\r\n"; init = true; s = true;
+    code += "  for( var d = x < 0 ? -1 : 1, i = x * d, o = " + this.sp[1] + " * d, t = " + this.sp[0] + " * d; i > 0; o = ( t += o ) - o, i-- );\r\n\r\n"; init = true; s = true;
   }
 
   for ( var i = 0; i < d.length || !sw; i++ )

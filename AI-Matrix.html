@@ -121,11 +121,8 @@
 
       var d = null;
       
-      if ( Mode === 5 ) { d = input.geosp(); }
-      else if ( Mode === 3 ) { d = input.seqsp(); }
-      else if ( Mode === 2 ) { d = input.gen(); }
-      else if ( Mode === 1 ) { d = input.geo(); }
-      else { d = input.seq(); }
+      if ( Mode === 5 ) { d = input.geosp(); } else if ( Mode === 4 ) { d = input.gensp(); } else if ( Mode === 3 ) { d = input.seqsp(); }
+      else if ( Mode === 2 ) { d = input.gen(); } else if ( Mode === 1 ) { d = input.geo(); } else { d = input.seq(); }
       
       //Matrix Debug output.
       
@@ -157,7 +154,7 @@
 
       for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ i + ( ( Mode === 2 ) ? 0 : -1 ) ] + "</center></td></tr>";
+        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ i + ( ( Mode === 2 || ( Mode === 4 && input.length >= 5 ) ) ? 0 : -1 ) ] + "</center></td></tr>";
       }
 
       output += "</table></center>";
@@ -236,7 +233,7 @@
 
                 <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)" />
                 
-                <div style="width:218;height:125px;"></div>
+                <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src='Buttons/geo-sum-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sum-sp.gif'" onclick="Solve(4)" />
                 
                 <input type="image" src="Buttons/geo-sp.gif" onmousedown="this.src='Buttons/geo-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sp.gif'" onclick="Solve(5)" />
 
