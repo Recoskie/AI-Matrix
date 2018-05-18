@@ -215,6 +215,9 @@ var AI_Mat = {
 Setup an few Basic sequence functions.
 ***********************************************************************************/
 
+AI_Mat.SGeqSp[ 0 ] = function( s ) { return ( new DSet( [ 0 ], [ 0 ], [ 0, 0 ] ) ); };
+AI_Mat.SGeqSp[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); };
+
 AI_Mat.SGeq[ 0 ] = function( s ) { return ( new DSet( [ 0 ], [ 0 ], [ 0, 0 ] ) ); };
 AI_Mat.SGeq[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); };
 AI_Mat.SGeq[ 2 ] = function( s ) { var s = s.slice( 0 ); s[ 1 ] = s[ 1 ] - s[ 0 ]; s[ 0 ] -= s[ 1 ]; return ( new DSet( s, [ 0 ], [ 0, 0 ] ) ); }
@@ -430,10 +433,6 @@ Set.prototype.gensp = function()
   AI_Mat.debug += "<hr /><h2>Current Alingment^Sequence Matrix.</h2><hr />"; AI_Mat.showMat( AI_Mat.PMat );
   
   //Run Sequence function.
-
-  var t = 0;
-  
-  if( this.length < 5 ) { return( this.geosp() ); }
   
   if ( t = AI_Mat.SGeqSp[ this.length ] ) { AI_Mat.debug += "<hr /><h2>Using Sequence function.</h2><hr />" + t.toString().html() + ""; t = t( this ); }
 
@@ -443,8 +442,8 @@ Set.prototype.gensp = function()
   {
     //Center align.
 
-    var c1 = Math.floor( ( this.length - 2 ) / 2 );
-    var c2 = this.length - c1;
+    var c1 = Math.floor( ( this.length - 2 ) / 2 ); //Seq split.
+    var c2 = this.length - c1; //Geo split.
 
     var code = "AI_Mat.SGeqSp[ " + this.length + " ] = function( s )\r\n{\r\n  var s = s.slice( 0 );\r\n\r\n";
     
@@ -460,34 +459,37 @@ Set.prototype.gensp = function()
 
     //Decode geo
 
-    code += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 4 ), true ) + "\r\n";
-
-    //Adjust geo decode matrix.
-
-    for( var i = 0, c = 1, b = 4, SMatSp = []; i < c2 - 3; SMatSp[ i ] = AI_Mat.SMat[ i ].map( x => x * c * Math.pow( i + 1, c1 + 1 ) ), c += b, b += 2, i++ );
-
-    var temp = AI_Mat.MkD( "g", SMatSp, false ); for( var i = 0, i2 = c2 - 4, s = temp.split( "\r\n" ), temp = ""; i < c2 - 3; i++, i2-- )
+    if( ( c2 - 3 ) > 0 )
     {
-      temp += s[ i ] + " sp1 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 2 ) + "; sp2 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 1 ) + ";\r\n";
-    }
-    
-    code += temp + "\r\n"; temp = "";
+      code += AI_Mat.MkS( "g", AI_Mat.PMat.slice( 0, c2 - 4 ), true ) + "\r\n";
 
-    //Remove geo from seq.
+      //Adjust geo decode matrix.
 
-    for ( var i1 = 0; i1 < c1 + 1; i1++ )
-    {
-      code += "  s[" + i1 + "] -= ";
+      for( var i = 0, c = 1, b = 4, SMatSp = []; i < c2 - 3; SMatSp[ i ] = AI_Mat.SMat[ i ].map( x => x * c * Math.pow( i + 1, c1 + 1 ) ), c += b, b += 2, i++ );
 
-      for ( var i2 = 0, c = 1, b = 4; i2 < c2 - 3; i2++, c += b, b += 2 )
+      var temp = AI_Mat.MkD( "g", SMatSp, false ); for( var i = 0, i2 = c2 - 4, s = temp.split( "\r\n" ), temp = ""; i < c2 - 3; i++, i2-- )
       {
-        code += "g[" + i2 + "]" + ( ( Math.pow( i2 + 1, i1 ) * c !== 1 ) ? " * " + Math.pow( i2 + 1, i1 ) * c : "") + ( ( i2 < c2 - 4 ) ? " + " : "" );
+        temp += s[ i ] + " sp1 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 2 ) + "; sp2 -= g[" + i2 + "] * " + Math.pow( i2 + 2, this.length - 1 ) + ";\r\n";
+      }
+      
+      code += temp + "\r\n"; temp = "";
+
+      //Remove geo from seq.
+
+      for ( var i1 = 0; i1 < c1 + 1; i1++ )
+      {
+        code += "  s[" + i1 + "] -= ";
+
+        for ( var i2 = 0, c = 1, b = 4; i2 < c2 - 3; i2++, c += b, b += 2 )
+        {
+          code += "g[" + i2 + "]" + ( ( Math.pow( i2 + 1, i1 ) * c !== 1 ) ? " * " + Math.pow( i2 + 1, i1 ) * c : "") + ( ( i2 < c2 - 4 ) ? " + " : "" );
+        }
+
+        code += ";\r\n";
       }
 
-      code += ";\r\n";
+      code += "\r\n";
     }
-
-    code += "\r\n";
 
     //Adjust Seq decode matrix.
 
@@ -504,7 +506,7 @@ Set.prototype.gensp = function()
 
     temp = AI_Mat.MkD( "s", PMatSp, false ); for( var i = 0, i2 = c1, s = temp.split( "\r\n" ), temp = ""; i < c1 + 1; i++, i2-- )
     {
-      temp += s[ i ] + " sp1 -= s[" + i2 + "] * " + Math.pow( this.length - 2, i2 ) + "; sp2 -= s[" + i2 + "] * " + Math.pow( this.length - 1, i2 ) + ";\r\n";
+      temp += s[ i ] + "  sp1 -= s[" + i2 + "] * " + Math.pow( this.length - 2, i2 ) + "; sp2 -= s[" + i2 + "] * " + Math.pow( this.length - 1, i2 ) + ";\r\n";
     }
     
     code += temp + "\r\n"; temp = null;
@@ -515,9 +517,7 @@ Set.prototype.gensp = function()
     
     //Create function.
     
-    code += "\r\n  g.unshift( s.shift() ); g.unshift(0); s.unshift(0);\r\n";
-    
-    eval( code + "\r\n  return( new DSet( s, g, [ sp2, sp1 ] ) );\r\n}" );
+    eval( code + "\r\n  g.unshift( s.shift() ); g.unshift(0); s.unshift(0);\r\n\r\n  return( new DSet( s, g, [ sp2, sp1 ] ) );\r\n}" );
     
     AI_Mat.debug += "<hr /><h2>Using Compiled function.</h2><hr />" + AI_Mat.SGeqSp[ this.length ].toString().html() + "";
 
