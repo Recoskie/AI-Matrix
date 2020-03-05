@@ -369,7 +369,10 @@ Set.prototype.gensp = function()
 
       //Adjust geo decode matrix.
 
-      for( var i = 0, c = 1, b = 4, SMatSp = []; i < c2 - 3; SMatSp[ i ] = AI_Mat.SMat[ i ].map( x => x * c * Math.pow( i + 1, c1 + 1 ) ), c += b, b += 2, i++ );
+      for (var i1 = 0, c = 1, b = 4, SMatSp = []; i1 < c2 - 3; c += b, b += 2, i1++ )
+      {
+        SMatSp[i1] = []; for (var i2 = 0; i2 < AI_Mat.SMat[i1].length; SMatSp[i1][i2] = AI_Mat.SMat[i1][i2] * c * Math.pow(i1 + 1, c1 + 1), i2++);
+      }
 
       var temp = AI_Mat.MkD( "g", SMatSp, false ); for( var i = 0, i2 = c2 - 4, s = temp.split( "\r\n" ), temp = ""; i < c2 - 3; i++, i2-- )
       {
@@ -498,9 +501,16 @@ Set.prototype.geosp = function()
     
     code += AI_Mat.MkS( "s", AI_Mat.PMat.slice( 0, this.length - 2 ), false ) + "\r\n";
     
-    //Aling decode matrix.
+    //Align decode matrix.
 
-    for( var i = 1, c = -1, b = 2, SMatSp = []; i < this.length - 1; SMatSp[ i - 1 ] = AI_Mat.SMat[ i ].map( x => x * c ), SMatSp[ i - 1 ].shift(), c += b, b += 2, i++ );
+    for (var i1 = 1, c = -1, b = 2, SMatSp = []; i1 < this.length - 1; c += b, b += 2, i1++)
+    {
+      SMatSp[i1 - 1] = [];
+
+      for (var i2 = 0; i2 < AI_Mat.SMat[i1].length; SMatSp[i1 - 1][i2] = AI_Mat.SMat[i1][i2] * c, i2++);
+
+      SMatSp[i1 - 1].shift();
+    }
 
     var temp = AI_Mat.MkD( "s", SMatSp, false ); for( var i = 0, i2 = this.length - 3, s = temp.split( "\r\n" ), temp = ""; i < s.length - 1; i++, i2-- )
     {
