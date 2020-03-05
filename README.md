@@ -2,6 +2,8 @@
 
 **AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
 
+AI Matrix Web Page: <a href="http://recoskie.github.io/AI-Matrix/AI-Matrix.html">Link</a><br />
+
 Below are very basic example uses without phase shifting, solving continued functions in data, or fractaling. <br />
 
 <a href="https://github.com/Recoskie/AI-Matrix#basic-library-use-and-reference">Skip to Reference, and use.</a>
