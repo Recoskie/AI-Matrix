@@ -973,5 +973,118 @@ for( var x = 0; x < 20; x++)
   This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional like in the example.<br />
   You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
   This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
+
+  <h2>Solve All Patterns plus multiple Fibonacci sequences.</h2>
+  The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
+  This solves both geo, sequential dimensional values, and Fibonacci sequences.
+
+  <!--Example #17-->
+
+<textarea class="c" rows="40" id="e17">//Sequence everything. Plus multiple Fibonacci sequences.
+
+var o = Math.round(Math.random() * 1000);
+
+var g1 = Math.round(Math.random() * 1000);
+var g2 = Math.round(Math.random() * 1000);
+var g3 = Math.round(Math.random() * 1000);
+
+var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
+var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
+var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
+var o7 = Math.round(Math.random() * 1000), o8 = Math.round(Math.random() * 1000);
+var o9 = Math.round(Math.random() * 1000), o10 = Math.round(Math.random() * 1000);
+
+var d1 = Math.round(Math.random() * 1000);
+var d2 = Math.round(Math.random() * 1000);
+var d3 = Math.round(Math.random() * 1000);
+var d4 = Math.round(Math.random() * 1000);
+var d5 = Math.round(Math.random() * 1000);
+var d6 = Math.round(Math.random() * 1000);
+var d7 = Math.round(Math.random() * 1000);
+
+var values = [];
+
+for( var i1 = 0; i1 < 16; i1++)
+{
+  o2 = o1 + ( o1 = o2 );
+  o4 = o3 + ( o3 = o4 );
+  o6 = o5 + ( o5 = o6 );
+  o8 = o7 + ( o7 = o8 );
+  o10 = o9 + ( o9 = o10 );
+
+  g1 = g1 * 2;
+  g2 = g2 * 3;
+  g3 = g3 * 4;
+
+  o += d1;
+
+  for( var i2 = 0; i2 < i1; i2++ )
+  {
+    o += d2;
+
+    for( var i3 = 0; i3 < i2; i3++ )
+    {
+      o += d3;
+
+      for( var i4 = 0; i4 < i3; i4++ )
+      {
+        o += d4;
+
+        for( var i5 = 0; i5 < i4; i5++ )
+        {
+          o += d5;
+
+          for( var i6 = 0; i6 < i5; i6++ )
+          {
+            o += d6;
+
+            for( var i7 = 0; i7 < i6; i7++ )
+            {
+              o += d7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  values[i1] = o + g1 + g2 + g3 + o1 + o3 + o5 + o7 + o9;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.gensp();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="40" id="e17o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e17');" value="Run code." />
+
+  <!--End Example #17-->
+
+  <br /><br />
+
+  The highest dimensional sequence is 7. Thus the heights dimensional geometric sequence is 3. Just like the regular <h4 style="display:inline-block;">geo();</h4> you need a minim of 7+7=14 values to equally line up the dimensions across the set.<br />
+  Plus an additional 14+2=16, because of the rotation. Although that is the minimum amount of values needed to line up the produced set. In many cases you are not going to know the minim number values to line the set up. You can go higher and it should still solve out to the same function.<br />
+  This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires less data to make sense of the data.<br />
+  I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI or bot.
 </body>
 </html>
