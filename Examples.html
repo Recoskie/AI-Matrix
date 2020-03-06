@@ -48,7 +48,8 @@
     console.log = function (msg) { output += msg + "\r\n"; }
 
     var output = "";
-  </script>
+
+/**/</script>
 
   <h1>Indexed contents.</h1>
   Warning it is important you read each section in order. As there is many basics explained and are not re explained in later sections.
@@ -56,7 +57,7 @@
   Creating A set: <a href="#sets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
   Fibonacci sequence: <a href="#seqsp">Link</a><br />
-  Geometric sequence: <a href="#geo">Link</a>
+  Geometric sequence: <a href="#geo">Link</a><br />
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that analyze data. Write functions for data. Thus act on self programming and data. Are the future.</h3>
@@ -749,6 +750,126 @@ for( var x = 0; x < 20; x++)
   So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
 
   <a id="geo"><h1>Geometric sequences.</h1></a>
-  Flipping the matrix upside down allows you to solve all geometric sequences.
+  Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
+
+  <!--Example #14-->
+
+  <textarea class="c" rows="40" id="e14">//Geometric sequence.
+
+var o = Math.round(Math.random()*1000);
+
+var g1 = Math.round(Math.random()*1000);
+var g2 = Math.round(Math.random()*1000);
+var g3 = Math.round(Math.random()*1000);
+
+var values = [];
+
+for( var i = 0; i < 12; i++)
+{
+  g1 = g1 * 2;
+  g2 = g2 * 3;
+  g3 = g3 * 4;
+
+  values[i] = o + g1 + g2 + g3;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.geo();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="40" id="e14o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e14');" value="Run code." />
+
+  <!--End Example #14-->
+
+  <br /><br />
+  Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
+  It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minim of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
+
+  <h2>Geo Sequence Plus Fibonacci.</h2>
+
+  In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
+
+  <!--Example #15-->
+
+  <textarea class="c" rows="40" id="e15">//Geometric sequence Plus multiple Fibonacci.
+
+var o = Math.round(Math.random()*1000);
+
+var g1 = Math.round(Math.random()*1000);
+var g2 = Math.round(Math.random()*1000);
+var g3 = Math.round(Math.random()*1000);
+
+var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
+var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
+var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
+
+var values = [];
+
+for( var i = 0; i < 12; i++)
+{
+  o2 = o1 + ( o1 = o2 );
+  o4 = o3 + ( o3 = o4 );
+  o6 = o5 + ( o5 = o6 );
+
+  g1 = g1 * 2;
+  g2 = g2 * 3;
+  g3 = g3 * 4;
+
+  values[i] = o + g1 + g2 + g3 + o1 + o3 + o5;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.geosp();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="40" id="e15o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e15');" value="Run code." />
+
+  <!--End Example #15-->
+  <br /><br />
+  The highest geometric dimension is 4 in this example so you need a minimum of 5 values to line it up.<br />
+  Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in a set at minim.<br />
+  This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are separated.
 </body>
 </html>
