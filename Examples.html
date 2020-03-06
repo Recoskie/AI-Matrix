@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
   <title>AI-Mat Examples.</title>
 </head>
@@ -48,7 +48,9 @@
     console.log = function (msg) { output += msg + "\r\n"; }
 
     var output = "";
-  </script>
+
+
+/**/</script>
 
   <h1>Indexed contents.</h1>
 
@@ -71,9 +73,9 @@
 
   <textarea class="c" rows="10" id="e1">//Method one. Creating a set.
 
-  var My_set = new Set( 10, 20, 30 );
+var My_set = new Set( 10, 20, 30 );
 
-  console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
+ console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
   <br />
   <input style="width:100%;" type="button" onclick="runExamp('e1');" value="Run code." />
 
@@ -87,11 +89,11 @@
 
   <textarea class="c" rows="10" id="e2">//Method two. Creating a set.
 
-  var text = "77, 160, 911";
+var text = "77, 160, 911";
 
-  var My_set = new Set( text );
+var My_set = new Set( text );
 
-  console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
+console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
   <br />
   <input style="width:100%;" type="button" onclick="runExamp('e2');" value="Run code." />
 
@@ -105,14 +107,14 @@
 
   <textarea class="c" rows="13" id="e3">//Method two. Creating a set.
 
-  var text = "10, 20, Z, 30";
+var text = "10, 20, Z, 30";
 
-  var My_set;
+var My_set;
 
-  try { var My_set = new Set( text ); }
-  catch( e ){ console.log("Bad Input!"); }
+try { var My_set = new Set( text ); }
+catch( e ){ console.log("Bad Input!"); }
 
-  console.log( My_set );</textarea><textarea class="o" rows="13" id="e3o" readonly>Console output.</textarea>
+console.log( My_set );</textarea><textarea class="o" rows="13" id="e3o" readonly>Console output.</textarea>
   <input style="width:100%;" type="button" onclick="runExamp('e3');" value="Run code." />
 
   <!--End Example #3-->
@@ -129,21 +131,21 @@
 
   <textarea class="c" rows="20" id="e4">//Method three. Creating a set.
 
-  var o = 7;
+var o = 7;
 
-  var values = [];
+var values = [];
 
-  for( var i = 0; i < 10; i++)
-  {
-    o += 5;
-    values[i] = o;
-  }
-  
-  //Create the set using the values.
-  
-  var My_set = new Set( values );
+for( var i = 0; i < 10; i++)
+{
+  o += 5;
+  values[i] = o;
+}
 
-  console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly>Console output.</textarea>
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly>Console output.</textarea>
   <input style="width:100%;" type="button" onclick="runExamp('e4');" value="Run code." />
 
   <!--End Example #4-->
@@ -158,6 +160,376 @@
   </h4>
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
   <a id="seq"><h1>Solving sequences.</h1></a>
-  Reached the end of the examples page. More will be added soon.
+  So in the previous example in which I showed you how to create a set dynamically using an array. I will show you how to analyze a set.<br />
+  The basic set Method <h4 style="display:inline-block">seq();</h4> is the most vital sequencing function.
+  <br />
+
+  <!--Example #5-->
+
+  <textarea class="c" rows="24" id="e5">//Method one. Sequencing a set.
+
+var o = 7;
+
+var values = [];
+
+for( var i = 0; i < 10; i++)
+{
+  o += 5;
+  values[i] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );</textarea><textarea class="o" rows="24" id="e5o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e5');" value="Run code." />
+
+  <!--End Example #5-->
+
+  <br /><br />
+
+  First we output the set to the console window. As we did before in creating the set. Then we output the seq operation to the console.<br />
+  Which outputs a math calculation that calculates the numbers in our set (7+X*5).<br />
+  You can change the starting value 7 to what ever you like. Thus the amount added by in the loop.<br />
+
+  <h2>Creating and running a function from a analyzed set.</h2>
+
+  <!--Example #6-->
+
+  <textarea class="c" rows="24" id="e6">//Creating and running a function.
+
+var o = 7;
+
+var values = [];
+
+for( var i = 0; i < 10; i++)
+{
+  o += 5;
+  values[i] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="24" id="e6o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e6');" value="Run code." />
+
+  <!--End Example #6-->
+
+  <br /><br />
+  In order to get a usable function we call the method <h4 style="display:inline-block;">getFunc()</h4> on our sequenced variable.<br />
+  We then can give our new function each "x" and it should give us the same results. As you can see we are iterating 20 times as long as x is less than 20.<br />
+  Remember these examples are completely interactive and you can change anything you like in them.<br />
+
+  <h2>2 Dimensional set.</h2>
+
+  <!--Example #7-->
+
+  <textarea class="c" rows="24" id="e7">//2 Dimensional set.
+
+var o = 7;
+
+var values = [];
+
+for( var i1 = 0; i1 < 10; i1++)
+{
+  o += 5;
+
+  for( var i2 = 0; i2 < i1; i2++ ){ o += 76; }
+
+  values[i1] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="24" id="e7o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e7');" value="Run code." />
+
+  <!--End Example #7-->
+
+  <br /><br />
+  So now we are adding 76 more in the second dimension.
+  <br /><br />
+  If you change "var o = 7;" to "var o = 0;".<br />
+  Then change "o += 5;" to "o += 1;".<br />
+  Then change "o += 76;" to "o += 2;"
+  <br /><br />
+  You will create a set that goes as follows 0,1,4,9,16,25,36,49,64,81,100. Which is x squared.<br /><br />
+  Basically you can create any 2 dimensional set and convert back to a math function.<br />
+
+  <h2>3 dimensional set.</h2>
+
+  <!--Example #8-->
+
+  <textarea class="c" rows="24" id="e8">//3 Dimensional set.
+
+var o = 7;
+
+var values = [];
+
+for( var i1 = 0; i1 < 10; i1++)
+{
+  o += 5;
+
+  for( var i2 = 0; i2 < i1; i2++ )
+  {
+    o += 76;
+
+    for( var i3 = 0; i3 < i2; i3++ ) { o += 21; }
+  }
+
+  values[i1] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="24" id="e8o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e8');" value="Run code." />
+
+  <!--End Example #8-->
+
+  <br /><br />
+  So now we are adding 21 more in the third dimension.
+  <br /><br />
+  If you change "var o = 7;" to "var o = 0;".<br />
+  Then change "o += 5;" to "o += 1;".<br />
+  Then change "o += 76;" to "o += 6;".<br />
+  Then change "o += 21;" to "o += 6;".
+  <br /><br />
+  You will create a set that goes as follows 0,1,8,27,64,125,216,343,512,729,1000. Which is x cubed.<br /><br />
+  Basically you can create any 3 dimensional set and convert back to a math function.<br />
+
+  <h2>4 dimensional set.</h2>
+
+  <!--Example #9-->
+
+  <textarea class="c" rows="24" id="e9">//4 Dimensional set.
+
+var o = 7;
+
+var values = [];
+
+for( var i1 = 0; i1 < 10; i1++)
+{
+  o += 5;
+
+  for( var i2 = 0; i2 < i1; i2++ )
+  {
+    o += 76;
+
+    for( var i3 = 0; i3 < i2; i3++ )
+    {
+      o += 21;
+
+      for( var i4 = 0; i4 < i3; i4++ ) { o += 711; }
+    }
+  }
+
+  values[i1] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="24" id="e9o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e9');" value="Run code." />
+
+  <!--End Example #9-->
+
+  <br /><br />
+  So now we are adding 711 more in the fourth dimension.
+  <br /><br />
+  If you change "var o = 7;" to "var o = 0;".<br />
+  Then change "o += 5;" to "o += 1;".<br />
+  Then change "o += 76;" to "o += 14;".<br />
+  Then change "o += 21;" to "o += 36;".<br />
+  Then change "o += 21;" to "o += 24;".
+  <br /><br />
+  You will create a set that goes as follows 0,1,16,81,256,625,1296,2401,4096,6561,10000. Which is x to the power of 4.<br /><br />
+  Basically you can create any 4 dimensional set and convert back to a math function.<br />
+  There is no end in how high of dimension you can go using this analysis tool.
+
+  <h2>7 dimensional data randomized.</h2>
+
+  <!--Example #10-->
+
+  <textarea class="c" rows="40" id="e10">//4 Dimensional set.
+
+var o = Math.round(Math.random() * 1000);
+var d1 = Math.round(Math.random() * 1000);
+var d2 = Math.round(Math.random() * 1000);
+var d3 = Math.round(Math.random() * 1000);
+var d4 = Math.round(Math.random() * 1000);
+var d5 = Math.round(Math.random() * 1000);
+var d6 = Math.round(Math.random() * 1000);
+var d7 = Math.round(Math.random() * 1000);
+
+var values = [];
+
+for( var i1 = 0; i1 < 10; i1++)
+{
+  o += d1;
+
+  for( var i2 = 0; i2 < i1; i2++ )
+  {
+    o += d2;
+
+    for( var i3 = 0; i3 < i2; i3++ )
+    {
+      o += d3;
+
+      for( var i4 = 0; i4 < i3; i4++ )
+      {
+        o += d4;
+
+        for( var i5 = 0; i5 < i4; i5++ )
+        {
+          o += d5;
+
+          for( var i6 = 0; i6 < i5; i6++ )
+          {
+            o += d6;
+
+            for( var i7 = 0; i7 < i6; i7++ )
+            {
+              o += d7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  values[i1] = o;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.seq();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="40" id="e10o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e10');" value="Run code." />
+
+  <!--End Example #10-->
+
+  <br /><br />
+  This time we try our best to confuse it. However no matter how many randomized sets it creates they all reduce to that of what they came.<br />
+  Basically this AI matrix is a fractal hologram of all dimensions unified. For example if you ware given a set of random set of values. You can actually sequence all values in all dimensions into a formula instantly.
+  <br />
+  <h1>Geometric data.</h1>
+  You have reach the end of the examples page. More will be added soon.
 </body>
-  </html>
+</html>
