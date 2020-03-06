@@ -4,7 +4,6 @@
 </head>
 <body>
   <style type="text/css">
-
     <!--
     @media (orientation: landscape) {
       textarea.c {
@@ -56,9 +55,11 @@
   <br /><br />
   Creating A set: <a href="#sets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
-  Fibonacci sequence: <a href="#seqsp">Link</a>
+  Fibonacci sequence: <a href="#seqsp">Link</a><br />
+  Geometric sequence: <a href="#geo">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
+  <h3>Machines that analyze data. Write functions for data. Thus act on self programming and data. Are the future.</h3>
 
   <h1><a id="sets">Creating A set.</a></h1>
 
@@ -76,7 +77,7 @@
 
 var My_set = new Set( 10, 20, 30 );
 
- console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
+console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
   <br />
   <input style="width:100%;" type="button" onclick="runExamp('e1');" value="Run code." />
 
@@ -598,7 +599,7 @@ for( var x = 0; x < 20; x++)
 
   <h2>Multiple Fibonacci sequences.</h2>
 
-  Even as cool as what this seems you can actually add together as many Fibonacci sequences together as you like, and calculate all using only one.
+  Even as cool as what this seems. You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one.
 
   <br /><br />
 
@@ -741,10 +742,13 @@ for( var x = 0; x < 20; x++)
 
   <!--End Example #13-->
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
-  The reason why I separated them is that it takes extra two values in a set to line the set up using the rotation.<br />
+  The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
   So lets say it is mixed with a Fibonacci sequence and we need to rotate the matrix to solve it. Then 8 numbers are not enough to solve all 7 dimensions mixed with the Fibonacci sequence.<br />
   We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minim of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
-  So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>
+  So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
+
+  <a id="geo"><h1>Geometric sequences.</h1></a>
+  Flipping the matrix upside down allows you to solve all geometric sequences.
 </body>
 </html>
