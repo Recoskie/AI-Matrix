@@ -1,0 +1,163 @@
+﻿<html>
+<head>
+  <title>AI-Mat Examples.</title>
+</head>
+<body>
+  <style type="text/css">
+    <!--
+    @media (orientation: landscape) {
+      textarea.c {
+        resize: none;
+        width: 70%;
+        max-height: 70%;
+      }
+
+      textarea.o {
+        resize: none;
+        width: 30%;
+        max-height: 70%;
+      }
+    }
+
+    @media (orientation: portrait) {
+      textarea.c {
+        resize: none;
+        width: 100%;
+        max-height: 40%;
+      }
+
+      textarea.o {
+        resize: none;
+        width: 100%;
+        max-height: 20%;
+      }
+    }
+    -->
+  </style>
+  <script src="AI-Mat.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function runExamp(id)
+    {
+      var code = document.getElementById(id).value;
+
+      try { eval(code); } catch (e) { console.log(e.toString()); }
+
+      document.getElementById(id + "o").value = output; output = "";
+    }
+
+    console.log = function (msg) { output += msg + "\r\n"; }
+
+    var output = "";
+  </script>
+
+  <h1>Indexed contents.</h1>
+
+  Creating A set: <a href="#sets">Link</a><br />
+  Solving sequences: <a href="#seq">Link</a>
+
+  <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
+
+  <h1><a id="sets">Creating A set.</a></h1>
+
+  1. Sets are used to setup a set of data you wish to analyze.<br />
+  2. There are three ways to create a set.<br />
+  3. Sets can also be dynamically created by algorithms. By dynamically creating an array of values.<br />
+
+  <h3>Method One.</h3>
+  The preferred method. Use it when possible.
+  <br /><br />
+
+  <!--Example #1-->
+
+  <textarea class="c" rows="10" id="e1">//Method one. Creating a set.
+
+  var My_set = new Set( 10, 20, 30 );
+
+  console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
+  <br />
+  <input style="width:100%;" type="button" onclick="runExamp('e1');" value="Run code." />
+
+  <!--End Example #1-->
+
+  <h3>Method Two.</h3>
+  Use this method when getting input from a text box, or text file.
+  <br /><br />
+
+  <!--Example #2-->
+
+  <textarea class="c" rows="10" id="e2">//Method two. Creating a set.
+
+  var text = "77, 160, 911";
+
+  var My_set = new Set( text );
+
+  console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
+  <br />
+  <input style="width:100%;" type="button" onclick="runExamp('e2');" value="Run code." />
+
+  <!--End Example #2-->
+
+  <br /><br />
+  If a invalid input is used. You can use try and catch to warn the user of invalid input.
+  <br /><br />
+
+  <!--Example #3-->
+
+  <textarea class="c" rows="13" id="e3">//Method two. Creating a set.
+
+  var text = "10, 20, Z, 30";
+
+  var My_set;
+
+  try { var My_set = new Set( text ); }
+  catch( e ){ console.log("Bad Input!"); }
+
+  console.log( My_set );</textarea><textarea class="o" rows="13" id="e3o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e3');" value="Run code." />
+
+  <!--End Example #3-->
+
+  <br /><br />
+  If you remove "Z" then there will be no error.
+  <br />
+  <h3>Dynamically creating data, and sets.</h3>
+
+  Assuming we have an variable called "o", and we set it 7. Thus then we chose to add 7 by 5 ten times.
+  <br /><br />
+
+  <!--Example #4-->
+
+  <textarea class="c" rows="20" id="e4">//Method three. Creating a set.
+
+  var o = 7;
+
+  var values = [];
+
+  for( var i = 0; i < 10; i++)
+  {
+    o += 5;
+    values[i] = o;
+  }
+  
+  //Create the set using the values.
+  
+  var My_set = new Set( values );
+
+  console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e4');" value="Run code." />
+
+  <!--End Example #4-->
+
+  <br /><br />
+  You can skip the explanation of the code if you already understand it.
+  <br />
+  <h4>
+    As long as variable "i" is less than ten the loop runs the same code in the braces (you can change 10 to a larger number).<br />
+    Variable "i" is added by one each time the loop starts over. Thus variable "o" is added by 5 each time.<br />
+    Thus variable "i" selects "values[i]" which element. Then set it to the current value of variable "o" as "values[i] = o;". As variable "o" adds by 5.
+  </h4>
+  You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
+  <a id="seq"><h1>Solving sequences.</h1></a>
+  Reached the end of the examples page. More will be added soon.
+</body>
+  </html>
