@@ -48,8 +48,7 @@
     console.log = function (msg) { output += msg + "\r\n"; }
 
     var output = "";
-
-/**/</script>
+  </script>
 
   <h1>Indexed contents.</h1>
   Warning it is important you read each section in order. As there is many basics explained and are not re explained in later sections.
@@ -58,6 +57,7 @@
   Solving sequences: <a href="#seq">Link</a><br />
   Fibonacci sequence: <a href="#seqsp">Link</a><br />
   Geometric sequence: <a href="#geo">Link</a><br />
+  All sequences: <a href="#gen">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that analyze data. Write functions for data. Thus act on self programming and data. Are the future.</h3>
@@ -871,5 +871,14 @@ for( var x = 0; x < 20; x++)
   The highest geometric dimension is 4 in this example so you need a minimum of 5 values to line it up.<br />
   Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in a set at minim.<br />
   This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are separated.
+
+  <a id="gen"><h1>Solve All Patterns.</h1></a>
+  Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns function <h4 style="display:inline-block;">gen();</h4>.
+  <br /><br />
+  The only time you will want to use this method is when you know the data is going to be all over the place and you want a reliable method that solves all patterns.<br />
+  In order for this method to work. It splits the matrix between upside down, and right side up.<br />
+  This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional.<br />
+  You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence even though the geometric only needs three dimensions in alignment.<br />
+  This means your sets must be twice as long than the highest dimension weather it be geo, or sequential to line up dimensions properly.
 </body>
 </html>
