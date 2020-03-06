@@ -51,7 +51,7 @@
   </script>
 
   <h1>Indexed contents.</h1>
-  Warning it is important you read each section in order. As there is many basics explained and are not re explained in later sections.
+  Warning it is important you read each section in order. As there is many basics that are explained, and are not re-explained in later sections.
   <br /><br />
   Creating A set: <a href="#sets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
@@ -873,12 +873,105 @@ for( var x = 0; x < 20; x++)
   This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are separated.
 
   <a id="gen"><h1>Solve All Patterns.</h1></a>
-  Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns function <h4 style="display:inline-block;">gen();</h4>.
+  Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
+
+
+  <!--Example #16-->
+
+  <textarea class="c" rows="40" id="e16">//Sequence everything.
+
+var o = Math.round(Math.random()*1000);
+
+var g1 = Math.round(Math.random()*1000);
+var g2 = Math.round(Math.random()*1000);
+var g3 = Math.round(Math.random()*1000);
+
+var d1 = Math.round(Math.random() * 1000);
+var d2 = Math.round(Math.random() * 1000);
+var d3 = Math.round(Math.random() * 1000);
+var d4 = Math.round(Math.random() * 1000);
+var d5 = Math.round(Math.random() * 1000);
+var d6 = Math.round(Math.random() * 1000);
+var d7 = Math.round(Math.random() * 1000);
+
+var values = [];
+
+for( var i1 = 0; i1 < 15; i1++)
+{
+  g1 = g1 * 2;
+  g2 = g2 * 3;
+  g3 = g3 * 4;
+
+  o += d1;
+
+  for( var i2 = 0; i2 < i1; i2++ )
+  {
+    o += d2;
+
+    for( var i3 = 0; i3 < i2; i3++ )
+    {
+      o += d3;
+
+      for( var i4 = 0; i4 < i3; i4++ )
+      {
+        o += d4;
+
+        for( var i5 = 0; i5 < i4; i5++ )
+        {
+          o += d5;
+
+          for( var i6 = 0; i6 < i5; i6++ )
+          {
+            o += d6;
+
+            for( var i7 = 0; i7 < i6; i7++ )
+            {
+              o += d7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  values[i1] = o + g1 + g2 + g3;
+}
+
+//Create the set using the values.
+
+var My_set = new Set( values );
+
+console.log( My_set );
+
+//Sequence the set.
+
+var My_seq = My_set.gen();
+
+console.log( My_seq );
+
+//Get the function of a analyzed set.
+
+var My_func = My_seq.getFunc();
+
+console.log( My_func );
+
+//Calculate values using the function.
+
+for( var x = 0; x < 20; x++)
+{
+  console.log( My_func( x ) );
+}
+</textarea><textarea class="o" rows="40" id="e16o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e16');" value="Run code." />
+
+  <!--End Example #16-->
+
   <br /><br />
-  The only time you will want to use this method is when you know the data is going to be all over the place and you want a reliable method that solves all patterns.<br />
+  <h4>The only time you will want to use this method is when you know the data is going to be all over the place and you want a reliable method that solves all patterns.</h4>
+  <br />
   In order for this method to work. It splits the matrix between upside down, and right side up.<br />
-  This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional.<br />
-  You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence even though the geometric only needs three dimensions in alignment.<br />
-  This means your sets must be twice as long than the highest dimension weather it be geo, or sequential to line up dimensions properly.
+  This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional like in the example.<br />
+  You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
+  This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
 </body>
 </html>
