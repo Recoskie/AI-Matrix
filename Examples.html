@@ -54,10 +54,8 @@
   Warning it is important you read each section in order. As there is many basics that are explained, and are not re-explained in later sections.
   <br /><br />
   Creating A set: <a href="#sets">Link</a><br />
+  Manipulating A set: <a href="#msets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
-  Fibonacci sequence: <a href="#seqsp">Link</a><br />
-  Geometric sequence: <a href="#geo">Link</a><br />
-  All sequences: <a href="#gen">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that analyze data. Write functions for data. Thus act on self programming and data. Are the future.</h3>
@@ -162,8 +160,18 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
     Thus variable "i" selects "values[i]" which element. Then set it to the current value of variable "o" as "values[i] = o;". As variable "o" adds by 5.
   </h4>
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
+
   <a id="seq"><h1>Solving sequences.</h1></a>
-  So in the previous example in which I showed you how to create a set dynamically using an array. I will show you how to analyze a set.<br />
+
+  The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
+
+  <table border="1px">
+    <tr><td>Type</td><td>Stationary.</td><td>Rotation.</td></tr>
+    <tr><td>Sequential(top half).</td><td>seq();</td><td>seqsp();</td></tr>
+    <tr><td>Geometric(bottom half).</td><td>geo();</td><td>geosp();</td></tr>
+    <tr><td>Complete.</td><td>gen();</td><td>gensp();</td></tr>
+  </table>
+
   The basic set Method <h4 style="display:inline-block">seq();</h4> is the most vital sequencing function.
   <br />
 
@@ -446,6 +454,8 @@ for( var x = 0; x < 20; x++)
 
   <h2>7 dimensional data randomized.</h2>
 
+  I do not like using the word Random as random is not rally random.<br /><br />
+
   There is no end in how high of dimension you can go using this analysis tool.<br /><br />
 
   <!--Example #10-->
@@ -530,23 +540,22 @@ for( var x = 0; x < 20; x++)
   <!--End Example #10-->
 
   <br /><br />
-  This time we try our best to confuse it. However no matter how many randomized sets we throw at it they all line up to that of what they came.<br />
-  Basically this AI matrix is a fractal hologram of all dimensions unified. For example if you ware given a set of random values.<br />
-  You can actually sequence all values in all dimensions into a formula instantly.
+  This time we try our best to confuse it. However no matter how many random sets we throw at it they all line up using the sequence method.<br />
+  Basically this AI matrix is a fractal, of all dimensions unified. For example if you ware given a set of random values.<br />
+  You can actually sequence all values in all dimensions into a formula instantly back to what it was a result of.
 
   <br /><br />
-  There is only one small limitation to the quantum hologram.<br />
+  There is only one small limitation to the quantum matrix.<br />
   The set we are sequencing is 10 values in length.
   <br /><br />
   If you change "i1 < 10" to "i1 < 7".
   <br /><br />
   You then will end up with a set of numbers 7 in length.<br />
-  Thus 7 values can only line up 6 dimensions in the quantum hologram.<br />
+  Thus 7 values can only line up 6 dimensions in the quantum matrix.<br />
   Meaning the 7th dimension is invisible without the 8th value to line it up in the matrix.<br />
   <br />
-  Thus if you decease the set size you are analyzing to 3 in length.<br />
-  Then you can only line up till the second dimension in the hologram.<br />
-  You also know for certain that the data was solved if you have fewer to the power of than you did numbers.
+  Thus if you decease the set size you are analyzing to 3 in length. Then you can only line up till the second dimension in the matrix.<br />
+  You also know for certain that the data was solved if you have fewer to the power dimensions than you did numbers.
   <br />
   <a id="seqsp"><h1>Fibonacci.</h1></a>
   In this example we create the Fibonacci, and solve it.<br />
@@ -600,7 +609,7 @@ for( var x = 0; x < 20; x++)
 
   <h2>Multiple Fibonacci sequences.</h2>
 
-  Even as cool as what this seems. You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one.
+  You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one Fibonacci sequences.
 
   <br /><br />
 
@@ -746,7 +755,7 @@ for( var x = 0; x < 20; x++)
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
   So lets say it is mixed with a Fibonacci sequence and we need to rotate the matrix to solve it. Then 8 numbers are not enough to solve all 7 dimensions mixed with the Fibonacci sequence.<br />
-  We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minim of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
+  We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minimum of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
   So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
 
   <a id="geo"><h1>Geometric sequences.</h1></a>
@@ -804,7 +813,7 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
   Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
-  It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minim of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
+  It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minimum of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
 
   <h2>Geo Sequence Plus Fibonacci.</h2>
 
@@ -869,12 +878,11 @@ for( var x = 0; x < 20; x++)
   <!--End Example #15-->
   <br /><br />
   The highest geometric dimension is 4 in this example so you need a minimum of 5 values to line it up.<br />
-  Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in a set at minim.<br />
-  This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are separated.
+  Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in the set at minimum.<br />
+  This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are also separated.
 
-  <a id="gen"><h1>Solve All Patterns.</h1></a>
+  <h1>Solve All Patterns.</h1>
   Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
-
 
   <!--Example #16-->
 
@@ -1082,9 +1090,10 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  The highest dimensional sequence is 7. Thus the highest dimensional geometric sequence is 3. Just like the <h4 style="display:inline-block;">gen();</h4> sequence method you need a minum of 7+7=14 values. To equally line up the dimensions across the set.<br />
-  Plus an additional 14+2=16, because of the rotation. Although that is the minimum amount of values needed to line up the produced set. In many cases you are not going to know the minum number values to line the set up. You can go higher and it should still solve out to the same function.<br />
-  This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires less data to make sense of the data.<br />
-  I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super intelligent AI, or bot. That is self building and adaptive to information.
+  The highest dimensional sequence is 7. Thus the heights dimensional geometric sequence is 3. Just like the regular <h4 style="display:inline-block;">geo();</h4> you need a minim of 7+7=14 values to equally line up the dimensions across the set.<br />
+  Plus an additional 14+2=16, because of the rotation. Although that is the minimum amount of values needed to line up the produced set.<br />
+  You can make the set longer than 16 values, and it will still solve out to the same function. In many cases you are not going to know the minim number of values to line the set up.<br />
+  This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
+  I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI or bot.
 </body>
 </html>
