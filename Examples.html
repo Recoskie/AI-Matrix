@@ -56,6 +56,7 @@
   Creating A set: <a href="#sets">Link</a><br />
   Manipulating A set: <a href="#msets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
+  Error Correction: <a href="#er">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
@@ -160,6 +161,10 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
     Thus variable "i" selects "values[i]" which element. Then set it to the current value of variable "o" as "values[i] = o;". As variable "o" adds by 5.
   </h4>
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
+
+  <a id="msets"><h1>Manipulating sets.</h1></a>
+
+  A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
 
   <a id="seq"><h1>Solving sequences.</h1></a>
 
@@ -751,7 +756,6 @@ for( var x = 0; x < 20; x++)
   <input style="width:100%;" type="button" onclick="runExamp('e13');" value="Run code." />
 
   <!--End Example #13-->
-    
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
@@ -877,7 +881,9 @@ for( var x = 0; x < 20; x++)
   <input style="width:100%;" type="button" onclick="runExamp('e15');" value="Run code." />
 
   <!--End Example #15-->
+
   <br /><br />
+
   The highest geometric dimension is 4 in this example so you need a minimum of 5 values to line it up.<br />
   Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in the set at minimum.<br />
   This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are also separated.
@@ -1096,5 +1102,22 @@ for( var x = 0; x < 20; x++)
   You can make the set longer than 16 values, and it will still solve out to the same function. In many cases you are not going to know the minim number of values to line the set up.<br />
   This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
   I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI or bot.
+
+  <a id="er"><h1>Error Correction.</h1></a>
+  In all of the sequencing examples. You have probably noticed how values are 0.00000000001 off. This is because floating point numbers have a accuracy limit.
+
+  <br /><br />
+
+  See the following by on floating point values: <a href="https://docs.python.org/2/tutorial/floatingpoint.html">link.</a>
+
+  <br /><br />
+
+  The more operations you do with floating point numbers the higher the error is. Since the quantum matrix in the tool only lines up values and does a single calculation.<br />
+  The errors are extremely small. If the errors annoy you. You can actually filter them out. There are a few different types of error correction you can use that are built into the matrix.
+
+  <br /><br />
+
+  More will be added soon plus examples.
+
 </body>
 </html>
