@@ -164,7 +164,68 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
 
   <a id="msets"><h1>Manipulating sets.</h1></a>
 
-  A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
+  A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.<br /><br />
+
+  <!--Example #5-->
+
+  <textarea class="c" rows="10" id="e5">//Changing an element.
+
+var My_set = new Set( 10, 20, 30 );
+
+My_set[1] = 60;
+
+console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly>Console output.</textarea>
+  <br />
+  <input style="width:100%;" type="button" onclick="runExamp('e5');" value="Run code." />
+
+  <!--End Example #5-->
+
+  <br /><br />
+  In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
+
+  <h2>A set also has a length.</h2>
+  
+  The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
+  <br /><br />
+
+  <!--Example #6-->
+
+  <textarea class="c" rows="10" id="e6">//Looping through each element in a set.
+
+var My_set = new Set( 10, 20, 30 );
+
+for( var i = 0; i < My_set.length; i++ )
+{
+  console.log(My_set[i]);
+}
+</textarea><textarea class="o" rows="10" id="e6o" readonly>Console output.</textarea>
+  <br />
+  <input style="width:100%;" type="button" onclick="runExamp('e6');" value="Run code." />
+
+  <!--End Example #6-->
+
+  <!--Example #7-->
+
+  <h2>Array methods and operations.</h2>
+
+  Sets also support all of the array methods, and operations. So you can use methods like <h4 style="display:inline-block;">sort()</h4>, <h4 style="display:inline-block;">map()</h4>, <h4 style="display:inline-block;">push()</h4>, <h4 style="display:inline-block;">pop()</h4>, even <h4 style="display:inline-block;">reverse()</h4>.<br />
+
+  <textarea class="c" rows="10" id="e7">//Using array methods.
+
+var My_set = new Set( 10, 20, 30 );
+
+My_set = My_set.reverse();
+
+console.log(My_set);
+</textarea><textarea class="o" rows="10" id="e7o" readonly>Console output.</textarea>
+  <br />
+  <input style="width:100%;" type="button" onclick="runExamp('e7');" value="Run code." />
+
+  <!--End Example #7-->
+
+  In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
+
+  You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
 
   <a id="seq"><h1>Solving sequences.</h1></a>
 
@@ -180,9 +241,9 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
   The basic set Method <h4 style="display:inline-block">seq();</h4> is the most vital sequencing function.
   <br />
 
-  <!--Example #5-->
+  <!--Example #8-->
 
-  <textarea class="c" rows="24" id="e5">//Method one. Sequencing a set.
+  <textarea class="c" rows="24" id="e8">//Method one. Sequencing a set.
 
 var o = 7;
 
@@ -204,10 +265,10 @@ console.log( My_set );
 
 var My_seq = My_set.seq();
 
-console.log( My_seq );</textarea><textarea class="o" rows="24" id="e5o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e5');" value="Run code." />
+console.log( My_seq );</textarea><textarea class="o" rows="24" id="e8o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e8');" value="Run code." />
 
-  <!--End Example #5-->
+  <!--End Example #8-->
 
   <br /><br />
 
@@ -217,9 +278,9 @@ console.log( My_seq );</textarea><textarea class="o" rows="24" id="e5o" readonly
 
   <h2>Creating and running a function from a analyzed set.</h2>
 
-  <!--Example #6-->
+  <!--Example #9-->
 
-  <textarea class="c" rows="24" id="e6">//Creating and running a function.
+  <textarea class="c" rows="24" id="e9">//Creating and running a function.
 
 var o = 7;
 
@@ -255,10 +316,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="24" id="e6o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e6');" value="Run code." />
+</textarea><textarea class="o" rows="24" id="e9o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e9');" value="Run code." />
 
-  <!--End Example #6-->
+  <!--End Example #9-->
 
   <br /><br />
   In order to get a usable function we call the method <h4 style="display:inline-block;">getFunc()</h4> on our sequenced variable.<br />
@@ -267,9 +328,9 @@ for( var x = 0; x < 20; x++)
 
   <h2>2 Dimensional set.</h2>
 
-  <!--Example #7-->
+  <!--Example #10-->
 
-  <textarea class="c" rows="24" id="e7">//2 Dimensional set.
+  <textarea class="c" rows="24" id="e10">//2 Dimensional set.
 
 var o = 7;
 
@@ -308,10 +369,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="24" id="e7o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e7');" value="Run code." />
+</textarea><textarea class="o" rows="24" id="e10o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e10');" value="Run code." />
 
-  <!--End Example #7-->
+  <!--End Example #10-->
 
   <br /><br />
   So now we are adding 76 more in the second dimension. Using a loop inside a loop.
@@ -325,9 +386,9 @@ for( var x = 0; x < 20; x++)
 
   <h2>3 dimensional set.</h2>
 
-  <!--Example #8-->
+  <!--Example #11-->
 
-  <textarea class="c" rows="24" id="e8">//3 Dimensional set.
+  <textarea class="c" rows="24" id="e11">//3 Dimensional set.
 
 var o = 7;
 
@@ -371,10 +432,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="24" id="e8o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e8');" value="Run code." />
+</textarea><textarea class="o" rows="24" id="e11o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e11');" value="Run code." />
 
-  <!--End Example #8-->
+  <!--End Example #11-->
 
   <br /><br />
   So now we are adding 21 more in the third dimension.
@@ -389,9 +450,9 @@ for( var x = 0; x < 20; x++)
 
   <h2>4 dimensional set.</h2>
 
-  <!--Example #9-->
+  <!--Example #12-->
 
-  <textarea class="c" rows="24" id="e9">//4 Dimensional set.
+  <textarea class="c" rows="24" id="e12">//4 Dimensional set.
 
 var o = 7;
 
@@ -440,10 +501,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="24" id="e9o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e9');" value="Run code." />
+</textarea><textarea class="o" rows="24" id="e12o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e12');" value="Run code." />
 
-  <!--End Example #9-->
+  <!--End Example #12-->
 
   <br /><br />
   So now we are adding 711 more in the fourth dimension.
@@ -463,9 +524,9 @@ for( var x = 0; x < 20; x++)
 
   There is no end in how high of dimension you can go using this analysis tool.<br /><br />
 
-  <!--Example #10-->
+  <!--Example #13-->
 
-  <textarea class="c" rows="40" id="e10">//random 7 Dimensional set.
+  <textarea class="c" rows="40" id="e13">//random 7 Dimensional set.
 
 var o = Math.round(Math.random() * 1000);
 var d1 = Math.round(Math.random() * 1000);
@@ -539,13 +600,13 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e10o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e10');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e13o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e13');" value="Run code." />
 
-  <!--End Example #10-->
+  <!--End Example #13-->
 
   <br /><br />
-  This time we try our best to confuse it. However no matter how many random sets we throw at it they all line up using the sequence method.<br />
+  This time we try our best to confuse it. However no matter how many random sets we throw at it each time we run the code. They all line up using the sequence method.<br />
   Basically this AI matrix is a fractal, of all dimensions unified. For example if you ware given a set of random values.<br />
   You can actually sequence all values in all dimensions into a formula instantly back to what it was a result of.
 
@@ -568,9 +629,9 @@ for( var x = 0; x < 20; x++)
   In order to do this you only have to call the method <h4 style="display:inline-block">seqsp()</h4>.
   <br /><br />
 
-  <!--Example #11-->
+  <!--Example #14-->
 
-<textarea class="c" rows="40" id="e11">//Fibonacci seq.
+<textarea class="c" rows="40" id="e14">//Fibonacci seq.
 
 var o1 = 0, o2 = 1;
 
@@ -607,10 +668,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-  </textarea><textarea class="o" rows="40" id="e11o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e11');" value="Run code." />
+  </textarea><textarea class="o" rows="40" id="e14o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e14');" value="Run code." />
 
-  <!--End Example #11-->
+  <!--End Example #14-->
 
   <h2>Multiple Fibonacci sequences.</h2>
 
@@ -618,9 +679,9 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  <!--Example #12-->
+  <!--Example #15-->
 
-  <textarea class="c" rows="40" id="e12">//Multiple Fibonacci seq.
+  <textarea class="c" rows="40" id="e15">//Multiple Fibonacci seq.
 
 var o1 = 98, o2 = 11;
 var o3 = 7, o4 = -393;
@@ -661,16 +722,16 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-  </textarea><textarea class="o" rows="40" id="e12o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e12');" value="Run code." />
+  </textarea><textarea class="o" rows="40" id="e15o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e15');" value="Run code." />
 
-  <!--End Example #12-->
+  <!--End Example #15-->
 
   <h2>7 Dimensional data plus multiple Fibonacci.</h2>
 
-  <!--Example #13-->
+  <!--Example #16-->
 
-  <textarea class="c" rows="40" id="e13">//Random 7 Dimensional set. Plus Multiple random Fibonacci.
+  <textarea class="c" rows="40" id="e16">//Random 7 Dimensional set. Plus Multiple random Fibonacci.
 
 var o = Math.round(Math.random() * 1000);
 var d1 = Math.round(Math.random() * 1000);
@@ -752,10 +813,11 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e13o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e13');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e16o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e16');" value="Run code." />
 
-  <!--End Example #13-->
+  <!--End Example #16-->
+
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
@@ -766,9 +828,9 @@ for( var x = 0; x < 20; x++)
   <a id="geo"><h1>Geometric sequences.</h1></a>
   Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
 
-  <!--Example #14-->
+  <!--Example #17-->
 
-  <textarea class="c" rows="40" id="e14">//Geometric sequence.
+  <textarea class="c" rows="40" id="e17">//Geometric sequence.
 
 var o = Math.round(Math.random()*1000);
 
@@ -811,10 +873,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e14o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e14');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e17o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e17');" value="Run code." />
 
-  <!--End Example #14-->
+  <!--End Example #17-->
 
   <br /><br />
   Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
@@ -824,9 +886,9 @@ for( var x = 0; x < 20; x++)
 
   In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
 
-  <!--Example #15-->
+  <!--Example #18-->
 
-  <textarea class="c" rows="40" id="e15">//Geometric sequence Plus multiple Fibonacci.
+  <textarea class="c" rows="40" id="e18">//Geometric sequence Plus multiple Fibonacci.
 
 var o = Math.round(Math.random()*1000);
 
@@ -877,10 +939,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e15o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e15');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e18o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e18');" value="Run code." />
 
-  <!--End Example #15-->
+  <!--End Example #18-->
 
   <br /><br />
 
@@ -891,9 +953,9 @@ for( var x = 0; x < 20; x++)
   <h1>Solve All Patterns.</h1>
   Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
 
-  <!--Example #16-->
+  <!--Example #19-->
 
-  <textarea class="c" rows="40" id="e16">//Sequence everything.
+  <textarea class="c" rows="40" id="e19">//Sequence everything.
 
 var o = Math.round(Math.random()*1000);
 
@@ -976,10 +1038,10 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e16o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e16');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e19o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e19');" value="Run code." />
 
-  <!--End Example #16-->
+  <!--End Example #19-->
 
   <br /><br />
   <h4>The only time you will want to use this method is when you know the data is going to be all over the place and you want a reliable method that solves all patterns.</h4>
@@ -993,9 +1055,9 @@ for( var x = 0; x < 20; x++)
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
-  <!--Example #17-->
+  <!--Example #20-->
 
-<textarea class="c" rows="40" id="e17">//Sequence everything. Plus multiple Fibonacci sequences.
+<textarea class="c" rows="40" id="e20">//Sequence everything. Plus multiple Fibonacci sequences.
 
 var o = Math.round(Math.random() * 1000);
 
@@ -1090,30 +1152,30 @@ for( var x = 0; x < 20; x++)
 {
   console.log( My_func( x ) );
 }
-</textarea><textarea class="o" rows="40" id="e17o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e17');" value="Run code." />
+</textarea><textarea class="o" rows="40" id="e20o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e20');" value="Run code." />
 
-  <!--End Example #17-->
+  <!--End Example #20-->
 
   <br /><br />
 
-  The highest dimensional sequence is 7. Thus the heights dimensional geometric sequence is 3. Just like the regular <h4 style="display:inline-block;">geo();</h4> you need a minim of 7+7=14 values to equally line up the dimensions across the set.<br />
+  The highest dimensional sequence is 7. Thus the heights dimensional geometric sequence is 3. Just like the regular <h4 style="display:inline-block;">gen();</h4> you need a minim of 7+7=14 values to equally line up the dimensions across the set.<br />
   Plus an additional 14+2=16, because of the rotation. Although that is the minimum amount of values needed to line up the produced set.<br />
-  You can make the set longer than 16 values, and it will still solve out to the same function. In many cases you are not going to know the minim number of values to line the set up.<br />
+  You can make the set longer than 16 values. It will still solve out to the same function. In many cases you are not going to know the minim number of values to line the set up.<br />
   This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
-  I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI or bot.
+  I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI, or bot.
 
   <a id="er"><h1>Error Correction.</h1></a>
   In all of the sequencing examples. You have probably noticed how values are 0.00000000001 off. This is because floating point numbers have a accuracy limit.
 
   <br /><br />
 
-  See the following by on floating point values: <a href="https://docs.python.org/2/tutorial/floatingpoint.html">link.</a>
+  See the following on floating point values: <a href="https://docs.python.org/2/tutorial/floatingpoint.html" target="_blank">link.</a>
 
   <br /><br />
 
   The more operations you do with floating point numbers the higher the error is. Since the quantum matrix in the tool only lines up values and does a single calculation.<br />
-  The errors are extremely small. If the errors annoy you. You can actually filter them out. There are a few different types of error correction you can use that are built into the matrix.
+  The errors then are extremely small. If the errors annoy you. You can actually filter them out. There are a few different types of error correction you can use that are built into the matrix.
 
   <br /><br />
 
