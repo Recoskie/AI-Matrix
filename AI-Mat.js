@@ -574,34 +574,39 @@ DSet.prototype.filter = function()
   {
     this.isFiltered = true;
 
-    //Calculate the log data of each term.
+    //Dynamic epsilon error correction if FL64 is loaded.
 
-    for ( var i = 0, l = []; i < this.seq.length; l[ i ] = ( ( Math.log( Math.abs( this.seq[ i++ ] ) ) / 0.6931471805599453 ) + 0.5 ) & -1 );
-    for ( var i = 0; i < this.geo.length; l[ l.length ] = ( ( Math.log( Math.abs( this.geo[ i++ ] ) ) / 0.6931471805599453 ) + 0.5 ) & -1 );
-
-    //Remove terms outside of data.
-
-    for ( var i = 0, avg = 0; i < l.length; avg += l[ i++ ] ); avg /= l.length;
-    for ( i = 0; i < l.length; i++ ) { if (l[ i ] < avg && l[ i ] < 0 ) { if ( i < this.seq.length ) { this.seq[ i ] = 0; } else { this.geo[ i - this.seq.length ] = 0; } } }
-
-    //Dynamic epsilon error correction if Remaining data is to be converted to very close exact fractions.
-
-    if ( Number.prototype.getFract )
+    if (Number.prototype.getFract)
     {
-      for ( var i = this.seq.length - 1, err = Math.pow( 2, ( Math.abs( avg ) ) ); i > -1; err += Math.pow( 2, Math.abs( avg ) + ( i-- ) ) )
+      for (var i = this.seq.length - 1, err = Number.EPSILON; i > -1; err *= AI_Mat.PMat[i][i], i-- )
       {
-        this.seq[ i ] = ( this.seq[ i ] + 0 ).getFract( err );
+        this.seq[i] = (this.seq[i] + 0).limit(err).splitAll().calcF();
       }
-      for ( var i = this.geo.length - 1, err = Math.pow( 2, ( Math.abs( avg ) ) ); i > -1; err += Math.pow( 2, Math.abs( avg ) + ( i-- ) ) )
+      for (var i = this.geo.length - 1, err = Number.EPSILON; i > -1; err *= AI_Mat.PMat[i][i], i-- )
       {
-        this.geo[ i ] = ( this.geo[ i ] + 0 ).getFract( err );
+        this.geo[i] = (this.geo[i] + 0).limit(err).splitAll().calcF();
       }
+    }
+
+    //Else remove terms by logarithmic average.
+
+    else
+    {
+      //Calculate the log data of each term.
+
+      for (var i = 0, l = []; i < this.seq.length; l[i] = ((Math.log(Math.abs(this.seq[i++])) / 0.6931471805599453) + 0.5) & -1);
+      for (var i = 0; i < this.geo.length; l[l.length] = ((Math.log(Math.abs(this.geo[i++])) / 0.6931471805599453) + 0.5) & -1);
+
+      //Remove terms outside of data.
+
+      for (var i = 0, avg = 0; i < l.length; avg += l[i++]); avg /= l.length;
+      for (i = 0; i < l.length; i++) { if (l[i] < avg && l[i] < 0) { if (i < this.seq.length) { this.seq[i] = 0; } else { this.geo[i - this.seq.length] = 0; } } }
     }
   }
 
-  //For general use convert to best average faction if FL64 is loaded.
+  //For general use convert to best faction if FL64 is loaded.
   
-  else if ( Number.prototype.avgFract ) { this.seq = this.seq.avgFract(); this.geo = this.geo.avgFract(); }
+  else if (Number.prototype.getFract) { this.seq = this.seq.getFract(); this.geo = this.geo.getFract(); }
 }
 
 /***********************************************************************************
