@@ -574,39 +574,46 @@ DSet.prototype.filter = function()
   {
     this.isFiltered = true;
 
+    //Average.
+
+    for (var i = 0, l = []; i < this.seq.length; l[i] = ((Math.log(Math.abs(this.seq[i++])) / 0.6931471805599453) + 0.5) & -1);
+    for (var i = 0; i < this.geo.length; l[l.length] = ((Math.log(Math.abs(this.geo[i++])) / 0.6931471805599453) + 0.5) & -1);
+    for (var i = 0, avg = 0; i < l.length; avg += l[i++]); avg /= l.length;
+
     //Dynamic epsilon error correction if FL64 is loaded.
 
     if (Number.prototype.getFract)
     {
-      for (var i = this.seq.length - 1, err = Number.EPSILON; i > -1; err *= AI_Mat.PMat[i][i], i-- )
+      var avg1 = 1 / Math.pow(2, 53 - avg);
+      var avg2 = 1 / Math.pow(2, 26 - avg);
+
+      for (var i = this.seq.length - 1, err = avg1; i > -1; err *= i-- )
       {
-        this.seq[i] = (this.seq[i] + 0).limit(err).splitAll().calcF();
+        this.seq[i] = this.seq[i].limit(err).getFract();
       }
-      for (var i = this.geo.length - 1, err = Number.EPSILON; i > -1; err *= AI_Mat.PMat[i][i], i-- )
+      for (var i = this.geo.length - 1, err = avg1; i > -1; err *= i-- )
       {
-        this.geo[i] = (this.geo[i] + 0).limit(err).splitAll().calcF();
+        this.geo[i] = this.geo[i].limit(err).getFract();
       }
+
+      this.sp[0] = this.sp[0].limit(avg2).getFract();
+      this.sp[1] = this.sp[1].limit(avg2).getFract();
     }
 
-    //Else remove terms by logarithmic average.
+    //Else remove terms outside average.
 
     else
     {
-      //Calculate the log data of each term.
-
-      for (var i = 0, l = []; i < this.seq.length; l[i] = ((Math.log(Math.abs(this.seq[i++])) / 0.6931471805599453) + 0.5) & -1);
-      for (var i = 0; i < this.geo.length; l[l.length] = ((Math.log(Math.abs(this.geo[i++])) / 0.6931471805599453) + 0.5) & -1);
-
-      //Remove terms outside of data.
-
-      for (var i = 0, avg = 0; i < l.length; avg += l[i++]); avg /= l.length;
       for (i = 0; i < l.length; i++) { if (l[i] < avg && l[i] < 0) { if (i < this.seq.length) { this.seq[i] = 0; } else { this.geo[i - this.seq.length] = 0; } } }
     }
   }
 
   //For general use convert to best faction if FL64 is loaded.
   
-  else if (Number.prototype.getFract) { this.seq = this.seq.getFract(); this.geo = this.geo.getFract(); }
+  else if (Number.prototype.getFract)
+  {
+    this.seq = this.seq.getFract(); this.geo = this.geo.getFract(); this.sp = this.sp.getFract();
+  }
 }
 
 /***********************************************************************************
