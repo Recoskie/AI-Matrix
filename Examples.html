@@ -37,6 +37,12 @@
   </style>
   <script src="AI-Mat.js" type="text/javascript"></script>
   <script type="text/javascript">
+    var head = document.getElementsByTagName("head")[0], FL64 = document.createElement("script");
+
+    FL64.type = "text/javascript"; FL64.src = "https://recoskie.github.io/Fl64/FL64.js";
+
+    var output = "", loaded = false;
+
     function runExamp(id)
     {
       var code = document.getElementById(id).value;
@@ -48,7 +54,11 @@
 
     console.log = function (msg) { output += msg + "\r\n"; }
 
-    var output = "";
+    FL64.onload = function () { loaded = true; alert("FL64 is now loaded on this page."); };
+
+    FL64.onerror = function () { alert("Error Unable to load FL 64..."); };
+
+    function loadFL64() { if (!loaded) { head.appendChild(FL64); } else { alert("FL64 is already loaded on this page."); } }
   </script>
 
   <h1>Indexed contents.</h1>
@@ -57,7 +67,8 @@
   Creating A set: <a href="#sets">Link</a><br />
   Manipulating A set: <a href="#msets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
-  Error Correction: <a href="#er">Link</a>
+  Error Correction: <a href="#er">Link</a><br />
+  FL64 operations: <a href="#FL64">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
@@ -185,7 +196,7 @@ console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
   <h2>A set also has a length.</h2>
-  
+
   The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
   <br /><br />
 
@@ -205,11 +216,11 @@ for( var i = 0; i < My_set.length; i++ )
 
   <!--End Example #6-->
 
-  <!--Example #7-->
-
   <h2>Array methods and operations.</h2>
 
   Sets also support all of the array methods, and operations. So you can use methods like <h4 style="display:inline-block;">sort()</h4>, <h4 style="display:inline-block;">map()</h4>, <h4 style="display:inline-block;">push()</h4>, <h4 style="display:inline-block;">pop()</h4>, even <h4 style="display:inline-block;">reverse()</h4>.<br />
+
+  <!--Example #7-->
 
   <textarea class="c" rows="10" id="e7">//Using array methods.
 
@@ -223,7 +234,6 @@ console.log(My_set);
   <input style="width:100%;" type="button" onclick="runExamp('e7');" value="Run code." />
 
   <!--End Example #7-->
-
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
@@ -818,7 +828,6 @@ for( var x = 0; x < 20; x++)
   <input style="width:100%;" type="button" onclick="runExamp('e16');" value="Run code." />
 
   <!--End Example #16-->
-
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
@@ -1052,7 +1061,7 @@ for( var x = 0; x < 20; x++)
   You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
   This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
 
-  <h2>Solve All Patterns plus multiple Fibonacci sequences.</h2>
+  <a id="all"><h2>Solve All Patterns plus multiple Fibonacci sequences.</h2></a>
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
@@ -1180,7 +1189,78 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  More will be added soon plus examples.
+  The following code Enables error correction. However without the FL64 library loaded. It will only remove values that are caused by error.
 
+  <br /><br />
+
+  <!--Example #21-->
+
+  <textarea class="c" rows="7" id="e21">//Enable error correction.
+
+AI_Mat.ErrCorrect = true;
+
+alert("Error correction Is now Enabled.");
+</textarea><textarea class="o" rows="7" id="e21o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e21');" value="Run code." />
+
+  <!--End Example #21-->
+
+  <br /><br />
+
+  The Following code will disable error correction.
+
+  <br /><br />
+
+  <!--Example #22-->
+
+<textarea class="c" rows="7" id="e22">//Disable error correction.
+
+AI_Mat.ErrCorrect = false;
+
+alert("Error correction Is now disabled.");
+</textarea><textarea class="o" rows="7" id="e22o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e22');" value="Run code." />
+
+  <!--End Example #22-->
+
+  <br /><br />
+
+  In order to do real dynamic error correction the Floating point number library (FL64) has to be loaded on this page.
+
+  <br /><br />
+
+  What is FL64: <a href="https://github.com/Recoskie/Fl64">link</a>
+
+  <br /><br />
+
+  <input style="width:224px;height:36px;" type="button" value="Load FL64" onclick="loadFL64();" />
+
+  <br /><br />
+
+  By clicking the Load FL64 button. The tool will be loaded on this page.
+
+  <br /><br />
+
+  Thus by running the sequence examples again you will see the big difference it makes.
+
+  click the link to go to a earlier sequence example: <a href="#all">Link</a>.
+
+  <br /><br />
+
+  Running the examples over again will give you better results now.<br /><br />
+
+  <a id="FL64"><h1>FL64 set/array operations.</h1></a>
+
+  In order to run the code in these examples you must load the FL64 library into this page.
+
+  What is FL64: <a href="https://github.com/Recoskie/Fl64">link</a>.
+
+  <br /><br />
+
+  <input style="width:224px;height:36px;" type="button" value="Load FL64" onclick="loadFL64();" />.
+
+  <br /><br />
+
+  Examples coming soon.
 </body>
 </html>
