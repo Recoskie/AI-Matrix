@@ -59,7 +59,8 @@
     FL64.onerror = function () { alert("Error Unable to load FL 64..."); };
 
     function loadFL64() { if (!loaded) { head.appendChild(FL64); } else { alert("FL64 is already loaded on this page."); } }
-  </script>
+
+/**/</script>
 
   <h1>Indexed contents.</h1>
 
@@ -68,7 +69,7 @@
   Solving sequences: <a href="#seq">Link</a><br />
   Error Correction: <a href="#er">Link</a><br />
   FL64 operations: <a href="#FL64">Link</a><br />
-  Advanced: <a href="#Advance">Link</a>
+  Advanced: <a href="#Advanced">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
@@ -182,7 +183,7 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
   <a id="msets"><h1>Manipulating sets.</h1></a>
 
   A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
-  
+
   <br /><br />
 
   <!--Example #5-->
@@ -407,11 +408,11 @@ for( var x = 0; x < 20; x++)
   <br /><br />
 
   You will create a set that goes as follows 0,1,4,9,16,25,36,49,64,81,100. Which is x squared.
-  
+
   <br /><br />
 
   Basically you can create any 2 dimensional set and convert back to a math function.
-  
+
   <br />
 
   <h2>3 dimensional set.</h2>
@@ -485,7 +486,7 @@ for( var x = 0; x < 20; x++)
   <br /><br />
 
   Basically you can create any 3 dimensional set and convert back to a math function.
-  
+
   <br />
 
   <h2>4 dimensional set.</h2>
@@ -1316,6 +1317,92 @@ alert("Error correction Is now disabled.");
 
   <br /><br />
 
-  Examples coming soon.
+  All Of the FL64 operations can be used with all numbers in a set rather than one value at a time.
+
+  In the example bellow we call the method <h4 style="display:inline-block;">getFract</h4> on a single floating point value.
+
+  Then we do the same operation with a set. Except the operation then applies to all values in the set.
+
+  <br /><br />
+
+  <!--Example #23-->
+
+<textarea class="c" rows="14" id="e23">//Convert one floating point value to a floating point number.
+
+var My_float = 13.02415.getFract();
+
+console.log( My_float.toString() );
+
+//Now lets do the same operation with a set.
+
+var My_set = new Set( 7.11, 3.14, 0.1414, 1.6080 ).getFract();
+
+console.log( My_set );
+</textarea><textarea class="o" rows="14" id="e23o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e23');" value="Run code." />
+
+  <!--End Example #23-->
+
+  <br /><br />
+
+  As you can see we have the fraction of our single floating point value then the operation applied to a set.
+
+  <br /><br />
+
+  You do not have to call the methods on creation of a set, or number. You can septate operations into multiple lines.
+
+  <br /><br />
+
+  <!--Example #24-->
+
+  <textarea class="c" rows="28" id="e24">//Convert one floating point value to a floating point number.
+
+var My_float = 13.02415;
+
+My_float = My_float.bits();
+
+console.log( My_float.toString() );
+
+//Now convert the floating point value to binary.
+
+My_float = My_float.getFract();
+
+console.log( My_float );
+
+//Now lets do the same operation with a set.
+
+var My_set = new Set( 7.11, 3.14, 0.1414, 1.6080 );
+
+My_set = My_set.bits();
+
+console.log( My_set.toString() );
+
+My_set = My_set.getFract();
+
+console.log( My_set );
+</textarea><textarea class="o" rows="28" id="e24o" readonly>Console output.</textarea>
+  <input style="width:100%;" type="button" onclick="runExamp('e24');" value="Run code." />
+
+  <!--End Example #24-->
+
+  <br /><br />
+
+  As you can see the first two lines is the single floating point value converted to it's binary representation then to a fraction. Then the next two outputs are the same operations applied to the set.
+
+  <br /><br />
+
+  All operations in the FL64 library can be applied to a single floating point value, or to a set of values in a set, or array.
+
+  <a id="Advanced"><h1>Advanced Concepts.</h1></a>
+
+  Although all of this is the basics. Thus I have only touched the surface of what you can do with these tools.
+
+  <br /><br />
+
+  There is so much more you can do with these new methods and operations.
+
+  <br /><br />
+
+  More will be added soon.
 </body>
 </html>
