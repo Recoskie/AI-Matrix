@@ -62,13 +62,13 @@
   </script>
 
   <h1>Indexed contents.</h1>
-  Warning it is important you read each section in order. As there is many basics that are explained, and are not re-explained in later sections.
-  <br /><br />
+
   Creating A set: <a href="#sets">Link</a><br />
   Manipulating A set: <a href="#msets">Link</a><br />
   Solving sequences: <a href="#seq">Link</a><br />
   Error Correction: <a href="#er">Link</a><br />
-  FL64 operations: <a href="#FL64">Link</a>
+  FL64 operations: <a href="#FL64">Link</a><br />
+  Advanced: <a href="#Advance">Link</a>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
@@ -108,13 +108,14 @@ var text = "77, 160, 911";
 var My_set = new Set( text );
 
 console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
-  <br />
   <input style="width:100%;" type="button" onclick="runExamp('e2');" value="Run code." />
 
   <!--End Example #2-->
 
   <br /><br />
+
   If a invalid input is used. You can use try and catch to warn the user of invalid input.
+
   <br /><br />
 
   <!--Example #3-->
@@ -165,18 +166,24 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
   <!--End Example #4-->
 
   <br /><br />
+
   You can skip the explanation of the code if you already understand it.
+
   <br />
+
   <h4>
     As long as variable "i" is less than ten the loop runs the same code in the braces (you can change 10 to a larger number).<br />
     Variable "i" is added by one each time the loop starts over. Thus variable "o" is added by 5 each time.<br />
     Thus variable "i" selects "values[i]" which element. Then set it to the current value of variable "o" as "values[i] = o;". As variable "o" adds by 5.
   </h4>
+
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
 
   <a id="msets"><h1>Manipulating sets.</h1></a>
 
-  A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.<br /><br />
+  A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
+  
+  <br /><br />
 
   <!--Example #5-->
 
@@ -187,17 +194,18 @@ var My_set = new Set( 10, 20, 30 );
 My_set[1] = 60;
 
 console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly>Console output.</textarea>
-  <br />
   <input style="width:100%;" type="button" onclick="runExamp('e5');" value="Run code." />
 
   <!--End Example #5-->
 
   <br /><br />
+
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
   <h2>A set also has a length.</h2>
 
   The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
+
   <br /><br />
 
   <!--Example #6-->
@@ -211,7 +219,6 @@ for( var i = 0; i < My_set.length; i++ )
   console.log(My_set[i]);
 }
 </textarea><textarea class="o" rows="10" id="e6o" readonly>Console output.</textarea>
-  <br />
   <input style="width:100%;" type="button" onclick="runExamp('e6');" value="Run code." />
 
   <!--End Example #6-->
@@ -250,6 +257,7 @@ console.log(My_set);
   </table>
 
   The basic set Method <h4 style="display:inline-block">seq();</h4> is the most vital sequencing function.
+
   <br />
 
   <!--Example #8-->
@@ -333,6 +341,7 @@ for( var x = 0; x < 20; x++)
   <!--End Example #9-->
 
   <br /><br />
+
   In order to get a usable function we call the method <h4 style="display:inline-block;">getFunc()</h4> on our sequenced variable.<br />
   We then can give our new function each "x" and it should give us the same results. As you can see we are iterating 20 times as long as x is less than 20.<br />
   Remember these examples are completely interactive. Thus you can change anything you like in them.<br />
@@ -386,14 +395,24 @@ for( var x = 0; x < 20; x++)
   <!--End Example #10-->
 
   <br /><br />
+
   So now we are adding 76 more in the second dimension. Using a loop inside a loop.
+
   <br /><br />
+
   If you change "var o = 7;" to "var o = 0;".<br />
   Then change "o += 5;" to "o += 1;".<br />
   Then change "o += 76;" to "o += 2;"
+
   <br /><br />
-  You will create a set that goes as follows 0,1,4,9,16,25,36,49,64,81,100. Which is x squared.<br /><br />
-  Basically you can create any 2 dimensional set and convert back to a math function.<br />
+
+  You will create a set that goes as follows 0,1,4,9,16,25,36,49,64,81,100. Which is x squared.
+  
+  <br /><br />
+
+  Basically you can create any 2 dimensional set and convert back to a math function.
+  
+  <br />
 
   <h2>3 dimensional set.</h2>
 
@@ -449,15 +468,25 @@ for( var x = 0; x < 20; x++)
   <!--End Example #11-->
 
   <br /><br />
+
   So now we are adding 21 more in the third dimension.
+
   <br /><br />
+
   If you change "var o = 7;" to "var o = 0;".<br />
   Then change "o += 5;" to "o += 1;".<br />
   Then change "o += 76;" to "o += 6;".<br />
   Then change "o += 21;" to "o += 6;".
+
   <br /><br />
-  You will create a set that goes as follows 0,1,8,27,64,125,216,343,512,729,1000. Which is x cubed.<br /><br />
-  Basically you can create any 3 dimensional set and convert back to a math function.<br />
+
+  You will create a set that goes as follows 0,1,8,27,64,125,216,343,512,729,1000. Which is x cubed.
+
+  <br /><br />
+
+  Basically you can create any 3 dimensional set and convert back to a math function.
+  
+  <br />
 
   <h2>4 dimensional set.</h2>
 
@@ -518,22 +547,34 @@ for( var x = 0; x < 20; x++)
   <!--End Example #12-->
 
   <br /><br />
+
   So now we are adding 711 more in the fourth dimension.
+
   <br /><br />
+
   If you change "var o = 7;" to "var o = 0;".<br />
   Then change "o += 5;" to "o += 1;".<br />
   Then change "o += 76;" to "o += 14;".<br />
   Then change "o += 21;" to "o += 36;".<br />
   Then change "o += 21;" to "o += 24;".
+
   <br /><br />
-  You will create a set that goes as follows 0,1,16,81,256,625,1296,2401,4096,6561,10000. Which is x to the power of 4.<br /><br />
+
+  You will create a set that goes as follows 0,1,16,81,256,625,1296,2401,4096,6561,10000. Which is x to the power of 4.
+
+  <br /><br />
+
   Basically you can create any 4 dimensional set and convert back to a math function.
 
   <h2>7 dimensional data randomized.</h2>
 
-  I do not like using the word Random. As random is not rally random.<br /><br />
+  I do not like using the word Random. As random is not rally random.
 
-  There is no end in how high of dimension you can go using this analysis tool.<br /><br />
+  <br /><br />
+
+  There is no end in how high of dimension you can go using this analysis tool.
+
+  <br /><br />
 
   <!--Example #13-->
 
@@ -617,27 +658,38 @@ for( var x = 0; x < 20; x++)
   <!--End Example #13-->
 
   <br /><br />
+
   This time we try our best to confuse it. However no matter how many random sets we throw at it each time we run the code. They all line up using the sequence method.<br />
   Basically this AI matrix is a fractal, of all dimensions unified. For example if you ware given a set of random values.<br />
   You can actually sequence all values in all dimensions into a formula instantly back to what it was a result of.
 
   <br /><br />
+
   There is only one small limitation to the quantum matrix.<br />
   The set we are sequencing is 10 values in length.
+
   <br /><br />
+
   If you change "i1 < 10" to "i1 < 7".
+
   <br /><br />
+
   You then will end up with a set of 7 numbers in length.<br />
   Thus 7 values can only line up 6 dimensions in the quantum matrix.<br />
-  Meaning the 7th dimension is invisible without the 8th value to line it up in the matrix.<br />
-  <br />
+  Meaning the 7th dimension is invisible without the 8th value to line it up in the matrix.
+
+  <br /><br />
+
   Thus if you decease the set size to 3 in length. Then you can only line up till the second dimension in the matrix.<br />
   You also know for certain that the data was solved if you have fewer to the power of dimensions than you did numbers.
+
   <br />
+
   <h1>Fibonacci.</h1>
   In this example we create the Fibonacci, and solve it.<br />
   However to do this the matrix has to be rotated backwards, and forwards on both sides.<br />
   In order to do this you only have to call the method <h4 style="display:inline-block">seqsp()</h4>.
+
   <br /><br />
 
   <!--Example #14-->
@@ -889,6 +941,7 @@ for( var x = 0; x < 20; x++)
   <!--End Example #17-->
 
   <br /><br />
+
   Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
   It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minimum of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
 
@@ -1054,8 +1107,11 @@ for( var x = 0; x < 20; x++)
   <!--End Example #19-->
 
   <br /><br />
+
   <h4>The only time you will want to use this method is when you know the data is going to be all over the place and you want a reliable method that solves all patterns.</h4>
+
   <br />
+
   In order for this method to work. It splits the matrix between upside down, and right side up.<br />
   This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional like in the example.<br />
   You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
@@ -1189,9 +1245,24 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  The following code Enables error correction. However without the FL64 library loaded. It will only remove values that are caused by error.
+  In order to do real dynamic error correction the Floating point number library (FL64) has to be loaded on this page.
+
+  What is FL64: <a href="https://github.com/Recoskie/Fl64">link</a>
 
   <br /><br />
+
+  <input style="width:224px;height:68px;" type="button" value="Load FL64" onclick="loadFL64();" />
+
+  <br /><br />
+
+  With the FL64 library loaded It will error correct the floating point values directly.<br />
+  Without the FL64 library loaded. The values outside EPSILON (Relative 2^-53) will be removed.
+
+  <br />
+
+  <h2>The following code Enables error correction.</h2>
+
+  <br />
 
   <!--Example #21-->
 
@@ -1205,11 +1276,11 @@ alert("Error correction Is now Enabled.");
 
   <!--End Example #21-->
 
-  <br /><br />
+  <br />
 
-  The Following code will disable error correction.
+  <h2>The Following code will disable error correction.</h2>
 
-  <br /><br />
+  <br />
 
   <!--Example #22-->
 
@@ -1225,29 +1296,13 @@ alert("Error correction Is now disabled.");
 
   <br /><br />
 
-  In order to do real dynamic error correction the Floating point number library (FL64) has to be loaded on this page.
-
-  <br /><br />
-
-  What is FL64: <a href="https://github.com/Recoskie/Fl64">link</a>
-
-  <br /><br />
-
-  <input style="width:224px;height:36px;" type="button" value="Load FL64" onclick="loadFL64();" />
-
-  <br /><br />
-
-  By clicking the Load FL64 button. The tool will be loaded on this page.
-
-  <br /><br />
-
   Thus by running the sequence examples again you will see the big difference it makes.
 
   click the link to go to a earlier sequence example: <a href="#all">Link</a>.
 
   <br /><br />
 
-  Running the examples over again will give you better results now.<br /><br />
+  Running the examples over again will give you better results now. Especially if you loaded FL64.<br /><br />
 
   <a id="FL64"><h1>FL64 set/array operations.</h1></a>
 
@@ -1257,7 +1312,7 @@ alert("Error correction Is now disabled.");
 
   <br /><br />
 
-  <input style="width:224px;height:36px;" type="button" value="Load FL64" onclick="loadFL64();" />.
+  <input style="width:224px;height:68px;" type="button" value="Load FL64" onclick="loadFL64();" />.
 
   <br /><br />
 
