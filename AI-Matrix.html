@@ -109,7 +109,7 @@
 
       //Create an new set of data.
 
-      try { input = new Set( document.getElementById("Data").value ); } catch( e )
+      try { input = new set( document.getElementById("Data").value ); } catch( e )
       { 
         window.frames[0].document.body.innerHTML = "<center></center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
         return;

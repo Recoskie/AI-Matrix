@@ -66,7 +66,7 @@ for( var i = 0, d = []; i < 7; d[ i ] = Dimensional_data( ( i++ ) + 1 ) );
 
 //Create an new set using the AI matrix Set type.
 
-var s = new Set( d );
+var s = new set( d );
 
 //Display set of data.
 
@@ -173,7 +173,7 @@ for( var i = 0, d = []; i < 7; d[i] = Dimensional_data( ( i++ ) + 1 ) );
 
 //Create an new set using the AI matrix Set type.
 
-var s = new Set( d );
+var s = new set( d );
 
 //Display set of data.
 
@@ -225,13 +225,13 @@ There are four methods for loading data. For fractional base number conversion t
 ```Javascript
 //Method one. Creating an set
 
-var s = new Set( 10, 20, 30 );
+var s = new set( 10, 20, 30 );
 
 //Method two. Data generated from an algorithm or from file.
 
 var data = [ 10, 20, 30 ];
 
-s = new Set( data );
+s = new set( data );
 
 //Method three. Text input data.
 //Text can have line brakes and fractional numbers.
@@ -242,7 +242,7 @@ s = null;
 
 try
 {
-  s = new Set( str );
+  s = new set( str );
 }
 catch( e )
 {
@@ -258,7 +258,7 @@ s = null;
 
 try
 {
-  s = new Set( str, 2 ); //Base 2 fractional numbers.
+  s = new set( str, 2 ); //Base 2 fractional numbers.
 }
 catch( e )
 {
@@ -271,9 +271,9 @@ catch( e )
 ```Javascript
 //Create an basic set.
 
-var s = new Set( 10, 20, 30 );
+var s = new set( 10, 20, 30 );
 
-//Dispaly the set.
+//Display the set.
 
 alert( s );
 
@@ -291,7 +291,7 @@ X2 = 30
 ```Javascript
 //Create an basic set.
 
-var s = new Set( 10, 20, 30 );
+var s = new set( 10, 20, 30 );
 
 //Display the set array length.
 
@@ -329,7 +329,7 @@ If FL64 is loaded all float number binary operations and error correction, and f
 ```Javascript
 //Create an basic set.
 
-var s = new Set( 10, 20.5, 30.2 );
+var s = new set( 10, 20.5, 30.2 );
 
 //Convert all number in set to their exact binary representation in the computers memory.
 
@@ -439,7 +439,7 @@ In which we multidimensionally solve as sequences, or as geometric data, or both
 If you already have an idea of the type of data you are analyzing then you can solve as "geo", or "seq" otherwise "generic".
 
 ```Javascript
-var s = new Set( 0, -899.857142857143, -13167.42857142857, -49732.7142857143,
+var s = new set( 0, -899.857142857143, -13167.42857142857, -49732.7142857143,
   -52989.7142857143, 290003.571428571, 1898645.142857143, 6871669, 19337225.14285714,
   46635599.5714286 );
 
@@ -563,7 +563,7 @@ Also see other examples like Solve as <a href="https://github.com/Recoskie/AI-Ma
 
 ### seq:
   >
-  > Any set of data solved as powers will only solve properly if it is plus one number higher than the number of sumitations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
+  > Any set of data solved as powers will only solve properly if it is plus one number higher than the number of summations inside one another, or largest power in an given set. Basically X to the power of 7 will only solve properly as 8 numbers as there are 7 sum-able multiplies. The set can be an combination of any powers lower than 7 multiplied, or divided by any size, and you will only need 8 numbers to solve to the last multiply in the set. You can go higher than 8 numbers, but all that will happen is that the numbers in the set higher up will cancel out when the last sum to the last multiple is calculated.
   >
 ### geo:
   >

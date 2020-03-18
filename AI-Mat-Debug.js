@@ -232,7 +232,7 @@ AI_Mat.GeqSp[ 1 ] = function( s ) { var s = s.slice( 0 ); return ( new DSet( [ 0
 An new set can be numbers per argument, or array of numbers, or set( string, radix ).
 ***********************************************************************************/
 
-var Set = function( str, radix )
+var set = function( str, radix )
 {
   var d = [];
 
@@ -260,7 +260,7 @@ var Set = function( str, radix )
 Decode all dimensional sequences along set.
 ***********************************************************************************/
 
-Set.prototype.seq = function()
+set.prototype.seq = function()
 {
   //Adjust the matrix as necessary.
 
@@ -304,7 +304,7 @@ Set.prototype.seq = function()
 Decode all dimensional sequences along set plus spiral.
 ***********************************************************************************/
 
-Set.prototype.seqsp = function()
+set.prototype.seqsp = function()
 {
   //Adjust the matrix as necessary.
 
@@ -349,7 +349,7 @@ Set.prototype.seqsp = function()
 Decode all dimensional sequences, and geo expansion along set.
 ***********************************************************************************/
 
-Set.prototype.gen = function( set )
+set.prototype.gen = function( set )
 {
   //Adjust the matrix as necessary.
 
@@ -421,7 +421,7 @@ Set.prototype.gen = function( set )
 Decode all dimensional sequences, and geo expansion along set plus spiral.
 ***********************************************************************************/
 
-Set.prototype.gensp = function()
+set.prototype.gensp = function()
 {
   //Adjust the matrix as necessary.
 
@@ -540,7 +540,7 @@ Set.prototype.gensp = function()
 Decode all dimensional geo expansion sequences along set.
 ***********************************************************************************/
 
-Set.prototype.geo = function()
+set.prototype.geo = function()
 {
   //Adjust the matrix as necessary.
 
@@ -584,7 +584,7 @@ Set.prototype.geo = function()
 Decode all dimensional geo expansion sequences along set plus spiral.
 ***********************************************************************************/
 
-Set.prototype.geosp = function()
+set.prototype.geosp = function()
 {
   //Adjust the matrix as necessary.
 
@@ -661,7 +661,7 @@ Set.prototype.geosp = function()
 Set to string.
 ***********************************************************************************/
 
-Set.prototype.toString = function( radix ) { for ( var i = 0, str = ""; i < this.length; str += "X" + i + " = " + this[ i++ ].toString( radix ) + "\r\n" ); return ( str ); }
+set.prototype.toString = function( radix ) { for ( var i = 0, str = ""; i < this.length; str += "X" + i + " = " + this[ i++ ].toString( radix ) + "\r\n" ); return ( str ); }
 
 /***********************************************************************************
 DSet is the decoding of Seq, or Geo, or both. Takes two sets. The first set can be 0 if not used.
@@ -671,7 +671,7 @@ DSet is the decoding of Seq, or Geo, or both. Takes two sets. The first set can 
 
 function DSet( seq, geo, sp )
 {
-  this.seq = new Set( seq || [ 0 ] ); this.geo = new Set( geo || [ 0 ] ); this.sp = sp || [ 0, 0 ];
+  this.seq = new set( seq || [ 0 ] ); this.geo = new set( geo || [ 0 ] ); this.sp = sp || [ 0, 0 ];
 
   //Is not filtered. Set already filtered if error correction is disabled.
 
@@ -812,7 +812,7 @@ DSet.prototype.getFunc = function()
 Convert set to HTML setting and color for each element.
 ***********************************************************************************/
 
-Set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace( /= /g, "= <font color=\"" + c + "\">" ).replace( /\r\n/g, "</font><br />" ) ); }
+set.prototype.fontcolor = function( c ) { return( ( this + "" ).replace( /= /g, "= <font color=\"" + c + "\">" ).replace( /\r\n/g, "</font><br />" ) ); }
 
 /***********************************************************************************
 HTML format function for browsers that do not support the formatting for debug output.
@@ -850,11 +850,11 @@ Inherit operations from Arrays, and FL64 library if loaded otherwise functions d
 
 for ( var i = 0, a = [ "reverse", "splice", "slice", "divP", "reduce", "valueOf", "getFract", "avgFract", "bits", "bitAnd", "bitOr", "bitXor", "bitNot", "bitRsh", "bitLsh", "toPattern", "err" ], c = ""; i < a.length; i++ )
 {
-  c += "Set.prototype." + a[ i ] + " = function( arg ) { return( Array.prototype." + a[ i ] + " ? new Set( Array.from( this )." + a[ i ] + "( arg ) ) : this ); };\r\n";
+  c += "set.prototype." + a[ i ] + " = function( arg ) { return( Array.prototype." + a[ i ] + " ? new set( Array.from( this )." + a[ i ] + "( arg ) ) : this ); };\r\n";
 }
 for ( var i = 0, a = [ "shift", "unshift", "push", "pop" ]; i < a.length; i++ )
 {
-  c += "Set.prototype." + a[ i ] + " = Array.prototype." + a[ i ] + ";\r\n";
+  c += "set.prototype." + a[ i ] + " = Array.prototype." + a[ i ] + ";\r\n";
 }
 
 eval( c ); c = undefined; i = undefined; a = undefined;
