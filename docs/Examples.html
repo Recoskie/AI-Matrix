@@ -6,6 +6,11 @@
 <body>
   <style type="text/css">
     <!--
+    input[type=button] {
+      width: 100%;
+      height: 48px;
+    }
+
     @media (orientation: landscape) {
       textarea.c {
         resize: none;
@@ -32,7 +37,6 @@
         width: 100%;
         max-height: 20%;
       }
-    }
     -->
   </style>
   <script src="../AI-Mat.js" type="text/javascript"></script>
@@ -91,7 +95,7 @@ var My_set = new set( 10, 20, 30 );
 
 console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
   <br />
-  <input style="width:100%;" type="button" onclick="runExamp('e1');" value="Run code." />
+  <input  type="button" onclick="runExamp('e1');" value="Run code." />
 
   <!--End Example #1-->
 
@@ -108,7 +112,7 @@ var text = "77, 160, 911";
 var My_set = new set( text );
 
 console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e2');" value="Run code." />
+  <input  type="button" onclick="runExamp('e2');" value="Run code." />
 
   <!--End Example #2-->
 
@@ -130,7 +134,7 @@ try { var My_set = new set( text ); }
 catch( e ){ console.log("Bad Input!"); }
 
 console.log( My_set );</textarea><textarea class="o" rows="13" id="e3o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e3');" value="Run code." />
+  <input  type="button" onclick="runExamp('e3');" value="Run code." />
 
   <!--End Example #3-->
 
@@ -161,7 +165,7 @@ for( var i = 0; i < 10; i++)
 var My_set = new set( values );
 
 console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e4');" value="Run code." />
+  <input type="button" onclick="runExamp('e4');" value="Run code." />
 
   <!--End Example #4-->
 
@@ -194,7 +198,7 @@ var My_set = new set( 10, 20, 30 );
 My_set[1] = 60;
 
 console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e5');" value="Run code." />
+  <input  type="button" onclick="runExamp('e5');" value="Run code." />
 
   <!--End Example #5-->
 
@@ -219,7 +223,7 @@ for( var i = 0; i < My_set.length; i++ )
   console.log(My_set[i]);
 }
 </textarea><textarea class="o" rows="10" id="e6o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e6');" value="Run code." />
+  <input  type="button" onclick="runExamp('e6');" value="Run code." />
 
   <!--End Example #6-->
 
@@ -238,7 +242,7 @@ My_set = My_set.reverse();
 console.log(My_set);
 </textarea><textarea class="o" rows="10" id="e7o" readonly>Console output.</textarea>
   <br />
-  <input style="width:100%;" type="button" onclick="runExamp('e7');" value="Run code." />
+  <input  type="button" onclick="runExamp('e7');" value="Run code." />
 
   <!--End Example #7-->
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
@@ -285,7 +289,7 @@ console.log( My_set );
 var My_seq = My_set.seq();
 
 console.log( My_seq );</textarea><textarea class="o" rows="24" id="e8o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e8');" value="Run code." />
+  <input  type="button" onclick="runExamp('e8');" value="Run code." />
 
   <!--End Example #8-->
 
@@ -336,7 +340,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="24" id="e9o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e9');" value="Run code." />
+  <input  type="button" onclick="runExamp('e9');" value="Run code." />
 
   <!--End Example #9-->
 
@@ -390,7 +394,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="24" id="e10o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e10');" value="Run code." />
+  <input  type="button" onclick="runExamp('e10');" value="Run code." />
 
   <!--End Example #10-->
 
@@ -463,7 +467,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="24" id="e11o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e11');" value="Run code." />
+  <input  type="button" onclick="runExamp('e11');" value="Run code." />
 
   <!--End Example #11-->
 
@@ -542,7 +546,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="24" id="e12o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e12');" value="Run code." />
+  <input  type="button" onclick="runExamp('e12');" value="Run code." />
 
   <!--End Example #12-->
 
@@ -653,7 +657,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e13o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e13');" value="Run code." />
+  <input  type="button" onclick="runExamp('e13');" value="Run code." />
 
   <!--End Example #13-->
 
@@ -732,7 +736,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
   </textarea><textarea class="o" rows="40" id="e14o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e14');" value="Run code." />
+  <input  type="button" onclick="runExamp('e14');" value="Run code." />
 
   <!--End Example #14-->
 
@@ -786,7 +790,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
   </textarea><textarea class="o" rows="40" id="e15o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e15');" value="Run code." />
+  <input  type="button" onclick="runExamp('e15');" value="Run code." />
 
   <!--End Example #15-->
 
@@ -877,9 +881,10 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e16o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e16');" value="Run code." />
+  <input  type="button" onclick="runExamp('e16');" value="Run code." />
 
   <!--End Example #16-->
+
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
   So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
@@ -936,7 +941,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e17o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e17');" value="Run code." />
+  <input  type="button" onclick="runExamp('e17');" value="Run code." />
 
   <!--End Example #17-->
 
@@ -1003,7 +1008,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e18o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e18');" value="Run code." />
+  <input  type="button" onclick="runExamp('e18');" value="Run code." />
 
   <!--End Example #18-->
 
@@ -1102,7 +1107,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e19o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e19');" value="Run code." />
+  <input  type="button" onclick="runExamp('e19');" value="Run code." />
 
   <!--End Example #19-->
 
@@ -1219,7 +1224,7 @@ for( var x = 0; x < 20; x++)
   console.log( My_func( x ) );
 }
 </textarea><textarea class="o" rows="40" id="e20o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e20');" value="Run code." />
+  <input  type="button" onclick="runExamp('e20');" value="Run code." />
 
   <!--End Example #20-->
 
@@ -1272,7 +1277,7 @@ AI_Mat.ErrCorrect = true;
 
 alert("Error correction Is now Enabled.");
 </textarea><textarea class="o" rows="7" id="e21o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e21');" value="Run code." />
+  <input  type="button" onclick="runExamp('e21');" value="Run code." />
 
   <!--End Example #21-->
 
@@ -1290,7 +1295,7 @@ AI_Mat.ErrCorrect = false;
 
 alert("Error correction Is now disabled.");
 </textarea><textarea class="o" rows="7" id="e22o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e22');" value="Run code." />
+  <input  type="button" onclick="runExamp('e22');" value="Run code." />
 
   <!--End Example #22-->
 
@@ -1338,7 +1343,7 @@ var My_set = new set( 7.11, 3.14, 0.1414, 1.6080 ).getFract();
 
 console.log( My_set );
 </textarea><textarea class="o" rows="14" id="e23o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e23');" value="Run code." />
+  <input  type="button" onclick="runExamp('e23');" value="Run code." />
 
   <!--End Example #23-->
 
@@ -1380,7 +1385,7 @@ My_set = My_set.getFract();
 
 console.log( My_set );
 </textarea><textarea class="o" rows="28" id="e24o" readonly>Console output.</textarea>
-  <input style="width:100%;" type="button" onclick="runExamp('e24');" value="Run code." />
+  <input  type="button" onclick="runExamp('e24');" value="Run code." />
 
   <!--End Example #24-->
 
