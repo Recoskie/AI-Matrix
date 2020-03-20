@@ -39,33 +39,8 @@
     var output = ""; console.log = function (msg) { output += msg + "\r\n"; }
   </script>
   <textarea id="code" style="width:70%;height:93%;background-color:rgba(255,255,255,0.5);">
-var n1 = 3.147547;
 
-var er1 = 1; //Number Of binary digits.
-
-//The exponent position using log 2.
-
-var pos = Math.round(Math.log(n1)/Math.log(2));
-
-//The last binary digit.
-
-var er = 2**(pos-(53-er1)); er -= 2**(pos-53);
-
-//Show the error that is being introduced.
-
-console.log("value before error is introduced.\r\n"+n1.toString(2));
-
-console.log("Value that is going to be added to Number as error.\r\n"+er.toString(2));
-
-n1 += er;
-
-console.log("Value After error is introduced.\r\n"+n1.toString(2));
-
-//Show stats and error correction.
-
-n1.stats();
-
-console.log("Error corrected value = "+n1.err());</textarea>
+</textarea>
   <textarea id="console" style="width:29%;height:93%;background-color:rgba(255,255,255,0.75);">Console Output.</textarea>
   <input type="button" value="Run Code." onclick="RunCode()" style="width:99%;height:7%;" />
 </body>
