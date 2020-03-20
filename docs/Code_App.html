@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
+  <title>AI Matrix.</title>
+</head>
+<body>
+  <style type="text/css">
+    <!--
+    body
+    {
+      background-image: url(Bg/bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      overflow:hidden;
+    }
+    textarea
+    {
+      resize: none;
+    }
+    -->
+  </style>
+  <script src="../AI-Mat.js" type="text/javascript"></script>
+  <script src="https://recoskie.github.io/Fl64/FL64.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function RunCode()
+    {
+      var s = document.getElementById("code").value;
+      try { eval(s); } catch (e) { console.log(e + ""); }
+
+      document.getElementById("console").value = output;
+
+      output = "";
+    }
+
+    //Allow console to log to external output on page.
+
+    var output = ""; console.log = function (msg) { output += msg + "\r\n"; }
+  </script>
+  <textarea id="code" style="width:70%;height:93%;background-color:rgba(255,255,255,0.5);">
+var n1 = 3.147547;
+
+var er1 = 1; //Number Of binary digits.
+
+//The exponent position using log 2.
+
+var pos = Math.round(Math.log(n1)/Math.log(2));
+
+//The last binary digit.
+
+var er = 2**(pos-(53-er1)); er -= 2**(pos-53);
+
+//Show the error that is being introduced.
+
+console.log("value before error is introduced.\r\n"+n1.toString(2));
+
+console.log("Value that is going to be added to Number as error.\r\n"+er.toString(2));
+
+n1 += er;
+
+console.log("Value After error is introduced.\r\n"+n1.toString(2));
+
+//Show stats and error correction.
+
+n1.stats();
+
+console.log("Error corrected value = "+n1.err());</textarea>
+  <textarea id="console" style="width:29%;height:93%;background-color:rgba(255,255,255,0.75);">Console Output.</textarea>
+  <input type="button" value="Run Code." onclick="RunCode()" style="width:99%;height:7%;" />
+</body>
+</html>

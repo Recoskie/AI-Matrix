@@ -2,8 +2,8 @@
 
 **AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
 
-AI Matrix Web Page: <a href="https://recoskie.github.io/AI-Matrix/AI-Matrix.html">Link</a><br />
-Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/Examples.html">Link</a>
+AI Matrix Web Page: <a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a><br />
+Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a>
 
 Below are very basic example uses without phase shifting, solving continued functions in data, or fractaling. <br />
 
@@ -220,7 +220,7 @@ For more information on what types of things this applies to see section [Solve 
 
 # Basic library use, and reference.
 
-There are four methods for loading data. For fractional base number conversion the <a href="https://github.com/Recoskie/Fl64">FL64 libaray</a> needs to be loaded.
+There are four methods for loading data. For fractional base number conversion the <a href="https://github.com/Recoskie/Fl64">FL64 library</a> needs to be loaded.
 
 ```Javascript
 //Method one. Creating an set
