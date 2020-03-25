@@ -3,12 +3,16 @@
   <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
   <title>AI-Mat Examples.</title>
 </head>
-<body>
+<body onload="setup();">
   <style type="text/css">
     <!--
     input[type=button] {
       width: 100%;
       height: 48px;
+    }
+
+    h3 {
+      display: inline-block;
     }
 
     @media (orientation: landscape) {
@@ -37,7 +41,7 @@
         width: 100%;
         max-height: 20%;
       }
-    -->
+      -->
   </style>
   <script src="../AI-Mat.js" type="text/javascript"></script>
   <script type="text/javascript">
@@ -46,6 +50,25 @@
     FL64.type = "text/javascript"; FL64.src = "https://recoskie.github.io/Fl64/FL64.js";
 
     var output = "", loaded = false;
+
+    function setup()
+    {
+      var list = document.getElementsByTagName("code");
+
+      var html = "", lines = 0, spaces = 0;
+
+      for (var i1 = 0; i1 < list.length; i1++) {
+        html = list[i1].innerHTML;
+
+        var t = html.split("\n"); lines = t.length - 1; spaces = html.search(/\S|$/) - 1;
+
+        for (var i2 = 0, html = ""; i2 < lines; i2++) { html += t[i2].slice(spaces, t[i2].length) + "\n"; }
+
+        lines = list[i1].getAttribute("rows") || lines;
+
+        list[i1].innerHTML = "<textarea class=\"c\" rows=\"" + lines + "\" id=\"e" + i1 + "\">" + html + "</textarea></textarea><textarea class=\"o\" rows=\"" + lines + "\" id=\"e" + i1 + "o\" readonly>Console output.</textarea><input type=\"button\" onclick=\"runExamp('e" + i1 + "');\" value=\"Run code.\" />";
+      }
+    }
 
     function runExamp(id)
     {
@@ -57,6 +80,7 @@
     }
 
     console.log = function (msg) { output += msg + "\r\n"; }
+
 
     FL64.onload = function () { loaded = true; alert("FL64 is now loaded on this page."); };
 
@@ -85,36 +109,30 @@
 
   <h3>Method One.</h3>
   The preferred method. Use it when possible.
+
   <br /><br />
 
-  <!--Example #1-->
+  <code>
+    //Method one. Creating a set.
 
-  <textarea class="c" rows="10" id="e1">//Method one. Creating a set.
+    var My_set = new set( 10, 20, 30 );
 
-var My_set = new set( 10, 20, 30 );
-
-console.log( My_set );</textarea><textarea class="o" rows="10" id="e1o" readonly>Console output.</textarea>
-  <br />
-  <input  type="button" onclick="runExamp('e1');" value="Run code." />
-
-  <!--End Example #1-->
+    console.log( My_set );
+  </code>
 
   <h3>Method Two.</h3>
   Use this method when getting input from a text box, or text file.
   <br /><br />
 
-  <!--Example #2-->
+  <code>
+    //Method two. Creating a set.
 
-  <textarea class="c" rows="10" id="e2">//Method two. Creating a set.
+    var text = "77, 160, 911";
 
-var text = "77, 160, 911";
+    var My_set = new set( text );
 
-var My_set = new set( text );
-
-console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e2');" value="Run code." />
-
-  <!--End Example #2-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
 
@@ -122,52 +140,50 @@ console.log( My_set );</textarea><textarea class="o" rows="10" id="e2o" readonly
 
   <br /><br />
 
-  <!--Example #3-->
+  <code>
+    //Method two. Creating a set.
 
-  <textarea class="c" rows="13" id="e3">//Method two. Creating a set.
+    var text = "10, 20, Z, 30";
 
-var text = "10, 20, Z, 30";
+    var My_set;
 
-var My_set;
+    try { var My_set = new set( text ); }
+    catch( e ){ console.log("Bad Input!"); }
 
-try { var My_set = new set( text ); }
-catch( e ){ console.log("Bad Input!"); }
-
-console.log( My_set );</textarea><textarea class="o" rows="13" id="e3o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e3');" value="Run code." />
-
-  <!--End Example #3-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
+
   If you remove "Z" then there will be no error.
+
   <br />
+
   <h3>Dynamically creating data, and sets.</h3>
 
   Assuming we have an variable called "o", and we set it 7. Thus then we chose to add 7 by 5 ten times.
+
   <br /><br />
 
-  <!--Example #4-->
+  <code>
+    //Method three. Creating a set.
 
-  <textarea class="c" rows="20" id="e4">//Method three. Creating a set.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 10; i++)
+    {
+      o += 5;
+      values[i] = o;
+    }
 
-for( var i = 0; i < 10; i++)
-{
-  o += 5;
-  values[i] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
-
-console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly>Console output.</textarea>
-  <input type="button" onclick="runExamp('e4');" value="Run code." />
-
-  <!--End Example #4-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
 
@@ -189,18 +205,15 @@ console.log( My_set );</textarea><textarea class="o" rows="20" id="e4o" readonly
 
   <br /><br />
 
-  <!--Example #5-->
+  <code>
+    //Changing an element.
 
-  <textarea class="c" rows="10" id="e5">//Changing an element.
+    var My_set = new set( 10, 20, 30 );
 
-var My_set = new set( 10, 20, 30 );
+    My_set[1] = 60;
 
-My_set[1] = 60;
-
-console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e5');" value="Run code." />
-
-  <!--End Example #5-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
 
@@ -212,39 +225,31 @@ console.log( My_set );</textarea><textarea class="o" rows="10" id="e5o" readonly
 
   <br /><br />
 
-  <!--Example #6-->
+  <code>
+    //Looping through each element in a set.
 
-  <textarea class="c" rows="10" id="e6">//Looping through each element in a set.
+    var My_set = new set( 10, 20, 30 );
 
-var My_set = new set( 10, 20, 30 );
-
-for( var i = 0; i < My_set.length; i++ )
-{
-  console.log(My_set[i]);
-}
-</textarea><textarea class="o" rows="10" id="e6o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e6');" value="Run code." />
-
-  <!--End Example #6-->
+    for( var i = 0; i < My_set.length; i++ )
+    {
+      console.log(My_set[i]);
+    }
+  </code>
 
   <h2>Array methods and operations.</h2>
 
   Sets also support all of the array methods, and operations. So you can use methods like <h4 style="display:inline-block;">sort()</h4>, <h4 style="display:inline-block;">map()</h4>, <h4 style="display:inline-block;">push()</h4>, <h4 style="display:inline-block;">pop()</h4>, even <h4 style="display:inline-block;">reverse()</h4>.<br />
 
-  <!--Example #7-->
+  <code>
+    //Using array methods.
 
-  <textarea class="c" rows="10" id="e7">//Using array methods.
+    var My_set = new set( 10, 20, 30 );
 
-var My_set = new set( 10, 20, 30 );
+    My_set = My_set.reverse();
 
-My_set = My_set.reverse();
+    console.log(My_set);
+  </code>
 
-console.log(My_set);
-</textarea><textarea class="o" rows="10" id="e7o" readonly>Console output.</textarea>
-  <br />
-  <input  type="button" onclick="runExamp('e7');" value="Run code." />
-
-  <!--End Example #7-->
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
@@ -264,34 +269,31 @@ console.log(My_set);
 
   <br />
 
-  <!--Example #8-->
+  <code>
+    //Method one. Sequencing a set.
 
-  <textarea class="c" rows="24" id="e8">//Method one. Sequencing a set.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 10; i++)
+    {
+      o += 5;
+      values[i] = o;
+    }
 
-for( var i = 0; i < 10; i++)
-{
-  o += 5;
-  values[i] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
-
-console.log( My_seq );</textarea><textarea class="o" rows="24" id="e8o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e8');" value="Run code." />
-
-  <!--End Example #8-->
+    console.log( My_seq );
+  </code>
 
   <br /><br />
 
@@ -301,48 +303,44 @@ console.log( My_seq );</textarea><textarea class="o" rows="24" id="e8o" readonly
 
   <h2>Creating and running a function from a analyzed set.</h2>
 
-  <!--Example #9-->
+  <code>
+    //Creating and running a function.
 
-  <textarea class="c" rows="24" id="e9">//Creating and running a function.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 10; i++)
+    {
+      o += 5;
+      values[i] = o;
+    }
 
-for( var i = 0; i < 10; i++)
-{
-  o += 5;
-  values[i] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="24" id="e9o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e9');" value="Run code." />
-
-  <!--End Example #9-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -352,51 +350,47 @@ for( var x = 0; x < 20; x++)
 
   <h2>2 Dimensional set.</h2>
 
-  <!--Example #10-->
+  <code>
+    //2 Dimensional set.
 
-  <textarea class="c" rows="24" id="e10">//2 Dimensional set.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
+    for( var i1 = 0; i1 < 10; i1++)
+    {
+      o += 5;
 
-for( var i1 = 0; i1 < 10; i1++)
-{
-  o += 5;
+      for( var i2 = 0; i2 < i1; i2++ ){ o += 76; }
 
-  for( var i2 = 0; i2 < i1; i2++ ){ o += 76; }
+      values[i1] = o;
+    }
 
-  values[i1] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="24" id="e10o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e10');" value="Run code." />
-
-  <!--End Example #10-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -420,54 +414,52 @@ for( var x = 0; x < 20; x++)
 
   <h2>3 dimensional set.</h2>
 
-  <!--Example #11-->
+  <code>
+    //3 Dimensional set.
 
-  <textarea class="c" rows="24" id="e11">//3 Dimensional set.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
+    for( var i1 = 0; i1 < 10; i1++)
+    {
+      o += 5;
 
-for( var i1 = 0; i1 < 10; i1++)
-{
-  o += 5;
+      for( var i2 = 0; i2 < i1; i2++ )
+      {
+        o += 76;
 
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += 76;
+        for( var i3 = 0; i3 < i2; i3++ ) { o += 21; }
+      }
 
-    for( var i3 = 0; i3 < i2; i3++ ) { o += 21; }
-  }
+      values[i1] = o;
+    }
 
-  values[i1] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="24" id="e11o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e11');" value="Run code." />
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <!--End Example #11-->
 
@@ -494,59 +486,57 @@ for( var x = 0; x < 20; x++)
 
   <h2>4 dimensional set.</h2>
 
-  <!--Example #12-->
+  <code>
+    //4 Dimensional set.
 
-  <textarea class="c" rows="24" id="e12">//4 Dimensional set.
+    var o = 7;
 
-var o = 7;
+    var values = [];
 
-var values = [];
-
-for( var i1 = 0; i1 < 10; i1++)
-{
-  o += 5;
-
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += 76;
-
-    for( var i3 = 0; i3 < i2; i3++ )
+    for( var i1 = 0; i1 < 10; i1++)
     {
-      o += 21;
+      o += 5;
 
-      for( var i4 = 0; i4 < i3; i4++ ) { o += 711; }
+      for( var i2 = 0; i2 < i1; i2++ )
+      {
+        o += 76;
+
+        for( var i3 = 0; i3 < i2; i3++ )
+        {
+          o += 21;
+
+          for( var i4 = 0; i4 < i3; i4++ ) { o += 711; }
+        }
+      }
+
+      values[i1] = o;
     }
-  }
 
-  values[i1] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="24" id="e12o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e12');" value="Run code." />
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <!--End Example #12-->
 
@@ -580,86 +570,82 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  <!--Example #13-->
+  <code>
+    //random 7 Dimensional set.
 
-  <textarea class="c" rows="40" id="e13">//random 7 Dimensional set.
+    var o = Math.round(Math.random() * 1000);
+    var d1 = Math.round(Math.random() * 1000);
+    var d2 = Math.round(Math.random() * 1000);
+    var d3 = Math.round(Math.random() * 1000);
+    var d4 = Math.round(Math.random() * 1000);
+    var d5 = Math.round(Math.random() * 1000);
+    var d6 = Math.round(Math.random() * 1000);
+    var d7 = Math.round(Math.random() * 1000);
 
-var o = Math.round(Math.random() * 1000);
-var d1 = Math.round(Math.random() * 1000);
-var d2 = Math.round(Math.random() * 1000);
-var d3 = Math.round(Math.random() * 1000);
-var d4 = Math.round(Math.random() * 1000);
-var d5 = Math.round(Math.random() * 1000);
-var d6 = Math.round(Math.random() * 1000);
-var d7 = Math.round(Math.random() * 1000);
+    var values = [];
 
-var values = [];
-
-for( var i1 = 0; i1 < 10; i1++)
-{
-  o += d1;
-
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += d2;
-
-    for( var i3 = 0; i3 < i2; i3++ )
+    for( var i1 = 0; i1 < 10; i1++)
     {
-      o += d3;
+      o += d1;
 
-      for( var i4 = 0; i4 < i3; i4++ )
+      for( var i2 = 0; i2 < i1; i2++ )
       {
-        o += d4;
+        o += d2;
 
-        for( var i5 = 0; i5 < i4; i5++ )
+        for( var i3 = 0; i3 < i2; i3++ )
         {
-          o += d5;
+          o += d3;
 
-          for( var i6 = 0; i6 < i5; i6++ )
+          for( var i4 = 0; i4 < i3; i4++ )
           {
-            o += d6;
+            o += d4;
 
-            for( var i7 = 0; i7 < i6; i7++ )
+            for( var i5 = 0; i5 < i4; i5++ )
             {
-              o += d7;
+              o += d5;
+
+              for( var i6 = 0; i6 < i5; i6++ )
+              {
+                o += d6;
+
+                for( var i7 = 0; i7 < i6; i7++ )
+                {
+                  o += d7;
+                }
+              }
             }
           }
         }
       }
+
+      values[i1] = o;
     }
-  }
 
-  values[i1] = o;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seq();
 
-var My_seq = My_set.seq();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e13o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e13');" value="Run code." />
-
-  <!--End Example #13-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -696,49 +682,45 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  <!--Example #14-->
+  <code>
+    //Fibonacci seq.
 
-<textarea class="c" rows="40" id="e14">//Fibonacci seq.
+    var o1 = 0, o2 = 1;
 
-var o1 = 0, o2 = 1;
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 10; i++)
+    {
+      o2 = o1 + ( o1 = o2 );
 
-for( var i = 0; i < 10; i++)
-{
-  o2 = o1 + ( o1 = o2 );
+      values[i] = o1;
+    }
 
-  values[i] = o1;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seqsp();
 
-var My_seq = My_set.seqsp();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-  </textarea><textarea class="o" rows="40" id="e14o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e14');" value="Run code." />
-
-  <!--End Example #14-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <h2>Multiple Fibonacci sequences.</h2>
 
@@ -746,144 +728,136 @@ for( var x = 0; x < 20; x++)
 
   <br /><br />
 
-  <!--Example #15-->
+  <code>
+    //Multiple Fibonacci seq.
 
-  <textarea class="c" rows="40" id="e15">//Multiple Fibonacci seq.
+    var o1 = 98, o2 = 11;
+    var o3 = 7, o4 = -393;
+    var o5 = 99, o6 = 72;
 
-var o1 = 98, o2 = 11;
-var o3 = 7, o4 = -393;
-var o5 = 99, o6 = 72;
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 10; i++)
+    {
+      o2 = o1 + ( o1 = o2 );
+      o4 = o3 + ( o3 = o4 );
+      o6 = o5 + ( o5 = o6 );
 
-for( var i = 0; i < 10; i++)
-{
-  o2 = o1 + ( o1 = o2 );
-  o4 = o3 + ( o3 = o4 );
-  o6 = o5 + ( o5 = o6 );
+      values[i] = o1 + o4 + o6;
+    }
 
-  values[i] = o1 + o4 + o6;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seqsp();
 
-var My_seq = My_set.seqsp();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-  </textarea><textarea class="o" rows="40" id="e15o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e15');" value="Run code." />
-
-  <!--End Example #15-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <h2>7 Dimensional data plus multiple Fibonacci.</h2>
 
-  <!--Example #16-->
+  <code>
+    //Random 7 Dimensional set. Plus Multiple random Fibonacci.
 
-  <textarea class="c" rows="40" id="e16">//Random 7 Dimensional set. Plus Multiple random Fibonacci.
+    var o = Math.round(Math.random() * 1000);
+    var d1 = Math.round(Math.random() * 1000);
+    var d2 = Math.round(Math.random() * 1000);
+    var d3 = Math.round(Math.random() * 1000);
+    var d4 = Math.round(Math.random() * 1000);
+    var d5 = Math.round(Math.random() * 1000);
+    var d6 = Math.round(Math.random() * 1000);
+    var d7 = Math.round(Math.random() * 1000);
 
-var o = Math.round(Math.random() * 1000);
-var d1 = Math.round(Math.random() * 1000);
-var d2 = Math.round(Math.random() * 1000);
-var d3 = Math.round(Math.random() * 1000);
-var d4 = Math.round(Math.random() * 1000);
-var d5 = Math.round(Math.random() * 1000);
-var d6 = Math.round(Math.random() * 1000);
-var d7 = Math.round(Math.random() * 1000);
+    var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
+    var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
+    var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
 
-var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
-var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
-var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
+    var values = [];
 
-var values = [];
-
-for( var i1 = 0; i1 < 12; i1++)
-{
-  o2 = o1 + ( o1 = o2 );
-  o4 = o3 + ( o3 = o4 );
-  o6 = o5 + ( o5 = o6 );
-
-  o += d1;
-
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += d2;
-
-    for( var i3 = 0; i3 < i2; i3++ )
+    for( var i1 = 0; i1 < 12; i1++)
     {
-      o += d3;
+      o2 = o1 + ( o1 = o2 );
+      o4 = o3 + ( o3 = o4 );
+      o6 = o5 + ( o5 = o6 );
 
-      for( var i4 = 0; i4 < i3; i4++ )
+      o += d1;
+
+      for( var i2 = 0; i2 < i1; i2++ )
       {
-        o += d4;
+        o += d2;
 
-        for( var i5 = 0; i5 < i4; i5++ )
+        for( var i3 = 0; i3 < i2; i3++ )
         {
-          o += d5;
+          o += d3;
 
-          for( var i6 = 0; i6 < i5; i6++ )
+          for( var i4 = 0; i4 < i3; i4++ )
           {
-            o += d6;
+            o += d4;
 
-            for( var i7 = 0; i7 < i6; i7++ )
+            for( var i5 = 0; i5 < i4; i5++ )
             {
-              o += d7;
+              o += d5;
+
+              for( var i6 = 0; i6 < i5; i6++ )
+              {
+                o += d6;
+
+                for( var i7 = 0; i7 < i6; i7++ )
+                {
+                  o += d7;
+                }
+              }
             }
           }
         }
       }
+
+      values[i1] = o + o1 + o4 + o6;
     }
-  }
 
-  values[i1] = o + o1 + o4 + o6;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.seqsp();
 
-var My_seq = My_set.seqsp();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e16o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e16');" value="Run code." />
-
-  <!--End Example #16-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
@@ -895,55 +869,51 @@ for( var x = 0; x < 20; x++)
   <a id="geo"><h1>Geometric sequences.</h1></a>
   Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
 
-  <!--Example #17-->
+  <code>
+    //Geometric sequence.
 
-  <textarea class="c" rows="40" id="e17">//Geometric sequence.
+    var o = Math.round(Math.random()*1000);
 
-var o = Math.round(Math.random()*1000);
+    var g1 = Math.round(Math.random()*1000);
+    var g2 = Math.round(Math.random()*1000);
+    var g3 = Math.round(Math.random()*1000);
 
-var g1 = Math.round(Math.random()*1000);
-var g2 = Math.round(Math.random()*1000);
-var g3 = Math.round(Math.random()*1000);
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 12; i++)
+    {
+      g1 = g1 * 2;
+      g2 = g2 * 3;
+      g3 = g3 * 4;
 
-for( var i = 0; i < 12; i++)
-{
-  g1 = g1 * 2;
-  g2 = g2 * 3;
-  g3 = g3 * 4;
+      values[i] = o + g1 + g2 + g3;
+    }
 
-  values[i] = o + g1 + g2 + g3;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.geo();
 
-var My_seq = My_set.geo();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e17o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e17');" value="Run code." />
-
-  <!--End Example #17-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -954,63 +924,59 @@ for( var x = 0; x < 20; x++)
 
   In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
 
-  <!--Example #18-->
+  <code>
+    //Geometric sequence Plus multiple Fibonacci.
 
-  <textarea class="c" rows="40" id="e18">//Geometric sequence Plus multiple Fibonacci.
+    var o = Math.round(Math.random()*1000);
 
-var o = Math.round(Math.random()*1000);
+    var g1 = Math.round(Math.random()*1000);
+    var g2 = Math.round(Math.random()*1000);
+    var g3 = Math.round(Math.random()*1000);
 
-var g1 = Math.round(Math.random()*1000);
-var g2 = Math.round(Math.random()*1000);
-var g3 = Math.round(Math.random()*1000);
+    var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
+    var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
+    var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
 
-var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
-var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
-var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
+    var values = [];
 
-var values = [];
+    for( var i = 0; i < 12; i++)
+    {
+      o2 = o1 + ( o1 = o2 );
+      o4 = o3 + ( o3 = o4 );
+      o6 = o5 + ( o5 = o6 );
 
-for( var i = 0; i < 12; i++)
-{
-  o2 = o1 + ( o1 = o2 );
-  o4 = o3 + ( o3 = o4 );
-  o6 = o5 + ( o5 = o6 );
+      g1 = g1 * 2;
+      g2 = g2 * 3;
+      g3 = g3 * 4;
 
-  g1 = g1 * 2;
-  g2 = g2 * 3;
-  g3 = g3 * 4;
+      values[i] = o + g1 + g2 + g3 + o1 + o3 + o5;
+    }
 
-  values[i] = o + g1 + g2 + g3 + o1 + o3 + o5;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.geosp();
 
-var My_seq = My_set.geosp();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e18o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e18');" value="Run code." />
-
-  <!--End Example #18-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -1021,95 +987,91 @@ for( var x = 0; x < 20; x++)
   <h1>Solve All Patterns.</h1>
   Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
 
-  <!--Example #19-->
+  <code>
+    //Sequence everything.
 
-  <textarea class="c" rows="40" id="e19">//Sequence everything.
+    var o = Math.round(Math.random()*1000);
 
-var o = Math.round(Math.random()*1000);
+    var g1 = Math.round(Math.random()*1000);
+    var g2 = Math.round(Math.random()*1000);
+    var g3 = Math.round(Math.random()*1000);
 
-var g1 = Math.round(Math.random()*1000);
-var g2 = Math.round(Math.random()*1000);
-var g3 = Math.round(Math.random()*1000);
+    var d1 = Math.round(Math.random() * 1000);
+    var d2 = Math.round(Math.random() * 1000);
+    var d3 = Math.round(Math.random() * 1000);
+    var d4 = Math.round(Math.random() * 1000);
+    var d5 = Math.round(Math.random() * 1000);
+    var d6 = Math.round(Math.random() * 1000);
+    var d7 = Math.round(Math.random() * 1000);
 
-var d1 = Math.round(Math.random() * 1000);
-var d2 = Math.round(Math.random() * 1000);
-var d3 = Math.round(Math.random() * 1000);
-var d4 = Math.round(Math.random() * 1000);
-var d5 = Math.round(Math.random() * 1000);
-var d6 = Math.round(Math.random() * 1000);
-var d7 = Math.round(Math.random() * 1000);
+    var values = [];
 
-var values = [];
-
-for( var i1 = 0; i1 < 15; i1++)
-{
-  g1 = g1 * 2;
-  g2 = g2 * 3;
-  g3 = g3 * 4;
-
-  o += d1;
-
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += d2;
-
-    for( var i3 = 0; i3 < i2; i3++ )
+    for( var i1 = 0; i1 < 15; i1++)
     {
-      o += d3;
+      g1 = g1 * 2;
+      g2 = g2 * 3;
+      g3 = g3 * 4;
 
-      for( var i4 = 0; i4 < i3; i4++ )
+      o += d1;
+
+      for( var i2 = 0; i2 < i1; i2++ )
       {
-        o += d4;
+        o += d2;
 
-        for( var i5 = 0; i5 < i4; i5++ )
+        for( var i3 = 0; i3 < i2; i3++ )
         {
-          o += d5;
+          o += d3;
 
-          for( var i6 = 0; i6 < i5; i6++ )
+          for( var i4 = 0; i4 < i3; i4++ )
           {
-            o += d6;
+            o += d4;
 
-            for( var i7 = 0; i7 < i6; i7++ )
+            for( var i5 = 0; i5 < i4; i5++ )
             {
-              o += d7;
+              o += d5;
+
+              for( var i6 = 0; i6 < i5; i6++ )
+              {
+                o += d6;
+
+                for( var i7 = 0; i7 < i6; i7++ )
+                {
+                  o += d7;
+                }
+              }
             }
           }
         }
       }
+
+      values[i1] = o + g1 + g2 + g3;
     }
-  }
 
-  values[i1] = o + g1 + g2 + g3;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.gen();
 
-var My_seq = My_set.gen();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e19o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e19');" value="Run code." />
-
-  <!--End Example #19-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -1126,107 +1088,103 @@ for( var x = 0; x < 20; x++)
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
-  <!--Example #20-->
+  <code>
+    //Sequence everything. Plus multiple Fibonacci sequences.
 
-<textarea class="c" rows="40" id="e20">//Sequence everything. Plus multiple Fibonacci sequences.
+    var o = Math.round(Math.random() * 1000);
 
-var o = Math.round(Math.random() * 1000);
+    var g1 = Math.round(Math.random() * 1000);
+    var g2 = Math.round(Math.random() * 1000);
+    var g3 = Math.round(Math.random() * 1000);
 
-var g1 = Math.round(Math.random() * 1000);
-var g2 = Math.round(Math.random() * 1000);
-var g3 = Math.round(Math.random() * 1000);
+    var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
+    var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
+    var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
+    var o7 = Math.round(Math.random() * 1000), o8 = Math.round(Math.random() * 1000);
+    var o9 = Math.round(Math.random() * 1000), o10 = Math.round(Math.random() * 1000);
 
-var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);
-var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);
-var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);
-var o7 = Math.round(Math.random() * 1000), o8 = Math.round(Math.random() * 1000);
-var o9 = Math.round(Math.random() * 1000), o10 = Math.round(Math.random() * 1000);
+    var d1 = Math.round(Math.random() * 1000);
+    var d2 = Math.round(Math.random() * 1000);
+    var d3 = Math.round(Math.random() * 1000);
+    var d4 = Math.round(Math.random() * 1000);
+    var d5 = Math.round(Math.random() * 1000);
+    var d6 = Math.round(Math.random() * 1000);
+    var d7 = Math.round(Math.random() * 1000);
 
-var d1 = Math.round(Math.random() * 1000);
-var d2 = Math.round(Math.random() * 1000);
-var d3 = Math.round(Math.random() * 1000);
-var d4 = Math.round(Math.random() * 1000);
-var d5 = Math.round(Math.random() * 1000);
-var d6 = Math.round(Math.random() * 1000);
-var d7 = Math.round(Math.random() * 1000);
+    var values = [];
 
-var values = [];
-
-for( var i1 = 0; i1 < 16; i1++)
-{
-  o2 = o1 + ( o1 = o2 );
-  o4 = o3 + ( o3 = o4 );
-  o6 = o5 + ( o5 = o6 );
-  o8 = o7 + ( o7 = o8 );
-  o10 = o9 + ( o9 = o10 );
-
-  g1 = g1 * 2;
-  g2 = g2 * 3;
-  g3 = g3 * 4;
-
-  o += d1;
-
-  for( var i2 = 0; i2 < i1; i2++ )
-  {
-    o += d2;
-
-    for( var i3 = 0; i3 < i2; i3++ )
+    for( var i1 = 0; i1 < 16; i1++)
     {
-      o += d3;
+      o2 = o1 + ( o1 = o2 );
+      o4 = o3 + ( o3 = o4 );
+      o6 = o5 + ( o5 = o6 );
+      o8 = o7 + ( o7 = o8 );
+      o10 = o9 + ( o9 = o10 );
 
-      for( var i4 = 0; i4 < i3; i4++ )
+      g1 = g1 * 2;
+      g2 = g2 * 3;
+      g3 = g3 * 4;
+
+      o += d1;
+
+      for( var i2 = 0; i2 < i1; i2++ )
       {
-        o += d4;
+        o += d2;
 
-        for( var i5 = 0; i5 < i4; i5++ )
+        for( var i3 = 0; i3 < i2; i3++ )
         {
-          o += d5;
+          o += d3;
 
-          for( var i6 = 0; i6 < i5; i6++ )
+          for( var i4 = 0; i4 < i3; i4++ )
           {
-            o += d6;
+            o += d4;
 
-            for( var i7 = 0; i7 < i6; i7++ )
+            for( var i5 = 0; i5 < i4; i5++ )
             {
-              o += d7;
+              o += d5;
+
+              for( var i6 = 0; i6 < i5; i6++ )
+              {
+                o += d6;
+
+                for( var i7 = 0; i7 < i6; i7++ )
+                {
+                  o += d7;
+                }
+              }
             }
           }
         }
       }
+
+      values[i1] = o + g1 + g2 + g3 + o1 + o3 + o5 + o7 + o9;
     }
-  }
 
-  values[i1] = o + g1 + g2 + g3 + o1 + o3 + o5 + o7 + o9;
-}
+    //Create the set using the values.
 
-//Create the set using the values.
+    var My_set = new set( values );
 
-var My_set = new set( values );
+    console.log( My_set );
 
-console.log( My_set );
+    //Sequence the set.
 
-//Sequence the set.
+    var My_seq = My_set.gensp();
 
-var My_seq = My_set.gensp();
+    console.log( My_seq );
 
-console.log( My_seq );
+    //Get the function of a analyzed set.
 
-//Get the function of a analyzed set.
+    var My_func = My_seq.getFunc();
 
-var My_func = My_seq.getFunc();
+    console.log( My_func );
 
-console.log( My_func );
+    //Calculate values using the function.
 
-//Calculate values using the function.
-
-for( var x = 0; x < 20; x++)
-{
-  console.log( My_func( x ) );
-}
-</textarea><textarea class="o" rows="40" id="e20o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e20');" value="Run code." />
-
-  <!--End Example #20-->
+    for( var x = 0; x < 20; x++)
+    {
+      console.log( My_func( x ) );
+    }
+  </code>
 
   <br /><br />
 
@@ -1269,17 +1227,13 @@ for( var x = 0; x < 20; x++)
 
   <br />
 
-  <!--Example #21-->
+  <code>
+    //Enable error correction.
 
-  <textarea class="c" rows="7" id="e21">//Enable error correction.
+    AI_Mat.ErrCorrect = true;
 
-AI_Mat.ErrCorrect = true;
-
-alert("Error correction Is now Enabled.");
-</textarea><textarea class="o" rows="7" id="e21o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e21');" value="Run code." />
-
-  <!--End Example #21-->
+    alert("Error correction Is now Enabled.");
+  </code>
 
   <br />
 
@@ -1287,17 +1241,13 @@ alert("Error correction Is now Enabled.");
 
   <br />
 
-  <!--Example #22-->
+  <code>
+    //Disable error correction.
 
-<textarea class="c" rows="7" id="e22">//Disable error correction.
+    AI_Mat.ErrCorrect = false;
 
-AI_Mat.ErrCorrect = false;
-
-alert("Error correction Is now disabled.");
-</textarea><textarea class="o" rows="7" id="e22o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e22');" value="Run code." />
-
-  <!--End Example #22-->
+    alert("Error correction Is now disabled.");
+  </code>
 
   <br /><br />
 
@@ -1329,23 +1279,19 @@ alert("Error correction Is now disabled.");
 
   <br /><br />
 
-  <!--Example #23-->
+  <code>
+    //Convert one floating point value to a floating point number.
 
-<textarea class="c" rows="14" id="e23">//Convert one floating point value to a floating point number.
+    var My_float = 13.02415.getFract();
 
-var My_float = 13.02415.getFract();
+    console.log( My_float.toString() );
 
-console.log( My_float.toString() );
+    //Now lets do the same operation with a set.
 
-//Now lets do the same operation with a set.
+    var My_set = new set( 7.11, 3.14, 0.1414, 1.6080 ).getFract();
 
-var My_set = new set( 7.11, 3.14, 0.1414, 1.6080 ).getFract();
-
-console.log( My_set );
-</textarea><textarea class="o" rows="14" id="e23o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e23');" value="Run code." />
-
-  <!--End Example #23-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
 
@@ -1357,37 +1303,33 @@ console.log( My_set );
 
   <br /><br />
 
-  <!--Example #24-->
+  <code>
+    //Convert one floating point value to a floating point number.
 
-  <textarea class="c" rows="28" id="e24">//Convert one floating point value to a floating point number.
+    var My_float = 13.02415;
 
-var My_float = 13.02415;
+    My_float = My_float.bits();
 
-My_float = My_float.bits();
+    console.log( My_float.toString() );
 
-console.log( My_float.toString() );
+    //Now convert the floating point value to binary.
 
-//Now convert the floating point value to binary.
+    My_float = My_float.getFract();
 
-My_float = My_float.getFract();
+    console.log( My_float );
 
-console.log( My_float );
+    //Now lets do the same operation with a set.
 
-//Now lets do the same operation with a set.
+    var My_set = new set( 7.11, 3.14, 0.1414, 1.6080 );
 
-var My_set = new set( 7.11, 3.14, 0.1414, 1.6080 );
+    My_set = My_set.bits();
 
-My_set = My_set.bits();
+    console.log( My_set.toString() );
 
-console.log( My_set.toString() );
+    My_set = My_set.getFract();
 
-My_set = My_set.getFract();
-
-console.log( My_set );
-</textarea><textarea class="o" rows="28" id="e24o" readonly>Console output.</textarea>
-  <input  type="button" onclick="runExamp('e24');" value="Run code." />
-
-  <!--End Example #24-->
+    console.log( My_set );
+  </code>
 
   <br /><br />
 
