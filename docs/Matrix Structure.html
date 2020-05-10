@@ -153,7 +153,7 @@
 
   <br /><br />
 
-  In the case of the example I gave you. We ended up with the following set starting with 1 and adding by per 7.
+  In the case of the example I gave you. We ended up with the following set starting with 1, and adding by per 7.
 
   <br /><br />
 
@@ -161,11 +161,11 @@
 
   <br /><br />
 
-  The starting amount was 1. This solves what the starting amount is.
+  The starting amount is 1. This solves what the starting amount is.
 
   <br /><br />
 
-  All you have to do is subtract the next number by the previous number with all numbers in the set. To solve the first dimension.
+  Then all you have to do is subtract the next number by the previous number with all numbers in the set. To solve the first dimension.
 
   <br /><br />
 
@@ -179,7 +179,7 @@
 
   <br /><br />
 
-  This gives us how much is added per number. The difference should be the same across all number making a set of 7,7,7,7,7,7,7.
+  This gives us how much is added per number. The difference is the same across all number making a set of 7,7,7,7,7,7,7 with a one dimensional set.
 
   <br /><br />
 
@@ -226,17 +226,15 @@
 
   <br /><br />
 
-  In this example we create a square using a 2D set.
+  In this example we create a square using a 2D set. Which is the calculation X<sup>2</sup>.
 
   <br /><br />
-
-  This time the starting value was 0. So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
 
   Our set is 0,1,4,9,16,25,36,49.
 
-  <br /><br />
+  So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
 
-  Subtracting the values into each other as follows gives us.
+  Subtracting the values into each other gives us.
 
   <br /><br />
 
@@ -286,15 +284,13 @@
   The first number without any subtraction will be the starting value.<br />
   The first number after the subtraction of all numbers will be per1.<br />
   The first number after the subtraction of all numbers again will be per2.<br />
-  The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left.<br />
+  The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left.
 
   <br /><br />
 
-  You loose one number with each subtraction into all numbers. So to solve a 5 dimensional pattern per iteration requires at least 6 numbers including the starting value.
+  You loose one number with each subtraction into all numbers. So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
 
-  <br /><br />
-
-  <h1>5 Dimensional set with solve function.</h1>
+  <h1>5 Dimensional set with subtraction.</h1>
 
   So now you know you can solve how much is added per dimension with each subtraction into all numbers.
 
@@ -304,7 +300,7 @@
 
   <br /><br />
 
-  In this code I will make it that you can create any 5D set you like. At the end of the code each number is subtract into it's self.
+  In this code I will make it that you can create any 5D set you like. At the end of the code each number is subtract into the previous.
 
   <br /><br />
 
@@ -424,8 +420,6 @@
 
   With each subtraction the first number is what each per dimension is. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
 
-  <br /><br />
-
   <h1>Faster way of subtracting.</h1>
 
   Instead of subtracting the next number to the previous number. We can instead add up the number of subtraction to calculate each value.
@@ -526,7 +520,7 @@
     <tr><td>x<sup>3</sup>*7</td><td>0*7=0</td><td>1*7=7</td><td>6*7=42</td><td>6*7=42</td><td>0*7=0</td><td>0*7=0</td><td>0,7,56,189,448,875,1512,2401</td></tr>
   </table>
 
-  <br /><br />
+  <br />
 
   If you want to get more complex you can multiply the square and cube, and add them together.
 
@@ -540,7 +534,7 @@
     <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
   </table>
 
-  <br /><br />
+  <br />
 
   Try each of them if you like. Or even combine and make up your own combinations.
 
@@ -631,7 +625,7 @@
     <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
   </table>
 
-  <br /><br />
+  <br />
 
   As previously seen you can add each of these together per value to create any calculation you wish by adding all the per values together.
 
@@ -641,7 +635,7 @@
 
   <br /><br />
 
-  If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you have to multiply each per value for x<sup>5</sup> by 2 doing.<br />
+  If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you have to multiply each per value for x<sup>5</sup> by 2 doing.
 
   <br /><br />
 
@@ -650,7 +644,7 @@
     <tr><td>x<sup>5</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>30*2=60</td><td>150*2=300</td><td>240*2=480</td><td>120*2=240</td></tr>
   </table>
 
-  <br /><br />
+  <br />
 
   You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth dimensional calculation from each per value.
 
@@ -672,7 +666,7 @@
     <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
   </table>
 
-  <br /><br />
+  <br />
 
   In this example we multiply and mix the square and cube together as 0,14,36,12,0,0. This gives us the set 0,14,64,162,320,550,864,1274.
 
@@ -694,7 +688,7 @@
 
   <br /><br />
 
-  We subtract x<sup>3</sup>*2 is 0,2,12,12,0,0. From our per values 0,14,36,12,0,0. Making 0,12,24,0,0,0. This is how we de-mix.
+  We subtract 0,2,12,12,0,0 which is x<sup>3</sup>*2, from our per values 0,14,36,12,0,0. Making our current per values 0,12,24,0,0,0.
 
   <br /><br />
 
@@ -706,7 +700,7 @@
 
   <br /><br />
 
-  We subtract x<sup>2</sup>*2 0,12,24,0,0,0. From our current per values 0,12,24,0,0,0. Making 0,0,0,0,0,0.
+  We subtract 0,12,24,0,0,0 which is x<sup>2</sup>*12, from our current per values 0,12,24,0,0,0. Making 0,0,0,0,0,0.
 
   <br /><br />
 
@@ -714,7 +708,7 @@
 
   <br /><br />
 
-  In this new example code we multiply by the power of by each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>.
+  In this new example code. We multiply by the power of by each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>. To any value you like.
 
   <br /><br />
 
@@ -778,7 +772,7 @@
 
   <br /><br />
 
-  Basically doing a faster forum of subtracting the numbers into them selves.
+  Basically doing a faster forum of subtracting next numbers minus previous.
 
   <br /><br />
 
@@ -790,7 +784,7 @@
 
   <br /><br />
 
-  You can build the subtraction pattern as big as you like. Thus the decoder at the end to match each iteration to the power of.
+  You can build the subtraction pattern as big as you like to as high in dimension. Thus the decoder at the end to match each iteration to the power of in dimension.
 
   <br /><br />
 
@@ -813,7 +807,11 @@
 
   <br /><br />
 
-  Thus de-mixing each one as we divide by the last value and work our way backwards decoding each to the power of in the set. You can expand this table to the power of 50 if liked if you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
+  Thus de-mixing each one as we divide by the last value and work our way backwards decoding each to the power of in the set.
+  
+  <br /><br />
+  
+  You can expand this table to the power of 50 if liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
 
   <h1>Upside down.</h1>
 
@@ -851,7 +849,7 @@
 
   <br />
 
-  AS you can see with 2^x we are doubling per value. And with 3^x we are tripling. And so on. This forum of solving things is useful the growth and expansion of things. The expansion and branching of nodes, or the spread of bacteria, or viruses. The rate at which a person grows.
+  AS you can see with 2^x we are doubling per value. And with 3^x we are tripling. And so on. This forum of solving things is useful the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria, or viruses. The rate at which a person grows.
 
   <br /><br />
 
@@ -906,8 +904,8 @@
 
   <br /><br />
 
-  This will de-mix any tripling or doubling pattern there is in the set. We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
-   
+  This will de-mix any tripling, or doubling combinational pattern there is in the set. We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
+
   <a id="geometry"><h1>Matrix structure.</h1></a>
 
   We can create tow matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
