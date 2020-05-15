@@ -89,7 +89,7 @@
 
   <h3>Note that this is a big simplification of the Q-matrix.</h3>
 
-  <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
+  <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3> 
 
   <h1><a id="basic">Solving a Dimensional Set.</a></h1>
 
@@ -165,7 +165,19 @@
 
   <br /><br />
 
-  Then all you have to do is subtract the next number by the previous number with all numbers in the set. To solve the first dimension.
+  Then all you have to do is subtract the next number by the previous number.
+  
+  <br /><br />
+  
+  The next number after 1 is 8 so 8-1=7.
+  
+  <br /><br />
+
+  You then move to the next number in the set which is 8. The number after 8 is 15. So 15-8=7.
+
+  <br /><br />
+  
+  You do this with all numbers in the set. To solve the first dimension. As it solves the difference between the numbers per iteration.
 
   <br /><br />
 
@@ -187,7 +199,7 @@
 
   <h1>Solving a 2 dimensional set.</h1>
 
-  So in the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension.
+  So in the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension per added amount.
 
   <br /><br />
 
@@ -263,7 +275,7 @@
 
   <br /><br />
 
-  This solves the difference in the second dimension. Which is 2. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
+  This solves the difference in the second dimension. Which is 2 more. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
 
   <br /><br />
 
@@ -288,7 +300,11 @@
 
   <br /><br />
 
-  You loose one number with each subtraction into all numbers. So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
+  You loose one number with each subtraction into all numbers, because there is no next digit to subtract the last digit into in the set.
+  
+  <br /><br />
+  
+  So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
 
   <h1>5 Dimensional set with subtraction.</h1>
 
@@ -300,7 +316,7 @@
 
   <br /><br />
 
-  In this code. I will make it that you can create any 5D set you like. At the end of the code each number is subtract into the previous.
+  In this code. I will make it that you can create any 5D set you like. At the end of the code. Each number is subtract into the previous.
 
   <br /><br />
 
@@ -908,7 +924,11 @@
 
   <br /><br />
 
-  This will de-mix any tripling, or doubling combinational pattern there is in the set. We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
+  This will de-mix any tripling, or doubling combinational pattern there is in the set. Even if you start in the middle of the set It will de-mix all combinations in the set to what they are.
+  
+  <br /><br />
+  
+  We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
 
   <a id="geometry"><h1>Matrix structure.</h1></a>
 
