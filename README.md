@@ -1,12 +1,14 @@
 # Artificially solve all kinds of multidimensional data.
 
-**AI-Matrix.html** is an sample web application using this library which allows you to use the matrices basic functions. <br />
+This tool lets you solve things beyond the human senses, mind, and capacity. On this page you can learn how the algorithm works. It's unified structure of all things. How it solves all things in a quantum alignment. Which reviles all things in any set, or any data instantly. You can create sets with set parameters and have this tool give you the best answer instantly.
+  
+You can convert anything into a formula. Weather it be a set for gravity per second. That you wish to translate to a formula. Which is a 2D calculation. 
 
 AI Matrix Web Page: <a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a><br />
 Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a><br />
 How it works, and additional resources: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a>
 
-Below are very basic example uses without phase shifting, solving continued functions in data, or fractaling. <br />
+Below are very basic example uses.<br />
 
 <a href="https://github.com/Recoskie/AI-Matrix#basic-library-use-and-reference">Skip to Reference, and use.</a>
 
