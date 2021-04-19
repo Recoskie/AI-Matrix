@@ -1,8 +1,10 @@
+---
+layout: default
+image:
+  path: https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1
+---
+
 <html>
-<head>
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
-  <title>AI-Mat Structure.</title>
-</head>
 <body onload="setup();">
   <style type="text/css">
     <!--
@@ -10,41 +12,32 @@
     {
       width: 100%;
       height: 48px;
+      clear: both;
+    }
+    
+    textarea.c
+    {
+      resize: none;
+      width: 100%;
+      max-height: 40%;
+      float: left;
     }
 
-    @media (orientation: landscape)
+    textarea.o 
     {
-      textarea.c
-      {
-        resize: none;
-        width: 70%;
-        max-height: 70%;
-      }
-
-      textarea.o
-      {
-        resize: none;
-        width: 30%;
-        max-height: 70%;
-      }
+      resize: none;
+      width: 100%;
+      max-height: 20%;
+      float: left;
     }
 
-    @media (orientation: portrait)
+    .cmd:target
     {
-      textarea.c
-      {
-        resize: none;
-        width: 100%;
-        max-height: 40%;
-      }
-
-      textarea.o
-      {
-        resize: none;
-        width: 100%;
-        max-height: 20%;
-      }
-      -->
+      display: block;
+      height: 4rem; margin-top: -4rem;
+      visibility: hidden;
+    }
+    -->
   </style>
   <script type="text/javascript">
     var output = "";
@@ -83,15 +76,17 @@
 
   <h1>Indexed contents.</h1>
 
-  The basic algorithm: <a href="#basic">Link</a><br />
-  Decoding dimensional iteration: <a href="#decoding">Link</a><br />
-  The complete matrix: <a href="#geometry">Link</a><br />
+  <table>
+    <tr><td>The basic algorithm: <a href="#basic">Link</a></td></tr>
+    <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
+    <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
+  </table>
 
   <h3>Note that this is a big simplification of the Q-matrix.</h3>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3> 
 
-  <h1><a id="basic">Solving a Dimensional Set.</a></h1>
+  <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
 
   Lets start with a one dimensional set, and show how it builds, and solves. Starting from here will help you see how it works.
 
@@ -516,7 +511,7 @@
 
   This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each dimension.
 
-  <a id="decoding"><h1>Solving sets to math functions.</h1></a>
+  <a id="decoding" class="cmd"></a><h1>Solving sets to math functions.</h1>
 
   You can calculate any mathematical dimensional shape, or combination as follows using per amount in iteration.
 
@@ -930,7 +925,7 @@
   
   We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
 
-  <a id="geometry"><h1>Matrix structure.</h1></a>
+  <a id="geometry" class="cmd"></a><h1>Matrix structure.</h1>
 
   We can create tow matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
 

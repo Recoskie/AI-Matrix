@@ -1,43 +1,43 @@
+---
+layout: default
+image:
+  path: https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1
+---
+
 <html>
-<head>
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
-  <title>AI-Mat Examples.</title>
-</head>
 <body onload="setup();">
   <style type="text/css">
     <!--
-    input[type=button] {
+    input[type=button]
+    {
       width: 100%;
       height: 48px;
+      clear: both;
+    }
+    
+    textarea.c
+    {
+      resize: none;
+      width: 100%;
+      max-height: 40%;
+      float: left;
     }
 
-    @media (orientation: landscape) {
-      textarea.c {
-        resize: none;
-        width: 70%;
-        max-height: 70%;
-      }
-
-      textarea.o {
-        resize: none;
-        width: 30%;
-        max-height: 70%;
-      }
+    textarea.o 
+    {
+      resize: none;
+      width: 100%;
+      max-height: 20%;
+      float: left;
     }
 
-    @media (orientation: portrait) {
-      textarea.c {
-        resize: none;
-        width: 100%;
-        max-height: 40%;
-      }
-
-      textarea.o {
-        resize: none;
-        width: 100%;
-        max-height: 20%;
-      }
-      -->
+    .cmd:target
+    {
+      display: block;
+      height: 4rem; margin-top: -4rem;
+      visibility: hidden;
+    }
+    -->
   </style>
   <script src="../AI-Mat.js" type="text/javascript"></script>
   <script type="text/javascript">
@@ -87,17 +87,19 @@
 
   <h1>Indexed contents.</h1>
 
-  Creating A set: <a href="#sets">Link</a><br />
-  Manipulating A set: <a href="#msets">Link</a><br />
-  Solving sequences: <a href="#seq">Link</a><br />
-  Error Correction: <a href="#er">Link</a><br />
-  FL64 operations: <a href="#FL64">Link</a><br />
-  Advanced: <a href="#Advanced">Link</a>
+  <table>
+    <tr><td>Creating A set: <a href="#sets">Link</a></td></tr>
+    <tr><td>Manipulating A set: <a href="#msets">Link</a></td></tr>
+    <tr><td>Solving sequences: <a href="#seq">Link</a></td></tr>
+    <tr><td>Error Correction: <a href="#er">Link</a></td></tr>
+    <tr><td>FL64 operations: <a href="#FL64">Link</a></td></tr>
+    <tr><td>Advanced: <a href="#Advanced">Link</a></td></tr>
+  </table>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
   <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
 
-  <h1><a id="sets">Creating A set.</a></h1>
+  <a id="sets" class="cmd"></a><h1>Creating A set.</h1>
 
   1. Sets are used to setup a set of data you wish to analyze.<br />
   2. There are three ways to create a set.<br />
@@ -195,7 +197,7 @@
 
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
 
-  <a id="msets"><h1>Manipulating sets.</h1></a>
+  <a id="msets" class="cmd"></a><h1>Manipulating sets.</h1>
 
   A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
 
@@ -250,7 +252,7 @@
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
 
-  <a id="seq"><h1>Solving sequences.</h1></a>
+  <a id="seq" class="cmd"></a><h1>Solving sequences.</h1>
 
   The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
 
@@ -866,7 +868,7 @@
   We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minimum of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
   So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
 
-  <a id="geo"><h1>Geometric sequences.</h1></a>
+  <a id="geo" class="cmd"></a><h1>Geometric sequences.</h1>
   Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
 
   <code>
@@ -1084,7 +1086,7 @@
   You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
   This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
 
-  <a id="all"><h2>Solve All Patterns plus multiple Fibonacci sequences.</h2></a>
+  <a id="all" class="cmd"></a><h2>Solve All Patterns plus multiple Fibonacci sequences.</h2>
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
@@ -1194,7 +1196,7 @@
   This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
   I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI, or bot.
 
-  <a id="er"><h1>Error Correction.</h1></a>
+  <a id="er" class="cmd"></a><h1>Error Correction.</h1>
   In all of the sequencing examples. You have probably noticed how values are 0.00000000001 off. This is because floating point numbers have a accuracy limit.
 
   <br /><br />
@@ -1259,7 +1261,7 @@
 
   Running the examples over again will give you better results now. Especially if you loaded FL64.<br /><br />
 
-  <a id="FL64"><h1>FL64 set/array operations.</h1></a>
+  <a id="FL64" class="cmd"></a><h1>FL64 set/array operations.</h1>
 
   In order to run the code in these examples you must load the FL64 library into this page.
 
@@ -1339,7 +1341,7 @@
 
   All operations in the FL64 library can be applied to a single floating point value, or to a set of values in a set, or array.
 
-  <a id="Advanced"><h1>Advanced.</h1></a>
+  <a id="Advanced" class="cmd"></a><h1>Advanced.</h1>
 
   Although all of this is the basics. Thus I have only touched the surface of what you can do with these tools.
 

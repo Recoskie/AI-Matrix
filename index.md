@@ -1,17 +1,31 @@
-AI-Matrix.
-=============================
+---
+layout: default
+image:
+  path: https://repository-images.githubusercontent.com/81086272/73a9ee80-65f9-11ea-9cd9-3c14b7503cff
+---
 
-<table>
-  <tr><td>Main Page:</td><td><a href="https://recoskie.github.io/AI-Matrix/">Link</a></td></tr>
-</table>
+<html>
+  <body>
+  <style type="text/css">
+    <!--
+    .cmd:target
+    {
+      display: block;
+      height: 4rem; margin-top: -4rem;
+      visibility: hidden;
+    }
+    -->
+  </style>
+  </body>
+</html>
 
 ## Documentation, and tools.
 
 <table>
-  <tr><td>Data analyzer:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a></tr></td>
-  <tr><td>Run custom code:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></tr></td>
-  <tr><td>Interactive examples:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a></tr></td>
-  <tr><td>How it works:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a></tr></td>
+  <tr><td>Data analyzer: <a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a></td></tr>
+  <tr><td>Run custom code: <a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></td></tr>
+  <tr><td>Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a></td></tr>
+  <tr><td>How it works: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a></td></tr>
 </table>
 
 ## What is AI-Matrix.
@@ -22,7 +36,9 @@ You can convert anything into a formula. Weather it be a set for gravity per sec
 
 Below are very basic example uses.<br />
 
-<a href="#basic-library-use-and-reference">Skip to Reference, and use.</a>
+<a href="#ref">Skip to Reference, and use.</a>
+
+<a id="start" class="cmd"></a>
 
 This code generates random data using Math random. It uses a three dimensional loop to add together a three dimensional set.
 
@@ -127,7 +143,7 @@ function( x )
 
 Also the Matrix can be used to improve performance of functions that use loops to calculate results into simple calculations.
 The calculation abilities of this matrix goes far beyond the third dimension. Thus can solve very complex problems.
-For more information on what types of things this applies to see section <a href="#solve-as-seq">Solve as seq</a>.
+For more information on what types of things this applies to see section <a href="#seq-s">Solve as seq.</a>
 
 Not only can stuff be dimensional inside each other per sums. We also have expanding horizontal dimensions.<br />
 
@@ -230,7 +246,9 @@ function( x )
 ---------------------------------------------------------*/
 ```
 
-For more information on what types of things this applies to see section <a href="#solve-as-geo">Solve as geo</a>.
+For more information on what types of things this applies to see section <a href="#geo-s">Solve as geo.</a>
+
+<a id="ref" class="cmd"></a>
 
 # Basic library use, and reference.
 
@@ -543,7 +561,7 @@ alert( Data3 );
 //Do not forget the sets in data also support all FL64 operations.
 ```
 
-Also see other examples like Solve as <a href="#artificially-solve-all-kinds-of-multidimensional-data">Seq, or Geo</a> at the beginning.
+Also see other examples like Solve as <a href="#start">Seq, or Geo</a> at the beginning.
 
 # AI Matrix Debug Script.
   >
@@ -557,11 +575,16 @@ Also see other examples like Solve as <a href="#artificially-solve-all-kinds-of-
   >
 # Types of data.
 
+<a id="seq-s" class="cmd"></a>
+
 ### Solve as seq:
   > Solves an set of numbers as Sums to the next number as Summation inside Summation as each pow is another dimension added up by the last dimension geometrically any number of times.
   >
   > To the programmer this means Basically an loop adding up values, or an loop inside an loop adding up increment values any number of loops inside one another. It allows the break down combinations of any mix of Circles, curves, gravity, quadratics, polynomials, and even wave function combinations.
   >
+
+<a id="geo-s" class="cmd"></a>
+
 ### Solve as geo:
   >  
   > Solve things that multiply by two per value, or by three, or both sets are existent in the data.
