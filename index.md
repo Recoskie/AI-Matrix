@@ -23,7 +23,7 @@ image:
 
 <table>
   <tr><td>Data analyzer: <a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a></td></tr>
-  <tr><td>Run custom code: <a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></td></tr>
+  <tr><td>Test And execute custom code: <a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></td></tr>
   <tr><td>Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a></td></tr>
   <tr><td>Test And execute custom code: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a></td></tr>
 </table>
