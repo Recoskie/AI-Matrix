@@ -2,12 +2,38 @@
 <head>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="apple-mobile-web-app-title" content="DataAI">
-  <link rel="apple-touch-icon" href="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
+  <meta name="apple-mobile-web-app-title" content="DataAI" />
+  <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp" />
+  <link rel="apple-touch-icon" href="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
   <script src="../AI-Mat.js" type="text/javascript"></script>
   
   <script type="text/javascript">
+    //View port resize and adjust for mobile.
+    
+    var mobile = !isNaN( window.orientation ), eventVP = true;
+    
+    function resetVP()
+    {
+      document.getElementById("vp").content = "initial-scale=0.5, user-scalable=yes";
+      
+      document.removeEventListener("touchstart", resetVP);
+      
+      eventVP = true;
+    }
+    
+    if( mobile )
+    {
+      (window.onorientationchange = function()
+      {
+        if( eventVP )
+        {
+          document.getElementById("vp").content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no";
+          document.addEventListener("touchstart", resetVP, eventVP = false);
+        }
+      })();
+    }
+    
     /*****************************************************************************************
     Reset the option boxes onload.
     *****************************************************************************************/
