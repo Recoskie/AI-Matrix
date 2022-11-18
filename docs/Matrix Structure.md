@@ -935,7 +935,7 @@ image:
 
   <br /><br />
 
-  See <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. Also see <a href="https://youtu.be/wkI0y43EqHI" target="_blank">NOVA Fractals The Hidden Dimension</a>. These are good places to start if you do not understand what Fractals are.
+  See <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. Also see <a href="https://youtu.be/d0Exnv8Ym7s" target="_blank">NOVA Fractals The Hidden Dimension</a>. These are good places to start if you do not understand what Fractals are.
 
   <br /><br />
 
