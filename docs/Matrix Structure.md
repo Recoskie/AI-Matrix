@@ -980,5 +980,17 @@ image:
   <br /><br />
 
   <iframe src="https://player.vimeo.com/video/177192957" width="640" height="361" frameborder="0"></iframe>
+    
+  <br /><br />
+    
+  <h1>Golden ratio/Quasicrystals.</h1>
+
+  <br /><br />
+    
+  This document covers the final structure, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio. See: <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
+    
+  <br /><br />
+
+  You can also relate single number values into this point space from reality and give them meaning to the world around you or have them represent themselves. The golden ratio is a simplified expression of this entire point space of all things. If you want to analyze just single number values to that of the point space, then the number analytics library will teach you the secret structure to all numbers. See <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>. All numbers have a place and an expression and meaning in the quasicrystals point space.
 </body>
 </html>
