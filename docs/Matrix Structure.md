@@ -984,7 +984,7 @@ image:
     
   <br /><br />
     
-  <a id="ratio" class="cmd"><h1>Golden ratio/Quasicrystals.</h1>
+  <a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
 
   <br />
     
