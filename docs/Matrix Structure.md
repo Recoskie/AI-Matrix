@@ -80,6 +80,7 @@ image:
     <tr><td>The basic algorithm: <a href="#basic">Link</a></td></tr>
     <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
     <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
+    <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
   </table>
 
   <h3>Note that this is a big simplification of the Q-matrix.</h3>
@@ -983,7 +984,7 @@ image:
     
   <br /><br />
     
-  <h1>Golden ratio/Quasicrystals.</h1>
+  <a id="ratio" class="cmd"><h1>Golden ratio/Quasicrystals.</h1>
 
   <br />
     
