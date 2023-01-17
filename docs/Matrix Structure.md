@@ -987,16 +987,20 @@ image:
   <a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
 
   <br />
-
+  
   This document covers the final structure of the quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
 
   <br /><br />
 
   The only place you will find quasicrystals is in the very beginning and creation of reality, such as an asteroid with a quasicrystal structure; see <a href="https://www.nature.com/articles/nature.2012.9728" target="_blank">the quasicrystal from outer space</a>.
+
+  <br /><br />
+
+  Also, the Fibonacci sequence can help quantum computers remain quantum much longer; see <a href="https://www.futurism.com/the-byte/fibonacci-quantum-computer" target="_blank">sientests fed the Fibonacci sequence into a quantum</a>.
   
   <br /><br />
 
-  You can also relate single number values into the quantum matrix from reality and give them meaning to the world around you or have them represent themselves. The golden ratio is a simplified expression of this entire point space from zero as a single number value. If you want to analyze just single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
+  The golden ratio is a simplified expression of this entire point space from zero as a single number value. You can reverse the calculation of any number back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
 
   <br /><br />
   
