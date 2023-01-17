@@ -995,15 +995,15 @@ image:
   The only place you will find quasicrystals is in the very beginning and creation of reality, such as an asteroid with a quasicrystal structure; see <a href="https://www.nature.com/articles/nature.2012.9728" target="_blank">the quasicrystal from outer space</a>.
   
   <br /><br />
-  
-  You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of-life-and-golden-ratio-explained" target="_blank">The purpose of life and golden ratio explained</a>.
-  
-  <br /><br />
 
   You can also relate single number values into the quantum matrix from reality and give them meaning to the world around you or have them represent themselves. The golden ratio is a simplified expression of this entire point space from zero as a single number value. If you want to analyze just single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
+
+  <br /><br />
+  
+  You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of-life-and-golden-ratio-explained" target="_blank">The purpose of life and golden ratio explained</a>.
  
  <br /><br />
  
- All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use this quantum matrix to calculate any number value.
+ All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
 </body>
 </html>
