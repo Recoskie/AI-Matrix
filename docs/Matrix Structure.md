@@ -996,7 +996,7 @@ image:
 
   <br /><br />
 
-  Also, the Fibonacci sequence can help quantum computers remain quantum much longer; see <a href="https://www.futurism.com/the-byte/fibonacci-quantum-computer" target="_blank">sientests fed the Fibonacci sequence into a quantum</a>.
+  Also, the Fibonacci sequence can help quantum computers remain quantum much longer; see <a href="https://www.futurism.com/the-byte/fibonacci-quantum-computer" target="_blank">sientests fed the Fibonacci sequence into a quantum computer</a>.
 
   <br /><br />
   
@@ -1004,7 +1004,7 @@ image:
   
   <br /><br />
 
-  The golden ratio is a simplified expression of this entire point space from zero as a single number value. You can reverse the calculation of any number back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
+  The golden ratio is a simplified expression of this entire point space from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
  
  <br /><br />
  
