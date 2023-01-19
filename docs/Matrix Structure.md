@@ -83,13 +83,15 @@ image:
     <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
   </table>
 
-  <h3>Note that this is a big simplification of the Q-matrix.</h3>
+  <h3>Note that this is a big simplification of the quantum-matrix.</h3>
 
   <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3> 
+  
+  <h3>At the center of the quantum-matrix is a spiral that creates both the sequential half and the geometric half in opposite directions of rotation.<h3>
 
   <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
 
-  Lets start with a one dimensional set, and show how it builds, and solves. Starting from here will help you see how it works.
+  Let's start with a one-dimensional set, and show how it builds, and solves sequentially. Starting from here will help you see how it works.
 
   <br /><br />
 
