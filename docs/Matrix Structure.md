@@ -4,75 +4,74 @@ image:
   path: https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1
 ---
 
-<html>
 <body onload="setup();">
-  <style type="text/css">
-    <!--
-    input[type=button]
-    {
-      width: 100%;
-      height: 48px;
-      clear: both;
-    }
+<style type="text/css">
+  <!--
+  input[type=button]
+  {
+    width: 100%;
+    height: 48px;
+    clear: both;
+  }
     
-    textarea.c
+  textarea.c
+  {
+    resize: none;
+    width: 100%;
+    max-height: 40%;
+    float: left;
+  }
+
+  textarea.o 
+  {
+    resize: none;
+    width: 100%;
+    max-height: 20%;
+    float: left;
+  }
+
+  .cmd:target
+  {
+    display: block;
+    height: 4rem; margin-top: -4rem;
+    visibility: hidden;
+  }
+  -->
+</style>
+<script type="text/javascript">
+  var output = "";
+
+  function setup()
+  {
+    var list = document.getElementsByTagName("code");
+
+    var html = "", lines = 0, spaces = 0;
+
+    for (var i1 = 0; i1 < list.length; i1++)
     {
-      resize: none;
-      width: 100%;
-      max-height: 40%;
-      float: left;
+      html = list[i1].innerHTML;
+
+      var t = html.split("\n"); lines = t.length - 1; spaces = html.search(/\S|$/) - 1;
+
+      for (var i2 = 0, html = ""; i2 < lines; i2++) { html += t[i2].slice(spaces, t[i2].length) + "\n"; }
+
+      lines = list[i1].getAttribute("rows") || lines;
+
+      list[i1].innerHTML = "<textarea class=\"c\" rows=\"" + lines + "\" id=\"e" + i1 + "\">" + html + "</textarea></textarea><textarea class=\"o\" rows=\"" + ( ( lines > 16 ) ? 16 : lines ) + "\" id=\"e" + i1 + "o\" readonly>Console output.</textarea><input type=\"button\" onclick=\"runExamp('e" + i1 + "');\" value=\"Run code.\" />";
     }
+  }
 
-    textarea.o 
-    {
-      resize: none;
-      width: 100%;
-      max-height: 20%;
-      float: left;
-    }
+  function runExamp(id)
+  {
+    var code = document.getElementById(id).value;
 
-    .cmd:target
-    {
-      display: block;
-      height: 4rem; margin-top: -4rem;
-      visibility: hidden;
-    }
-    -->
-  </style>
-  <script type="text/javascript">
-    var output = "";
+    try { eval(code); } catch (e) { console.log(e.toString()); }
 
-    function setup()
-    {
-      var list = document.getElementsByTagName("code");
+    document.getElementById(id + "o").value = output; output = "";
+  }
 
-      var html = "", lines = 0, spaces = 0;
-
-      for (var i1 = 0; i1 < list.length; i1++)
-      {
-        html = list[i1].innerHTML;
-
-        var t = html.split("\n"); lines = t.length - 1; spaces = html.search(/\S|$/) - 1;
-
-        for (var i2 = 0, html = ""; i2 < lines; i2++) { html += t[i2].slice(spaces, t[i2].length) + "\n"; }
-
-        lines = list[i1].getAttribute("rows") || lines;
-
-        list[i1].innerHTML = "<textarea class=\"c\" rows=\"" + lines + "\" id=\"e" + i1 + "\">" + html + "</textarea></textarea><textarea class=\"o\" rows=\"" + ( ( lines > 16 ) ? 16 : lines ) + "\" id=\"e" + i1 + "o\" readonly>Console output.</textarea><input type=\"button\" onclick=\"runExamp('e" + i1 + "');\" value=\"Run code.\" />";
-      }
-    }
-
-    function runExamp(id)
-    {
-      var code = document.getElementById(id).value;
-
-      try { eval(code); } catch (e) { console.log(e.toString()); }
-
-      document.getElementById(id + "o").value = output; output = "";
-    }
-
-    console.log = function (msg) { output += msg + "\r\n"; }
-  </script>
+  console.log = function (msg) { output += msg + "\r\n"; }
+</script>
 
   <h1>Indexed contents.</h1>
 
@@ -1011,5 +1010,3 @@ image:
   <br /><br />
   
   All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
-</body>
-</html>
