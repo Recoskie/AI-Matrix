@@ -8,10 +8,10 @@ AI-Matrix.
 ## Documentation and tools.
 
 <table>
-  <tr><td>Interactive examples:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a></tr></td>
-  <tr><td>How it works:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a></tr></td>
-  <tr><td>Data analyzer:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a></tr></td>
-  <tr><td>Test And execute custom code:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></tr></td>
+  <tr><td>Interactive examples:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a></td></tr>
+  <tr><td>How it works:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a></td></tr>
+  <tr><td>Data analyzer:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/AI-Matrix.html">Link</a></td></tr>
+  <tr><td>Test And execute custom code:</td><td><a href="https://recoskie.github.io/AI-Matrix/docs/Code_App.html">Link</a></td></tr>
 </table>
 
 ## What is AI-Matrix.
