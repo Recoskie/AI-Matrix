@@ -16,7 +16,7 @@ image:
 ## What is AI-Matrix.
 
 This tool lets you solve things beyond the human senses, mind, and capacity. On this page, you can learn how the algorithm works. It's unified structure of all things. How it solves all things in quantum alignment. Which reviles all things in any set or any data instantly. You can create sets with set parameters and have this tool give you the best answer instantly.
-  
+
 You can convert anything into a formula. Whether it be a set for gravity per second. That you wish to translate into a formula. Which is a 2D calculation. 
 
 Below are very basic example uses.<br />
