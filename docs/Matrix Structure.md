@@ -1005,11 +1005,12 @@ image:
   You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of-life-and-golden-ratio-explained" target="_blank">The purpose of life and golden ratio explained</a>.
   
   <br /><br />
-
+  
   The golden ratio is a simplified expression of this entire point space from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
- 
- <br /><br />
- 
- All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
-</body>
+  
+  <br /><br />
+  
+  All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
+  
+  </body>
 </html>
