@@ -448,9 +448,18 @@ X2 = 3.36542208899635e-308
 
 ### Decoding data.
 
-Sets have three functions "seq, geo, gen".
-In which we solve as per sequences per dimension, geometric data, or both.
-If you already have an idea of the type of data, you are analyzing. Then you can solve as "geo", or "seq"; otherwise, "generic".
+The main sequence method is **gensp()**. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
+
+<table border="1px">
+  <tr><td>Type</td><td>Stationary.</td><td>Rotation.</td></tr>
+  <tr><td>Sequential(top half).</td><td>seq();</td><td>seqsp();</td></tr>
+  <tr><td>Geometric(bottom half).</td><td>geo();</td><td>geosp();</td></tr>
+  <tr><td>Complete.</td><td>gen();</td><td>gensp();</td></tr>
+</table>
+
+At the center of the matrix is a spiral that creates both the sequential half and the geometric half in opposite directions of rotation.
+  
+If you are interested in the forum and shape of the matrix and how it works see document Matrix structure: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html" target="_blank">Link</a>.
 
 ```javascript
 var s = new set( 0, -899.857142857143, -13167.42857142857, -49732.7142857143,
