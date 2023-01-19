@@ -1011,6 +1011,5 @@ image:
   <br /><br />
   
   All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
-  
-  </body>
+</body>
 </html>
