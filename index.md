@@ -4,17 +4,6 @@ image:
   path: https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1
 ---
 
-<style type="text/css">
-  <!--
-  .cmd:target
-  {
-    display: block;
-    height: 4rem; margin-top: -4rem;
-    visibility: hidden;
-  }
-  -->
-</style>
-
 ## Documentation and tools.
 
 <table>
@@ -617,15 +606,15 @@ Also, see other examples like Solve as <a href="#start">Seq, or Geo</a> at the b
   >
 ### seqsp:
   >
-  > Same as seq, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as seq, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### geosp:
   >
-  > Same as geo, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as geo, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### gensp:
   >
-  > Same as gen, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as gen, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### Suffers from epsilon error.
   >

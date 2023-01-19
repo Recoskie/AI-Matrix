@@ -598,15 +598,15 @@ Also, see other examples like Solve as <a href="#artificially-solve-all-kinds-of
   >
 ### seqsp:
   >
-  > Same as seq, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as seq, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### geosp:
   >
-  > Same as geo, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as geo, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### gensp:
   >
-  > Same as gen, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as gen, but includes the double spiral rotation on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### Suffers from epsilon error.
   >
