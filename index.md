@@ -16,8 +16,6 @@ image:
     }
     -->
   </style>
-  </body>
-</html>
 
 ## Documentation and tools.
 
@@ -636,3 +634,5 @@ Also, see other examples like Solve as <a href="#start">Seq, or Geo</a> at the b
   > Computers can not do perfect float arithmetic. Thus, we end up with data that should be 0 in alignment but are at the value of EPSILON.
   >
   > As of version 6, this has been fixed. Thus Float values are also epsilon corrected if the FL64 library is loaded on the same page as the AI matrix. The values are converted to fractions with a dynamic constraint to stop at the error range.
+  </body>
+</html>
