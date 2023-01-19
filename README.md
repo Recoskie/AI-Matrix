@@ -606,7 +606,7 @@ Also, see other examples like Solve as <a href="#artificially-solve-all-kinds-of
   >
 ### gensp:
   >
-  > Same as gensp, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  > Same as gen, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
   >
 ### Suffers from epsilon error.
   >
