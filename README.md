@@ -596,6 +596,18 @@ Also, see other examples like Solve as <a href="#artificially-solve-all-kinds-of
   >
   > This solves both backwards and forwards in the set. Thus links the result to an intercepting central matrix of both matrices. The Highest sequence dimension plus the Highest Geo dimension in the set plus one is the required number of results to solve the set properly. You can go higher than the required set of numbers and still solve the set as the rest of the numbers to the center of the set cancel out to 0.
   >
+### seqsp:
+  >
+  > Same as seq, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  >
+### geosp:
+  >
+  > Same as geo, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  >
+### gensp:
+  >
+  > Same as gensp, but includes the double spiral roration on both halves of the matrix. Requires an additional 2 numbers in the set as the start and end values are aligned in the spiral.
+  >
 ### Suffers from epsilon error.
   >
   > Computers can not do perfect float arithmetic. Thus, we end up with data that should be 0 in alignment but are at the value of EPSILON.
