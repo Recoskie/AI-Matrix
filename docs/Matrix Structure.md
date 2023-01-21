@@ -84,9 +84,7 @@ image:
 
 <h3>Note that this is a big simplification of the quantum-matrix.</h3>
 
-<h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3> 
-
-<h3>At the center of the quantum-matrix is a spiral that creates both the sequential half and the geometric half in opposite directions of rotation.<h3>
+<h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
 
 <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
 
@@ -965,11 +963,11 @@ This is called the flower of life pattern. It is a much more fun way of creating
 
 <br /><br />
 
-Lastly if we rotate the two matrices in opposite directions. We end up with a double serial in the center. This solves the Fibonacci sequence. This completes the all encompassing totality of all things.
+The geometrical pattern follows something which we have come to know as the “Golden Ratio”, which plays a part in the Fibonacci Sequence.
 
 <br /><br />
 
-Which brings us to the final forum of all things as merkaba.
+We end up with a spiral in that forums the matrix structure. Which brings us to the final forum of all things as merkaba.
 
 <br /><br />
 
@@ -997,7 +995,7 @@ The only place you will find quasicrystals is in the very beginning and creation
 
 <br /><br />
 
-Also, the Fibonacci sequence can help quantum computers remain quantum much longer; see <a href="https://www.futurism.com/the-byte/fibonacci-quantum-computer" target="_blank">sientests fed the Fibonacci sequence into a quantum computer</a>.
+Also, the Fibonacci sequence can help quantum computers remain quantum much longer; see <a href="https://www.futurism.com/the-byte/fibonacci-quantum-computer" target="_blank">scientists fed the Fibonacci sequence into a quantum computer</a>.
 
 <br /><br />
 
@@ -1005,7 +1003,7 @@ You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of
 
 <br /><br />
 
-The golden ratio is a simplified expression of this entire point space from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
+The golden ratio is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
 
 <br /><br />
 
