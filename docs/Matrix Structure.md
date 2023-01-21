@@ -967,7 +967,7 @@ The geometrical pattern follows something which we have come to know as the “G
 
 <br /><br />
 
-We end up with a spiral in that forums the matrix structure. Which brings us to the final forum of all things as merkaba.
+We end up with a spiral that forums the matrix structure. Which brings us to the final forum of all things as merkaba.
 
 <br /><br />
 
