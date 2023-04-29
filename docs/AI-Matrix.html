@@ -7,33 +7,7 @@
   <link rel="apple-touch-icon" href="Bg/icon.png" />
   <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
   <script src="../AI-Mat.js" type="text/javascript"></script>
-  
   <script type="text/javascript">
-    //View port resize and adjust for mobile.
-    
-    var mobile = !isNaN( window.orientation ), eventVP = true;
-    
-    function resetVP()
-    {
-      document.getElementById("vp").content = "initial-scale=0.5, user-scalable=yes";
-      
-      document.removeEventListener("touchstart", resetVP);
-      
-      eventVP = true;
-    }
-    
-    if( mobile )
-    {
-      (window.onorientationchange = function()
-      {
-        if( eventVP )
-        {
-          document.getElementById("vp").content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no";
-          document.addEventListener("touchstart", resetVP, eventVP = false);
-        }
-      })();
-    }
-    
     /*****************************************************************************************
     Reset the option boxes onload.
     *****************************************************************************************/
@@ -122,7 +96,7 @@
 
       w.document.body.innerHTML = "The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br />\
         The matrix can solve all sums in all dimensions or logarithmic values.<br />\
-        The debug value in the AI matix is read and then displayed along with the results.<br />\
+        The debug value in the AI matrix is read and then displayed along with the results.<br />\
         However the extra work involved as running slows down the AI solving abilities so one has the debug value and the other does not.<br /><br />\
         The debug version is still in the makings.";
     }
@@ -141,7 +115,7 @@
 
       try { input = new set( document.getElementById("Data").value ); } catch( e )
       { 
-        window.frames[0].document.body.innerHTML = "<center></center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
+        document.getElementById("console").innerHTML = "<center></center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
         return;
       }
 
@@ -191,13 +165,37 @@
 
       //Update output.
 
-      window.frames[0].document.body.innerHTML = output;
+      document.getElementById("console").innerHTML = output;
+    }
+
+    //View port resize and adjust for mobile.
+    
+    var mobile = !isNaN( window.orientation ), eventVP = true;
+    
+    function resetVP()
+    {
+      document.getElementById("vp").content = "initial-scale=0.5, user-scalable=yes";
+      
+      document.removeEventListener("touchstart", resetVP);
+      
+      eventVP = true;
+    }
+    
+    if( mobile )
+    {
+      (window.onorientationchange = function()
+      {
+        if( eventVP )
+        {
+          document.getElementById("vp").content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no";
+          document.addEventListener("touchstart", resetVP, eventVP = false);
+        }
+      })();
     }
   </script>
 </head>
 <body style="background-color:#000000" background="Bg/bg.jpg" text="#FFFFFF" onload="Setup()">
   <table height="100%" width="100%">
-
     <tr>
       <td height="1px;">
         <center>
@@ -228,52 +226,51 @@
         </center>
       </td>
     </tr>
-
     <tr>
       <td height="100%">
         <img src="Bg/bg2.gif" style="max-height:30%;width:auto;position:absolute;left:50%;transform:translate(-50%, 20%);z-index:-1;">
-        <iframe id="d" width="100%" height="100%" src="javascript:(function(){document.write('<body text=\'#FFFFFF\'><center>Each number in an set is separated by an comma.<br /><br /><br />Example use:<br /><br /><br />10,20,30<br /><br /><br />If you decide to add another number it should look like this.<br /><br /><br />10,20,30,40<br /><br /><br />The only format that is supported is just numbers separated by commas. No words or any letters yet.<br /><br /><br />After you enter the number data click one of the solve buttons.</center><script>window.stop();</script></body>'); })()"></iframe>
+        <div id="console" style="width:100%;height:100%;color:#FFFFFF;background-color:rgba(255,255,255,0);text-align: center;overflow-y: auto;border: 2px inset #FFFFFF;">
+          Each number in an set is separated by an comma.
+          <br /><br /><br />
+          Example use:
+          <br /><br /><br />
+          10,20,30
+          <br /><br /><br />
+          If you decide to add another number it should look like this.
+          <br /><br /><br />
+          10,20,30,40
+          <br /><br /><br />
+          The only format that is supported is just numbers separated by commas. No words or any letters yet.
+          <br /><br /><br />
+          After you enter the number data click one of the solve buttons.
+        </div>
       </td>
     </tr>
-
     <tr>
       <td>
-
         <table style="height:100%;">
           <tr>
             <td width="100%">
               <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" id="Data">Enter Numbers here.</textarea>
             </td>
-
             <td>
               <center>
-
                 <input type="image" src="Buttons/sum.gif" onmousedown="this.src='Buttons/sum_pressed.gif'" onmouseup="this.src='Buttons/sum.gif'" onclick="Solve(0)" />
-
                 <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src='Buttons/geo-sum_pressed.gif'" onmouseup="this.src='Buttons/geo-sum.gif'" onclick="Solve(2)" />
-
                 <input type="image" src="Buttons/geo.gif" onmousedown="this.src='Buttons/geo_pressed.gif'" onmouseup="this.src='Buttons/geo.gif'" onclick="Solve(1)" />
-
               </center>
             </td>
             <td>
               <center>
-
                 <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)" />
-                
                 <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src='Buttons/geo-sum-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sum-sp.gif'" onclick="Solve(4)" />
-                
                 <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src='Buttons/geo-sp_pressed.gif'" onmouseup="this.src='Buttons/Geo-sp.gif'" onclick="Solve(5)" />
-
               </center>
             </td>
           </tr>
         </table>
-
       </td>
     </tr>
-
   </table>
-
 </body>
 </html>
