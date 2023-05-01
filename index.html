@@ -3,7 +3,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="DataAI">
   <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp">
-  <link rel="apple-touch-icon" href="Bg/icon.png">
+  <link rel="apple-touch-icon" href="docs/Bg/icon.png">
   <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
   <style type="text/css">
   <!--
@@ -11,7 +11,7 @@
     {
       background-color: #000000;
       color: #FFFFFF;
-      background-image: url(Bg/bg.jpg);
+      background-image: url(docs/Bg/bg.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       -moz-background-size: cover;
@@ -69,7 +69,7 @@
     .toolBar:hover .toolBtn { box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }
   -->
   </style>
-  <script src="../AI-Mat.js" type="text/javascript"></script>
+  <script src="AI-Mat.js" type="text/javascript"></script>
   <script type="text/javascript">
     var page = null, output = "";
 
@@ -293,14 +293,14 @@
       <div class="row">\
         <textarea style="width:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value=\'\';this.onclick=\'\'" id="Data">Enter Numbers here.</textarea>\
         <div class="col">\
-          <input type="image" src="Buttons/sum.gif" onmousedown="this.src=\'Buttons/sum_pressed.gif\'" onmouseup="this.src=\'Buttons/sum.gif\'" onclick="Solve(0)">\
-          <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src=\'Buttons/geo-sum_pressed.gif\'" onmouseup="this.src=\'Buttons/geo-sum.gif\'" onclick="Solve(2)">\
-          <input type="image" src="Buttons/geo.gif" onmousedown="this.src=\'Buttons/geo_pressed.gif\'" onmouseup="this.src=\'Buttons/geo.gif\'" onclick="Solve(1)">\
+          <input type="image" src="docs/Buttons/sum.gif" onmousedown="this.src=\'docs/Buttons/sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum.gif\'" onclick="Solve(0)">\
+          <input type="image" src="docs/Buttons/geo-sum.gif" onmousedown="this.src=\'docs/Buttons/geo-sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum.gif\'" onclick="Solve(2)">\
+          <input type="image" src="docs/Buttons/geo.gif" onmousedown="this.src=\'docs/Buttons/geo_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo.gif\'" onclick="Solve(1)">\
         </div>\
         <div class="col">\
-          <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src=\'Buttons/sum-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/sum-sp.gif\'" onclick="Solve(3)">\
-          <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src=\'Buttons/geo-sum-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/geo-sum-sp.gif\'" onclick="Solve(4)">\
-          <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src=\'Buttons/geo-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/Geo-sp.gif\'" onclick="Solve(5)">\
+          <input type="image" src="docs/Buttons/sum-sp.gif" onmousedown="this.src=\'docs/Buttons/sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum-sp.gif\'" onclick="Solve(3)">\
+          <input type="image" src="docs/Buttons/geo-sum-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum-sp.gif\'" onclick="Solve(4)">\
+          <input type="image" src="docs/Buttons/Geo-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/Geo-sp.gif\'" onclick="Solve(5)">\
         </div>\
       </div>',
       /***********************************************************************************
@@ -433,7 +433,7 @@ for( var x = 0; x < 20; x++)\n\
         <td>Error Correction:<select id="EMode"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select></td>
       </tr>
     </table>
-    <img class="bgIcon" src="Bg/bg2.gif">
+    <img class="bgIcon" src="docs/Bg/bg2.gif">
     <div id="page"></div>
   </div>
 </body></html>
