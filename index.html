@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp">
   <link rel="apple-touch-icon" href="docs/Bg/icon.png">
   <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
+  <link rel="canonical" href="https://recoskie.github.io/AI-Matrix/" />
+  <link rel="manifest" href="manifest.json">
   <style type="text/css">
   <!--
     body
@@ -429,6 +431,10 @@ for( var x = 0; x < 20; x++)\n\
         }
       })();
     }
+
+    //Add the web application service worker.
+
+    if(navigator.serviceWorker) { navigator.serviceWorker.register('/AI-Matrix/sw.js', {scope: '/AI-Matrix/'} ) }
   </script>
 </head>
 <body onload="setup();setTool();">

@@ -1,0 +1,29 @@
+{
+  "background_color": "#000000",
+  "description": "Number analytics application.",
+  "dir": "auto",
+  "display": "fullscreen",
+  "name": "AIMatrix",
+  "orientation": "any",
+  "scope": "/AI-Matrix/",
+  "short_name": "AIMat",
+  "start_url": "/AI-Matrix/index.html",
+  "theme_color": "#ffffff",
+  "categories": [
+    "education",
+    "utilities",
+    "math"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/AI-Matrix/docs/Bg/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [],
+  "lang": "en",
+  "iarc_rating_id": "10+"
+}
