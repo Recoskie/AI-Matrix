@@ -42,3 +42,5 @@ Lastly, you are going to have to store data if you want it to remember and to se
 Having an AI build a data model to work with and to analyze and bias data can be time-consuming.
 
 However, when it comes to analyzing data into what it is to put into your data model or solving data and calculations, it is ultra-fast.
+
+There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here.
