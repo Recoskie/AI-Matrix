@@ -17,6 +17,12 @@ The web application lets you enter values or data to analyze.
 
 It also lets you run your own custom code.
 
+# Refrence: <a href="https://github.com/Recoskie/AI-Matrix/wiki/Basics">Link</a>
+
+The basics wiki page shows how to use the AI-Matrix script in detail.
+
+You can always learn using the interactive examples page if you find it difficult to use or understand.
+
 # Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html">Link</a>
 
 You can learn by examples using the interactive examples page.
