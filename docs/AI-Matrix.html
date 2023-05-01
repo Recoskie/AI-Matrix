@@ -26,6 +26,14 @@
       overflow-y: auto;
       border: 2px inset #FFFFFF;
     }
+    .console2
+    {
+      width:30%; height:100%;
+      color:#000000;
+      background-color:rgba(255,255,255,0.75);
+      overflow-y: auto;
+      border: 2px inset #FFFFFF;
+    }
     .bgIcon
     {
       max-height:30%;
@@ -34,13 +42,6 @@
       left:50%;
       transform:translate(-50%, 20%);
       z-index:-1;
-    }
-    .pageCol
-    {
-      display: flex;
-      flex-direction: column;
-      width:100%;
-      height:100%;
     }
     .col
     {
@@ -51,6 +52,11 @@
     {
       display: flex;
     }
+    textarea
+    {
+      resize: none;
+    }
+    #page { display: contents; }
     /***********************************************************************************
     Create a menubar for navigation
     ***********************************************************************************/
@@ -65,14 +71,17 @@
   </style>
   <script src="../AI-Mat.js" type="text/javascript"></script>
   <script type="text/javascript">
+    var page = null, output = "";
+
     /*****************************************************************************************
     Reset the option boxes onload.
     *****************************************************************************************/
     
-    function Setup()
+    function setup()
     {
       document.getElementById("DMode").options[0].selected = true;
       document.getElementById("EMode").options[0].selected = true;
+      page = document.getElementById("page");
     }
     
     /*****************************************************************************************
@@ -90,7 +99,7 @@
 
     script1.type = "text/javascript"; script1.src = "https://recoskie.github.io/Fl64/FL64.js"; 
 
-    script1.onload = function() { document.getElementById("LoadFL64").deleteCell(0); alert("loaded!"); };
+    script1.onload = function() { document.getElementById("LoadFL64").deleteCell(1); alert("loaded!"); };
 
     script1.onerror = function() { alert("Error Unable to load FL64..."); };
 	
@@ -162,17 +171,17 @@
     {
       var DMode = document.getElementById("DMode").value == "true"; AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
       
-      var input = [], output = "<br />";
+      var input = []; console.clear();
 
       //Create an new set of data.
 
       try { input = new set( document.getElementById("Data").value ); } catch( e )
       { 
-        document.getElementById("console").innerHTML = "<br /><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
-        return;
+        console.log("<br /><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.");
+        updateData(); return;
       }
 
-      output += "<h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() );
+      console.log("<br /><h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() ));
 
       //Analyze data.
 
@@ -183,17 +192,17 @@
       
       //Matrix Debug output.
       
-      output += AI_Mat + "";
+      console.log(AI_Mat + "");
       
       //Show the data.
 
-      output += "<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() );
+      console.log("<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() ));
 
-      output += "<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() );
+      console.log("<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() ));
       
       //Display the data math string.
 
-      output += "<h1>ASCII Math String.</h1><br />" + d + "";
+      console.log("<h1>ASCII Math String.</h1><br />" + d + "");
       
       //Compile to function.
 
@@ -201,24 +210,75 @@
       
       //Function to string then to HTML.
 
-      output += "<h1>Compiled to an function.</h1><br /><center><table><tr><td>" + f.toString().html() + "</td></tr></table></center>";
+      console.log("<h1>Compiled to an function.</h1><br /><center><table><tr><td>" + f.toString().html() + "</td></tr></table></center>");
       
       //Execute the math function in an loop. Compare and display the results.
 
-      output += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
+      console.log("<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />");
 
-      output += "<center><table border=\"1\"><tr><td>X</td><td>result</td><td>Your Input</td></tr>";
+      console.log("<center><table border=\"1\"><tr><td>X</td><td>result</td><td>Your Input</td></tr>");
 
       for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        output += "<tr><td>" + i + "</td><td>" + f( i ) + "</td><td>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</td></tr>";
+        console.log("<tr><td>" + i + "</td><td>" + f( i ) + "</td><td>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</td></tr>");
       }
 
-      output += "</table></center>";
+      console.log("</table></center>");
 
       //Update output.
 
-      document.getElementById("console").innerHTML = output;
+      updateData();
+    }
+
+    /***********************************************************************************
+    Allow user to run custom code and to use console to log to external output on page.
+    ***********************************************************************************/
+
+    var output = "", l1 = console.log, l2 = console.clear; console.log = function (msg) { l1(msg); output += msg + "\r\n"; }; console.clear = function() { l2(); output = ""; }
+
+    function runCode() { console.clear(); try { eval(document.getElementById("code").value); } catch (e) { console.log(e + ""); } updateData(true); }
+
+    /***********************************************************************************
+    Updates console on page.
+    ***********************************************************************************/
+
+    function updateData(pre) { if(pre) { output = "<pre>" + output + "</pre>"; } document.getElementById("console").innerHTML = output; }
+
+    /***********************************************************************************
+    Change the tool in use on the page.
+    ***********************************************************************************/
+
+    var toolType = ["Data analyzer","Run custom code","Help"]
+
+    function setTool()
+    {
+      tool = parseInt(window.location.hash.replace("#","")) || 0; page.innerHTML = subTool[tool]; document.getElementById("setTool").innerHTML = toolType[tool];
+
+      //Output number analyzer basic usage to console output.
+
+      if(tool == 0)
+      {
+        console.clear(); console.log('<br />\
+        Each number in an set is separated by an comma.\
+        <br><br><br>\
+        Example use:\
+        <br><br><br>\
+        10,20,30\
+        <br><br><br>\
+        If you decide to add another number it should look like this.\
+        <br><br><br>\
+        10,20,30,40\
+        <br><br><br>\
+        The only format that is supported is just numbers separated by commas. No words or any letters yet.\
+        <br><br><br>\
+        After you enter the number data click one of the solve buttons.');
+      }
+      else if(tool == 1)
+      {
+        console.clear(); console.log('Console output.');
+      }
+
+      updateData();
     }
 
     /***********************************************************************************
@@ -229,7 +289,101 @@
       /***********************************************************************************
       Data analyzer.
       ***********************************************************************************/
-
+      '<div class="console" id="console"></div>\
+      <div class="row">\
+        <textarea style="width:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value=\'\';this.onclick=\'\'" id="Data">Enter Numbers here.</textarea>\
+        <div class="col">\
+          <input type="image" src="Buttons/sum.gif" onmousedown="this.src=\'Buttons/sum_pressed.gif\'" onmouseup="this.src=\'Buttons/sum.gif\'" onclick="Solve(0)">\
+          <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src=\'Buttons/geo-sum_pressed.gif\'" onmouseup="this.src=\'Buttons/geo-sum.gif\'" onclick="Solve(2)">\
+          <input type="image" src="Buttons/geo.gif" onmousedown="this.src=\'Buttons/geo_pressed.gif\'" onmouseup="this.src=\'Buttons/geo.gif\'" onclick="Solve(1)">\
+        </div>\
+        <div class="col">\
+          <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src=\'Buttons/sum-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/sum-sp.gif\'" onclick="Solve(3)">\
+          <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src=\'Buttons/geo-sum-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/geo-sum-sp.gif\'" onclick="Solve(4)">\
+          <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src=\'Buttons/geo-sp_pressed.gif\'" onmouseup="this.src=\'Buttons/Geo-sp.gif\'" onclick="Solve(5)">\
+        </div>\
+      </div>',
+      /***********************************************************************************
+      Run custom code.
+      ***********************************************************************************/
+      '<div style="width:100%;height:100%;" class="row">\
+        <div style="width:70%;"><textarea id="code" style="width:100%;height:100%;background-color:rgba(255,255,255,0.5);">\
+//Generate the most random chaotic data we can possibly generate.\n\n\
+var o = Math.round(Math.random() * 1000);\n\
+var g1 = Math.round(Math.random() * 1000);\n\
+var g2 = Math.round(Math.random() * 1000);\n\
+var g3 = Math.round(Math.random() * 1000);\n\n\
+var o1 = Math.round(Math.random() * 1000), o2 = Math.round(Math.random() * 1000);\n\
+var o3 = Math.round(Math.random() * 1000), o4 = Math.round(Math.random() * 1000);\n\
+var o5 = Math.round(Math.random() * 1000), o6 = Math.round(Math.random() * 1000);\n\
+var o7 = Math.round(Math.random() * 1000), o8 = Math.round(Math.random() * 1000);\n\
+var o9 = Math.round(Math.random() * 1000), o10 = Math.round(Math.random() * 1000);\n\n\
+var d1 = Math.round(Math.random() * 1000);\n\
+var d2 = Math.round(Math.random() * 1000);\n\
+var d3 = Math.round(Math.random() * 1000);\n\
+var d4 = Math.round(Math.random() * 1000);\n\
+var d5 = Math.round(Math.random() * 1000);\n\
+var d6 = Math.round(Math.random() * 1000);\n\
+var d7 = Math.round(Math.random() * 1000);\n\n\
+var values = [];\n\n\
+for( var i1 = 0; i1 < 16; i1++)\n\
+{\n\
+  o2 = o1 + ( o1 = o2 );\n\
+  o4 = o3 + ( o3 = o4 );\n\
+  o6 = o5 + ( o5 = o6 );\n\
+  o8 = o7 + ( o7 = o8 );\n\
+  o10 = o9 + ( o9 = o10 );\n\r\
+  g1 = g1 * 2;\n\
+  g2 = g2 * 3;\n\
+  g3 = g3 * 4;\n\n\
+  o += d1;\n\r\
+  for( var i2 = 0; i2 < i1; i2++ )\n\
+  {\n\
+    o += d2;\n\n\
+    for( var i3 = 0; i3 < i2; i3++ )\n\
+    {\n\
+      o += d3;\n\n\
+      for( var i4 = 0; i4 < i3; i4++ )\n\
+      {\n\
+        o += d4;\n\n\
+        for( var i5 = 0; i5 < i4; i5++ )\n\
+        {\n\
+          o += d5;\n\n\
+          for( var i6 = 0; i6 < i5; i6++ )\n\
+          {\n\
+            o += d6;\n\n\
+            for( var i7 = 0; i7 < i6; i7++ )\n\
+            {\n\
+              o += d7;\n\
+            }\n\
+          }\n\
+        }\n\
+      }\n\
+    }\n\
+  }\n\n\
+  values[i1] = o + g1 + g2 + g3 + o1 + o3 + o5 + o7 + o9;\n\
+}\n\n\
+//Create a set using the generated data.\n\n\
+var My_set = new set( values );\n\n\
+console.log( My_set );\n\n\
+//Sequence the set.\n\n\
+var My_seq = My_set.gensp();\n\n\
+console.log( My_seq );\n\n\
+//Get the function for the analyzed set.\n\n\
+var My_func = My_seq.getFunc();\n\n\
+console.log( My_func );\n\n\
+//Calculate values using the function generated from the data.\n\n\
+for( var x = 0; x < 20; x++)\n\
+{\n\
+  console.log( My_func( x ) );\n\
+}</textarea></div>\
+        <div class="console2" id="console"></div>\
+      </div>\
+      <input type="button" value="Run Code." onclick="runCode()" style="width:100%;height:7%;" />',
+      /***********************************************************************************
+      Basic help and documentation.
+      ***********************************************************************************/
+      '<div style="width:100%;height:100%;background-color:rgba(255,255,255,0.5);color:#000000;"><center><h1>Page Not yet Ready</h1></center></div>'
     ];
 
     //View port resize and adjust for mobile.
@@ -258,45 +412,28 @@
     }
   </script>
 </head>
-<body onload="Setup()">
-  <div class="pageCol">
+<body onload="setup();setTool();">
+  <div style="width:100%;height:100%;" class="col">
     <center><h1>By Damian Recoskie</h1></center>
     <table border="1px">
       <tr id="LoadFL64">
+        <td>
+          <div class="toolBar">
+            <button id="toolBar" class="toolBtn">Open tool menu</button>
+            <div class="toolBarI">
+              <a onclick="window.location.hash = '0';setTool();">Data analyzer</a>
+              <a onclick="window.location.hash = '1';setTool();">Run custom code</a>
+              <a onclick="window.location.hash = '2';setTool();">Help</a>
+            </div>
+          </div>
+          <div style="display: inline-block;" id="setTool"></div>
+        </td>
         <td><input type="button" value="Load FL64." onclick="LoadFL64();"><input type="button" value="?" onclick="FL64Info();"></td>
         <td>Debug Mode:<select id="DMode" onchange="LoadDebug();"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select><input type="button" value="?" onclick="DebugInfo();"></td>
         <td>Error Correction:<select id="EMode"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select></td>
       </tr>
     </table>
     <img class="bgIcon" src="Bg/bg2.gif">
-    <div class="console" id="console">
-      <br />
-      Each number in an set is separated by an comma.
-      <br><br><br>
-      Example use:
-      <br><br><br>
-      10,20,30
-      <br><br><br>
-      If you decide to add another number it should look like this.
-      <br><br><br>
-      10,20,30,40
-      <br><br><br>
-      The only format that is supported is just numbers separated by commas. No words or any letters yet.
-      <br><br><br>
-      After you enter the number data click one of the solve buttons.
-    </div>
-    <div class="row">
-      <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" id="Data">Enter Numbers here.</textarea>
-      <div class="col">
-        <input type="image" src="Buttons/sum.gif" onmousedown="this.src='Buttons/sum_pressed.gif'" onmouseup="this.src='Buttons/sum.gif'" onclick="Solve(0)">
-        <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src='Buttons/geo-sum_pressed.gif'" onmouseup="this.src='Buttons/geo-sum.gif'" onclick="Solve(2)">
-        <input type="image" src="Buttons/geo.gif" onmousedown="this.src='Buttons/geo_pressed.gif'" onmouseup="this.src='Buttons/geo.gif'" onclick="Solve(1)">
-      </div>
-      <div class="col">
-        <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)">
-        <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src='Buttons/geo-sum-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sum-sp.gif'" onclick="Solve(4)">
-        <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src='Buttons/geo-sp_pressed.gif'" onmouseup="this.src='Buttons/Geo-sp.gif'" onclick="Solve(5)">
-      </div>
-    </div>
+    <div id="page"></div>
   </div>
 </body></html>
