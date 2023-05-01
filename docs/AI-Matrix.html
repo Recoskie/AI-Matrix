@@ -1,11 +1,10 @@
-<html>
-<head>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="apple-mobile-web-app-title" content="DataAI" />
-  <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp" />
-  <link rel="apple-touch-icon" href="Bg/icon.png" />
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1" />
+<html><head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="DataAI">
+  <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp">
+  <link rel="apple-touch-icon" href="Bg/icon.png">
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
   <style type="text/css">
   <!--
     body
@@ -35,6 +34,22 @@
       left:50%;
       transform:translate(-50%, 20%);
       z-index:-1;
+    }
+    .pageCol
+    {
+      display: flex;
+      flex-direction: column;
+      width:100%;
+      height:100%;
+    }
+    .col
+    {
+      display: flex;
+      flex-direction: column;
+    }
+    .row
+    {
+      display: flex;
     }
     /***********************************************************************************
     Create a menubar for navigation
@@ -77,7 +92,7 @@
 
     script1.onload = function() { document.getElementById("LoadFL64").deleteCell(0); alert("loaded!"); };
 
-    script1.onerror = function() { alert("Error Unable to load FL 64..."); };
+    script1.onerror = function() { alert("Error Unable to load FL64..."); };
 	
     function LoadFL64() { head.appendChild( script1 ); }
 
@@ -125,20 +140,16 @@
 
     function FL64Info()
     {
-      var w = window.open("", "_blank", "location=0");
-
-      w.document.body.innerHTML = "FL64 is used to convert float values to fractions when displaying any decoded data as an function, or as an ASCII Math string.<br />\
-        If Error correction is enabled then the float values are converted back to fractions using an dynamic error range to further make the values more accurate and to cut out epsilon error.<br />\
-        <a href=\"https://github.com/Recoskie/Fl64\">Github link</a> to the full documentation of the FL64 library.";
+      document.getElementById("console").innerHTML = "<br/>FL64 is used to convert float values to fractions when displaying any decoded data as an function, or as an ASCII Math string.<br /><br />\
+        If Error correction is enabled then the float values are converted back to fractions using an dynamic error range to further make the values more accurate and to cut out epsilon error.<br /><br />\
+        <a href=\"https://github.com/Recoskie/Fl64\" target=\"_blank\">Github link</a> to the full documentation of the FL64 library.";
     }
 
     function DebugInfo()
     {
-      var w = window.open("", "_blank", "location=0");
-
-      w.document.body.innerHTML = "The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br />\
-        The matrix can solve all sums in all dimensions or logarithmic values.<br />\
-        The debug value in the AI matrix is read and then displayed along with the results.<br />\
+      document.getElementById("console").innerHTML = "<br/>The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br /><br/>\
+        The matrix can solve all sums in all dimensions or logarithmic values.<br /><br/>\
+        The debug value in the AI matrix is read and then displayed along with the results.<br /><br/>\
         However the extra work involved as running slows down the AI solving abilities so one has the debug value and the other does not.<br /><br />\
         The debug version is still in the makings.";
     }
@@ -151,13 +162,13 @@
     {
       var DMode = document.getElementById("DMode").value == "true"; AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
       
-      var input = [], output = "<center>";
+      var input = [], output = "<br />";
 
       //Create an new set of data.
 
       try { input = new set( document.getElementById("Data").value ); } catch( e )
       { 
-        document.getElementById("console").innerHTML = "<center></center><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
+        document.getElementById("console").innerHTML = "<br /><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.";
         return;
       }
 
@@ -190,17 +201,17 @@
       
       //Function to string then to HTML.
 
-      output += "<h1>Compiled to an function.</h1><br /><table><tr><td>" + f.toString().html() + "</td></tr></table>";
+      output += "<h1>Compiled to an function.</h1><br /><center><table><tr><td>" + f.toString().html() + "</td></tr></table></center>";
       
       //Execute the math function in an loop. Compare and display the results.
 
       output += "<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />";
 
-      output += "<table border=\"1\"><tr><td><center>X</center></td><td><center>result</center></td><td><center>Your Input</center></td></tr>";
+      output += "<center><table border=\"1\"><tr><td>X</td><td>result</td><td>Your Input</td></tr>";
 
       for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
       {
-        output += "<tr><td><center>" + i + "</center></td><td><center>" + f( i ) + "</center></td><td><center>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</center></td></tr>";
+        output += "<tr><td>" + i + "</td><td>" + f( i ) + "</td><td>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</td></tr>";
       }
 
       output += "</table></center>";
@@ -209,6 +220,17 @@
 
       document.getElementById("console").innerHTML = output;
     }
+
+    /***********************************************************************************
+    All in one web application.
+    ***********************************************************************************/
+
+    var subTool = [
+      /***********************************************************************************
+      Data analyzer.
+      ***********************************************************************************/
+
+    ];
 
     //View port resize and adjust for mobile.
     
@@ -237,82 +259,44 @@
   </script>
 </head>
 <body onload="Setup()">
-  <table height="100%" width="100%">
-    <tr>
-      <td height="1px;">
-        <center>
-          <h1>By Damian Recoskie</h1>
-          <hr />
-          <table border="1px">
-            <tr id="LoadFL64">
-              <td>
-                <input type="button" value="Load FL64." onclick="LoadFL64();" /><input type="button" value="?" onclick="FL64Info();" />
-              </td>
-              <td>
-                Debug Mode:
-                <select id="DMode" onchange="LoadDebug();">
-                  <option value="false" selected="selected">Disable</option>
-                  <option value="true">Enable</option>
-                </select>
-                <input type="button" value="?" onclick="DebugInfo();" />
-              </td>
-              <td>
-                Error Correction:
-                <select id="EMode">
-                  <option value="false" selected="selected">Disable</option>
-                  <option value="true">Enable</option>
-                </select>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
-    <tr>
-      <td height="100%">
-        <img class="bgIcon" src="Bg/bg2.gif">
-        <div class="console" id="console">
-          Each number in an set is separated by an comma.
-          <br /><br /><br />
-          Example use:
-          <br /><br /><br />
-          10,20,30
-          <br /><br /><br />
-          If you decide to add another number it should look like this.
-          <br /><br /><br />
-          10,20,30,40
-          <br /><br /><br />
-          The only format that is supported is just numbers separated by commas. No words or any letters yet.
-          <br /><br /><br />
-          After you enter the number data click one of the solve buttons.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <table style="height:100%;">
-          <tr>
-            <td width="100%">
-              <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" id="Data">Enter Numbers here.</textarea>
-            </td>
-            <td>
-              <center>
-                <input type="image" src="Buttons/sum.gif" onmousedown="this.src='Buttons/sum_pressed.gif'" onmouseup="this.src='Buttons/sum.gif'" onclick="Solve(0)" />
-                <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src='Buttons/geo-sum_pressed.gif'" onmouseup="this.src='Buttons/geo-sum.gif'" onclick="Solve(2)" />
-                <input type="image" src="Buttons/geo.gif" onmousedown="this.src='Buttons/geo_pressed.gif'" onmouseup="this.src='Buttons/geo.gif'" onclick="Solve(1)" />
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)" />
-                <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src='Buttons/geo-sum-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sum-sp.gif'" onclick="Solve(4)" />
-                <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src='Buttons/geo-sp_pressed.gif'" onmouseup="this.src='Buttons/Geo-sp.gif'" onclick="Solve(5)" />
-              </center>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
+  <div class="pageCol">
+    <center><h1>By Damian Recoskie</h1></center>
+    <table border="1px">
+      <tr id="LoadFL64">
+        <td><input type="button" value="Load FL64." onclick="LoadFL64();"><input type="button" value="?" onclick="FL64Info();"></td>
+        <td>Debug Mode:<select id="DMode" onchange="LoadDebug();"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select><input type="button" value="?" onclick="DebugInfo();"></td>
+        <td>Error Correction:<select id="EMode"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select></td>
+      </tr>
+    </table>
+    <img class="bgIcon" src="Bg/bg2.gif">
+    <div class="console" id="console">
+      <br />
+      Each number in an set is separated by an comma.
+      <br><br><br>
+      Example use:
+      <br><br><br>
+      10,20,30
+      <br><br><br>
+      If you decide to add another number it should look like this.
+      <br><br><br>
+      10,20,30,40
+      <br><br><br>
+      The only format that is supported is just numbers separated by commas. No words or any letters yet.
+      <br><br><br>
+      After you enter the number data click one of the solve buttons.
+    </div>
+    <div class="row">
+      <textarea style="width:100%;height:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value='';this.onclick=''" id="Data">Enter Numbers here.</textarea>
+      <div class="col">
+        <input type="image" src="Buttons/sum.gif" onmousedown="this.src='Buttons/sum_pressed.gif'" onmouseup="this.src='Buttons/sum.gif'" onclick="Solve(0)">
+        <input type="image" src="Buttons/geo-sum.gif" onmousedown="this.src='Buttons/geo-sum_pressed.gif'" onmouseup="this.src='Buttons/geo-sum.gif'" onclick="Solve(2)">
+        <input type="image" src="Buttons/geo.gif" onmousedown="this.src='Buttons/geo_pressed.gif'" onmouseup="this.src='Buttons/geo.gif'" onclick="Solve(1)">
+      </div>
+      <div class="col">
+        <input type="image" src="Buttons/sum-sp.gif" onmousedown="this.src='Buttons/sum-sp_pressed.gif'" onmouseup="this.src='Buttons/sum-sp.gif'" onclick="Solve(3)">
+        <input type="image" src="Buttons/geo-sum-sp.gif" onmousedown="this.src='Buttons/geo-sum-sp_pressed.gif'" onmouseup="this.src='Buttons/geo-sum-sp.gif'" onclick="Solve(4)">
+        <input type="image" src="Buttons/Geo-sp.gif" onmousedown="this.src='Buttons/geo-sp_pressed.gif'" onmouseup="this.src='Buttons/Geo-sp.gif'" onclick="Solve(5)">
+      </div>
+    </div>
+  </div>
+</body></html>
