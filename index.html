@@ -1,338 +1,331 @@
-<html><head>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="DataAI">
-  <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp">
-  <link rel="apple-touch-icon" href="docs/Bg/icon.png">
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
-  <link rel="canonical" href="https://recoskie.github.io/AI-Matrix/" />
-  <link rel="manifest" href="manifest.json">
-  <style type="text/css">
-  <!--
-    body
-    {
-      background-color: #000000;
-      color: #FFFFFF;
-      background-image: url(docs/Bg/bg.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      -moz-background-size: cover;
-      -webkit-background-size: cover;
-    }
-    .console
-    {
-      width:100%; height:100%;
-      color:#FFFFFF;
-      background-color:rgba(255,255,255,0);
-      text-align: center;
-      overflow-y: auto;
-      border: 2px inset #FFFFFF;
-    }
-    .console2
-    {
-      width:30%; height:100%;
-      color:#000000;
-      background-color:rgba(255,255,255,0.75);
-      overflow-y: auto;
-      border: 2px inset #FFFFFF;
-    }
-    .bgIcon
-    {
-      max-height:30%;
-      width:auto;
-      position:absolute;
-      left:50%;
-      transform:translate(-50%, 20%);
-      z-index:-1;
-    }
-    .col
-    {
-      display: flex;
-      flex-direction: column;
-    }
-    .row
-    {
-      display: flex;
-    }
-    textarea
-    {
-      resize: none;
-    }
-    #page { display: contents; }
-    /***********************************************************************************
-    Create a menubar for navigation
-    ***********************************************************************************/
-    .toolBtn { white-space: nowrap; padding: 8px; border: none; cursor: pointer; }
-    .toolBar { position: relative; display: inline-block; }
-    .toolBarI { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
-    .toolBarI a { color: black; padding: 12px 16px; text-decoration: none; display: block; cursor: pointer; }
-    .toolBarI a:hover {background-color: #f1f1f1}
-    .toolBar:hover .toolBarI { display: block; }
-    .toolBar:hover .toolBtn { box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }
-  -->
-  </style>
-  <script src="AI-Mat.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    var page = null, output = "";
-
-    /*****************************************************************************************
-    Reset the option boxes onload.
-    *****************************************************************************************/
-    
-    function setup()
-    {
-      document.getElementById("DMode").options[0].selected = true;
-      document.getElementById("EMode").options[0].selected = true;
-      page = document.getElementById("page");
-    }
-    
-    /*****************************************************************************************
-    If user decides to load the external Float number library with the matrix.
-    Or if user wants an debug view of the Matrix.
-    *****************************************************************************************/
-
-    var head = document.getElementsByTagName("head")[0];
-
-    var script1 = document.createElement("script"), script2, script3;
-
-    /*****************************************************************************************
-    The double precision library is not mandatory, but is an nice enhancement to the Matrix.
-    *****************************************************************************************/
-
-    script1.type = "text/javascript"; script1.src = "https://recoskie.github.io/Fl64/FL64.js"; 
-
-    script1.onload = function() { document.getElementById("LoadFL64").deleteCell(1); alert("loaded!"); };
-
-    script1.onerror = function() { alert("Error Unable to load FL64..."); };
-	
-    function LoadFL64() { head.appendChild( script1 ); }
-
-    /*****************************************************************************************
-    Load the debugged or reload the non debugged Matrix.
-    *****************************************************************************************/
-
-    function LoadDebug()
-    {
-      var sw = document.getElementById("DMode").value == "true";
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DataAI">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no" id="vp">
+    <link rel="apple-touch-icon" href="docs/Bg/icon.png">
+    <meta property="og:image" content="https://repository-images.githubusercontent.com/24019736/faa49a00-65ec-11ea-8fae-da9b8ce0e7d1">
+    <link rel="canonical" href="https://recoskie.github.io/AI-Matrix/" />
+    <link rel="manifest" href="manifest.json">
+    <style type="text/css">
+      <!--
+        body
+        {
+          background-color: #000000;
+          color: #FFFFFF;
+          background-image: url(docs/Bg/bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          -moz-background-size: cover;
+          -webkit-background-size: cover;
+        }
+        .col { display: flex; flex-direction: column; } .row { display: flex; }
+        .console
+        {
+          width:100%; height:100%;
+          color:#FFFFFF;
+          background-color:rgba(255,255,255,0);
+          text-align: center;
+          overflow-y: auto;
+          border: 2px inset #FFFFFF;
+        }
+        .console2
+        {
+          width:30%; height:100%;
+          color:#000000;
+          background-color:rgba(255,255,255,0.75);
+          overflow-y: auto;
+          border: 2px inset #FFFFFF;
+        }
+        .bgIcon
+        {
+          max-height:30%;
+          width:auto;
+          position:absolute;
+          left:50%;
+          transform:translate(-50%, 20%);
+          z-index:-1;
+        }
+        textarea
+        {
+          resize: none;
+        }
+        #page { display: contents; }
+        /***********************************************************************************
+        Create a menubar for navigation
+        ***********************************************************************************/
+        .toolBtn { white-space: nowrap; padding: 8px; border: none; cursor: pointer; }
+        .toolBar { position: relative; display: inline-block; }
+        .toolBarI { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+        .toolBarI a { color: black; padding: 12px 16px; text-decoration: none; display: block; cursor: pointer; }
+        .toolBarI a:hover {background-color: #f1f1f1}
+        .toolBar:hover .toolBarI { display: block; }
+        .toolBar:hover .toolBtn { box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }
+        -->
+    </style>
+    <script src="AI-Mat.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var page = null, output = "";
       
-      if( sw )
+      /*****************************************************************************************
+      Reset the option boxes onload.
+      *****************************************************************************************/
+      
+      function setup()
       {
-        var script3 = document.createElement("script");
-
-        script3.type = "text/javascript"; script3.src = "AI-Mat-Debug.js";
-
-        try { head.removeChild( script2 ); } catch( e ) { };
-
-        script3.onload = function() { alert("loaded!"); };
-
-        script3.onerror = function() { document.getElementById("DMode").options[0].selected=true; alert("Error Unable to load AI-Mat-Debug..."); };
-
-        head.appendChild( script3 );
+        document.getElementById("DMode").options[0].selected = true;
+        document.getElementById("EMode").options[0].selected = true;
+        page = document.getElementById("page");
       }
-      else
+      
+      /*****************************************************************************************
+      If user decides to load the external Float number library with the matrix.
+      Or if user wants an debug view of the Matrix.
+      *****************************************************************************************/
+      
+      var head = document.getElementsByTagName("head")[0];
+      
+      var script1 = document.createElement("script"), script2, script3;
+      
+      /*****************************************************************************************
+      The double precision library is not mandatory, but is an nice enhancement to the Matrix.
+      *****************************************************************************************/
+      
+      script1.type = "text/javascript"; script1.src = "https://recoskie.github.io/Fl64/FL64.js"; 
+      
+      script1.onload = function() { document.getElementById("LoadFL64").deleteCell(1); alert("loaded!"); };
+      
+      script1.onerror = function() { alert("Error Unable to load FL64..."); };
+      
+      function LoadFL64() { head.appendChild( script1 ); }
+      
+      /*****************************************************************************************
+      Load the debugged or reload the non debugged Matrix.
+      *****************************************************************************************/
+      
+      function LoadDebug()
       {
-        var script2 = document.createElement("script");
-
-        script2.type = "text/javascript"; script2.src = "AI-Mat.js";
-
-        try { head.removeChild( script3 ); } catch( e ) { };
-
-        script2.onload = function() { alert("loaded!"); };
-
-        script2.onerror = function() { document.getElementById("DMode").options[1].selected=true; alert("Error Unable to load AI-Mat..."); };
-
-        head.appendChild( script2 );
+        var sw = document.getElementById("DMode").value == "true";
+        
+        if( sw )
+        {
+          var script3 = document.createElement("script");
+      
+          script3.type = "text/javascript"; script3.src = "AI-Mat-Debug.js";
+      
+          try { head.removeChild( script2 ); } catch( e ) { };
+      
+          script3.onload = function() { alert("loaded!"); };
+      
+          script3.onerror = function() { document.getElementById("DMode").options[0].selected=true; alert("Error Unable to load AI-Mat-Debug..."); };
+      
+          head.appendChild( script3 );
+        }
+        else
+        {
+          var script2 = document.createElement("script");
+      
+          script2.type = "text/javascript"; script2.src = "AI-Mat.js";
+      
+          try { head.removeChild( script3 ); } catch( e ) { };
+      
+          script2.onload = function() { alert("loaded!"); };
+      
+          script2.onerror = function() { document.getElementById("DMode").options[1].selected=true; alert("Error Unable to load AI-Mat..."); };
+      
+          head.appendChild( script2 );
+        }
       }
-    }
-
-    /*****************************************************************************************
-    Information on external libraries and what they do.
-    *****************************************************************************************/
-
-    function FL64Info()
-    {
-      document.getElementById("console").innerHTML = "<br/>FL64 is used to convert float values to fractions when displaying any decoded data as an function, or as an ASCII Math string.<br /><br />\
-        If Error correction is enabled then the float values are converted back to fractions using an dynamic error range to further make the values more accurate and to cut out epsilon error.<br /><br />\
-        <a href=\"https://github.com/Recoskie/Fl64\" target=\"_blank\">Github link</a> to the full documentation of the FL64 library.";
-    }
-
-    function DebugInfo()
-    {
-      document.getElementById("console").innerHTML = "<br/>The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br /><br/>\
-        The matrix can solve all sums in all dimensions or logarithmic values.<br /><br/>\
-        The debug value in the AI matrix is read and then displayed along with the results.<br /><br/>\
-        However the extra work involved as running slows down the AI solving abilities so one has the debug value and the other does not.<br /><br />\
-        The debug version is still in the makings.";
-    }
-
-    /*****************************************************************************************
-    Solve data.
-    *****************************************************************************************/
-
-    function Solve( Mode )
-    {
-      var DMode = document.getElementById("DMode").value == "true"; AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
       
-      var input = []; console.clear();
-
-      //Create an new set of data.
-
-      try { input = new set( document.getElementById("Data").value ); } catch( e )
-      { 
-        console.log("<br /><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.");
-        updateData(); return;
-      }
-
-      console.log("<br /><h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() ));
-
-      //Analyze data.
-
-      var d = null;
+      /*****************************************************************************************
+      Information on external libraries and what they do.
+      *****************************************************************************************/
       
-      if ( Mode === 5 ) { d = input.geosp(); } else if ( Mode === 4 ) { d = input.gensp(); } else if ( Mode === 3 ) { d = input.seqsp(); }
-      else if ( Mode === 2 ) { d = input.gen(); } else if ( Mode === 1 ) { d = input.geo(); } else { d = input.seq(); }
-      
-      //Matrix Debug output.
-      
-      console.log(AI_Mat + "");
-      
-      //Show the data.
-
-      console.log("<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() ));
-
-      console.log("<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() ));
-      
-      //Display the data math string.
-
-      console.log("<h1>ASCII Math String.</h1><br />" + d + "");
-      
-      //Compile to function.
-
-      var f = d.getFunc();
-      
-      //Function to string then to HTML.
-
-      console.log("<h1>Compiled to an function.</h1><br /><center><table><tr><td>" + f.toString().html() + "</td></tr></table></center>");
-      
-      //Execute the math function in an loop. Compare and display the results.
-
-      console.log("<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />");
-
-      console.log("<center><table border=\"1\"><tr><td>X</td><td>result</td><td>Your Input</td></tr>");
-
-      for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
+      function FL64Info()
       {
-        console.log("<tr><td>" + i + "</td><td>" + f( i ) + "</td><td>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</td></tr>");
+        document.getElementById("console").innerHTML = "<br/>FL64 is used to convert float values to fractions when displaying any decoded data as an function, or as an ASCII Math string.<br /><br />\
+          If Error correction is enabled then the float values are converted back to fractions using an dynamic error range to further make the values more accurate and to cut out epsilon error.<br /><br />\
+          <a href=\"https://github.com/Recoskie/Fl64\" target=\"_blank\">Github link</a> to the full documentation of the FL64 library.";
       }
-
-      console.log("</table></center>");
-
-      //Update output.
-
-      updateData();
-    }
-
-    /***********************************************************************************
-    Allow user to run custom code and to use console to log to external output on page.
-    ***********************************************************************************/
-
-    var output = "", l1 = console.log, l2 = console.clear; console.log = function (msg) { l1(msg); output += msg + "\r\n"; }; console.clear = function() { l2(); output = ""; }
-
-    function runCode() { console.clear(); try { eval(document.getElementById("code").value); } catch (e) { console.log(e + ""); } updateData(true); }
-
-    /***********************************************************************************
-    Updates console on page.
-    ***********************************************************************************/
-
-    function updateData(pre) { if(pre) { output = "<pre>" + output + "</pre>"; } document.getElementById("console").innerHTML = output; }
-
-    /***********************************************************************************
-    Change the tool in use on the page.
-    ***********************************************************************************/
-
-    var toolType = ["Data analyzer","Run custom code","Help"]
-
-    function setTool()
-    {
-      console.clear(); tool = parseInt(window.location.hash.replace("#","")) || 0; page.innerHTML = subTool[tool]; document.getElementById("setTool").innerHTML = toolType[tool];
-
-      //Output number analyzer basic usage to console output.
-
-      if(tool == 0)
+      
+      function DebugInfo()
       {
-        console.log('<br />\
-        Each number in an set is separated by an comma.\
-        <br><br><br>\
-        Example use:\
-        <br><br><br>\
-        10,20,30\
-        <br><br><br>\
-        If you decide to add another number it should look like this.\
-        <br><br><br>\
-        10,20,30,40\
-        <br><br><br>\
-        The only format that is supported is just numbers separated by commas. No words or any letters yet.\
-        <br><br><br>\
-        After you enter the number data click one of the solve buttons.');
+        document.getElementById("console").innerHTML = "<br/>The Debug version of the AI mat has an \"AI_Mat.debug\" value which is written to in HTML showing each step the matrix does.<br /><br/>\
+          The matrix can solve all sums in all dimensions or logarithmic values.<br /><br/>\
+          The debug value in the AI matrix is read and then displayed along with the results.<br /><br/>\
+          However the extra work involved as running slows down the AI solving abilities so one has the debug value and the other does not.<br /><br />\
+          The debug version is still in the makings.";
       }
-      else if(tool == 1)
+      
+      /*****************************************************************************************
+      Solve data.
+      *****************************************************************************************/
+      
+      function Solve( Mode )
       {
-        console.log('Console output.');
+        var DMode = document.getElementById("DMode").value == "true"; AI_Mat.ErrCorrect = document.getElementById("EMode").value == "true";
+        
+        var input = []; console.clear();
+      
+        //Create an new set of data.
+      
+        try { input = new set( document.getElementById("Data").value ); } catch( e )
+        { 
+          console.log("<br /><h1>Error input not allowed</h1>separate each number by an comma<br /><br /><br />Example use:<br /><br /><br />10,<br />20,<br />30<br /><br /><br />If you decide to add another number it should look like this<br /><br /><br />10,<br />20,<br />30,<br />40<br /><br /><br />The only data that should be typed in before solving the data is just the numbers and commas that separate each number<br /><br /><br />No words or any letters are allowed yet. Only numbers are allowed, and after each number you put an comma except for the last number you enter in the text input.<br /><br /><br />After entering the number data click one of the solve buttons.<br /><br /><br />Enter the Number Data in the text input below and type the numbers in the correct format.");
+          updateData(); return;
+        }
+      
+        console.log("<br /><h1>Given data from function, or observed measurements.</h1><br />" + ( DMode ? input.fontcolor("#00AFFF") : input.toString().html() ));
+      
+        //Analyze data.
+      
+        var d = null;
+        
+        if ( Mode === 5 ) { d = input.geosp(); } else if ( Mode === 4 ) { d = input.gensp(); } else if ( Mode === 3 ) { d = input.seqsp(); }
+        else if ( Mode === 2 ) { d = input.gen(); } else if ( Mode === 1 ) { d = input.geo(); } else { d = input.seq(); }
+        
+        //Matrix Debug output.
+        
+        console.log(AI_Mat + "");
+        
+        //Show the data.
+      
+        console.log("<h1>Sequence data.</h1><br />" + ( DMode ? d.seq.fontcolor("#00FF00") : d.seq.toString().html() ));
+      
+        console.log("<h1>Geo Sequence data.</h1><br />" + ( DMode ? d.geo.fontcolor("#00FF00") : d.geo.toString().html() ));
+        
+        //Display the data math string.
+      
+        console.log("<h1>ASCII Math String.</h1><br />" + d + "");
+        
+        //Compile to function.
+      
+        var f = d.getFunc();
+        
+        //Function to string then to HTML.
+      
+        console.log("<h1>Compiled to an function.</h1><br /><center><table><tr><td>" + f.toString().html() + "</td></tr></table></center>");
+        
+        //Execute the math function in an loop. Compare and display the results.
+      
+        console.log("<h1>Running Math function -" + ( input.length + 5 ) + " to " + ( input.length + 5 ) + ".</h1><br />");
+      
+        console.log("<center><table border=\"1\"><tr><td>X</td><td>result</td><td>Your Input</td></tr>");
+      
+        for ( var i = -( input.length + 5 ); i <= input.length + 5; i++ )
+        {
+          console.log("<tr><td>" + i + "</td><td>" + f( i ) + "</td><td>" + input[ i + ( ( Mode === 2 || Mode === 4 ) ? 0 : -1 ) ] + "</td></tr>");
+        }
+      
+        console.log("</table></center>");
+      
+        //Update output.
+      
+        updateData();
       }
-      else if(tool == 2)
-      {
-        console.log('<br /><h1>AI-Matrix github page: <a href="https://github.com/Recoskie/AI-Matrix" target="_blank">Link</a></h1>\
-        This is a fast artificial intelligence data algorithm that can solve any data back into exactly what it is.<br /><br />\
-        This sort of AI excels at characterizing audio waves, processing images, and solving math problems that are in higher dimensions, such as quantum physics problems.<br /><br />\
-        It allows you to design javascripts that build and create their own code or functions using the get function method.<br /><br />\
-        You can also create sets with set parameters and have it align to the best answer possible given your data.<br /><br />\
-        You can also use it to translate data from a function into its smallest math function.<br />\
-        <h1>Reference: <a href="https://github.com/Recoskie/AI-Matrix/wiki/Basics" target="_blank">Link</a></h1>\
-        The basics wiki page shows how to use the AI-Matrix script in detail.<br /><br />\
-        You can always learn using the interactive examples page if you find it difficult to use or understand.<br />\
-        <h1>Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html" target="_blank">Link</a></h1>\
-        You can learn by examples using the interactive examples page.<br />\
-        <h1>How it works: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html" target="_blank">Link</a></h1>\
-        On the How it Works page, you can learn how the algorithm works. It\'s unified structure of all things. How it solves all things in quantum alignment. Which reviles all things in any data instantly.\
-        <h1>Practical uses</h1>\
-        You can develop audio-enhancing algorithms and picture-enhancing algorithms.<br /><br />\
-        In order to build a chatbot, you would have to build a language interface for it.<br /><br />\
-        Lastly, you are going to have to store data if you want it to remember and to self-learn. Which is known as building a data model.<br /><br />\
-        Having an AI build a data model to work with and to analyze and bias data can be time-consuming.<br /><br />\
-        However, when it comes to analyzing data into what it is to put into your data model or solving data and calculations, it is ultra-fast.<br /><br />\
-        There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here.');
-      }
-
-      updateData();
-    }
-
-    /***********************************************************************************
-    All in one web application.
-    ***********************************************************************************/
-
-    var subTool = [
+      
       /***********************************************************************************
-      Data analyzer.
+      Allow user to run custom code and to use console to log to external output on page.
       ***********************************************************************************/
-      '<div class="console" id="console"></div>\
-      <div class="row">\
-        <textarea style="width:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value=\'\';this.onclick=\'\'" id="Data">Enter Numbers here.</textarea>\
-        <div class="col">\
-          <input type="image" src="docs/Buttons/sum.gif" onmousedown="this.src=\'docs/Buttons/sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum.gif\'" onclick="Solve(0)">\
-          <input type="image" src="docs/Buttons/geo-sum.gif" onmousedown="this.src=\'docs/Buttons/geo-sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum.gif\'" onclick="Solve(2)">\
-          <input type="image" src="docs/Buttons/geo.gif" onmousedown="this.src=\'docs/Buttons/geo_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo.gif\'" onclick="Solve(1)">\
-        </div>\
-        <div class="col">\
-          <input type="image" src="docs/Buttons/sum-sp.gif" onmousedown="this.src=\'docs/Buttons/sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum-sp.gif\'" onclick="Solve(3)">\
-          <input type="image" src="docs/Buttons/geo-sum-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum-sp.gif\'" onclick="Solve(4)">\
-          <input type="image" src="docs/Buttons/Geo-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/Geo-sp.gif\'" onclick="Solve(5)">\
-        </div>\
-      </div>',
+      
+      var output = "", l1 = console.log, l2 = console.clear; console.log = function (msg) { l1(msg); output += msg + "\r\n"; }; console.clear = function() { l2(); output = ""; }
+      
+      function runCode() { console.clear(); try { eval(document.getElementById("code").value); } catch (e) { console.log(e + ""); } updateData(true); }
+      
       /***********************************************************************************
-      Run custom code.
+      Updates console on page.
       ***********************************************************************************/
-      '<div style="width:100%;height:100%;" class="row">\
-        <div style="width:70%;"><textarea id="code" style="width:100%;height:100%;background-color:rgba(255,255,255,0.5);">\
+      
+      function updateData(pre) { if(pre) { output = "<pre>" + output + "</pre>"; } document.getElementById("console").innerHTML = output; }
+      
+      /***********************************************************************************
+      Change the tool in use on the page.
+      ***********************************************************************************/
+      
+      var toolType = ["Data analyzer","Run custom code","Help"]
+      
+      function setTool()
+      {
+        console.clear(); tool = parseInt(window.location.hash.replace("#","")) || 0; page.innerHTML = subTool[tool]; document.getElementById("setTool").innerHTML = toolType[tool];
+      
+        //Output number analyzer basic usage to console output.
+      
+        if(tool == 0)
+        {
+          console.log('<br />\
+          Each number in an set is separated by an comma.\
+          <br><br><br>\
+          Example use:\
+          <br><br><br>\
+          10,20,30\
+          <br><br><br>\
+          If you decide to add another number it should look like this.\
+          <br><br><br>\
+          10,20,30,40\
+          <br><br><br>\
+          The only format that is supported is just numbers separated by commas. No words or any letters yet.\
+          <br><br><br>\
+          After you enter the number data click one of the solve buttons.');
+        }
+        else if(tool == 1)
+        {
+          console.log('Console output.');
+        }
+        else if(tool == 2)
+        {
+          console.log('<br /><h1>AI-Matrix github page: <a href="https://github.com/Recoskie/AI-Matrix" target="_blank">Link</a></h1>\
+          This is a fast artificial intelligence data algorithm that can solve any data back into exactly what it is.<br /><br />\
+          This sort of AI excels at characterizing audio waves, processing images, and solving math problems that are in higher dimensions, such as quantum physics problems.<br /><br />\
+          It allows you to design javascripts that build and create their own code or functions using the get function method.<br /><br />\
+          You can also create sets with set parameters and have it align to the best answer possible given your data.<br /><br />\
+          You can also use it to translate data from a function into its smallest math function.<br />\
+          <h1>Reference: <a href="https://github.com/Recoskie/AI-Matrix/wiki/Basics" target="_blank">Link</a></h1>\
+          The basics wiki page shows how to use the AI-Matrix script in detail.<br /><br />\
+          You can always learn using the interactive examples page if you find it difficult to use or understand.<br />\
+          <h1>Interactive examples: <a href="https://recoskie.github.io/AI-Matrix/docs/Examples.html" target="_blank">Link</a></h1>\
+          You can learn by examples using the interactive examples page.<br />\
+          <h1>How it works: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html" target="_blank">Link</a></h1>\
+          On the How it Works page, you can learn how the algorithm works. It\'s unified structure of all things. How it solves all things in quantum alignment. Which reviles all things in any data instantly.\
+          <h1>Practical uses</h1>\
+          You can develop audio-enhancing algorithms and picture-enhancing algorithms.<br /><br />\
+          In order to build a chatbot, you would have to build a language interface for it.<br /><br />\
+          Lastly, you are going to have to store data if you want it to remember and to self-learn. Which is known as building a data model.<br /><br />\
+          Having an AI build a data model to work with and to analyze and bias data can be time-consuming.<br /><br />\
+          However, when it comes to analyzing data into what it is to put into your data model or solving data and calculations, it is ultra-fast.<br /><br />\
+          There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here.');
+        }
+      
+        updateData();
+      }
+      
+      /***********************************************************************************
+      All in one web application.
+      ***********************************************************************************/
+      
+      var subTool = [
+        /***********************************************************************************
+        Data analyzer.
+        ***********************************************************************************/
+        '<div class="console" id="console"></div>\
+        <div class="row">\
+          <textarea style="width:100%;background:rgba(255,255,255,0.3);font-size:200%;resize:none;" onclick="this.value=\'\';this.onclick=\'\'" id="Data">Enter Numbers here.</textarea>\
+          <div class="col">\
+            <input type="image" src="docs/Buttons/sum.gif" onmousedown="this.src=\'docs/Buttons/sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum.gif\'" onclick="Solve(0)">\
+            <input type="image" src="docs/Buttons/geo-sum.gif" onmousedown="this.src=\'docs/Buttons/geo-sum_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum.gif\'" onclick="Solve(2)">\
+            <input type="image" src="docs/Buttons/geo.gif" onmousedown="this.src=\'docs/Buttons/geo_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo.gif\'" onclick="Solve(1)">\
+          </div>\
+          <div class="col">\
+            <input type="image" src="docs/Buttons/sum-sp.gif" onmousedown="this.src=\'docs/Buttons/sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/sum-sp.gif\'" onclick="Solve(3)">\
+            <input type="image" src="docs/Buttons/geo-sum-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sum-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/geo-sum-sp.gif\'" onclick="Solve(4)">\
+            <input type="image" src="docs/Buttons/Geo-sp.gif" onmousedown="this.src=\'docs/Buttons/geo-sp_pressed.gif\'" onmouseup="this.src=\'docs/Buttons/Geo-sp.gif\'" onclick="Solve(5)">\
+          </div>\
+        </div>',
+        /***********************************************************************************
+        Run custom code.
+        ***********************************************************************************/
+        '<div style="width:100%;height:100%;" class="row">\
+          <div style="width:70%;"><textarea id="code" style="width:100%;height:100%;background-color:rgba(255,255,255,0.5);">\
 //Generate the most random chaotic data we can possibly generate.\n\n\
 var o = Math.round(Math.random() * 1000);\n\
 var g1 = Math.round(Math.random() * 1000);\n\
@@ -402,67 +395,83 @@ for( var x = 0; x < 20; x++)\n\
 {\n\
   console.log( My_func( x ) );\n\
 }</textarea></div>\
-        <div class="console2" id="console"></div>\
-      </div>\
-      <input type="button" value="Run Code." onclick="runCode()" style="width:100%;height:7%;" />',
-      /***********************************************************************************
-      Basic help and documentation.
-      ***********************************************************************************/
-      '<div id="console" style="width:100%;height:100%;overflow-y:auto;background-color:rgba(255,255,255,0.5);color:#000000;"></div>'
-    ];
-
-    //View port resize and adjust for mobile.
-    
-    var mobile = !isNaN( window.orientation ), eventVP = true;
-    
-    function resetVP()
-    {
-      document.getElementById("vp").content = "initial-scale=0.5, user-scalable=yes";
+          <div class="console2" id="console"></div>\
+        </div>\
+        <input type="button" value="Run Code." onclick="runCode()" style="width:100%;height:7%;" />',
+        /***********************************************************************************
+        Basic help and documentation.
+        ***********************************************************************************/
+        '<div id="console" style="width:100%;height:100%;overflow-y:auto;background-color:rgba(255,255,255,0.5);color:#000000;"></div>'
+      ];
       
-      document.removeEventListener("touchstart", resetVP);
+      //View port resize and adjust for mobile.
       
-      eventVP = true;
-    }
-    
-    if( mobile )
-    {
-      (window.onorientationchange = function()
+      var mobile = !isNaN( window.orientation ), eventVP = true;
+      
+      function resetVP()
       {
-        if( eventVP )
+        document.getElementById("vp").content = "initial-scale=0.5, user-scalable=yes";
+        
+        document.removeEventListener("touchstart", resetVP);
+        
+        eventVP = true;
+      }
+      
+      if( mobile )
+      {
+        (window.onorientationchange = function()
         {
-          document.getElementById("vp").content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no";
-          document.addEventListener("touchstart", resetVP, eventVP = false);
-        }
-      })();
-    }
-
-    //Add the web application service worker.
-
-    if(navigator.serviceWorker) { navigator.serviceWorker.register('/AI-Matrix/sw.js', {scope: '/AI-Matrix/'} ) }
-  </script>
-</head>
-<body onload="setup();setTool();">
-  <div style="width:100%;height:100%;" class="col">
-    <center><h1>By Damian Recoskie</h1></center>
-    <table border="1px">
-      <tr id="LoadFL64">
-        <td>
-          <div class="toolBar">
-            <button id="toolBar" class="toolBtn">Open tool menu</button>
-            <div class="toolBarI">
-              <a onclick="window.location.hash = '0';setTool();">Data analyzer</a>
-              <a onclick="window.location.hash = '1';setTool();">Run custom code</a>
-              <a onclick="window.location.hash = '2';setTool();">Help</a>
+          if( eventVP )
+          {
+            document.getElementById("vp").content="width=device-width, minimum-scale=0.5, maximum-scale=0.5, initial-scale=0.5, user-scalable=no";
+            document.addEventListener("touchstart", resetVP, eventVP = false);
+          }
+        })();
+      }
+      
+      //Add the web application service worker.
+      
+      if(navigator.serviceWorker) { navigator.serviceWorker.register('/AI-Matrix/sw.js', {scope: '/AI-Matrix/'} ) }
+    </script>
+  </head>
+  <body onload="setup();setTool();">
+    <div style="width:100%;height:100%;" class="col">
+      <center>
+        <h1>By Damian Recoskie</h1>
+      </center>
+      <table border="1px">
+        <tr id="LoadFL64">
+          <td>
+            <div class="toolBar">
+              <button id="toolBar" class="toolBtn">Open tool menu</button>
+              <div class="toolBarI">
+                <a onclick="window.location.hash = '0';setTool();">Data analyzer</a>
+                <a onclick="window.location.hash = '1';setTool();">Run custom code</a>
+                <a onclick="window.location.hash = '2';setTool();">Help</a>
+              </div>
             </div>
-          </div>
-          <div style="display: inline-block;" id="setTool"></div>
-        </td>
-        <td><input type="button" value="Load FL64." onclick="LoadFL64();"><input type="button" value="?" onclick="FL64Info();"></td>
-        <td>Debug Mode:<select id="DMode" onchange="LoadDebug();"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select><input type="button" value="?" onclick="DebugInfo();"></td>
-        <td>Error Correction:<select id="EMode"><option value="false" selected="selected">Disable</option><option value="true">Enable</option></select></td>
-      </tr>
-    </table>
-    <img class="bgIcon" src="docs/Bg/bg2.gif">
-    <div id="page"></div>
-  </div>
-</body></html>
+            <div style="display: inline-block;" id="setTool"></div>
+          </td>
+          <td><input type="button" value="Load FL64." onclick="LoadFL64();"><input type="button" value="?" onclick="FL64Info();"></td>
+          <td>
+            Debug Mode:
+            <select id="DMode" onchange="LoadDebug();">
+              <option value="false" selected="selected">Disable</option>
+              <option value="true">Enable</option>
+            </select>
+            <input type="button" value="?" onclick="DebugInfo();">
+          </td>
+          <td>
+            Error Correction:
+            <select id="EMode">
+              <option value="false" selected="selected">Disable</option>
+              <option value="true">Enable</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <img class="bgIcon" src="docs/Bg/bg2.gif">
+      <div id="page"></div>
+    </div>
+  </body>
+</html>
