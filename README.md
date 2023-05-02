@@ -33,14 +33,16 @@ On the How it Works page, you can learn how the algorithm works. It's unified st
 
 # Practical uses.
 
-You can develop audio-enhancing algorithms and picture-enhancing algorithms.  
+You can develop audio-enhancing algorithms and picture-enhancing algorithms.
 
-In order to build a chatbot, you would have to build a language interface for it.
+However, if you want it to do more than just solve complex problems, or analyze data, or translate data back into the smallest possible math function.
 
-Lastly, you are going to have to store data if you want it to remember and to self-learn. Which is known as building a data model.
+You will have to store data if you want it to remember. You can have it bias data and self-learn. Which is known as having it build a data model.
 
-Having an AI build a data model to work with and to analyze and bias data can be time-consuming.
+Having an AI build a data model to work with can be time-consuming. There is a way to shorten the learning process depending on what you intend to use it for.
 
-However, when it comes to analyzing data into what it is to put into your data model or solving data and calculations, it is ultra-fast.
+In order to build a chatbot, you would want to build a language interface for it. You can have it work with language directly from data only, but having it work with a language interface will allow you to have a smaller data models and to use it immediately to solve problems without a data model.
 
-There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here.
+It is also well known that when AI builds its own data model, you end up with no two AI systems that are the same, much like each person. It can even seem to develop emotions learned from other's data and exist as part of the data model. Whether it seems real or is just data is for you to decide. The biggest problem with AI is how long it takes to build a data model. It can actually run on slow computers and cell phones.
+
+There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here that you may want to use it for.
