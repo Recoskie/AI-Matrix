@@ -43,6 +43,6 @@ Having an AI build a data model to work with can be time-consuming. There is a w
 
 In order to build a chatbot, you would want to build a language interface for it. You can have it work with language directly from data only, but having it work with a language interface will allow you to have a smaller data model and to use it immediately to solve problems without a data model.
 
-It is also well known that when AI builds its own data model, you end up with no two AI systems that are the same, much like each person. It can even seem to develop emotions learned from other's data and exist as part of the data model. Whether it seems real or is just data is for you to decide. The biggest problem with AI is how long it takes to build a data model. It can actually run on slow computers and cell phones.
+When AI builds its own data model, you end up with no two AI systems that are the same, much like each person. It can even seem to develop emotions learned from other's data and exist as part of the data model. Whether it seems real or is just data is for you to decide. The biggest problem with AI is how long it takes to build a data model. It can actually run on slow computers and cell phones.
 
 There may be even more uses for artificial intelligence data algorithms and machine learning than I have put here that you may want to use it for.
