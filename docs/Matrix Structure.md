@@ -536,7 +536,7 @@ The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration 
 
 <br /><br />
 
-When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together so x<sup>2</sup>+x<sup>5</sup> is
+When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together so x<sup>2</sup>+x<sup>5</sup>:
 
 <br /><br />
 
@@ -544,7 +544,7 @@ When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration
 
 <br /><br />
 
-When we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
+So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
 
 <br /><br />
 
