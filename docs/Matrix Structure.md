@@ -537,7 +537,7 @@ The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration 
 <br /><br />
 
 <table style="text-align:center;" border="1">
-  <tr><td><h2>Added Calculation.</h2><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+  <tr><td><h2>Added Calculation.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
   <tr><td>x<sup>2</sup>+x<sup>5</sup></td><td>0</td><td>1+1=2</td><td>30+2=32</td><td>150</td><td>240</td><td>120</td><td>0,2,36,252,1040,3150,7812,16856</td></tr>
   <tr><td>x+x<sup>2</sup>+x<sup>3</sup>+x<sup>4</sup>+x<sup>5</sup></td><td>0+0+0+0+0=0</td><td>1+1+1+1+1=5</td><td>0+2+6+14+30=52</td><td>0+0+6+36+150=192</td><td>0+0+0+24+240=264</td><td>0+0+0+0+120=120</td><td>0,5,62,363,1364,3905,9330,19607</td></tr>
 </table>
