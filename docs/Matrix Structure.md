@@ -532,7 +532,19 @@ Each dimension to the power of by it's self is as follows.
 
 <br />
 
-The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration amount for x<sup>5</sup> is 0,1,30,150,240,120. When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together so x<sup>2</sup>+x<sup>5</sup> is 0+0,1+1,2+30,0+150,0+240,0+120 is 0,2,32,150,240,120. When we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
+The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration amount for x<sup>5</sup> is 0,1,30,150,240,120.
+
+<br /><br />
+
+When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together so x<sup>2</sup>+x<sup>5</sup> is
+
+<br /><br />
+
+0+0, 1+1, 2+30, 0+150, 0+240, 0+120 is 0,2,32,150,240,120.
+
+<br /><br />
+
+When we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
 
 <br /><br />
 
