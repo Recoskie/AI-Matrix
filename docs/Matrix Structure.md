@@ -560,7 +560,7 @@ If you want to get more complex you can multiply the square, and cube. Then add 
 <br /><br />
 
 <table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+  <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
   <tr><td>x<sup>2</sup>*12</td><td>0*12=0</td><td>1*12=12</td><td>2*12=24</td><td>0*12=0</td><td>0*12=0</td><td>0*12=0</td><td>0,12,48,108,192,300,432,588</td></tr>
   <tr><td>x<sup>3</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>6*2=12</td><td>6*2=12</td><td>0*2=0</td><td>0*2=0</td><td>0,2,16,54,128,250,432,686</td></tr>
 </table>
@@ -669,7 +669,7 @@ So here is how we translate a set to a math function after we subtract the numbe
 
 <br />
 
-As previously seen you can add each of these together per value to create any calculation you wish by adding all the per values together.
+As previously seen you can multiply, divide, add subtract each calculation per values to create any calculation you wish.
 
 <br /><br />
 
@@ -710,7 +710,7 @@ Lets take the following mixed calculation for example.
 
 <br />
 
-In this example we multiply and mix the square and cube together as 0,14,36,12,0,0.
+In this example we multiply and add the square and cube together as 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -718,7 +718,7 @@ This gives us the set 0,14,64,162,320,550,864,1274.
 
 <br /><br />
 
-By subtracting the values 0,14,64,162,320,550,864,1274. We can find each per value giving us 0,14,36,12,0,0.
+By subtracting the values 0,14,64,162,320,550,864,1274. We can find each per value iteration as 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -857,7 +857,7 @@ Thus de-mixing each one as we divide by the last value and work our way backward
 
 <br /><br />
 
-You can expand this table to the power of 50 if liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
+You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
 
 <h1>Upside down.</h1>
 
@@ -992,13 +992,35 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page.
 
+<a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
+
+<br />
+
+This document covers the final structure of the quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
+
 <br /><br />
 
-The geometrical pattern follows something which we have come to know as the “Golden Ratio”, which plays a part in the Fibonacci Sequence.
+<img src="https://recoskie.github.io/Fl64/docs/bg/fig1.jpg" />
 
 <br /><br />
 
-We end up with a spiral that forums the matrix structure. Which brings us to the final forum of all things as merkaba.
+The matrix corresponds to the following alignment of the Fibonacci sequence called the Fibonacci identity.
+
+<br /><br />
+
+<img src="figs/fig5.jpg" />
+
+<br /><br />
+
+Both the top and bottom matrices rostrate in opposite directions.
+
+<br /><br />
+
+<img src="https://cs.astronomy.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-00-51-JCP_5F00_blog/3835.Whirlpool-Golden-ratio.jpg" />
+
+<br /><br />
+
+We end up with a spiral that forms the matrix structure. This brings us to the final form of all things as Merkaba.
 
 <br /><br />
 
@@ -1006,19 +1028,11 @@ We end up with a spiral that forums the matrix structure. Which brings us to the
 
 <br /><br />
 
-As a point space it is more closely like this. Multidimensionality.
+As a point space, it is more closely like this. Multidimensionality.
 
 <br /><br />
 
 <iframe src="https://player.vimeo.com/video/177192957" width="640" height="361" frameborder="0"></iframe>
-
-<br /><br />
-
-<a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
-
-<br />
-
-This document covers the final structure of the quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
 
 <br /><br />
 
