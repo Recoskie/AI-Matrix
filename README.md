@@ -31,6 +31,10 @@ You can learn by examples using the interactive examples page.
 
 On the How it Works page, you can learn how the algorithm works. It's unified structure of all things. How it solves all things in quantum alignment. Which reviles all things in any data instantly.
 
+I also discuss the integrated information theory and how to measure how self-aware the AI is.
+
+This is an important read if you design a chatbot and want to make the most immersive experience possible with your data models.
+
 # Practical uses.
 
 You can develop audio-enhancing algorithms and picture-enhancing algorithms.
