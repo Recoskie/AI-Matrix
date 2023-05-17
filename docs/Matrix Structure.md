@@ -1103,11 +1103,11 @@ All numbers have a place and an expression and meaning to reality itself. The nu
 
 <br />
 
-Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/">cause and effect</a>.
+Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
 
 <br /><br />
 
-Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE">emergence</a>.
+Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
 <br /><br />
 
@@ -1123,7 +1123,7 @@ Nuclear energy is much smaller than Atomic energy and is more powerful than Atom
 
 <br /><br />
 
-It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole">the singularity</a>.
+It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole" target="_blank">the singularity</a>.
 
 <br /><br />
 
@@ -1131,7 +1131,7 @@ It seems that all our physics formulas about reality emerge from zero Fibonacci 
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is">integrated information theory</a>.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
 
 <br /><br />
 
