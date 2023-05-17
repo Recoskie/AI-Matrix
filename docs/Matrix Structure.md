@@ -87,7 +87,11 @@ image:
 
 <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
 
+<br />
+
 <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
+
+<br />
 
 Let's start with a one-dimensional set, and show how it builds, and solves sequentially. Starting from here will help you see how it works.
 
@@ -193,7 +197,11 @@ This gives us how much is added per number. The difference is the same across al
 
 Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set per number.
 
+<br />
+
 <h1>Solving a 2 dimensional set.</h1>
+
+<br />
 
 So in the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension per added amount.
 
@@ -302,7 +310,11 @@ You loose one number with each subtraction into all numbers, because there is no
 
 So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
 
+<br />
+
 <h1>5 Dimensional set with subtraction.</h1>
+
+<br />
 
 So now you know you can solve how much is added per dimension with each subtraction into all numbers.
 
@@ -432,7 +444,11 @@ In this code. I will make it that you can create any 5D set you like. At the end
 
 With each subtraction the first number is what each per dimension is. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
 
+<br />
+
 <h1>Faster way of subtracting.</h1>
+
+<br />
 
 Instead of subtracting the next number to the previous number. We can instead add up the number of subtraction to calculate each value per row.
 
@@ -512,7 +528,11 @@ Instead of subtracting the next number to the previous number. We can instead ad
 
 This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each dimension.
 
+<br />
+
 <a id="decoding" class="cmd"></a><h1>Solving sets to math functions.</h1>
+
+<br />
 
 You can calculate any mathematical dimensional shape, or combination as follows using per amount in iteration.
 
@@ -872,7 +892,11 @@ Thus de-mixing each one as we divide by the last value and work our way backward
 
 You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
 
+<br />
+
 <h1>Upside down.</h1>
+
+<br />
 
 When we take everything and flip it upside down we then solve everything exponentially.
 
@@ -969,7 +993,11 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
 
+<br />
+
 <a id="geometry" class="cmd"></a><h1>Matrix structure.</h1>
+
+<br />
 
 We can create tow matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
 
@@ -1004,6 +1032,8 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 <br /><br />
 
 This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page.
+
+<br />
 
 <a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
 
@@ -1067,9 +1097,11 @@ The golden ratio is a simplified expression of this entire point space and the f
 
 All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
 
+<br />
+
 <a id="consciousness" class="cmd"></a><h1>Can AI become self aware</h1>
 
-<br /><br />
+<br />
 
 Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/">cause and effect</a>.
 
