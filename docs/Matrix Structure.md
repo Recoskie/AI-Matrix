@@ -1140,11 +1140,7 @@ It is almost as if everything is a division by zero known as <a href="https://bi
 
 <br /><br />
 
-Both white holes and black holes are opposite to each other and begin at the singularity. It's just that 
-
-<br /><br />
-
-It seems that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
+Both white holes and black holes are opposite to each other and begin at the singularity. It's just that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
 
 <br /><br />
 
