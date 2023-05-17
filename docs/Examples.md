@@ -103,7 +103,7 @@ image:
 
   <br /><br />
 
-  Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+  Reality its self follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
 
   <br /><br />
 
@@ -115,7 +115,13 @@ image:
 
   <br /><br />
 
+  Our brain recalls these pasterns, and sequences from memory and allows us to build thoughts and ideas, and builds brain function.
+
+  <br /><br />
+
   Note that all examples on this page can be modified, so you can change the examples to see the effects.
+
+  <br /><br />
 
   <a id="sets" class="cmd"></a><h1>Creating A set.</h1>
 

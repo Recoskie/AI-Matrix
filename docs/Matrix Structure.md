@@ -90,7 +90,7 @@ No matter how complex of a calculation or steps you write to output a result, th
 
 <br /><br />
 
-Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+Reality its self follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
 
 <br /><br />
 
@@ -102,13 +102,17 @@ Anything we measure can be reduced back into math calculations or functions. Our
 
 <br /><br />
 
+Our brain recalls these pasterns, and sequences from memory and allows us to build thoughts and ideas, and builds brain function.
+
+<br /><br />
+
 Note that all examples on this page can be modified, so you can change the examples to see the effects.
 
-<br />
+<br /><br />
 
 <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
 
-<br />
+<br /><br />
 
 Let's start with a one-dimensional set, and show how it builds, and solves sequentially. Starting from here will help you see how it works.
 
