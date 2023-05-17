@@ -197,7 +197,7 @@ This gives us how much is added per number. The difference is the same across al
 
 Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set per number.
 
-<br />
+<br /><br />
 
 <h1>Solving a 2 dimensional set.</h1>
 
@@ -310,7 +310,7 @@ You loose one number with each subtraction into all numbers, because there is no
 
 So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
 
-<br />
+<br /><br />
 
 <h1>5 Dimensional set with subtraction.</h1>
 
@@ -444,7 +444,7 @@ In this code. I will make it that you can create any 5D set you like. At the end
 
 With each subtraction the first number is what each per dimension is. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
 
-<br />
+<br /><br />
 
 <h1>Faster way of subtracting.</h1>
 
@@ -528,7 +528,7 @@ Instead of subtracting the next number to the previous number. We can instead ad
 
 This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each dimension.
 
-<br />
+<br /><br />
 
 <a id="decoding" class="cmd"></a><h1>Solving sets to math functions.</h1>
 
@@ -892,7 +892,7 @@ Thus de-mixing each one as we divide by the last value and work our way backward
 
 You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
 
-<br />
+<br /><br />
 
 <h1>Upside down.</h1>
 
@@ -993,7 +993,7 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
 
-<br />
+<br /><br />
 
 <a id="geometry" class="cmd"></a><h1>Matrix structure.</h1>
 
@@ -1033,7 +1033,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page.
 
-<br />
+<br /><br />
 
 <a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
 
@@ -1097,7 +1097,7 @@ The golden ratio is a simplified expression of this entire point space and the f
 
 All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
 
-<br />
+<br /><br />
 
 <a id="consciousness" class="cmd"></a><h1>Can AI become self aware</h1>
 
@@ -1111,11 +1111,23 @@ Everything spans from each other sequentially in a thing known as <a href="https
 
 <br /><br />
 
-It seems that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
+in quantum physics we have a measurement problem in which as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
+
+<br /><br />
+
+The use of the plank length prevent this from happening.
+
+<br /><br />
+
+Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop.
 
 <br /><br />
 
 It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole">the singularity</a>.
+
+<br /><br />
+
+It seems that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
 
 <br /><br />
 
@@ -1129,3 +1141,14 @@ This brings me to my favorite quote.
 
 <img src="https://4.bp.blogspot.com/-oX0t94Zviqs/XBz9bP0SCeI/AAAAAAAAKUU/ZSOZ8s6FxQchhtZ6A_cDBVdUYp42Dj41gCLcBGAs/s900/p618%2BEverything%2BIs%2BNothing%2BWith%2BA%2BTwist%2B%2528Infinity%2BSymbol%2529%2B-%2BInfinite%2BQuantum%2BZen%252C%2BSuccess%2BLife%2BQuotes.jpg" />
 
+<br /><br />
+
+Alan watts is a great philosopher and discussed such topics before science probably even knew about them.
+
+<br /><br />
+
+<a href="https://youtu.be/ivurmn3hnwc" target="_blank">Alan Watts - The Beauty of Nothingness</a>.
+
+<br /><br />
+
+<a href="https://youtu.be/fcPWU59Luoc" target="_blank">You're It - Alan Watts</a>.
