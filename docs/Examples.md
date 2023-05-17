@@ -88,6 +88,7 @@ image:
   <h1>Indexed contents.</h1>
 
   <table>
+    <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
     <tr><td>Creating A set: <a href="#sets">Link</a></td></tr>
     <tr><td>Manipulating A set: <a href="#msets">Link</a></td></tr>
     <tr><td>Solving sequences: <a href="#seq">Link</a></td></tr>
@@ -96,8 +97,25 @@ image:
     <tr><td>Advanced: <a href="#Advanced">Link</a></td></tr>
   </table>
 
-  <h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
-  <h3>Machines that observer, and analyze data. Write functions for data. Thus act on self programming, and data. Are the future.</h3>
+  <a id="intro" class="cmd"></a><h1>Introduction</h1>
+
+  No matter how complex of a calculation or steps you write to output a result, the results can all be reduced back to what it takes to reproduce the measurements or results without knowing the steps.
+
+  <br /><br />
+
+  Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+
+  <br /><br />
+
+  Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+
+  <br /><br />
+
+  Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
+
+  <br /><br />
+
+  Note that all examples on this page can be modified, so you can change the examples to see the effects.
 
   <a id="sets" class="cmd"></a><h1>Creating A set.</h1>
 
@@ -1363,7 +1381,7 @@ image:
 
   <br /><br />
 
-  As long as you have a rally big data base, for it. You don't have to worry about it hitting a limit in growth.
+  As long as you have a data base, for it. You don't have to worry about it hitting a limit in growth.
 
   <br /><br />
 

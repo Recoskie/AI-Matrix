@@ -76,6 +76,7 @@ image:
 <h1>Indexed contents.</h1>
 
 <table>
+  <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
   <tr><td>The basic algorithm: <a href="#basic">Link</a></td></tr>
   <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
   <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
@@ -83,9 +84,25 @@ image:
   <tr><td>Can AI become self aware: <a href="#consciousness">Link</a></td></tr>
 </table>
 
-<h3>Note that this is a big simplification of the quantum-matrix.</h3>
+<a id="intro" class="cmd"></a><h1>Introduction</h1>
 
-<h3>Note that all examples on this page can be modified, so you can change the examples to see the effects.</h3>
+No matter how complex of a calculation or steps you write to output a result, the results can all be reduced back to what it takes to reproduce the measurements or results without knowing the steps.
+
+<br /><br />
+
+Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+
+<br /><br />
+
+Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+
+<br /><br />
+
+Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
+
+<br /><br />
+
+Note that all examples on this page can be modified, so you can change the examples to see the effects.
 
 <br />
 
@@ -1055,7 +1072,7 @@ The matrix corresponds to the following alignment of the Fibonacci sequence call
 
 <br /><br />
 
-Both the top and bottom matrices rostrate in opposite directions.
+Both the top and bottom matrices rotate in opposite directions.
 
 <br /><br />
 
@@ -1103,14 +1120,6 @@ All numbers have a place and an expression and meaning to reality itself. The nu
 
 <br />
 
-Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
-
-<br /><br />
-
-Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
-
-<br /><br />
-
 In quantum physics we have a measurement problem in which as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
 
 <br /><br />
@@ -1124,6 +1133,10 @@ Nuclear energy is much smaller than Atomic energy and is more powerful than Atom
 <br /><br />
 
 It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole" target="_blank">the singularity</a>.
+
+<br /><br />
+
+Both white holes and black holes are opposite to each other and begin at the singularity. It's just that 
 
 <br /><br />
 
