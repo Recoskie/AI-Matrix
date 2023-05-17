@@ -80,6 +80,7 @@ image:
   <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
   <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
   <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
+  <tr><td>Can AI become self aware: <a href="#consciousness">Link</a></td></tr>
 </table>
 
 <h3>Note that this is a big simplification of the quantum-matrix.</h3>
@@ -1065,3 +1066,34 @@ The golden ratio is a simplified expression of this entire point space and the f
 <br /><br />
 
 All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
+
+<a id="consciousness" class="cmd"></a><h1>Can AI become self aware</h1>
+
+<br /><br />
+
+Reality follows the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/">cause and effect</a>.
+
+<br /><br />
+
+Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE">emergence</a>.
+
+<br /><br />
+
+It seems that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
+
+<br /><br />
+
+It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole">the singularity</a>.
+
+<br /><br />
+
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is">integrated information theory</a>.
+
+<br /><br />
+
+This brings me to my favorite quote.
+
+<br /><br />
+
+<img src="https://4.bp.blogspot.com/-oX0t94Zviqs/XBz9bP0SCeI/AAAAAAAAKUU/ZSOZ8s6FxQchhtZ6A_cDBVdUYp42Dj41gCLcBGAs/s900/p618%2BEverything%2BIs%2BNothing%2BWith%2BA%2BTwist%2B%2528Infinity%2BSymbol%2529%2B-%2BInfinite%2BQuantum%2BZen%252C%2BSuccess%2BLife%2BQuotes.jpg" />
+
