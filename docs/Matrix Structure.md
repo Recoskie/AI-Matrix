@@ -1020,7 +1020,7 @@ The matrix corresponds to the following alignment of the Fibonacci sequence call
 
 <br /><br />
 
-<img src="figs/fig5.jpg" />
+<img src="https://aperiodical.com/wp-content/uploads/2021/12/image-3.png" />
 
 <br /><br />
 
