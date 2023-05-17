@@ -1111,7 +1111,7 @@ Everything spans from each other sequentially in a thing known as <a href="https
 
 <br /><br />
 
-in quantum physics we have a measurement problem in which as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
+In quantum physics we have a measurement problem in which as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
 
 <br /><br />
 
