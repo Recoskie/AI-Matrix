@@ -121,7 +121,7 @@ image:
 
   Note that all examples on this page can be modified, so you can change the examples to see the effects.
 
-  <br /><br />
+  <br />
 
   <a id="sets" class="cmd"></a><h1>Creating A set.</h1>
 

@@ -112,7 +112,7 @@ Note that all examples on this page can be modified, so you can change the examp
 
 <a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
 
-<br /><br />
+<br />
 
 Let's start with a one-dimensional set, and show how it builds, and solves sequentially. Starting from here will help you see how it works.
 
