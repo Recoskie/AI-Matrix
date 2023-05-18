@@ -73,7 +73,7 @@ image:
   console.log = function (msg) { output += msg + "\r\n"; }
 </script>
 
-<h1>Indexed contents.</h1>
+<h1>Indexed contents</h1>
 
 <table>
   <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
@@ -463,11 +463,11 @@ In this code. I will make it that you can create any 5D set you like. At the end
 
 <br /><br />
 
-With each subtraction the first number is what each per dimension is. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
+With each subtraction the first number is what each per value is that produced the set. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
 
 <br /><br />
 
-<h1>Faster way of subtracting.</h1>
+<h1>Faster way of subtracting</h1>
 
 <br />
 
@@ -547,11 +547,11 @@ Instead of subtracting the next number to the previous number. We can instead ad
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each dimension.
+This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each per iteration.
 
 <br /><br />
 
-<a id="decoding" class="cmd"></a><h1>Solving sets to math functions.</h1>
+<a id="decoding" class="cmd"></a><h1>Solving sets to math functions</h1>
 
 <br />
 
@@ -915,7 +915,7 @@ You can expand this table to the power of 50 if you liked. If you wish to solve 
 
 <br /><br />
 
-<h1>Upside down.</h1>
+<h1>Upside down</h1>
 
 <br />
 
@@ -1016,7 +1016,7 @@ We just basically switch the numbers that was used to decode the per iteration o
 
 <br /><br />
 
-<a id="geometry" class="cmd"></a><h1>Matrix structure.</h1>
+<a id="geometry" class="cmd"></a><h1>Matrix structure</h1>
 
 <br />
 
@@ -1056,7 +1056,7 @@ This is called the flower of life pattern. It is a much more fun way of creating
 
 <br /><br />
 
-<a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals.</h1>
+<a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals</h1>
 
 <br />
 

@@ -68,11 +68,11 @@ image:
 
     function runExamp(id)
     {
-      var code = document.getElementById(id).value;
+      var code = document.getElementById(id).value; output = "";
 
       try { eval(code); } catch (e) { console.log(e.toString()); }
 
-      document.getElementById(id + "o").value = output; output = "";
+      document.getElementById(id + "o").value = output;
     }
 
     console.log = function (msg) { output += msg + "\r\n"; }
