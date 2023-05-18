@@ -63,11 +63,11 @@ image:
 
   function runExamp(id)
   {
-    var code = document.getElementById(id).value;
+    var code = document.getElementById(id).value; output = "";
 
     try { eval(code); } catch (e) { console.log(e.toString()); }
 
-    document.getElementById(id + "o").value = output; output = "";
+    document.getElementById(id + "o").value = output;
   }
 
   console.log = function (msg) { output += msg + "\r\n"; }
@@ -110,7 +110,7 @@ Note that all examples on this page can be modified, so you can change the examp
 
 <br /><br />
 
-<a id="basic" class="cmd"></a><h1>Solving a Dimensional Set.</h1>
+<a id="basic" class="cmd"></a><h1>Solving a Dimensional Set</h1>
 
 <br />
 
@@ -220,7 +220,7 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br /><br />
 
-<h1>Solving a 2 dimensional set.</h1>
+<h1>Solving a 2 dimensional set</h1>
 
 <br />
 
@@ -578,7 +578,7 @@ The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration 
 
 <br /><br />
 
-When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together so x<sup>2</sup>+x<sup>5</sup>:
+When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together:
 
 <br /><br />
 
@@ -598,7 +598,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 <br />
 
-Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per values.
+Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per iteration values.
 
 <br /><br />
 
@@ -621,7 +621,7 @@ If you want to get more complex you can multiply the square, and cube. Then add 
 
 <br />
 
-Now we add our multiplied per iteration values together.
+Now we add our multiplied iteration values together.
 
 <br /><br />
 
@@ -723,11 +723,11 @@ So here is how we translate a set to a math function after we subtract the numbe
 
 <br />
 
-As previously seen you can multiply, divide, add subtract each calculation per values to create any calculation you wish.
+As previously seen you can multiply, divide, add subtract each calculation using the iteration values to create any calculation you wish.
 
 <br /><br />
 
-In order to change each per value back into a math calculation. You start with the last per value. You divide the last value by 120 which is what it should be if it is x<sup>5</sup>.
+In order to change each per iteration value back into a math calculation. You start with the last per iteration value. You divide the last value by 120 which is what it should be if it is x<sup>5</sup>.
 
 <br /><br />
 
@@ -746,7 +746,7 @@ You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-m
 
 <br /><br />
 
-You repeat this process to de-mix every calculation combination of each per value. Giving you what the size of each to the power of is.
+You repeat this process to de-mix every calculation combination of each per iteration value. Giving you what the size of each to the power of is.
 
 <br /><br />
 
@@ -772,7 +772,7 @@ This gives us the set 0,14,64,162,320,550,864,1274.
 
 <br /><br />
 
-By subtracting the values 0,14,64,162,320,550,864,1274. We can find each per value iteration as 0,14,36,12,0,0.
+By subtracting the values 0,14,64,162,320,550,864,1274. We can find each per iteration value as 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -804,7 +804,7 @@ We subtract 0,12,24,0,0,0 which is x<sup>2</sup>*12, from our current per values
 
 <br /><br />
 
-Working backwards like this lets us de-mix any calculation combination in much the same way as we can create such a calculation by mixing per values together.
+Working backwards like this lets us de-mix any calculation combination in much the same way as we can create such a calculation by mixing per iteration values together.
 
 <br /><br />
 
@@ -1144,7 +1144,7 @@ Both white holes and black holes are opposite to each other and begin at the sin
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>
 
 <br /><br />
 
