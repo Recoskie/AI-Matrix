@@ -95,7 +95,7 @@ Reality itself follows the same principles known as the law of <a href="https://
 
 <br /><br />
 
-Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
 <br /><br />
 
@@ -159,7 +159,7 @@ The second loop adds per 7 more to each value. Which you can change to anything 
 
 <br /><br />
 
-Now you can pick and choose any numbers you like to create the one dimensional set.
+You can change the numbers to anything you like and run the code again to create any one dimensional set.
 
 <br /><br />
 
@@ -229,7 +229,7 @@ So in the previous example it is quite easy to see that subtracting the next num
 
 <br /><br />
 
-So I will show you what happens when you add in another dimension.
+So I will show you what happens when you add another dimension.
 
 <br /><br />
 
@@ -276,7 +276,7 @@ Our set is 0,1,4,9,16,25,36,49.
 
 So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
 
-Subtracting the values into each other gives us.
+Subtracting the next value into the previous each gives us.
 
 <br /><br />
 
@@ -315,7 +315,7 @@ The first number in each subtraction is what the dimensional value is per iterat
 
 The starting value is very important as you could start anywhere in two dimensional square sequence. For example you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. Thus you can solve each iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
 
 <br /><br />
 
@@ -326,7 +326,7 @@ The first number after the subtraction of all numbers again would be per3. Excep
 
 <br /><br />
 
-You loose one number with each subtraction all numbers, because there is no next digit to subtract the last digit into in the set.
+You loose one number with each subtraction into all numbers, because there is no next digit to subtract the last digit into at the end of the set.
 
 <br /><br />
 
@@ -364,7 +364,7 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that is 2 units because both sides of the square join at one unit.
+In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that add 2 units because both sides of the square join at one unit.
 
 <br /><br />
 
@@ -412,7 +412,7 @@ In math, we call these quadratic equations and it makes it so we never have to u
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add one new square layer per square, which creates a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add each layer per square, which creates a 3D cube.
 
 <br /><br />
 
@@ -428,7 +428,7 @@ You can solve how much is added per dimension with each subtraction into all num
 
 <br /><br />
 
-With the first number being the difference. After each subtraction into all numbers.
+With the first number being the difference.
 
 <br /><br />
 
@@ -638,7 +638,7 @@ Instead of subtracting the next number to the previous number. We can instead ad
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each per iteration.
+This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each per iteration faster.
 
 <br /><br />
 
@@ -835,7 +835,7 @@ The same way you mix these together. Is the same way you reverse them back into 
 
 <br />
 
-So here is how we translate a set to a math function after we subtract the numbers and solve each per iteration. Each to the power of. Up to 5 solves out as.
+After we subtract the numbers and solve each per iteration. Each to the power of. Up to 5 solves out as.
 
 <br /><br />
 
@@ -1007,7 +1007,7 @@ Basically doing a faster forum of subtracting next numbers minus previous.
 
 <br /><br />
 
-If you add the number together you create the next row. For example by adding the next number together in row 1,3,3,1 doing 1+3=4, 3+3=6, 3+1=4. Creates the row 1,4,6,4,1.
+If you addCalculations together you create the next row. For example by adding the next number together in row 1,3,3,1 doing 1+3=4, 3+3=6, 3+1=4. Creates the row 1,4,6,4,1.
 
 <br /><br />
 
@@ -1179,7 +1179,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-In early history, we have a similar patterns appearing in ancient pyramids that is very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
+In early history, we have similar patterns appearing in ancient pyramids that is very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
 
 <br /><br />
 
