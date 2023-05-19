@@ -1179,7 +1179,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which shows is a fun page.
+In early history, we have a similar patterns appearing in ancient pyramids that is very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
 
 <br /><br />
 
@@ -1211,7 +1211,7 @@ Both the top and bottom matrices rotate in opposite directions.
 
 <br /><br />
 
-We end up with a spiral that forms the matrix structure. This brings us to the final form of all things as Merkaba.
+We end up with a spiral that forms the matrix structure. This brings us to the final form of all things as strangely like a Merkaba.
 
 <br /><br />
 
@@ -1219,7 +1219,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-As a point space, it is more closely like this. Multidimensionality.
+As a point space, it is more closely like this multidimensionality. Which was creepily created by terra nova.
 
 <br /><br />
 
