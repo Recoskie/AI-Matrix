@@ -364,7 +364,7 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second dimension, we have to add a one-dimensional pattern shown as the green squares that is 2 units more because both sides of the square that join at one unit.
+In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that is 2 units because both sides of the square join at one unit.
 
 <br /><br />
 
