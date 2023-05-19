@@ -78,6 +78,7 @@ image:
 <table>
   <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
   <tr><td>The basic algorithm: <a href="#basic">Link</a></td></tr>
+  <tr><td>The geometry of higher dimensions: <a href="#dims">Link</a></td></tr>
   <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
   <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
   <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
@@ -267,6 +268,10 @@ In this example we create a square using a 2D set. Which is the calculation X<su
 
 <br /><br />
 
+We will talk about what a square actually is in the geometry section.
+
+<br /><br />
+
 Our set is 0,1,4,9,16,25,36,49.
 
 So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
@@ -308,24 +313,20 @@ The first number in each subtraction is what the dimensional value is per iterat
 
 <br /><br />
 
-Also the starting value is very important as you could start anywhere in the square sequence set. For example you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+The starting value is very important as you could start anywhere in two dimensional square sequence. For example you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
 This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. Thus you can solve each iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
-
-<br /><br />
-
-You can do the math your self and change per1, and per2 to what ever you like.
 
 <br /><br />
 
 The first number without any subtraction will be the starting value.<br />
 The first number after the subtraction of all numbers will be per1.<br />
 The first number after the subtraction of all numbers again will be per2.<br />
-The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left.
+The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left in the third dimension.
 
 <br /><br />
 
-You loose one number with each subtraction into all numbers, because there is no next digit to subtract the last digit into in the set.
+You loose one number with each subtraction all numbers, because there is no next digit to subtract the last digit into in the set.
 
 <br /><br />
 
@@ -333,7 +334,89 @@ So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in
 
 <br /><br />
 
-<h1>5 Dimensional set with subtraction.</h1>
+You can do the math your self and change per1, and per2 to what ever you like.
+
+<br />
+
+<a id="dims" class="cmd"></a><h1>The geometry of higher dimensions</h1>
+
+<br />
+
+I decided to create this section later to help anyone to understand dimensions geometrically.
+
+<br /><br />
+
+<img style="float:left;" src="figs/fig0.jpg">
+
+The small number above x is how many times to multiply the number against it's self per value.
+
+<br /><br />
+
+The blue squares is the amount that existed before we move to the next value. The red, and green squares is the added units per value.
+
+<br /><br />
+
+In the first dimension we are only adding one new unit which can be added together one unit at a time in a single loop. We input 5 into our function and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
+
+<br /><br />
+
+When we multiply the number by it's self we expand this pattern both vertically and horizontally.
+
+<br /><br />
+
+In the second dimension we have to add a one-dimensional pattern shown as the green squares that is 2 unit more because of both sides of the square that join at one unit.
+
+<br /><br />
+
+When we input 5 into our function it adds it together as follows.
+
+<br />
+
+<pre>
+1+
+1+(1)*2 +
+1+(1+1)*2 +
+1+(1+1+1)*2 +
+1+(1+1+1+1)*2 = 25 
+</pre>
+
+The first loop can add the single units at the start of each line, but now we must add another loop inside this loop that does the same thing but adds 2 for both sides.
+
+<br /><br />
+
+What is really neat is that we can take away the added unit in the square ny subtracting it as
+
+<br /><br />
+
+x<sup>2</sup>-x=0,2,6,12,20 which is 0,0+2,0+2+4,0+2+4+6,0+2+4+6+8.
+
+<br /><br />
+
+Dividing it by 2 gives us a set that adds a one dimensional sequence per value.
+
+<br /><br />
+
+(x<sup>2</sup>-x)&div;2=0,1,3,6,10, which is 0,0+1,0+1+2,0+1+2+3,0+1+2+3+4.
+
+<br /><br />
+
+As objects fall they get faster per second. To be exact 33 feat more per second. We can add this together using two loops or we can just multiply our equation by 33.
+
+<br /><br />
+
+((x<sup>2</sup>-x)&div;2)*33=0,33,99,198,330, which is 0,0+33,0+33+66,0+33+66+99,0+33+66+99+132.
+
+<br /><br />
+
+In math we call these quadratic equations and makes it so we never have use two summations inside each other to add together such a result. Quadratics are good at producing curves and are good for showing the path an object will move when you throw it as it is pulled towards the earth.
+
+<br /><br />
+
+When we multiply the square against itself, then is the same as as adding a whole new square per square. At 5x5 we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that adds one new square layer which creates a 3D cube.
+
+<br /><br />
+
+<h1 style="clear:left;">5 Dimensional set with subtraction.</h1>
 
 <br />
 
@@ -574,6 +657,46 @@ Each dimension to the power of by it's self is as follows.
 
 <br />
 
+You can create this same table by multiplying values together and subtracting the set till we have zero left.
+
+<br /><br />
+
+You can actually calculate the last iteration value of each dimensional shape.
+
+<br /><br />
+
+The last per iteration value you get is the number of sides the dimensional shape has.
+
+<br /><br />
+
+x ends with 1 as it is a straight line.<br />
+x<sup>2</sup> ends with 2 as it is a square.<br />
+x<sup>3</sup> ends with 6 as it is a cube with six sides.<br />
+x<sup>4</sup> ends with 24 as it has 24 sides in the fourth dimension.<br />
+x<sup>5</sup> ends with 120 as it has 120 sides in the fifth dimension.
+
+<br /><br />
+
+The number of sides can be calculated by multiplying the dimension number by previously expanding as follows.
+
+<br /><br />
+
+1! = 1 is 1<br />
+2! = 1x2 is 2<br />
+3! = 1x2x3 is 6<br />
+4! = 1x2x3x4 is 24<br />
+5! = 1x2x3x4x5 is 120<br />
+
+<br />
+
+In math this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
+
+<br />
+
+<h3>mixing calculations</h3>
+
+<br />
+
 The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration amount for x<sup>5</sup> is 0,1,30,150,240,120.
 
 <br /><br />
@@ -707,6 +830,10 @@ The same way you mix these together. Is the same way you reverse them back into 
 </code>
 
 <br /><br />
+
+<h3>Demixing per iteration calculations</h3>
+
+<br />
 
 So here is how we translate a set to a math function after we subtract the numbers and solve each per iteration. Each to the power of. Up to 5 solves out as.
 
@@ -1088,7 +1215,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cR0pe4eDzSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cR0pe4eDzSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br /><br />
 
