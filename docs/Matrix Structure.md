@@ -336,7 +336,7 @@ So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in
 
 You can do the math your self and change per1, and per2 to what ever you like.
 
-<br />
+<br /><br />
 
 <a id="dims" class="cmd"></a><h1>The geometry of higher dimensions</h1>
 
@@ -418,7 +418,7 @@ When we multiply the square against itself, then is the same as adding a whole n
 
 Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration amount.
 
-<br />
+<br /><br />
 
 <h1 style="clear:left;">5 Dimensional set with subtraction.</h1>
 
@@ -646,10 +646,6 @@ This makes solving the starting value for each iteration much faster. Since we a
 
 <br />
 
-You can calculate any mathematical dimensional shape, or combination as follows using per amount in iteration.
-
-<br /><br />
-
 Each dimension to the power of by it's self is as follows.
 
 <br /><br />
@@ -695,7 +691,7 @@ The number of sides can be calculated by multiplying the dimension number by pre
 
 In math, this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
 
-<br />
+<br /><br />
 
 <h3>Mixing calculations</h3>
 
@@ -1183,7 +1179,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page.
+This is called the flower of life pattern. It is a much more fun way of creating the point space. Also see the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which shows is a fun page.
 
 <br /><br />
 
