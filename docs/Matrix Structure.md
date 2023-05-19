@@ -348,27 +348,27 @@ I decided to create this section later to help anyone to understand dimensions g
 
 <img style="float:left;" src="figs/fig0.jpg">
 
-The small number above x is how many times to multiply the number against it's self per value.
+The small number above x is how many times to multiply the number against itself per value.
 
 <br /><br />
 
-The blue squares is the amount that existed before we move to the next value. The red, and green squares is the added units per value.
+The blue squares are the amount that existed before we moved to the next value. The red and green squares are the added units per value.
 
 <br /><br />
 
-In the first dimension we are only adding one new unit which can be added together one unit at a time in a single loop. We input 5 into our function and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
+In the first dimension, we are only adding one new unit, which can be added together one unit at a time in a single loop. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
 
 <br /><br />
 
-When we multiply the number by it's self we expand this pattern both vertically and horizontally.
+When we multiply the number by itself, we expand this pattern vertically and horizontally.
 
 <br /><br />
 
-In the second dimension we have to add a one-dimensional pattern shown as the green squares that is 2 unit more because of both sides of the square that join at one unit.
+In the second dimension, we have to add a one-dimensional pattern shown as the green squares that is 2 units more because both sides of the square that join at one unit.
 
 <br /><br />
 
-When we input 5 into our function it adds it together as follows.
+When we input 5 into our function, it adds it together as follows.
 
 <br />
 
@@ -380,27 +380,27 @@ When we input 5 into our function it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-The first loop can add the single units at the start of each line, but now we must add another loop inside this loop that does the same thing but adds 2 for both sides.
+The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing but adds 2 for both sides.
 
 <br /><br />
 
-What is really neat is that we can take away the added unit in the square ny subtracting it as
+What is really neat is that we can take away the added unit in the square by subtracting it as
 
 <br /><br />
 
-x<sup>2</sup>-x=0,2,6,12,20 which is 0,0+2,0+2+4,0+2+4+6,0+2+4+6+8.
+x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
 
 <br /><br />
 
-Dividing it by 2 gives us a set that adds a one dimensional sequence per value.
+Dividing it by 2 gives us a set that adds a one-dimensional sequence per value.
 
 <br /><br />
 
-(x<sup>2</sup>-x)&div;2=0,1,3,6,10, which is 0,0+1,0+1+2,0+1+2+3,0+1+2+3+4.
+(x<sup>2</sup>-x)&div;2=0,1,3,6,10, which is 0, 0+1, 0+1+2, 0+1+2+3, 0+1+2+3+4.
 
 <br /><br />
 
-As objects fall they get faster per second. To be exact 33 feat more per second. We can add this together using two loops or we can just multiply our equation by 33.
+As objects fall, they get faster per second. To be exact, 33 feet more per second. We can add this together using two loops, or we can just multiply our equation by 33.
 
 <br /><br />
 
@@ -408,11 +408,11 @@ As objects fall they get faster per second. To be exact 33 feat more per second.
 
 <br /><br />
 
-In math we call these quadratic equations and makes it so we never have use two summations inside each other to add together such a result. Quadratics are good at producing curves and are good for showing the path an object will move when you throw it as it is pulled towards the earth.
+In math, we call these quadratic equations and make it so we never have to use two summations inside each other to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-When we multiply the square against itself, then is the same as as adding a whole new square per square. At 5x5 we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that adds one new square layer which creates a 3D cube.
+When we multiply the square against itself, then is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add one new square layer per square, which creates a 3D cube.
 
 <br /><br />
 
@@ -658,10 +658,6 @@ Each dimension to the power of by it's self is as follows.
 <br />
 
 You can create this same table by multiplying values together and subtracting the set till we have zero left.
-
-<br /><br />
-
-You can actually calculate the last iteration value of each dimensional shape.
 
 <br /><br />
 
