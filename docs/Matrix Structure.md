@@ -380,7 +380,7 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing but adds 2 for both sides.
+The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added units by 2 for both sides.
 
 <br /><br />
 
@@ -408,11 +408,11 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations and make it so we never have to use two summations inside each other to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations and it makes it so we never have to use two summations (sigma) inside each other to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-When we multiply the square against itself, then is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add one new square layer per square, which creates a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add one new square layer per square, which creates a 3D cube.
 
 <br /><br />
 
@@ -420,7 +420,7 @@ Multiplying the cube by itself adds a new one-dimension loop outside the cube ad
 
 <br /><br />
 
-<h1 style="clear:left;">5 Dimensional set with subtraction.</h1>
+<h1 style="clear:left;">5 Dimensional set with subtraction</h1>
 
 <br />
 
