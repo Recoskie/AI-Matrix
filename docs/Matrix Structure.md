@@ -665,7 +665,7 @@ Each dimension to the power of by it's self is as follows.
 
 <br />
 
-You can create this same table by multiplying values together and subtracting the set till we have zero left.
+You can create this same table by multiplying values together and subtracting the set till you have zero left.
 
 <br /><br />
 
@@ -693,11 +693,11 @@ The number of sides can be calculated by multiplying the dimension number by pre
 
 <br />
 
-In math this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
+In math, this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
 
 <br />
 
-<h3>mixing calculations</h3>
+<h3>Mixing calculations</h3>
 
 <br />
 
