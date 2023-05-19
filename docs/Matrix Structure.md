@@ -416,11 +416,15 @@ When we multiply the square against itself, then is the same as adding a whole n
 
 <br /><br />
 
+Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration amount.
+
+<br />
+
 <h1 style="clear:left;">5 Dimensional set with subtraction.</h1>
 
 <br />
 
-So now you know you can solve how much is added per dimension with each subtraction into all numbers.
+You can solve how much is added per dimension with each subtraction into all numbers.
 
 <br /><br />
 
@@ -432,22 +436,26 @@ In this code. I will make it that you can create any 5D set you like. At the end
 
 <br /><br />
 
+Each per iteration value is set to what x<sup>5</sup> is. You can change them to whatever you like, even negative or fractional values.
+
+<br /><br />
+
 <code>
   var data = [];
 
   var end = 8;
 
-  var start = 7;
+  var start = 0;
 
-  var per1 = 3;
+  var per1 = 1;
 
-  var per2 = 1;
+  var per2 = 30;
 
-  var per3 = -9;
+  var per3 = 150;
 
-  var per4 = 12;
+  var per4 = 240;
 
-  var per5 = 13;
+  var per5 = 120;
 
   for( var i1 = 0; i1 < end; i1++ )
   {
@@ -546,7 +554,7 @@ In this code. I will make it that you can create any 5D set you like. At the end
 
 <br /><br />
 
-With each subtraction the first number is what each per value is that produced the set. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
+With each subtraction the first number is what each per iteration value is that produced the set. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
 
 <br /><br />
 
