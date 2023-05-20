@@ -1270,7 +1270,7 @@ The Fibonacci sequence creates the number phi (golden ratio), and our best theor
 <br /><br />
 
 According to our best formulas everything began at the singularly and is traceable to the singularity. History of the Universe:
-<a href="https://youtu.be/MOItjGpiAfo">was the universe born from noting</a>.
+<a href="https://youtu.be/MOItjGpiAfo" target="_blank">was the universe born from nothing</a>.
 
 <br /><br />
 
