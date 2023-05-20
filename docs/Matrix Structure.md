@@ -719,8 +719,6 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
   <tr><td>x+x<sup>2</sup>+x<sup>3</sup>+x<sup>4</sup>+x<sup>5</sup></td><td>0+0+0+0+0=0</td><td>1+1+1+1+1=5</td><td>0+2+6+14+30=52</td><td>0+0+6+36+150=192</td><td>0+0+0+24+240=264</td><td>0+0+0+0+120=120</td><td>0,5,62,363,1364,3905,9330,19607</td></tr>
 </table>
 
-<br />
-
 Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per iteration values.
 
 <br /><br />
@@ -729,8 +727,6 @@ Multiplying or dividing a single calculation is the same as dividing or multiply
   <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
   <tr><td>x<sup>3</sup>*7</td><td>0*7=0</td><td>1*7=7</td><td>6*7=42</td><td>6*7=42</td><td>0*7=0</td><td>0*7=0</td><td>0,7,56,189,448,875,1512,2401</td></tr>
 </table>
-
-<br />
 
 If you want to get more complex you can multiply the square, and cube. Then add them together.
 
@@ -742,8 +738,6 @@ If you want to get more complex you can multiply the square, and cube. Then add 
   <tr><td>x<sup>3</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>6*2=12</td><td>6*2=12</td><td>0*2=0</td><td>0*2=0</td><td>0,2,16,54,128,250,432,686</td></tr>
 </table>
 
-<br />
-
 Now we add our multiplied iteration values together.
 
 <br /><br />
@@ -752,8 +746,6 @@ Now we add our multiplied iteration values together.
   <tr><td><h2>Added.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
   <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
 </table>
-
-<br />
 
 Try each of them if you like. Or even combine and make up your own combinations.
 
@@ -1026,8 +1018,6 @@ At the bottom we basically are taking each of these.
   <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
 </table>
 
-<br /><br />
-
 Thus de-mixing each one as we divide by the last value and work our way backwards decoding each to the power of in the set.
 
 <br /><br />
@@ -1057,8 +1047,6 @@ Instead of solving everything sequentially as.
   <tr><td>x^5</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
 </table>
 
-<br />
-
 We can solve things exponentially as.
 
 <br /><br />
@@ -1071,8 +1059,6 @@ We can solve things exponentially as.
   <tr><td>4^x</td><td>4,16,64,256,1024,4096,16384,65536</td></tr>
   <tr><td>5^x</td><td>5,25,125,625,3125,15625,78125,390625</td></tr>
 </table>
-
-<br />
 
 As you can see, with 2^x, we are doubling per value. With 3^x, we are tripling. And so on. This forum of solving things is useful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
 
