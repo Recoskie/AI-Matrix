@@ -416,9 +416,23 @@ When we multiply the square against itself, then it is the same as adding a whol
 
 <br /><br />
 
-Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration.
+Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration amount.
 
 <br /><br />
+
+Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop can be reduced into simple fast calculations.
+
+<br /><br />
+
+This allows us to replace loops within loops that add different amounts with a fast calculation.
+
+<br /><br />
+
+Changing your per added amounts per loop inside each other is explained in the decoding dimensional iteration section.
+
+<br /><br />
+
+Higher dimensional sequences and counting of things exist all over in nature and in the world around us.
 
 <h1 style="clear:left;">5 Dimensional set with subtraction</h1>
 
