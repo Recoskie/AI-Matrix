@@ -103,19 +103,19 @@ image:
 
   <br /><br />
 
-  Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
-
-  <br /><br />
-
-  Everything spans from each other sequentially in a thing known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
-
-  <br /><br />
-
   Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
 
   <br /><br />
 
   Our brain recalls these patterns and sequences from memory, allowing us to build thoughts and ideas and brain function.
+
+  <br /><br />
+
+  Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+
+  <br /><br />
+
+  Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
   <br /><br />
 

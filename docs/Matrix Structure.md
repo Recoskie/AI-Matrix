@@ -91,19 +91,19 @@ No matter how complex of a calculation or steps you write to output a result, th
 
 <br /><br />
 
-Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
-
-<br /><br />
-
-Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
-
-<br /><br />
-
 Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
 
 <br /><br />
 
 Our brain recalls these patterns and sequences from memory, allowing us to build thoughts and ideas and brain function.
+
+<br /><br />
+
+Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+
+<br /><br />
+
+Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
 <br /><br />
 
@@ -175,7 +175,7 @@ The starting amount is very important as you could start anywhere. What ever you
 
 <br /><br />
 
-In the case of the example I gave you. We ended up with the following set starting with 1, and adding by per 7.
+In the case of the example I gave you. We ended up with the following set starting with 1, and adding by 7 per value.
 
 <br /><br />
 
@@ -199,7 +199,7 @@ You then move to the next number in the set which is 8. The number after 8 is 15
 
 <br /><br />
 
-You do this with all numbers in the set. To solve the first dimension. As it solves the difference between the numbers per iteration.
+You do this with all numbers in the set. This solves the first dimension. As it solves the difference between the numbers per iteration.
 
 <br /><br />
 
@@ -213,11 +213,11 @@ You do this with all numbers in the set. To solve the first dimension. As it sol
 
 <br /><br />
 
-This gives us how much is added per number. The difference is the same across all numbers making a set of 7,7,7,7,7,7,7 with a one dimensional set.
+This gives us how much is added per value. The difference is the same across all numbers making a set of 7,7,7,7,7,7,7 per value.
 
 <br /><br />
 
-Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set per number.
+Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set per value.
 
 <br /><br />
 
@@ -225,7 +225,7 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br />
 
-So in the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension per added amount.
+In the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension per added value.
 
 <br /><br />
 
@@ -276,7 +276,7 @@ Our set is 0,1,4,9,16,25,36,49.
 
 So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
 
-Subtracting the next value into the previous each gives us.
+Subtracting the next value into the previous value gives us.
 
 <br /><br />
 
@@ -313,7 +313,7 @@ The first number in each subtraction is what the dimensional value is per iterat
 
 <br /><br />
 
-The starting value is very important as you could start anywhere in two dimensional square sequence. For example you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+The starting value is very important as you could start anywhere in the two dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
 This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
 
@@ -326,7 +326,7 @@ The first number after the subtraction of all numbers again would be per3. Excep
 
 <br /><br />
 
-You loose one number with each subtraction into all numbers, because there is no next digit to subtract the last digit into at the end of the set.
+You loose one number with each subtraction into all numbers, because there is no next value to subtract the previous value into at the end of the set.
 
 <br /><br />
 
@@ -364,7 +364,7 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that add 2 units because both sides of the square join at one unit.
+In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that join at one unit.
 
 <br /><br />
 
@@ -380,7 +380,7 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added units by 2 for both sides.
+The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added unit by 2 for both sides.
 
 <br /><br />
 
@@ -392,7 +392,7 @@ x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
 
 <br /><br />
 
-Dividing it by 2 gives us a set that adds a one-dimensional sequence per value.
+Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
 
 <br /><br />
 
@@ -412,11 +412,11 @@ In math, we call these quadratic equations and it makes it so we never have to u
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that add each layer per square, which creates a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that will add each square layer, which creates a 3D cube.
 
 <br /><br />
 
-Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration amount.
+Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration.
 
 <br /><br />
 
@@ -432,7 +432,7 @@ With the first number being the difference.
 
 <br /><br />
 
-In this code. I will make it that you can create any 5D set you like. At the end of the code. Each number is subtract into the previous.
+I will make it that you can create any 5D set you like in this code. At the end of the code. Each number is subtract into the previous.
 
 <br /><br />
 
@@ -487,13 +487,13 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
     }
   }
 
-  console.log(data);
+  console.log("data = "+data);
 
   var s1 = data[0], s2 = data[1], s3 = data[2], s4 = data[3], s5 = data[4], s6 = data[5], s7 = data[6], s8 = data[7];
 
   //The starting value.
 
-  console.log( [s1,s2,s3,s4,s5,s6,s7,s8] );
+  console.log("\r\nBegin subtraction\r\n");
 
   //Subtract next number to previous number.
 
@@ -711,7 +711,7 @@ When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration
 
 So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
 
-<br /><br />
+<br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Added Calculation.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -723,7 +723,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per iteration values.
 
-<br /><br />
+<br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -734,7 +734,7 @@ Multiplying or dividing a single calculation is the same as dividing or multiply
 
 If you want to get more complex you can multiply the square, and cube. Then add them together.
 
-<br /><br />
+<br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -746,7 +746,7 @@ If you want to get more complex you can multiply the square, and cube. Then add 
 
 Now we add our multiplied iteration values together.
 
-<br /><br />
+<br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Added.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -835,7 +835,7 @@ The same way you mix these together. Is the same way you reverse them back into 
 
 <br />
 
-After we subtract the numbers and solve each per iteration. Each to the power of. Up to 5 solves out as.
+After subtracting the numbers and solving each per iteration, each to the power of up to 5 solves out as.
 
 <br /><br />
 
@@ -850,7 +850,7 @@ After we subtract the numbers and solve each per iteration. Each to the power of
 
 <br />
 
-As previously seen you can multiply, divide, add subtract each calculation using the iteration values to create any calculation you wish.
+As previously seen you can multiply, divide, add, and subtract each calculation using the iteration values to create any calculation you wish.
 
 <br /><br />
 
@@ -899,7 +899,7 @@ This gives us the set 0,14,64,162,320,550,864,1274.
 
 <br /><br />
 
-By subtracting the values 0,14,64,162,320,550,864,1274. We can find each per iteration value as 0,14,36,12,0,0.
+By subtracting the values 0,14,64,162,320,550,864,1274 till we have 0. We can find each per iteration value as 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -1007,7 +1007,7 @@ Basically doing a faster forum of subtracting next numbers minus previous.
 
 <br /><br />
 
-If you addCalculations together you create the next row. For example by adding the next number together in row 1,3,3,1 doing 1+3=4, 3+3=6, 3+1=4. Creates the row 1,4,6,4,1.
+By adding the previous and next number together in row 1,3,3,1 doing 1+3=4, 3+3=6, 3+1=4. Creates the row 1,4,6,4,1.
 
 <br /><br />
 
@@ -1015,7 +1015,7 @@ You can build the subtraction pattern as big as you like to as high in dimension
 
 <br /><br />
 
-However it is important to remember a few things. You loose one number each time you subtract each next value to previous values. You need enough numbers in the set to be able to find the last per value iteration.
+However it is important to remember a few things. You loose one number each time you subtract next values to previous values. You need enough numbers in the set to be able to find the last per value iteration.
 
 <br /><br />
 
@@ -1139,7 +1139,7 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 <br /><br />
 
-We just basically switch the numbers that was used to decode the per iteration of each to the power of. Then use the subtraction pattern as the decoder.
+We just basically switch the numbers that are used to decode the per iteration of each to the power to the decoder, and move the decoder to the subtraction pattern.
 
 <br /><br />
 
@@ -1219,7 +1219,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-As a point space, it is more closely like this multidimensionality. Which was creepily created by terra nova.
+It is more closely like this multidimensional as a point space. Which was creepily created by terra nova.
 
 <br /><br />
 
@@ -1251,7 +1251,7 @@ All numbers have a place and an expression and meaning to reality itself. The nu
 
 <br />
 
-In quantum physics we have a measurement problem in which as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
+In quantum physics as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
 
 <br /><br />
 
@@ -1259,7 +1259,7 @@ The use of the plank length prevent this from happening.
 
 <br /><br />
 
-Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop.
+Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop. According to quantum physics.
 
 <br /><br />
 
