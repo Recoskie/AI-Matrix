@@ -434,6 +434,8 @@ Changing your per added amounts per loop inside each other is explained in the d
 
 Higher dimensional sequences and counting of things exist all over in nature and in the world around us.
 
+<br /><br />
+
 <h1 style="clear:left;">5 Dimensional set with subtraction</h1>
 
 <br />
@@ -576,11 +578,86 @@ With each subtraction the first number is what each per iteration value is that 
 
 <br />
 
-Instead of subtracting the next number to the previous number. We can instead add up the number of subtraction to calculate each value per row.
+Instead of subtracting the next number from the previous, we can calculate them.
+
+<br /><br />
+
+The starting amount is always going to be the first number in the set.
+
+<br /><br />
+
+<pre>
+s1 = s1 * 1;
+</pre>
+
+<br /><br />
+
+We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number.
+
+<br /><br />
+
+<pre>
+s1 = s1 * 1;
+s2 = s2 - (s1 * 1);
+</pre>
+
+<br /><br />
+
+The value s2 matches the first per iteration amount in the second subtraction of all numbers.
+
+<br /><br />
+
+We multiply s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row. This calculates what s2 should be per iteration.
+
+<br /><br />
+
+<pre>
+s1 = s1 * 1;
+s2 = s2 - (s1 * 1);
+s3 = s3 - (s1 * 1 + s2 * 2);
+s4 = s4 - (s1 * 1 + s2 * 3);
+s5 = s5 - (s1 * 1 + s2 * 4);
+s6 = s6 - (s1 * 1 + s2 * 5);
+s7 = s7 - (s1 * 1 + s2 * 6);
+s8 = s8 - (s1 * 1 + s2 * 7);
+</pre>
+
+<br /><br />
+
+The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
+
+<br /><br />
+
+We multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row. This calculates what s3 should be per iteration in a loop outside of the square.
+
+<br /><br />
+
+<pre>
+s1 = s1 * 1;
+s2 = s2 - (s1 * 1);
+s3 = s3 - (s1 * 1 + s2 * 2);
+s4 = s4 - (s1 * 1 + s2 * 3 + s3 * 3);
+s5 = s5 - (s1 * 1 + s2 * 4 + s3 * 6);
+s6 = s6 - (s1 * 1 + s2 * 5 + s3 * 10);
+s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
+s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
+</pre>
+
+<br /><br />
+
+So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
+
+<br /><br />
+
+All this does is tally up the values per iteration amount and subtract it from each value.
 
 <br /><br />
 
 <img src="figs/fig1.jpg" />
+
+<br /><br />
+
+You can set each per iteration amount to whatever you like and the output will be exactly what you set them using the dimensional subtraction pattern.
 
 <br /><br />
 
@@ -652,7 +729,7 @@ Instead of subtracting the next number to the previous number. We can instead ad
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. Since we are calculating what the first number is relative to number of subtraction. Solving each per value for each per iteration faster.
+This makes solving the starting value for each iteration much faster. It gives us the same result as if we subtracted all the numbers repeatably and wrote down the first difference.
 
 <br /><br />
 

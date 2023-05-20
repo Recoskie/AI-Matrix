@@ -85,7 +85,7 @@ image:
     function loadFL64() { if (!loaded) { head.appendChild(FL64); } else { alert("FL64 is already loaded on this page."); } }
   </script>
 
-  <h1>Indexed contents.</h1>
+  <h1>Indexed contents</h1>
 
   <table>
     <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
@@ -123,13 +123,13 @@ image:
 
   <br />
 
-  <a id="sets" class="cmd"></a><h1>Creating A set.</h1>
+  <a id="sets" class="cmd"></a><h1>Creating A set</h1>
 
   1. Sets are used to setup a set of data you wish to analyze.<br />
   2. There are three ways to create a set.<br />
   3. Sets can also be dynamically created by algorithms. By dynamically creating an array of values.<br />
 
-  <h3>Method One.</h3>
+  <h3>Method One</h3>
   The preferred method. Use it when possible.
 
   <br /><br />
@@ -142,7 +142,7 @@ image:
     console.log( My_set );
   </code>
 
-  <h3>Method Two.</h3>
+  <h3>Method Two</h3>
   Use this method when getting input from a text box, or text file.
   <br /><br />
 
@@ -181,7 +181,7 @@ image:
 
   <br />
 
-  <h3>Dynamically creating data, and sets.</h3>
+  <h3>Dynamically creating data, and sets</h3>
 
   Assuming we have an variable called "o", and we set it 7. Thus then we chose to add 7 by 5 ten times.
 
@@ -221,7 +221,7 @@ image:
 
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
 
-  <a id="msets" class="cmd"></a><h1>Manipulating sets.</h1>
+  <a id="msets" class="cmd"></a><h1>Manipulating sets</h1>
 
   A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
 
@@ -241,7 +241,7 @@ image:
 
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
-  <h2>A set also has a length.</h2>
+  <h2>A set also has a length</h2>
 
   The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
 
@@ -258,7 +258,7 @@ image:
     }
   </code>
 
-  <h2>Array methods and operations.</h2>
+  <h2>Array methods and operations</h2>
 
   Sets also support all of the array methods, and operations. So you can use methods like <h4 style="display:inline-block;">sort()</h4>, <h4 style="display:inline-block;">map()</h4>, <h4 style="display:inline-block;">push()</h4>, <h4 style="display:inline-block;">pop()</h4>, even <h4 style="display:inline-block;">reverse()</h4>.<br />
 
@@ -276,7 +276,7 @@ image:
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
 
-  <a id="seq" class="cmd"></a><h1>Solving sequences.</h1>
+  <a id="seq" class="cmd"></a><h1>Solving sequences</h1>
 
   The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
 
@@ -327,7 +327,7 @@ image:
   Which outputs a math calculation that calculates the numbers in our set (7+X*5).<br />
   You can change the starting value 7 to what ever you like. Thus the amount added by in the loop.<br />
 
-  <h2>Creating and running a function from a analyzed set.</h2>
+  <h2>Creating and running a function from a analyzed set</h2>
 
   <code>
     //Creating and running a function.
@@ -374,7 +374,7 @@ image:
   We then can give our new function each "x" and it should give us the same results. As you can see we are iterating 20 times as long as x is less than 20.<br />
   Remember these examples are completely interactive. Thus you can change anything you like in them.<br />
 
-  <h2>2 Dimensional set.</h2>
+  <h2>2 Dimensional set</h2>
 
   <code>
     //2 Dimensional set.
@@ -438,7 +438,7 @@ image:
 
   <br />
 
-  <h2>3 dimensional set.</h2>
+  <h2>3 dimensional set</h2>
 
   <code>
     //3 Dimensional set.
@@ -510,7 +510,7 @@ image:
 
   <br />
 
-  <h2>4 dimensional set.</h2>
+  <h2>4 dimensional set</h2>
 
   <code>
     //4 Dimensional set.
@@ -586,7 +586,7 @@ image:
 
   Basically you can create any 4 dimensional set and convert back to a math function.
 
-  <h2>7 dimensional data randomized.</h2>
+  <h2>7 dimensional data randomized</h2>
 
   I do not like using the word Random. As random is not rally random.
 
@@ -701,7 +701,7 @@ image:
 
   <br />
 
-  <h1>Fibonacci.</h1>
+  <h1>Fibonacci</h1>
   In this example we create the Fibonacci, and solve it.<br />
   However to do this the matrix has to be rotated backwards, and forwards on both sides.<br />
   In order to do this you only have to call the method <h4 style="display:inline-block">seqsp()</h4>.
@@ -748,7 +748,7 @@ image:
     }
   </code>
 
-  <h2>Multiple Fibonacci sequences.</h2>
+  <h2>Multiple Fibonacci sequences</h2>
 
   You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one Fibonacci sequence.
 
@@ -798,7 +798,7 @@ image:
     }
   </code>
 
-  <h2>7 Dimensional data plus multiple Fibonacci.</h2>
+  <h2>7 Dimensional data plus multiple Fibonacci</h2>
 
   <code>
     //Random 7 Dimensional set. Plus Multiple random Fibonacci.
@@ -892,7 +892,7 @@ image:
   We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minimum of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
   So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
 
-  <a id="geo" class="cmd"></a><h1>Geometric sequences.</h1>
+  <a id="geo" class="cmd"></a><h1>Geometric sequences</h1>
   Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
 
   <code>
@@ -946,7 +946,7 @@ image:
   Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
   It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minimum of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
 
-  <h2>Geo Sequence Plus Fibonacci.</h2>
+  <h2>Geo Sequence Plus Fibonacci</h2>
 
   In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
 
@@ -1010,7 +1010,7 @@ image:
   Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in the set at minimum.<br />
   This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are also separated.
 
-  <h1>Solve All Patterns.</h1>
+  <h1>Solve All Patterns</h1>
   Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
 
   <code>
@@ -1110,7 +1110,7 @@ image:
   You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
   This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
 
-  <a id="all" class="cmd"></a><h2>Solve All Patterns plus multiple Fibonacci sequences.</h2>
+  <a id="all" class="cmd"></a><h2>Solve All Patterns plus multiple Fibonacci sequences</h2>
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
@@ -1220,7 +1220,7 @@ image:
   This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
   I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI, or bot.
 
-  <a id="er" class="cmd"></a><h1>Error Correction.</h1>
+  <a id="er" class="cmd"></a><h1>Error Correction</h1>
   In all of the sequencing examples. You have probably noticed how values are 0.00000000001 off. This is because floating point numbers have a accuracy limit.
 
   <br /><br />
@@ -1249,7 +1249,7 @@ image:
 
   <br />
 
-  <h2>The following code Enables error correction.</h2>
+  <h2>The following code Enables error correction</h2>
 
   <br />
 
@@ -1263,7 +1263,7 @@ image:
 
   <br />
 
-  <h2>The Following code will disable error correction.</h2>
+  <h2>The Following code will disable error correction</h2>
 
   <br />
 
@@ -1285,7 +1285,7 @@ image:
 
   Running the examples over again will give you better results now. Especially if you loaded FL64.<br /><br />
 
-  <a id="FL64" class="cmd"></a><h1>FL64 set/array operations.</h1>
+  <a id="FL64" class="cmd"></a><h1>FL64 set/array operations</h1>
 
   In order to run the code in these examples you must load the FL64 library into this page.
 
@@ -1365,7 +1365,7 @@ image:
 
   All operations in the FL64 library can be applied to a single floating point value, or to a set of values in a set, or array.
 
-  <a id="Advanced" class="cmd"></a><h1>Advanced.</h1>
+  <a id="Advanced" class="cmd"></a><h1>Advanced</h1>
 
   Although all of this is the basics. Thus I have only touched the surface of what you can do with these tools.
 
@@ -1399,7 +1399,7 @@ image:
 
   <br />
 
-  <h2>However in general use.</h2>
+  <h2>However in general use</h2>
 
   You can program systems that take in information and analyze it. Such things can be image processing. Making sense of graphs.
 
