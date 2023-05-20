@@ -711,7 +711,7 @@ When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration
 
 So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
 
-<br />
+<br /><br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Added Calculation.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -723,7 +723,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per iteration values.
 
-<br />
+<br /><br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -734,7 +734,7 @@ Multiplying or dividing a single calculation is the same as dividing or multiply
 
 If you want to get more complex you can multiply the square, and cube. Then add them together.
 
-<br />
+<br /><br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Multiplying.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -746,7 +746,7 @@ If you want to get more complex you can multiply the square, and cube. Then add 
 
 Now we add our multiplied iteration values together.
 
-<br />
+<br /><br />
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Added.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
@@ -848,8 +848,6 @@ After subtracting the numbers and solving each per iteration, each to the power 
   <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
 </table>
 
-<br />
-
 As previously seen you can multiply, divide, add, and subtract each calculation using the iteration values to create any calculation you wish.
 
 <br /><br />
@@ -866,8 +864,6 @@ If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you ha
   <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td></tr>
   <tr><td>x<sup>5</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>30*2=60</td><td>150*2=300</td><td>240*2=480</td><td>120*2=240</td></tr>
 </table>
-
-<br />
 
 You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth dimensional calculation from each per value iteration.
 
@@ -888,8 +884,6 @@ Lets take the following mixed calculation for example.
   <tr><td colspan="8"><h2>Added.</h2></td></tr>
   <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
 </table>
-
-<br />
 
 In this example we multiply and add the square and cube together as 0,14,36,12,0,0.
 
