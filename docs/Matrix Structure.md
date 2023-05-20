@@ -1275,6 +1275,15 @@ The Fibonacci sequence creates the number phi (golden ratio), and our best theor
 
 <br /><br />
 
+According to our best formulas everything began at the singularly and is traceable to the singularity. History of the Universe:
+<a href="https://youtu.be/MOItjGpiAfo">was the universe born from noting</a>.
+
+<br /><br />
+
+It seams everything spans from this super force that spans from zero as the Fibonacci sequence at the singularly which also exists in white holes and black holes. It does not matter if we are part of another universe or not as it seams there had to be an original nothing that span the sequence and made matter.
+
+<br /><br />
+
 This brings me to my favorite quote.
 
 <br /><br />
