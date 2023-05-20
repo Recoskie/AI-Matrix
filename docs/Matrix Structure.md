@@ -578,7 +578,7 @@ With each subtraction the first number is what each per iteration value is that 
 
 <br />
 
-Instead of subtracting the next number from the previous, we can calculate them.
+Instead of subtracting the next number from the previous with all numbers to find the per iteration amount, we can calculate them.
 
 <br /><br />
 
@@ -590,7 +590,7 @@ The starting amount is always going to be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-<br /><br />
+<br />
 
 We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number.
 
@@ -601,7 +601,7 @@ s1 = s1 * 1;
 s2 = s2 - (s1 * 1);
 </pre>
 
-<br /><br />
+<br />
 
 The value s2 matches the first per iteration amount in the second subtraction of all numbers.
 
@@ -622,7 +622,7 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
-<br /><br />
+<br />
 
 The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
 
@@ -643,7 +643,7 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
-<br /><br />
+<br />
 
 So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
 
@@ -712,7 +712,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
   var s1 = data[0], s2 = data[1], s3 = data[2], s4 = data[3], s5 = data[4], s6 = data[5], s7 = data[6], s8 = data[7];
 
-  //Each per value relative to number of subtraction.
+  //Each per value per dimensional iteration.
 
   var o = [];
   o[0] = s1 * 1;
@@ -729,7 +729,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. It gives us the same result as if we subtracted all the numbers repeatably and wrote down the first difference.
+This makes solving the starting value for each iteration much faster. It gives us the same result as the slow subtraction method.
 
 <br /><br />
 
