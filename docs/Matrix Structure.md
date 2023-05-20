@@ -590,8 +590,6 @@ The starting amount is always going to be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-<br />
-
 We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number.
 
 <br /><br />
@@ -600,8 +598,6 @@ We do not need to subtract all of the numbers to know what the first difference 
 s1 = s1 * 1;
 s2 = s2 - (s1 * 1);
 </pre>
-
-<br />
 
 The value s2 matches the first per iteration amount in the second subtraction of all numbers.
 
@@ -622,8 +618,6 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
-<br />
-
 The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
 
 <br /><br />
@@ -642,8 +636,6 @@ s6 = s6 - (s1 * 1 + s2 * 5 + s3 * 10);
 s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
-
-<br />
 
 So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
 
