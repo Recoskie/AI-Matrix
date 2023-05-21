@@ -581,7 +581,7 @@ With each subtraction the first number is what each per iteration value is that 
 
 <br />
 
-Instead of subtracting the next number from the previous with all numbers to find the per iteration amount, we can calculate them.
+Instead of subtracting the next number from the previous with all numbers to find the per iteration amount of each loop, we can calculate them.
 
 <br /><br />
 
@@ -593,7 +593,7 @@ The starting amount is always going to be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number. We only subtracted the rest of the set as the differences need to be found before the next subtraction into all numbers.
+We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number. We only subtracted the rest of the set as the differences are needed to reverse each loop.
 
 <br /><br />
 
@@ -621,7 +621,7 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
-You can also take the 5-dimensional set with the subtraction example above and add how many times we subtracted s2 when subtracting the following number from the previous row, and you will end up with the same number of subtraction per row.
+If you take the 5-dimensional set with the subtraction example above and add how many times we subtracted s2 per row you will end up with the same number of subtraction per row.
 
 <br /><br />
 
@@ -644,7 +644,7 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
-You can also take the 5-dimensional set with the subtraction example above and add how many times we subtracted s3 when subtracting the following number from the previous row, and you will end up with the same number of subtraction per row.
+If you take the 5-dimensional set with the subtraction example above and add how many times we subtracted s3 per row and will end up with the same number of subtraction per row.
 
 <br /><br />
 
@@ -652,7 +652,11 @@ So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20,
 
 <br /><br />
 
-All this does is tally up the subtraction per row to find the first per value iteration in each row doing a much faster subtraction than the 5-dimensional set with the subtraction example.
+You can produce the same numbers by adding the number of times we subtract the same values per row in the 5-dimensional set with subtraction example above. You can also view it as taking away the iteration amount per row.
+
+<br /><br />
+
+All this does is removes repeated subtraction per row in the 5-dimensional set with the subtraction example.
 
 <br /><br />
 
@@ -732,7 +736,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. It gives us the same result as the slow subtraction method.
+This makes solving the starting value for each iteration much faster. It gives us the same result as the slow subtraction method that repeated many subtractions that we can shrink into how many times it occurred per row.
 
 <br /><br />
 
