@@ -221,7 +221,7 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br /><br />
 
-<h1>Solving a 2 dimensional set</h1>
+<h1>Solving a 2-dimensional set</h1>
 
 <br />
 
@@ -380,6 +380,8 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
+<br />
+
 The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added unit by 2 for both sides.
 
 <br /><br />
@@ -436,7 +438,7 @@ Higher dimensional sequences and counting of things exist all over in nature and
 
 <br /><br />
 
-<h1 style="clear:left;">5 Dimensional set with subtraction</h1>
+<h1 style="clear:left;">5-Dimensional set with subtraction</h1>
 
 <br />
 
@@ -618,6 +620,10 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
+You can also take the 5-dimensional set with the subtraction example above and add how many times we subtracted s2 when subtracting the following number from the previous row, and you will end up with the same number of subtraction per row.
+
+<br /><br />
+
 The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
 
 <br /><br />
@@ -637,11 +643,15 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
+You can also take the 5-dimensional set with the subtraction example above and add how many times we subtracted s3 when subtracting the following number from the previous row, and you will end up with the same number of subtraction per row.
+
+<br /><br />
+
 So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
 
 <br /><br />
 
-All this does is tally up the values per iteration amount and subtract it from each value.
+All this does is tally up the subtraction per row to find the first per value iteration in each row doing a much faster subtraction than the 5-dimensional set with the subtraction example.
 
 <br /><br />
 
@@ -760,7 +770,7 @@ x<sup>5</sup> ends with 120 as it has 120 sides in the fifth dimension.
 
 <br /><br />
 
-The number of sides can be calculated by multiplying the dimension number by previously expanding as follows.
+The number of sides can be calculated by multiplying the number of dimensions by previous values.
 
 <br /><br />
 
@@ -798,7 +808,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 <table style="text-align:center;" border="1">
   <tr><td><h2>Added Calculation.</h2></td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
-  <tr><td>x<sup>2</sup>+x<sup>5</sup></td><td>0</td><td>1+1=2</td><td>30+2=32</td><td>150</td><td>240</td><td>120</td><td>0,2,36,252,1040,3150,7812,16856</td></tr>
+  <tr><td>x<sup>2</sup>+x<sup>5</sup></td><td>0+0=0</td><td>1+1=2</td><td>30+2=32</td><td>0+150=150</td><td>0+240=240</td><td>0+120=120</td><td>0,2,36,252,1040,3150,7812,16856</td></tr>
   <tr><td>x+x<sup>2</sup>+x<sup>3</sup>+x<sup>4</sup>+x<sup>5</sup></td><td>0+0+0+0+0=0</td><td>1+1+1+1+1=5</td><td>0+2+6+14+30=52</td><td>0+0+6+36+150=192</td><td>0+0+0+24+240=264</td><td>0+0+0+0+120=120</td><td>0,5,62,363,1364,3905,9330,19607</td></tr>
 </table>
 
@@ -830,7 +840,7 @@ Now we add our multiplied iteration values together.
   <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
 </table>
 
-Try each of them if you like. Or even combine and make up your own combinations.
+Try each of them if you like, or even combine and make up your own combinations.
 
 <br /><br />
 
@@ -1076,15 +1086,11 @@ Basically doing a faster forum of subtracting next numbers minus previous.
 
 <br /><br />
 
-By adding the previous and next number together in row 1,3,3,1 doing 1+3=4, 3+3=6, 3+1=4. Creates the row 1,4,6,4,1.
+Adding the previous and next numbers together in row 1,3,3,1, doing 1+3=4, 3+3=6, 3+1=4 creates row 1,4,6,4,1.
 
 <br /><br />
 
 You can build the subtraction pattern as big as you like to as high in dimension you need. The decoder at the end only needs to match each to the power of per iteration to de-mix.
-
-<br /><br />
-
-However it is important to remember a few things. You loose one number each time you subtract next values to previous values. You need enough numbers in the set to be able to find the last per value iteration.
 
 <br /><br />
 
@@ -1105,7 +1111,7 @@ Thus de-mixing each one as we divide by the last value and work our way backward
 
 <br /><br />
 
-You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers in length including the starting value.
+You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers minium in length, or higher including the starting value. There is no limit in how many dimensions you can have.
 
 <br /><br />
 
@@ -1230,7 +1236,7 @@ The two matrices then can be combined as the following infinite fractal pattern.
 
 <br /><br />
 
-Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU" target="_blank">Quantum Gravity Research: Reality</a>.
+Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains what a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU" target="_blank">Quantum Gravity Research: Reality</a>.
 
 <br /><br />
 
@@ -1242,7 +1248,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-In early history, we have similar patterns appearing in ancient pyramids that is very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
+In early history, we have similar patterns appearing in ancient pyramids that are very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
 
 <br /><br />
 
