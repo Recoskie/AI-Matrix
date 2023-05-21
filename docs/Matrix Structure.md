@@ -371,7 +371,7 @@ In the second dimension, we have to add a one-dimensional pattern shown as the g
 
 When we input 5 into our function, it adds it together as follows.
 
-<br />
+<br /><br />
 
 <pre>
 1+
@@ -380,8 +380,6 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1)*2 +
 1+(1+1+1+1)*2 = 25 
 </pre>
-
-<br />
 
 The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added unit by 2 for both sides.
 
