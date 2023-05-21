@@ -593,7 +593,7 @@ The starting amount is always going to be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number.
+We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number. We only subtracted the rest of the set as the differences need to be found before the next subtraction into all numbers.
 
 <br /><br />
 
@@ -629,7 +629,7 @@ The value s3 now matches the second per iteration amount in the second subtracti
 
 <br /><br />
 
-We multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row. This calculates what s3 should be per iteration in a loop outside of the square.
+We multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row. This calculates what s3 should be per iteration in a loop outside of s2 (square).
 
 <br /><br />
 
