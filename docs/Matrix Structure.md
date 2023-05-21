@@ -1308,7 +1308,7 @@ You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of
 
 <br /><br />
 
-The golden ratio is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern of the set to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html" target="_blank">FL64</a>.
+The golden ratio is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of such numbers back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern to any number. If you want to analyze single number values, then the number analytics library will teach you the structure of all numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html#irrational" target="_blank">FL64</a>.
 
 <br /><br />
 
