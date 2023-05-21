@@ -79,6 +79,7 @@ image:
   <tr><td>Introduction: <a href="#intro">Link</a></td></tr>
   <tr><td>The basic algorithm: <a href="#basic">Link</a></td></tr>
   <tr><td>The geometry of higher dimensions: <a href="#dims">Link</a></td></tr>
+  <tr><td>Fast dimensional subtraction: <a href="#sub-dims">Link</a></td></tr>
   <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
   <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
   <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
@@ -576,7 +577,7 @@ With each subtraction the first number is what each per iteration value is that 
 
 <br /><br />
 
-<h1>Faster way of subtracting</h1>
+<a id="sub-dims" class="cmd"></a><h1>Faster way of subtracting</h1>
 
 <br />
 
