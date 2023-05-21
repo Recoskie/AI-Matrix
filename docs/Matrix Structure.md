@@ -619,10 +619,6 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
-If you take the 5-dimensional set with the subtraction example above and add how many times we subtracted s2 per row you will end up with the same number of subtraction per row.
-
-<br /><br />
-
 The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
 
 <br /><br />
@@ -642,19 +638,15 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
-If you take the 5-dimensional set with the subtraction example above and add how many times we subtracted s3 per row and will end up with the same number of subtraction per row.
-
-<br /><br />
-
 So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
 
 <br /><br />
 
-You can produce the same numbers by adding the number of times we subtract the same values per row in the 5-dimensional set with subtraction example above. You can also view it as taking away the iteration amount per row.
+You can produce the same pattern by adding the number of times we subtract the same values per row in the 5-dimensional set with subtraction example above.
 
 <br /><br />
 
-All this does is removes repeated subtraction per row in the 5-dimensional set with the subtraction example.
+All this does is removes repeated subtraction per row in the 5-dimensional set with the subtraction example. You can also view it as taking away the iteration amount per row.
 
 <br /><br />
 
@@ -734,7 +726,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. It gives us the same result as the slow subtraction method that repeated many subtractions that we can shrink into how many times it occurred per row.
+This makes solving the starting value for each iteration much faster. It gives us the same result as the 5-dimensional set with subtraction example without any repeated subtractions that we can shrink into how many times it occurred per row.
 
 <br /><br />
 
