@@ -96,7 +96,7 @@ Anything we measure can be reduced back into math calculations or functions. Our
 
 <br /><br />
 
-Our brain recalls these patterns and sequences from memory, allowing us to build thoughts and ideas and brain function.
+Our brain recalls these patterns and sequences from memory, allowing us to build thoughts, ideas, and brain function.
 
 <br /><br />
 
@@ -200,7 +200,7 @@ You then move to the next number in the set which is 8. The number after 8 is 15
 
 <br /><br />
 
-You do this with all numbers in the set. This solves the first dimension. As it solves the difference between the numbers per iteration.
+You do this with all numbers in the set. This solves the first dimensional loop. As it solves the difference between the numbers per iteration.
 
 <br /><br />
 
@@ -316,7 +316,7 @@ The first number in each subtraction is what the dimensional value is per iterat
 
 The starting value is very important as you could start anywhere in the two dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each per amount iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
 
 <br /><br />
 
@@ -413,7 +413,7 @@ In math, we call these quadratic equations and it makes it so we never have to u
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 5x5, we then have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops that will add each square layer, which creates a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2, and at 5x5, we have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops to add each square layer, creating a 3D cube.
 
 <br /><br />
 
@@ -571,7 +571,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
 <br /><br />
 
-With each subtraction the first number is what each per iteration value is that produced the set. We also loose one number each time. You can change each per amount to what ever you like. Or you can do the math your self.
+The first number after each subtraction is what each per iteration value is that produced the set. We also loose one number each time as there is no number to subtract the last value into. You can change each per amount to what ever you like. Or you can do the math your self.
 
 <br /><br />
 
@@ -604,7 +604,7 @@ The value s2 matches the first per iteration amount in the second subtraction of
 
 <br /><br />
 
-We multiply s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row. This calculates what s2 should be per iteration.
+Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 should be per iteration.
 
 <br /><br />
 
@@ -623,7 +623,7 @@ The value s3 now matches the second per iteration amount in the second subtracti
 
 <br /><br />
 
-We multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row. This calculates what s3 should be per iteration in a loop outside of s2 (square).
+Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculates what s3 should be per iteration in a loop outside of s2 (square).
 
 <br /><br />
 
@@ -638,7 +638,7 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
-So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 is 4, 10, 20, 35.
+So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 = 4, 10, 20, 35.
 
 <br /><br />
 
@@ -646,7 +646,7 @@ You can produce the same pattern by adding the number of times we subtract the s
 
 <br /><br />
 
-All this does is removes repeated subtraction per row in the 5-dimensional set with the subtraction example. You can also view it as taking away the iteration amount per row.
+All this does is remove repeated subtractions per row in the 5-dimensional set with the subtraction example. You can also view it as taking away the iteration amount per row.
 
 <br /><br />
 
@@ -726,7 +726,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. It gives us the same result as the 5-dimensional set with subtraction example without any repeated subtractions that we can shrink into how many times it occurred per row.
+This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction example without any repeated subtractions that we can shrink into how many times it occurred per row.
 
 <br /><br />
 

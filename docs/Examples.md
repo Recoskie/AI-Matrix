@@ -107,7 +107,7 @@ image:
 
   <br /><br />
 
-  Our brain recalls these patterns and sequences from memory, allowing us to build thoughts and ideas and brain function.
+  Our brain recalls these patterns and sequences from memory, allowing us to build thoughts, ideas, and brain function.
 
   <br /><br />
 
