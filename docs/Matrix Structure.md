@@ -81,7 +81,7 @@ image:
   <tr><td>The geometry of higher dimensions: <a href="#dims">Link</a></td></tr>
   <tr><td>Fast dimensional subtraction: <a href="#sub-dims">Link</a></td></tr>
   <tr><td>Decoding dimensional iteration: <a href="#decoding">Link</a></td></tr>
-  <tr><td>The complete matrix: <a href="#geometry">Link</a></td></tr>
+  <tr><td>The matrix structure: <a href="#geometry">Link</a></td></tr>
   <tr><td>Golden ratio/Quasicrystals: <a href="#ratio">Link</a></td></tr>
   <tr><td>Can AI become self aware: <a href="#consciousness">Link</a></td></tr>
 </table>
