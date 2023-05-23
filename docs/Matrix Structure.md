@@ -1360,7 +1360,7 @@ Alan watts combines both scientific understanding with what we already know abou
 
 <br /><br />
 
-<a href="https://youtu.be/ivurmn3hnwc" target="_blank">Alan Watts - The Beauty of Nothingness</a>.
+<a href="https://youtu.be/ivurmn3hnwc" target="_blank">Nothingness - Alan Watts</a>.
 
 <br /><br />
 
