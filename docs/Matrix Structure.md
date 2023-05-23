@@ -642,11 +642,11 @@ So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 = 4, 10, 20, 
 
 <br /><br />
 
-You can produce the same pattern by adding the number of times we subtract the same values per row in the 5-dimensional set with subtraction example above.
+You can view it as taking away the iteration amount per row, but you can produce the same pattern from the 5-dimensional set with the subtraction example above by adding the number of times we subtract the same values per row.
 
 <br /><br />
 
-All this does is remove repeated subtractions per row in the 5-dimensional set with the subtraction example. You can also view it as taking away the iteration amount per row.
+This removes repeated subtractions per row in the 5-dimensional set with subtraction example.
 
 <br /><br />
 
@@ -726,7 +726,7 @@ You can set each per iteration amount to whatever you like and the output will b
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction example without any repeated subtractions that we can shrink into how many times it occurred per row.
+This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction example without repeated subtractions, which can be shrunk into how many times it occurred per row.
 
 <br /><br />
 
@@ -765,7 +765,7 @@ x<sup>5</sup> ends with 120 as it has 120 sides in the fifth dimension.
 
 <br /><br />
 
-The number of sides can be calculated by multiplying the number of dimensions by previous values.
+The number of sides can be calculated by multiplying the number of dimensions by the previous.
 
 <br /><br />
 
