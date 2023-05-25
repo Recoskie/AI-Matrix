@@ -100,26 +100,26 @@ image:
   <a id="intro" class="cmd"></a><h1>Introduction</h1>
 
   No matter how complex of a calculation or steps you write to output a result, the results can all be reduced back to what it takes to reproduce the measurements or results without knowing the steps.
-
+  
   <br /><br />
-
+  
   Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
-
+  
   <br /><br />
-
+  
   Our brain recalls these patterns and sequences from memory, allowing us to build thoughts, ideas, and brain function.
-
+  
   <br /><br />
-
+  
   Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
-
+  
   <br /><br />
-
-  Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
-
+  
+  Everything reverses to simplicity that forums complexity in cause and effect sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+  
   <br /><br />
-
-  Note that all examples on this page can be modified, so you can change the examples to see the effects.
+  
+  All examples on this page can be modified, so you can change the examples to see the effects.
 
   <br />
 

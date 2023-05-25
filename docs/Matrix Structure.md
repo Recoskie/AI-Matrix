@@ -104,11 +104,11 @@ Reality itself follows the same principles known as the law of <a href="https://
 
 <br /><br />
 
-Everything spans from each other sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+Everything reverses to simplicity that forums complexity in cause and effect sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
 <br /><br />
 
-Note that all examples on this page can be modified, so you can change the examples to see the effects.
+All examples on this page can be modified, so you can change the examples to see the effects.
 
 <br /><br />
 
@@ -124,7 +124,7 @@ A one dimensional set basically is counting by one per number, or by two per num
 
 <br /><br />
 
-So lets build a one dimensional set that is 7 more per number.
+So lets build a one-dimensional set that is 7 more per number.
 
 <br /><br />
 
@@ -156,11 +156,11 @@ This simple little code creates a set with the starting value of 1. Which you ca
 
 <br /><br />
 
-The second loop adds per 7 more to each value. Which you can change to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you like.
+The second loop adds 7 more to each value. Which you can change to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you like.
 
 <br /><br />
 
-You can change the numbers to anything you like and run the code again to create any one dimensional set.
+You can change the numbers to anything you like and run the code again to create any one-dimensional set.
 
 <br /><br />
 
@@ -1303,7 +1303,11 @@ You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of
 
 <br /><br />
 
-The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy. You can reverse the calculation of number values such as 3.1415926535... back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern to any number. If you want to analyze single number values back into what it took to calculate the value, then the number analytics library will teach you the structure numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html#irrational" target="_blank">FL64 (Number analytics tool)</a>.
+The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy.
+
+<br /><br />
+
+You can reverse the calculation of number values such as 3.1415926535... back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern to any number. If you want to analyze single number values back into what it took to calculate the value, then the number analytics library will teach you the structure numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html#irrational" target="_blank">FL64 (Number analytics tool)</a>.
 
 <br /><br />
 
