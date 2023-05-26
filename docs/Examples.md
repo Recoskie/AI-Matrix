@@ -256,7 +256,7 @@ image:
     console.log( My_set );
   </code>
 
-  <br />
+  <br /><br />
 
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
@@ -299,7 +299,7 @@ image:
     console.log(My_set);
   </code>
 
-  <br />
+  <br /><br />
 
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
 
@@ -313,7 +313,7 @@ image:
 
   The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
 
-  <br />
+  <br /><br />
 
   <table border="1px">
     <tr><td>Type</td><td>Stationary.</td><td>Rotation.</td></tr>
@@ -939,7 +939,7 @@ image:
     }
   </code>
   
-  <br />
+  <br /><br />
 
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
