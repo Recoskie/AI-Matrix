@@ -83,6 +83,7 @@ image:
     FL64.onerror = function () { alert("Error Unable to load FL 64..."); };
 
     function loadFL64() { if (!loaded) { head.appendChild(FL64); } else { alert("FL64 is already loaded on this page."); } }
+  </script>
 
   <h1>Indexed contents</h1>
 
