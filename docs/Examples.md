@@ -83,7 +83,6 @@ image:
     FL64.onerror = function () { alert("Error Unable to load FL 64..."); };
 
     function loadFL64() { if (!loaded) { head.appendChild(FL64); } else { alert("FL64 is already loaded on this page."); } }
-  </script>
 
   <h1>Indexed contents</h1>
 
@@ -173,7 +172,7 @@ image:
 
   If a invalid input is used. You can use try and catch to warn the user of invalid input.
 
-  <br /><br />
+  <br />
 
   <code>
     //Method two. Creating a set.
@@ -299,6 +298,8 @@ image:
     console.log(My_set);
   </code>
 
+  <br />
+
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
@@ -311,6 +312,8 @@ image:
 
   The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
 
+  <br />
+
   <table border="1px">
     <tr><td>Type</td><td>Stationary.</td><td>Rotation.</td></tr>
     <tr><td>Sequential(top half).</td><td>seq();</td><td>seqsp();</td></tr>
@@ -321,6 +324,8 @@ image:
   <br />
 
   <div style="background-color:gray"><br /><br />If you are interested in the forum and shape of the matrix and how it works see document Matrix structure: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html" target="_blank">Link</a>.<br /><br /><br /></div>
+
+  <br />
 
   The basic set Method <h4 style="display:inline-block">seq();</h4> is the most vital sequencing function.
 
@@ -361,8 +366,6 @@ image:
   <br /><br />
 
   <h2>Creating and running a function from a analyzed set</h2>
-
-  <br />
 
   <code>
     //Creating and running a function.
@@ -409,11 +412,9 @@ image:
   We then can give our new function each "x" and it should give us the same results. As you can see we are iterating 20 times as long as x is less than 20.<br />
   Remember these examples are completely interactive. Thus you can change anything you like in them.<br />
 
-  <br /><br />
+  <br />
 
   <h2>2-Dimensional set</h2>
-
-  <br />
 
   <code>
     //2-Dimensional set.
@@ -478,8 +479,6 @@ image:
   <br /><br />
 
   <h2>3-dimensional set</h2>
-
-  <br />
 
   <code>
     //3-Dimensional set.
@@ -552,8 +551,6 @@ image:
   <br /><br />
 
   <h2>4-dimensional set</h2>
-  
-  <br />
 
   <code>
     //4-Dimensional set.
@@ -856,8 +853,6 @@ image:
 
   <h2>7-Dimensional data plus multiple Fibonacci</h2>
 
-  <br />
-
   <code>
     //Random 7-Dimensional set. Plus Multiple random Fibonacci.
 
@@ -942,6 +937,8 @@ image:
       console.log( My_func( x ) );
     }
   </code>
+  
+  <br />
 
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
@@ -1339,8 +1336,6 @@ image:
 
   <h2>The following code Enables error correction</h2>
 
-  <br />
-
   <code>
     //Enable error correction.
 
@@ -1352,8 +1347,6 @@ image:
   <br /><br />
 
   <h2>The Following code will disable error correction</h2>
-
-  <br />
 
   <code>
     //Disable error correction.
@@ -1371,8 +1364,8 @@ image:
 
   <br /><br />
 
-  Running the examples over again will give you better results now. Especially if you loaded FL64.<br /><br />
-  
+  Running the examples over again will give you better results now. Especially if you loaded FL64.
+
   <br /><br />
 
   <a id="FL64" class="cmd"></a><h1>FL64 set/array operations</h1>
