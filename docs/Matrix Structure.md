@@ -1011,6 +1011,8 @@ In this new example code. We multiply by the power of by each d value. You can c
 
 You should see it de-mixes each to the power of perfectly. It also does not matter which position you start in the set per value.
 
+<br />
+
 <code>
   var data = [];
 
@@ -1077,11 +1079,11 @@ Basically doing a faster forum of subtracting next numbers minus previous.
 
 <br /><br />
 
-Adding the previous and next numbers together in row 1,3,3,1, doing 1+3=4, 3+3=6, 3+1=4 creates row 1,4,6,4,1.
+Adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3=4, 3+3=6, 3+1=4 creates row 1,4,6,4,1.
 
 <br /><br />
 
-You can build the subtraction pattern as big as you like to as high in dimension you need. The decoder at the end only needs to match each to the power of per iteration to de-mix.
+Meaning you can build the subtraction pattern as big as you like to as high in dimension you need. The decoder at the end only needs to match each to the power of per iteration to de-mix.
 
 <br /><br />
 
@@ -1227,6 +1229,10 @@ The two matrices then can be combined as the following infinite fractal pattern.
 
 <br /><br />
 
+When I view this shape, I understand that every math calculation you can dream up is geometrically in there.
+
+<br /><br />
+
 Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains what a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU" target="_blank">Quantum Gravity Research: Reality</a>.
 
 <br /><br />
@@ -1243,7 +1249,7 @@ In early history, we have similar patterns appearing in ancient pyramids that ar
 
 <br /><br />
 
-<a id="ratio" class="cmd"></a><h1>Golden ratio/Quasicrystals</h1>
+<a id="ratio" class="cmd"></a><h1>Golden ratio (Quasicrystals)</h1>
 
 <br />
 
@@ -1279,7 +1285,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-It is more closely like this multidimensional as a point space. Which was creepily created by terra nova.
+Multidimensionally, as a point space, it looks more closely like this, which was creepily created by terra nova.
 
 <br /><br />
 
@@ -1303,7 +1309,7 @@ The golden ratio 1.618033988749894... is a simplified expression of this entire 
 
 <br /><br />
 
-You can reverse the calculation of number values such as 3.1415926535... back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern to any number. If you want to analyze single number values back into what it took to calculate the value, then the number analytics library will teach you the structure numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html#irrational" target="_blank">FL64 (Number analytics tool)</a>.
+You can reverse the calculation of number values such as 3.1415926535... back into a set, including the golden ratio. You then can use the quantum matrix to show the pattern to any number. If you want to analyze single number values back into what it took to calculate the value, then the number analytics library will teach you the structure of numbers; see <a href="https://recoskie.github.io/Fl64/docs/Examples.html#irrational" target="_blank">FL64 (Number analytics tool)</a>.
 
 <br /><br />
 
@@ -1335,7 +1341,7 @@ Both white holes and black holes are opposite to each other and begin at the sin
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
 
 <br /><br />
 
@@ -1356,7 +1362,11 @@ This brings me to my favorite quote.
 
 <br /><br />
 
-Alan watts combines both scientific understanding with what we already know about everything in a simplifyed explanation.
+Realize that everything connects to everything else (Leonardo da Vinci 1452-1519).
+
+<br /><br />
+
+Alan watts combines both scientific understanding with what we already know about everything in a simplified explanation.
 
 <br /><br />
 
