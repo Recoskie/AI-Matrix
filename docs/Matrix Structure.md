@@ -120,7 +120,7 @@ Let's start with a one-dimensional set, and show how it builds, and solves seque
 
 <br /><br />
 
-A one dimensional set basically is counting by one per number, or by two per number.
+A one-dimensional set basically is counting by one per number, or by two per number.
 
 <br /><br />
 
@@ -168,11 +168,7 @@ Lastly the <h3>var end = 8;</h3> can be changed to a bigger number than 8. If yo
 
 <br /><br />
 
-The starting amount is always the first digit in the set. This is before we calculate the difference between the numbers.
-
-<br /><br />
-
-The starting amount is very important as you could start anywhere. What ever you set the starting value to will be the first number in the set.
+The starting amount is always the first digit in the set.
 
 <br /><br />
 
@@ -200,7 +196,7 @@ You then move to the next number in the set which is 8. The number after 8 is 15
 
 <br /><br />
 
-You do this with all numbers in the set. This solves the first dimensional loop. As it solves the difference between the numbers per iteration.
+You do this with all numbers in the set. This solves the first-dimensional loop. As it solves the difference between the numbers per iteration.
 
 <br /><br />
 

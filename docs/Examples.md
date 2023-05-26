@@ -121,9 +121,11 @@ image:
   
   All examples on this page can be modified, so you can change the examples to see the effects.
 
-  <br />
+  <br /><br />
 
   <a id="sets" class="cmd"></a><h1>Creating A set</h1>
+
+  <br />
 
   1. Sets are used to setup a set of data you wish to analyze.<br />
   2. There are three ways to create a set.<br />
@@ -221,7 +223,11 @@ image:
 
   You can change this code however you like. It is important that you understand the basics as this will be used a lot to demonstrate different types of sets and data.
 
+  <br /><br />
+
   <a id="msets" class="cmd"></a><h1>Manipulating sets</h1>
+
+  <br />
 
   A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
 
@@ -241,7 +247,11 @@ image:
 
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
+  <br /><br />
+
   <h2>A set also has a length</h2>
+
+  <br />
 
   The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
 
@@ -258,7 +268,11 @@ image:
     }
   </code>
 
+  <br /><br />
+
   <h2>Array methods and operations</h2>
+
+  <br />
 
   Sets also support all of the array methods, and operations. So you can use methods like <h4 style="display:inline-block;">sort()</h4>, <h4 style="display:inline-block;">map()</h4>, <h4 style="display:inline-block;">push()</h4>, <h4 style="display:inline-block;">pop()</h4>, even <h4 style="display:inline-block;">reverse()</h4>.<br />
 
@@ -275,8 +289,12 @@ image:
   In this example I use the array <h4 style="display:inline-block;">reverse()</h4> method. However you can change this to what ever you like.<br />
 
   You can also go to w3 which will list the array methods and also give you examples: <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">Link</a>.
+  
+  <br /><br />
 
   <a id="seq" class="cmd"></a><h1>Solving sequences</h1>
+  
+  <br />
 
   The main sequence method is <h4 style="display:inline-block;">gensp()</h4>. However the full quantum matrix does not need to be used for sequencing a kind of multi-dimensional set.
 
@@ -325,9 +343,13 @@ image:
 
   First we output the set to the console window. As we did before in creating the set. Then we output the seq operation to the console.<br />
   Which outputs a math calculation that calculates the numbers in our set (7+X*5).<br />
-  You can change the starting value 7 to what ever you like. Thus the amount added by in the loop.<br />
+  You can change the starting value 7 to what ever you like. Thus the amount added by in the loop.
+  
+  <br /><br />
 
   <h2>Creating and running a function from a analyzed set</h2>
+
+  <br />
 
   <code>
     //Creating and running a function.
@@ -374,10 +396,14 @@ image:
   We then can give our new function each "x" and it should give us the same results. As you can see we are iterating 20 times as long as x is less than 20.<br />
   Remember these examples are completely interactive. Thus you can change anything you like in them.<br />
 
-  <h2>2 Dimensional set</h2>
+  <br /><br />
+
+  <h2>2-Dimensional set</h2>
+
+  <br />
 
   <code>
-    //2 Dimensional set.
+    //2-Dimensional set.
 
     var o = 7;
 
@@ -420,7 +446,7 @@ image:
 
   <br /><br />
 
-  So now we are adding 76 more in the second dimension. Using a loop inside a loop.
+  So now we are adding 76 more in the second-dimension. Using a loop inside a loop.
 
   <br /><br />
 
@@ -434,14 +460,16 @@ image:
 
   <br /><br />
 
-  Basically you can create any 2 dimensional set and convert back to a math function.
+  Basically you can create any 2-dimensional set and convert back to a math function.
+
+  <br /><br />
+
+  <h2>3-dimensional set</h2>
 
   <br />
 
-  <h2>3 dimensional set</h2>
-
   <code>
-    //3 Dimensional set.
+    //3-Dimensional set.
 
     var o = 7;
 
@@ -491,7 +519,7 @@ image:
 
   <br /><br />
 
-  So now we are adding 21 more in the third dimension.
+  So now we are adding 21 more in the third-dimension.
 
   <br /><br />
 
@@ -506,14 +534,16 @@ image:
 
   <br /><br />
 
-  Basically you can create any 3 dimensional set and convert back to a math function.
+  Basically you can create any 3-dimensional set and convert back to a math function.
 
+  <br /><br />
+
+  <h2>4-dimensional set</h2>
+  
   <br />
 
-  <h2>4 dimensional set</h2>
-
   <code>
-    //4 Dimensional set.
+    //4-Dimensional set.
 
     var o = 7;
 
@@ -568,7 +598,7 @@ image:
 
   <br /><br />
 
-  So now we are adding 711 more in the fourth dimension.
+  So now we are adding 711 more in the fourth-dimension.
 
   <br /><br />
 
@@ -584,9 +614,13 @@ image:
 
   <br /><br />
 
-  Basically you can create any 4 dimensional set and convert back to a math function.
+  Basically you can create any 4-dimensional set and convert back to a math function.
 
-  <h2>7 dimensional data randomized</h2>
+  <br /><br />
+
+  <h2>7-dimensional data randomized</h2>
+  
+  <br />
 
   I do not like using the word Random. As random is not rally random.
 
@@ -597,7 +631,7 @@ image:
   <br /><br />
 
   <code>
-    //random 7 Dimensional set.
+    //Random 7-Dimensional set.
 
     var o = Math.round(Math.random() * 1000);
     var d1 = Math.round(Math.random() * 1000);
@@ -691,17 +725,20 @@ image:
   <br /><br />
 
   You then will end up with a set of 7 numbers in length.<br />
-  Thus 7 values can only line up 6 dimensions in the quantum matrix.<br />
-  Meaning the 7th dimension is invisible without the 8th value to line it up in the matrix.
+  Thus 7 values can only line up 6-dimensions in the quantum matrix.<br />
+  Meaning the 7th-dimension is invisible without the 8th value to line it up in the matrix.
 
   <br /><br />
 
-  Thus if you decease the set size to 3 in length. Then you can only line up till the second dimension in the matrix.<br />
+  Thus if you decease the set size to 3 in length. Then you can only line up till the second-dimension in the matrix.<br />
   You also know for certain that the data was solved if you have fewer to the power of dimensions than you did numbers.
 
-  <br />
+  <br /><br />
 
   <h1>Fibonacci</h1>
+
+  <br />
+  
   In this example we create the Fibonacci, and solve it.<br />
   However to do this the matrix has to be rotated backwards, and forwards on both sides.<br />
   In order to do this you only have to call the method <h4 style="display:inline-block">seqsp()</h4>.
@@ -748,7 +785,11 @@ image:
     }
   </code>
 
+  <br /><br />
+
   <h2>Multiple Fibonacci sequences</h2>
+
+  <br />
 
   You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one Fibonacci sequence.
 
@@ -798,10 +839,14 @@ image:
     }
   </code>
 
-  <h2>7 Dimensional data plus multiple Fibonacci</h2>
+  <br /><br />
+
+  <h2>7-Dimensional data plus multiple Fibonacci</h2>
+
+  <br />
 
   <code>
-    //Random 7 Dimensional set. Plus Multiple random Fibonacci.
+    //Random 7-Dimensional set. Plus Multiple random Fibonacci.
 
     var o = Math.round(Math.random() * 1000);
     var d1 = Math.round(Math.random() * 1000);
@@ -887,12 +932,17 @@ image:
 
   After seeing how perfectly it solves all things in the set you are probably wondering why I did not include the matrix rotation in the main <h4 style="display:inline-block;">seq()</h4> function.<br />
   The reason why I separated them is that it takes two more values in a set to line the set up using the rotation.<br />
-  So say we have 8 numbers to analyze. The data is 7 dimensional. We have just enough data to line up all 7 dimensions using <h4 style="display:inline-block;">seq()</h4>.<br />
-  So lets say it is mixed with a Fibonacci sequence and we need to rotate the matrix to solve it. Then 8 numbers are not enough to solve all 7 dimensions mixed with the Fibonacci sequence.<br />
-  We need two more numbers for the rotated version of the matrix. So for 7 dimensional data mixed with Fibonacci. We need a minimum of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
-  So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th dimension using <h4 style="display:inline-block;">seqsp()</h4>.
+  So say we have 8 numbers to analyze. The data is 7-Dimensional. We have just enough data to line up all 7-Dimensional using <h4 style="display:inline-block;">seq()</h4>.<br />
+  So lets say it is mixed with a Fibonacci sequence and we need to rotate the matrix to solve it. Then 8 numbers are not enough to solve all 7-dimensions mixed with the Fibonacci sequence.<br />
+  We need two more numbers for the rotated version of the matrix. So for 7-dimensional data mixed with Fibonacci. We need a minimum of 8+2=10 numbers in a set to solve everything in alignment in the matrix.<br />
+  So if you change "i1 < 12" to say "i1 < 9". This will make the set 9 in length. Thus you will only be able to line up till 6th-dimension using <h4 style="display:inline-block;">seqsp()</h4>.
+  
+  <br />
 
   <a id="geo" class="cmd"></a><h1>Geometric sequences</h1>
+
+  <br />
+  
   Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
 
   <code>
@@ -944,9 +994,13 @@ image:
   <br /><br />
 
   Geometric sequences are for things that are multiplying per value. It allows you to solve all things multiplying per value in multiple dimensions.<br />
-  It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10 dimensional value you need a minimum of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
+  It is also limited to the max set of numbers in the set that can be aligned per dimension. In order to line up a 10-dimensional value you need a minimum of 11 values in a set. Basically the same as the <h4 style="display:inline-block;">seq()</h4> method.
+
+  <br /><br />
 
   <h2>Geo Sequence Plus Fibonacci</h2>
+
+  <br />
 
   In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
 
@@ -1009,8 +1063,13 @@ image:
   The highest geometric dimension is 4 in this example so you need a minimum of 5 values to line it up.<br />
   Thus with rotating the matrix for the Fibonacci sequence you actually need 5+2=7 values in the set at minimum.<br />
   This is why method <h4 style="display:inline-block;">geo()</h4>, and <h4 style="display:inline-block;">geosp()</h4> are also separated.
+  
+  <br /><br />
 
   <h1>Solve All Patterns</h1>
+
+  <br />
+  
   Every sequencing method has it's place and possible use. However there is one sequencing method that solves all patterns <h4 style="display:inline-block;">gen();</h4>.
 
   <code>
@@ -1106,11 +1165,16 @@ image:
   <br />
 
   In order for this method to work. It splits the matrix between upside down, and right side up.<br />
-  This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3 dimensional like in the example.<br />
-  You will need 7+7=14 numbers from the set at minim to solve the 7 dimensional sequence. Even though the geometric only needs three dimensions in alignment.<br />
+  This means if the highest dimensional sequence in a set is 7, and the highest geometric sequence is 3-dimensional like in the example.<br />
+  You will need 7+7=14 numbers from the set at minim to solve the 7-dimensional sequence. Even though the geometric only needs three-dimensions in alignment.<br />
   This means your sets must be twice as long than highest dimension. Weather it be geo, or sequential to line up dimensions properly.
 
+  <br /><br />
+
   <a id="all" class="cmd"></a><h2>Solve All Patterns plus multiple Fibonacci sequences</h2>
+
+  <br />
+  
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
 
@@ -1220,7 +1284,12 @@ image:
   This method takes the most values in order for it to make sense of the data. In majority of cases all things are sequential in nature, so <h4 style="display:inline-block;">seq();</h4> is good enough for 90% of things. Thus it requires 48% less data to make sense of the data.<br />
   I am not going to pretend I know what you want to analyze. Or if you are planing on making it analyze all things. Thus make a super AI, or bot.
 
+  <br /><br />
+
   <a id="er" class="cmd"></a><h1>Error Correction</h1>
+
+  <br />
+
   In all of the sequencing examples. You have probably noticed how values are 0.00000000001 off. This is because floating point numbers have a accuracy limit.
 
   <br /><br />
@@ -1247,7 +1316,7 @@ image:
   With the FL64 library loaded It will error correct the floating point values directly.<br />
   Without the FL64 library loaded. The values outside EPSILON (Relative 2^-53) will be removed.
 
-  <br />
+  <br /><br />
 
   <h2>The following code Enables error correction</h2>
 
@@ -1261,7 +1330,7 @@ image:
     alert("Error correction Is now Enabled.");
   </code>
 
-  <br />
+  <br /><br />
 
   <h2>The Following code will disable error correction</h2>
 
@@ -1284,8 +1353,12 @@ image:
   <br /><br />
 
   Running the examples over again will give you better results now. Especially if you loaded FL64.<br /><br />
+  
+  <br /><br />
 
   <a id="FL64" class="cmd"></a><h1>FL64 set/array operations</h1>
+
+  <br />
 
   In order to run the code in these examples you must load the FL64 library into this page.
 
@@ -1365,7 +1438,11 @@ image:
 
   All operations in the FL64 library can be applied to a single floating point value, or to a set of values in a set, or array.
 
+  <br /><br />
+
   <a id="Advanced" class="cmd"></a><h1>Advanced</h1>
+
+  <br />
 
   Although all of this is the basics. Thus I have only touched the surface of what you can do with these tools.
 
@@ -1397,9 +1474,11 @@ image:
 
   An intelligence system that no one has ever seen the likes of before.
 
-  <br />
+  <br /><br />
 
   <h2>However in general use</h2>
+
+  <br />
 
   You can program systems that take in information and analyze it. Such things can be image processing. Making sense of graphs.
 
