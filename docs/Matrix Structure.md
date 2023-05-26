@@ -112,7 +112,7 @@ All examples on this page can be modified, so you can change the examples to see
 
 <br /><br />
 
-<a id="basic" class="cmd"></a><h1>Solving a Dimensional Set</h1>
+<a id="basic" class="cmd"></a><h1>Solving a dimensional set</h1>
 
 <br />
 
@@ -222,7 +222,7 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br />
 
-In the previous example it is quite easy to see that subtracting the next number into the previous number finds the first dimension per added value.
+In the previous example it is quite easy to see that subtracting the next number into the previous number finds the first-dimension per added value.
 
 <br /><br />
 
@@ -287,7 +287,7 @@ Subtracting the next value into the previous value gives us.
 
 <br /><br />
 
-This gives us the set 1,3,5,7,9,11,13. The first result will be the first dimension which is 1. <h3>var per1 = 1;</h3>
+This gives us the set 1,3,5,7,9,11,13. The first result will be the first-dimension which is 1. <h3>var per1 = 1;</h3>
 
 Subtracting the numbers 1,3,5,7,9,11,13. Going next number by previous number again.
 
@@ -302,24 +302,24 @@ Subtracting the numbers 1,3,5,7,9,11,13. Going next number by previous number ag
 
 <br /><br />
 
-This solves the difference in the second dimension. Which is 2 more. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
+This solves the difference in the second-dimension. Which is 2 more. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
 
 <br /><br />
 
-The first number in each subtraction is what the dimensional value is per iteration.
+The first number after each subtraction of all numbers is what the dimensional value is per iteration.
 
 <br /><br />
 
-The starting value is very important as you could start anywhere in the two dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+The starting value is very important as you could start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each per amount iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each amount per iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
 
 <br /><br />
 
 The first number without any subtraction will be the starting value.<br />
 The first number after the subtraction of all numbers will be per1.<br />
 The first number after the subtraction of all numbers again will be per2.<br />
-The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left in the third dimension.
+The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left in the third-dimension.
 
 <br /><br />
 
@@ -327,7 +327,7 @@ You loose one number with each subtraction into all numbers, because there is no
 
 <br /><br />
 
-So to solve a 5 dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
+So to solve a 5-dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
 
 <br /><br />
 
@@ -353,7 +353,7 @@ The blue squares are the amount that existed before we moved to the next value. 
 
 <br /><br />
 
-In the first dimension, we are only adding one new unit, which can be added together one unit at a time in a single loop. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
+In the first-dimension, we are only adding one new unit, which can be added together one unit at a time in a single loop. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
 
 <br /><br />
 
@@ -361,7 +361,7 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second dimension, we have to add a one-dimensional pattern shown as the green squares per square that join at one unit.
+In the second-dimension, we have to add a one-dimensional pattern shown as the green squares per square that join at one unit.
 
 <br /><br />
 
@@ -512,7 +512,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2; s3 = s4 - s3; s4 = s5 - s4; s5 = s6 - s5; s6 = s7 - s6; s7 = s8 - s7;
 
-  //The First dimension.
+  //The first-dimension.
 
   console.log( [s1,s2,s3,s4,s5,s6,s7] );
 
@@ -520,7 +520,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2; s3 = s4 - s3; s4 = s5 - s4; s5 = s6 - s5; s6 = s7 - s6;
 
-  //The second dimension.
+  //The second-dimension.
 
   console.log( [s1,s2,s3,s4,s5,s6] );
 
@@ -528,7 +528,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2; s3 = s4 - s3; s4 = s5 - s4; s5 = s6 - s5;
 
-  //The third dimension.
+  //The third-dimension.
 
   console.log( [s1,s2,s3,s4,s5] );
 
@@ -536,7 +536,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2; s3 = s4 - s3; s4 = s5 - s4;
 
-  //The fourth dimension.
+  //The fourth-dimension.
 
   console.log( [s1,s2,s3,s4] );
 
@@ -544,7 +544,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2; s3 = s4 - s3;
 
-  //The fifth dimension.
+  //The fifth-dimension.
 
   console.log( [s1,s2,s3] );
 
@@ -552,7 +552,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1; s2 = s3 - s2;
 
-  //The sixth dimension.
+  //The sixth-dimension.
 
   console.log( [s1,s2] );
 
@@ -560,7 +560,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
   s1 = s2 - s1;
 
-  //The sixth dimension.
+  //The zenith-dimension.
 
   console.log( [s1] );
 </code>
@@ -756,8 +756,8 @@ The last per iteration value you get is the number of sides the dimensional shap
 x ends with 1 as it is a straight line.<br />
 x<sup>2</sup> ends with 2 as it is a square.<br />
 x<sup>3</sup> ends with 6 as it is a cube with six sides.<br />
-x<sup>4</sup> ends with 24 as it has 24 sides in the fourth dimension.<br />
-x<sup>5</sup> ends with 120 as it has 120 sides in the fifth dimension.
+x<sup>4</sup> ends with 24 as it has 24 sides in the fourth-dimension.<br />
+x<sup>5</sup> ends with 120 as it has 120 sides in the fifth-dimension.
 
 <br /><br />
 
@@ -941,7 +941,7 @@ If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you ha
   <tr><td>x<sup>5</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>30*2=60</td><td>150*2=300</td><td>240*2=480</td><td>120*2=240</td></tr>
 </table>
 
-You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth dimensional calculation from each per value iteration.
+You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth-dimensional calculation from each per value iteration.
 
 <br /><br />
 

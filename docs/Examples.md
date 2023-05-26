@@ -129,12 +129,17 @@ image:
 
   1. Sets are used to setup a set of data you wish to analyze.<br />
   2. There are three ways to create a set.<br />
-  3. Sets can also be dynamically created by algorithms. By dynamically creating an array of values.<br />
-
-  <h3>Method One</h3>
-  The preferred method. Use it when possible.
+  3. Sets can also be dynamically created by algorithms. By dynamically creating an array of values.
 
   <br /><br />
+
+  <h3>Method one</h3>
+
+  <br />
+
+  The preferred method. Use it when possible.
+
+  <br />
 
   <code>
     //Method one. Creating a set.
@@ -144,9 +149,15 @@ image:
     console.log( My_set );
   </code>
 
-  <h3>Method Two</h3>
-  Use this method when getting input from a text box, or text file.
   <br /><br />
+
+  <h3>Method Two</h3>
+
+  <br />
+
+  Use this method when getting input from a text box, or text file.
+
+  <br />
 
   <code>
     //Method two. Creating a set.
@@ -181,13 +192,15 @@ image:
 
   If you remove "Z" then there will be no error.
 
-  <br />
+  <br /><br />
 
   <h3>Dynamically creating data, and sets</h3>
 
+  <br />
+
   Assuming we have an variable called "o", and we set it 7. Thus then we chose to add 7 by 5 ten times.
 
-  <br /><br />
+  <br />
 
   <code>
     //Method three. Creating a set.
@@ -231,7 +244,7 @@ image:
 
   A set can be manipulated and indexed the same as an array. More will be added to this section soon. Including examples.
 
-  <br /><br />
+  <br />
 
   <code>
     //Changing an element.
@@ -243,7 +256,7 @@ image:
     console.log( My_set );
   </code>
 
-  <br /><br />
+  <br />
 
   In this example we basically set the second element to 60. Remember array elements start at index 0. So element one is 0 and element two is 1.
 
@@ -255,7 +268,7 @@ image:
 
   The same as array. Thus you can loop from start to end. You can also get creative, and write algorithms that manipulate elements.
 
-  <br /><br />
+  <br />
 
   <code>
     //Looping through each element in a set.
@@ -628,7 +641,7 @@ image:
 
   There is no end in how high of dimension you can go using this analysis tool.
 
-  <br /><br />
+  <br />
 
   <code>
     //Random 7-Dimensional set.
@@ -743,7 +756,7 @@ image:
   However to do this the matrix has to be rotated backwards, and forwards on both sides.<br />
   In order to do this you only have to call the method <h4 style="display:inline-block">seqsp()</h4>.
 
-  <br /><br />
+  <br />
 
   <code>
     //Fibonacci seq.
@@ -793,7 +806,7 @@ image:
 
   You can actually add together as many Fibonacci sequences together as you like, and calculate all using only one Fibonacci sequence.
 
-  <br /><br />
+  <br />
 
   <code>
     //Multiple Fibonacci seq.
@@ -943,7 +956,9 @@ image:
 
   <br />
   
-  Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.<br />
+  Flipping the matrix upside down allows you to solve all geometric sequences. To do this you call the <h4 style="display:inline-block;">geo()</h4> function.
+
+  <br />
 
   <code>
     //Geometric sequence.
@@ -1003,6 +1018,8 @@ image:
   <br />
 
   In order to solve the Fibonacci sequence mixed with the geometric sequences you have to rotate the matrix while it's upside down. To do this just use the method <h4 style="display:inline-block;">geosp()</h4>.
+
+  <br />
 
   <code>
     //Geometric sequence Plus multiple Fibonacci.
@@ -1177,6 +1194,8 @@ image:
   
   The final solve method encompassing all patterns in existence <h4 style="display:inline-block;">gensp();</h4>.
   This solves both geo, sequential dimensional values, and Fibonacci sequences.
+
+  <br />
 
   <code>
     //Sequence everything. Plus multiple Fibonacci sequences.
@@ -1376,7 +1395,7 @@ image:
 
   Then we do the same operation with a set. Except the operation then applies to all values in the set.
 
-  <br /><br />
+  <br />
 
   <code>
     //Convert one floating point value to a floating point number.
@@ -1400,7 +1419,7 @@ image:
 
   You do not have to call the methods on creation of a set, or number. You can septate operations into multiple lines.
 
-  <br /><br />
+  <br />
 
   <code>
     //Convert one floating point value to a floating point number.
