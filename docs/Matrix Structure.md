@@ -642,7 +642,7 @@ You can view it as taking away the iteration amount per row, but you can produce
 
 <br /><br />
 
-This removes repeated subtractions per row in the 5-dimensional set with subtraction example.
+This removes repeated subtractions per row in the 5-dimensional set with the subtraction example included.
 
 <br /><br />
 
@@ -774,6 +774,22 @@ The number of sides can be calculated by multiplying the number of dimensions by
 <br />
 
 In math, this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
+
+<br /><br />
+
+It is well known that a 4D shape is a tesseract with 24 sides, and may be <a href="https://youtu.be/WzC92VJJnvg?t=390">4D space time</a>.
+
+<br /><br />
+
+Additionally you may find it interesting that antimatter goes backwards in time while normal matter goes forward in time.
+
+<br /><br />
+
+In 5D space we end up with multiple worlds and time lines. I will not discuss all this here as as this page is to explain this quantum AI matrix and data analyzer.
+
+<br /><br />
+
+If you persist on learning what the higher dimensions are the following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=373">0D to 11D explained advanced</a>.
 
 <br /><br />
 
@@ -1233,7 +1249,7 @@ When I view this shape, I understand that every math calculation you can dream u
 
 <br /><br />
 
-Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains what a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU" target="_blank">Quantum Gravity Research: Reality</a>.
+Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE?t=803" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains what a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU?t=1137" target="_blank">Quantum Gravity Research: Reality</a>.
 
 <br /><br />
 
