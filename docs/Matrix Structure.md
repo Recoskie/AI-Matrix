@@ -785,7 +785,7 @@ Additionally you may find it interesting that antimatter goes backwards in time 
 
 <br /><br />
 
-In 5D space we end up with multiple worlds and time lines. I will not discuss all this here as as this page is to explain this quantum AI matrix and data analyzer.
+In 5D space we end up with multiple worlds and time lines. I will not discuss all this here as this page is to explain this quantum AI matrix and data analyzer algorithm.
 
 <br /><br />
 
@@ -1249,7 +1249,19 @@ When I view this shape, I understand that every math calculation you can dream u
 
 <br /><br />
 
-Additionally if you take circles and connect them in a point space. You then can create the same pattern. See <a href="https://youtu.be/vJi3_znm7ZE?t=803" target="_blank">Quantum Gravity Research: E8</a>. Which clearly explains what a point space is, higher dimensional math, and also, <a href="https://youtu.be/w0ztlIAYTCU?t=1137" target="_blank">Quantum Gravity Research: Reality</a>.
+Additionally if you take circles and connect them in a point space. You then can create the same pattern.
+
+<br /><br />
+
+See <a href="https://youtu.be/vJi3_znm7ZE?t=218" target="_blank">Quantum Gravity Research: 4D and above</a>.
+
+<br /><br />
+
+See <a href="https://youtu.be/vJi3_znm7ZE?t=803" target="_blank">Quantum Gravity Research: Reality and higher dimensional space</a>.
+
+<br /><br />
+
+Which clearly explains what a point space is, and what higher dimensional math is.
 
 <br /><br />
 
@@ -1269,7 +1281,11 @@ In early history, we have similar patterns appearing in ancient pyramids that ar
 
 <br />
 
-This document covers the final structure of the quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
+The ratio between higher dimensions is the golden ratio see <a href="https://youtu.be/w0ztlIAYTCU?t=1137" target="_blank">Quantum Gravity Research: Golden ratio</a>.
+
+<br /><br />
+
+This document covers the final structure of the dimensional quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
 
 <br /><br />
 
@@ -1321,7 +1337,7 @@ You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of
 
 <br /><br />
 
-The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero as a single number value that can be infinitely computed to higher accuracy.
+The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero dimension as a single number value that can be infinitely computed to higher accuracy.
 
 <br /><br />
 
