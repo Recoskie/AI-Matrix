@@ -377,11 +377,11 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added unit by 2 for both sides.
+Each row is each square size leading to 5x5=25. The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added units by 2 for both sides.
 
 <br /><br />
 
-What is really neat is that we can take away the added unit in the square by subtracting it as
+The neat part is that we can take away the added unit in the square by subtracting it as
 
 <br /><br />
 
@@ -405,11 +405,11 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations and it makes it so we never have to use two summations (sigma) inside each other to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations and it makes it so we never have to use two loops called sigma summations in math to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2, and at 5x5, we have 5 squares stacked on top of each other when we multiply by 5. This means we have to add another one-dimensional loop outside the two loops to add each square layer, creating a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, and at 5x5, we have 5 squares stacked on top of each other when we multiply by another 5. This means we have to add another one-dimensional loop outside the two loops to add each square layer, creating a 3D cube.
 
 <br /><br />
 
@@ -417,7 +417,7 @@ Multiplying the cube by itself adds a new one-dimension loop outside the cube ad
 
 <br /><br />
 
-Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop can be reduced into simple fast calculations.
+Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop/sigma can be reduced into simple fast calculations.
 
 <br /><br />
 
@@ -600,7 +600,7 @@ The value s2 matches the first per iteration amount in the second subtraction of
 
 <br /><br />
 
-Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 should be per iteration.
+Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 is per iteration.
 
 <br /><br />
 
@@ -619,7 +619,7 @@ The value s3 now matches the second per iteration amount in the second subtracti
 
 <br /><br />
 
-Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculates what s3 should be per iteration in a loop outside of s2 (square).
+Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculates what s3 is per iteration in a loop outside of s2 (square).
 
 <br /><br />
 
@@ -769,15 +769,15 @@ The number of sides can be calculated by multiplying the number of dimensions by
 2! = 1x2 is 2<br />
 3! = 1x2x3 is 6<br />
 4! = 1x2x3x4 is 24<br />
-5! = 1x2x3x4x5 is 120<br />
+5! = 1x2x3x4x5 is 120
 
-<br />
+<br /><br />
 
 In math, this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
 
 <br /><br />
 
-It is well known that a 4D shape is a tesseract with 24 sides, and may be <a href="https://youtu.be/WzC92VJJnvg?t=390">4D space time</a>.
+It is well known that a 4D shape is a tesseract with 24 sides, and may be <a href="https://youtu.be/WzC92VJJnvg?t=390" target="_blank">4D space time</a>.
 
 <br /><br />
 
@@ -789,7 +789,7 @@ In 5D space we end up with multiple worlds and time lines. I will not discuss al
 
 <br /><br />
 
-If you persist on learning what the higher dimensions are the following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=373">0D to 11D explained advanced</a>.
+If you persist on learning what the higher dimensions are the following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=373" target="_blank">0D to 11D explained advanced</a>.
 
 <br /><br />
 
@@ -944,7 +944,7 @@ As previously seen you can multiply, divide, add, and subtract each calculation 
 
 <br /><br />
 
-In order to change each per iteration value back into a math calculation. You start with the last per iteration value. You divide the last value by 120 which is what it should be if it is x<sup>5</sup>.
+In order to change each per iteration value back into a math calculation. You start with the last per iteration value. You divide the last value by 120 which is what x<sup>5</sup> is.
 
 <br /><br />
 
@@ -1021,7 +1021,7 @@ Working backwards like this lets us de-mix any calculation combination in much t
 
 <br /><br />
 
-In this new example code. We multiply by the power of by each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>. To any value you like.
+In the new example code. We multiply by the power of by each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>. To any value you like.
 
 <br /><br />
 
@@ -1358,6 +1358,10 @@ In quantum physics as we approach zero we also approach infinity. See <a href="h
 <br /><br />
 
 The use of the plank length prevent this from happening.
+
+<br /><br />
+
+The zero dimension is also the existence of all possible states and the <a href="https://youtu.be/emlcwyvnsg0?t=238"  target="_blank">dimension zero explained</a>.
 
 <br /><br />
 
