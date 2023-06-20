@@ -36,6 +36,32 @@ image:
     height: 4rem; margin-top: -4rem;
     visibility: hidden;
   }
+
+  ::-webkit-scrollbar
+  {
+    width: 12px !important;
+    -webkit-overflow-scrolling: Auto; !important;
+  }
+
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    background: #41617D !important; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive
+  {
+    background: #41617D !important; 
+  }
   -->
 </style>
 <script type="text/javascript">
@@ -1355,7 +1381,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cR0pe4eDzSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/cR0pe4eDzSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br /><br />
 
@@ -1363,7 +1389,7 @@ Multidimensionally, as a point space, it looks more closely like this, which was
 
 <br /><br />
 
-<iframe src="https://player.vimeo.com/video/177192957" width="640" height="361" frameborder="0"></iframe>
+<iframe src="https://player.vimeo.com/video/177192957" width="100%" height="361" frameborder="0"></iframe>
 
 <br /><br />
 
