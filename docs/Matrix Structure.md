@@ -734,14 +734,16 @@ Each dimension to the power of by it's self is as follows.
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Single Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
-  <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
-  <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
-  <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
-  <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
-  <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Single Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+    <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
+    <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
+    <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
+    <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
+    <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
+  </table>
+</div>
 
 <br />
 
@@ -947,14 +949,18 @@ After subtracting the numbers and solving each per iteration, each to the power 
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
-  <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
-  <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
-  <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
-  <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
-  <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+    <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
+    <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
+    <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
+    <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
+    <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
+  </table>
+</div>
+
+<br />
 
 As previously seen you can multiply, divide, add, and subtract each calculation using the iteration values to create any calculation you wish.
 
@@ -968,10 +974,14 @@ If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you ha
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td></tr>
-  <tr><td>x<sup>5</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>30*2=60</td><td>150*2=300</td><td>240*2=480</td><td>120*2=240</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td></tr>
+    <tr><td>x<sup>5</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>30*2=60</td><td>150*2=300</td><td>240*2=480</td><td>120*2=240</td></tr>
+  </table>
+</div>
+
+<br />
 
 You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth-dimensional calculation from each per value iteration.
 
@@ -985,13 +995,17 @@ Lets take the following mixed calculation for example.
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
-  <tr><td>x<sup>2</sup>*12</td><td>0*12=0</td><td>1*12=12</td><td>2*12=24</td><td>0*12=0</td><td>0*12=0</td><td>0*12=0</td><td>0,12,48,108,192,300,432,588</td></tr>
-  <tr><td>x<sup>3</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>6*2=12</td><td>6*2=12</td><td>0*2=0</td><td>0*2=0</td><td>0,2,16,54,128,250,432,686</td></tr>
-  <tr><td colspan="8"><h2>Added.</h2></td></tr>
-  <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+    <tr><td>x<sup>2</sup>*12</td><td>0*12=0</td><td>1*12=12</td><td>2*12=24</td><td>0*12=0</td><td>0*12=0</td><td>0*12=0</td><td>0,12,48,108,192,300,432,588</td></tr>
+    <tr><td>x<sup>3</sup>*2</td><td>0*2=0</td><td>1*2=2</td><td>6*2=12</td><td>6*2=12</td><td>0*2=0</td><td>0*2=0</td><td>0,2,16,54,128,250,432,686</td></tr>
+    <tr><td colspan="8"><h2>Added.</h2></td></tr>
+    <tr><td>x<sup>2</sup>*12+x<sup>3</sup>*2</td><td>0+0=0</td><td>12+2=14</td><td>24+12=36</td><td>0+12=12</td><td>0+0=0</td><td>0+0=0</td><td>0,14,64,162,320,550,864,1274</td></tr>
+  </table>
+</div>
+
+<br />
 
 In this example we multiply and add the square and cube together as 0,14,36,12,0,0.
 
@@ -1123,14 +1137,18 @@ At the bottom we basically are taking each of these.
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
-  <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
-  <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
-  <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
-  <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
-  <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>start</td><td>per1</td><td>per2</td><td>per3</td><td>per4</td><td>per5</td><td>Result.</td></tr>
+    <tr><td>x</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0,1,2,3,4,5,6,7</td></tr>
+    <tr><td>x<sup>2</sup></td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0,1,4,9,16,25,36,49</td></tr>
+    <tr><td>x<sup>3</sup></td><td>0</td><td>1</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0,1,8,27,64,125,216,343</td></tr>
+    <tr><td>x<sup>4</sup></td><td>0</td><td>1</td><td>14</td><td>36</td><td>24</td><td>0</td><td>0,1,16,81,256,625,1296,2401</td></tr>
+    <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
+  </table>
+</div>
+
+<br />
 
 Thus de-mixing each one as we divide by the last value and work our way backwards decoding each to the power of in the set.
 
@@ -1152,27 +1170,35 @@ Instead of solving everything sequentially as.
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>Result.</td></tr>
-  <tr><td>x^1</td><td>0,1,2,3,4,5,6,7</td></tr>
-  <tr><td>x^2</td><td>0,1,4,9,16,25,36,49</td></tr>
-  <tr><td>x^3</td><td>0,1,8,27,64,125,216,343</td></tr>
-  <tr><td>x^4</td><td>0,1,16,81,256,625,1296,2401</td></tr>
-  <tr><td>x^5</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>Result.</td></tr>
+    <tr><td>x^1</td><td>0,1,2,3,4,5,6,7</td></tr>
+    <tr><td>x^2</td><td>0,1,4,9,16,25,36,49</td></tr>
+    <tr><td>x^3</td><td>0,1,8,27,64,125,216,343</td></tr>
+    <tr><td>x^4</td><td>0,1,16,81,256,625,1296,2401</td></tr>
+    <tr><td>x^5</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
+  </table>
+</div>
+
+<br />
 
 We can solve things exponentially as.
 
 <br /><br />
 
-<table style="text-align:center;" border="1">
-  <tr><td>Calculation.</td><td>Result.</td></tr>
-  <tr><td>1^x</td><td>1,1,1,1,1,1,1,1</td></tr>
-  <tr><td>2^x</td><td>2,4,8,16,32,64,128,256</td></tr>
-  <tr><td>3^x</td><td>3,9,27,81,243,729,2187,6561</td></tr>
-  <tr><td>4^x</td><td>4,16,64,256,1024,4096,16384,65536</td></tr>
-  <tr><td>5^x</td><td>5,25,125,625,3125,15625,78125,390625</td></tr>
-</table>
+<div style="width:100%;overflow-x:auto;">
+  <table style="text-align:center;" border="1">
+    <tr><td>Calculation.</td><td>Result.</td></tr>
+    <tr><td>1^x</td><td>1,1,1,1,1,1,1,1</td></tr>
+    <tr><td>2^x</td><td>2,4,8,16,32,64,128,256</td></tr>
+    <tr><td>3^x</td><td>3,9,27,81,243,729,2187,6561</td></tr>
+    <tr><td>4^x</td><td>4,16,64,256,1024,4096,16384,65536</td></tr>
+    <tr><td>5^x</td><td>5,25,125,625,3125,15625,78125,390625</td></tr>
+  </table>
+</div>
+
+<br />
 
 As you can see, with 2^x, we are doubling per value. With 3^x, we are tripling. And so on. This forum of solving things is useful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
 
@@ -1377,7 +1403,7 @@ The use of the plank length prevent this from happening.
 
 <br /><br />
 
-The zero dimension is also the existence of all possible states and the <a href="https://youtu.be/emlcwyvnsg0?t=238"  target="_blank">dimension zero explained</a>.
+The zero dimension is also the existence of all possible states; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">dimension zero explained</a>.
 
 <br /><br />
 
