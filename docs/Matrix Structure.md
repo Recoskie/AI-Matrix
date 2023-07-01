@@ -813,11 +813,11 @@ Additionally you may find it interesting that antimatter goes backwards in time 
 
 <br /><br />
 
-In 5D space we end up with multiple worlds and time lines. I will not discuss all this here as this page is to explain this quantum AI matrix and data analyzer algorithm.
+I will not discuss the relationship of all higher dimensions to reality as this page is to explain the quantum AI matrix and data analyzer algorithm.
 
 <br /><br />
 
-If you persist on learning what the higher dimensions are the following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=373" target="_blank">0D to 11D explained advanced</a>.
+If you persist on learning what the higher dimensions are, then following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=455" target="_blank">0D to 11D explained advanced</a>.
 
 <br /><br />
 
