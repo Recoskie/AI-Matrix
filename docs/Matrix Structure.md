@@ -431,7 +431,7 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations and it makes it so we never have to use two loops called sigma summations in math to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations, which makes it so we never have to use two loop iterations inside each other called sigma summations in math to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
@@ -443,7 +443,7 @@ Multiplying the cube by itself adds a new one-dimension loop outside the cube ad
 
 <br /><br />
 
-Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop/sigma can be reduced into simple fast calculations.
+Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop/sigma iteration can be reduced into simple fast calculations.
 
 <br /><br />
 
@@ -1301,7 +1301,7 @@ We can create tow matrices that are opposite to each other. They are a triangle 
 
 <br /><br />
 
-See <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. Also see <a href="https://youtu.be/d0Exnv8Ym7s?t=248" target="_blank">NOVA Fractals The Hidden Dimension</a>. These are good places to start if you do not understand what Fractals are.
+See <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. Also see <a href="https://youtu.be/d0Exnv8Ym7s?t=249" target="_blank">NOVA Fractals The Hidden Dimension</a>. These are good places to start if you do not understand what Fractals are.
 
 <br /><br />
 
