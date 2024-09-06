@@ -29,6 +29,8 @@ image:
       for(var i = 1; i < n.length; i++)
       {
         o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + "";
+        
+        var a = document.createElement("a"); a.classList.add("cmd"); n[i].parentNode.insertBefore(a,n[i]);
       }
       
       var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table>" + n.innerHTML;
