@@ -5,8 +5,8 @@ image:
 ---
 
 <html>
-<body>
-  <script src="https://gist.github.com/Recoskie/de34fad9c803c670795ba85d721008c8.js" onload="setup();"></script>
+<body onload="setup();">
+  <script src="https://gist.github.com/Recoskie/de34fad9c803c670795ba85d721008c8.js"></script>
   <style type="text/css">
     <!--
     .gist-data { background-color: inherit !important; }
@@ -22,6 +22,8 @@ image:
     function setup()
     {
       var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table>";
+
+      console.log(n);
       
       for(var i = 1; i < n.length; i++)
       {
