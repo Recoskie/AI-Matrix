@@ -22,11 +22,13 @@ image:
   <script>
     function setup()
     {
+      var n = document.getElementsByTagName("a"); for(var i = 0; i < n.length; i++) { n[i].setAttribute("target", "_blank"); }
+      
       var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table>";
       
       for(var i = 1; i < n.length; i++)
       {
-        o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + ""; n[i].className = "cmd";
+        o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + "";
       }
       
       var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table>" + n.innerHTML;
