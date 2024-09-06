@@ -30,7 +30,7 @@ image:
         o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + "";
       }
       
-      var n = document.getElementsByTagName("article"); a.innerHTML = o + "</table>" + a.innerHTML;
+      var n = document.getElementsByTagName("article"); n.innerHTML = o + "</table>" + n.innerHTML;
     }
   </script>
 </body>
