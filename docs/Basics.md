@@ -10,6 +10,7 @@ image:
   <style type="text/css">
     <!--
     .gist-data { background-color: inherit !important; }
+    p {  margin:1.5em 0; line-height:3em; color: #f0e7d5 !important; }
     .cmd:target
     {
       display: block;
@@ -22,15 +23,13 @@ image:
     function setup()
     {
       var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table>";
-
-      console.log(n);
       
       for(var i = 1; i < n.length; i++)
       {
-        o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + "";
+        o += "<tr><td>" + n[i].innerHTML + ": <a href='#i"+i+"'>Link</a></td></tr>"; n[i].id = "i" + i + ""; n[i].className = "cmd";
       }
       
-      var n = document.getElementsByTagName("article"); n.innerHTML = o + "</table>" + n.innerHTML;
+      var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table>" + n.innerHTML;
     }
   </script>
 </body>
