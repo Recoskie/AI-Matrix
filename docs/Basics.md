@@ -5,8 +5,8 @@ image:
 ---
 
 <html>
-<body onload="setup();">
-  <script src="https://gist.github.com/Recoskie/de34fad9c803c670795ba85d721008c8.js"></script>
+<body>
+  <script src="https://gist.github.com/Recoskie/de34fad9c803c670795ba85d721008c8.js" onload="setup();"></script>
   <style type="text/css">
     <!--
     .cmd:target
