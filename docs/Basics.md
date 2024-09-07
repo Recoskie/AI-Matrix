@@ -27,7 +27,11 @@ image:
   <script>
     function setup()
     {
+      //Change all links to open in new tab.
+
       var n = document.getElementsByTagName("a"); for(var i = 0; i < n.length; i++) { n[i].setAttribute("target", "_blank"); }
+
+      //Create indexed contents section.
       
       var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table><tr><td>Introduction: <a href='#i0'>Link</a></td></tr>";
       
@@ -39,6 +43,12 @@ image:
       }
       
       var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table><a id='i0' class='cmd'></a><h1>Introduction</h1>" + n.innerHTML;
+
+      //Override gist styles with default page theme.
+
+      var o = "", r = document.styleSheets[0].rules; for(var i = 0;i < r.length;i++){ for(var i2 = 0, s = r[i].cssText.split(";"); i2 < s.length-1; i2++ ){o += s[i2] + " !important;";} o += s[i2] + "\r\n"; }
+
+      var style=document.createElement("style"); style.innerHTML = o; document.head.appendChild(style);
     }
   </script>
 </body>
