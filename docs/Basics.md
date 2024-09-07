@@ -12,6 +12,7 @@ image:
     .gist-data { background-color: inherit !important; }
     p { margin:0.809em 0; line-height:1.618em; color: #f0e7d5 !important; }
     body .gist .gist-meta { color: #ffffff; background: #373737; }
+    table :first-child { width: 100vw; border-left: 0px !important; border-right: 0px !important; border-top: 0px !important; }
     table, tr, td { background: transparent !important; color: #f0e7d5 !important; }
     .cmd:target
     {
