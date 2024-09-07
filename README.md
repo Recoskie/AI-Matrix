@@ -27,7 +27,7 @@ You can always learn using the interactive examples page if you find it difficul
 
 You can learn by examples using the interactive examples page.
 
-# Traditional Data Analysis Methods: <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html">Link</a>
+# Traditional data analysis methods: <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html">Link</a>
 
 On the topic of traditional data analysis methods, you're delving into a straightforward and easy-to-understand approach. This method demonstrates how information and data can be deconstructed into their basic elements, a process that quantum computing can expedite.
 
