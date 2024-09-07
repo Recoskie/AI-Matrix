@@ -27,6 +27,12 @@ You can always learn using the interactive examples page if you find it difficul
 
 You can learn by examples using the interactive examples page.
 
+# Traditional data analysy methods: <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html">Link</a>
+
+On the traditional analysis method note, you learn a simpler version of data analysis that is simpler and easier to understand. This note shows precisely how information and data can be broken back down into exactly what it is and how quantum computing can perform such operations faster.
+
+I briefly touch upon how this multidimensional data analyzer is faster and better for digital systems.
+
 # How it works: <a href="https://recoskie.github.io/AI-Matrix/docs/Matrix%20Structure.html">Link</a>
 
 On the How it Works page, you can learn how the algorithm works. It's unified structure of all things. How it solves all things in quantum alignment. Which reviles all things in any data instantly.
