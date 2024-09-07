@@ -10,12 +10,9 @@ image:
   <style type="text/css">
     <!--
     .gist-data { background-color: inherit !important; }
-    p {  margin:1.5em 0; line-height:3em; color: #f0e7d5 !important; }
-    body .gist .gist-data .pl-s .pl-s1 { color: #a5c261 !important; }
+    p { margin:0.809em 0; line-height:1.618em; color: #f0e7d5 !important; }
     body .gist .gist-meta { color: #ffffff; background: #373737; }
-    body .gist .gist-meta a { color: #ffffff; }
     table, tr, td { background: transparent !important; color: #f0e7d5 !important; }
-    td { text-align: left; padding: 5px 10px; border-bottom: 1px solid #434343 !important; }
     .cmd:target
     {
       display: block;
@@ -46,7 +43,7 @@ image:
 
       //Override gist styles with default page theme.
 
-      var o = "", r = document.styleSheets[0].rules; for(var i = 0;i < r.length;i++){ for(var i2 = 0, s = r[i].cssText.split(";"); i2 < s.length-1; i2++ ){o += s[i2] + " !important;";} o += s[i2] + "\r\n"; }
+      var o = "", r = document.styleSheets[0].rules; for(var i1 = 0;i1 < r.length;i1++){ for(var i2 = 0, s = r[i1].cssText.split(";"); i2 < s.length-1; i2++ ){o += s[i2] + " !important;";} o += s[i2] + "\r\n"; }
 
       var style=document.createElement("style"); style.innerHTML = o; document.head.appendChild(style);
     }
