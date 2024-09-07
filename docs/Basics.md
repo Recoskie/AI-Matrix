@@ -11,6 +11,11 @@ image:
     <!--
     .gist-data { background-color: inherit !important; }
     p {  margin:1.5em 0; line-height:3em; color: #f0e7d5 !important; }
+    body .gist .gist-data .pl-s .pl-s1 { color: #a5c261 !important; }
+    body .gist .gist-meta { color: #ffffff; background: #373737; }
+    body .gist .gist-meta a { color: #ffffff; }
+    table, tr, td { background: transparent !important; color: #f0e7d5 !important; }
+    td { text-align: left; padding: 5px 10px; border-bottom: 1px solid #434343 !important; }
     .cmd:target
     {
       display: block;
@@ -24,7 +29,7 @@ image:
     {
       var n = document.getElementsByTagName("a"); for(var i = 0; i < n.length; i++) { n[i].setAttribute("target", "_blank"); }
       
-      var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table>";
+      var n = document.getElementsByTagName("h1"), o = "<h1>Indexed contents</h1><table><tr><td>Introduction: <a href='#i0'>Link</a></td></tr>";
       
       for(var i = 1; i < n.length; i++)
       {
@@ -33,7 +38,7 @@ image:
         var a = document.createElement("a"); a.id = "i" + i + ""; a.classList.add("cmd"); n[i].parentNode.insertBefore(a,n[i]);
       }
       
-      var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table>" + n.innerHTML;
+      var n = document.getElementsByTagName("article")[0]; n.innerHTML = o + "</table><a id='i0' class='cmd'></a><h1>Introduction</h1>" + n.innerHTML;
     }
   </script>
 </body>
