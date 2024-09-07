@@ -12,11 +12,8 @@ image:
     .gist-data { background-color: inherit !important; }
     p { margin:0.809em 0; line-height:1.618em; color: #f0e7d5 !important; }
     body .gist .gist-meta { color: #ffffff; background: #373737; }
-    table, tr, td
-    {
-      width: 100vw !important; border-left: 0px !important; border-right: 0px !important; border-top: 0px !important;
-      background: transparent !important; color: #f0e7d5 !important;
-    }
+    tr, td { width: 100vw !important; border-left: 0px !important; border-right: 0px !important; border-top: 0px !important; }
+    table, tr, td { background: transparent !important; color: #f0e7d5 !important; }
     .cmd:target
     {
       display: block;
