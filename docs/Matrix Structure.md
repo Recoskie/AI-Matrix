@@ -1446,11 +1446,19 @@ It is almost as if everything is a division by zero known as <a href="https://bi
 
 <br /><br />
 
+<img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ilxYlGBQN9mn2RxzJQSg4w.jpeg" />
+
+<br /><br />
+
 Both white holes and black holes are opposite to each other and begin at the singularity. It is as if the limit of this single quantum entangled state created the wave function of the universe and everything in it.
 
 <br /><br />
 
-The golden ratio does not only just express this multidimensional quantum matrix, but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>.
+The white hole is theorized to only exist at the beginning of the universe, and are extremely rare.
+
+<br /><br />
+
+The golden ratio does not only just express this multidimensional quantum matrix, but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>. The golden ratio also exists in black holes.
 
 <br /><br />
 
@@ -1474,7 +1482,7 @@ You may also like the following: <a href="https://youtu.be/P8xDfOVLlHg&t=770" ta
 
 <br /><br />
 
-Everything remains connected to a single fabric or whole, and the states of all units depend on one another and interact and create emergent properties from this whole.
+Everything remains connected to a single fabric or whole, and the states of all units depend on one another and interact and create emergent properties from this whole in <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause-effect</a> relationships.
 
 <br /><br />
 
