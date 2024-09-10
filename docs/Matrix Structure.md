@@ -1398,10 +1398,6 @@ Also, the Fibonacci sequence can help quantum computers remain quantum much long
 
 <br /><br />
 
-You may also like <a href="http://www.fibonaccilifechart.com/blog/the-purpose-of-life-and-golden-ratio-explained" target="_blank">The purpose of life and golden ratio explained</a>.
-
-<br /><br />
-
 The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero dimension as a single number value that can be infinitely computed to higher accuracy.
 
 <br /><br />
@@ -1466,7 +1462,7 @@ It's just that all our physics formulas about reality emerge from zero Fibonacci
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to the <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
 
 <br /><br />
 
