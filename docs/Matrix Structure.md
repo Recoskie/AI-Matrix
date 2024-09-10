@@ -126,11 +126,12 @@ Our brain recalls these patterns and sequences from memory, allowing us to build
 
 <br /><br />
 
-Reality itself follows the same principles known as the law of <a href="https://www.opencollege.info/law-of-cause-and-effect/" target="_blank">cause and effect</a>.
+
+This algorithm is a faster, accelerated version of reversing information and data to build advanced, accurate data models for AI.
 
 <br /><br />
 
-Everything reverses to simplicity that forums complexity in cause and effect sequentially known as <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
+I put together a document that demonstrates how information and data can be deconstructed into their basic elements, a process that quantum computing can expedite <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html" target="_blank">basics link</a>.
 
 <br /><br />
 
@@ -809,10 +810,6 @@ It is well known that a 4D shape is a tesseract with 24 sides, and may be <a hre
 
 <br /><br />
 
-Additionally you may find it interesting that antimatter goes backwards in time while normal matter goes forward in time.
-
-<br /><br />
-
 I will not discuss the relationship of all higher dimensions to reality as this page is to explain the quantum AI matrix and data analyzer algorithm.
 
 <br /><br />
@@ -895,7 +892,7 @@ Try each of them if you like, or even combine and make up your own combinations.
 
 <br /><br />
 
-The same way you mix these together. Is the same way you reverse them back into a math calculation.
+The same way you mix the relationships together to forum the iterations of your calculation. Is the same way you reverse them back into a math calculation.
 
 <br /><br />
 
@@ -1421,19 +1418,27 @@ All numbers have a place and an expression and meaning to reality itself. The nu
 
 <br />
 
-In quantum physics as we approach zero we also approach infinity. See <a href="https://fmbr.org/editoral/edit01_02/edit6_mar02.htm" target="_blank">THE MYSTERIOUS ZERO/INFINITY</a>.
+To understand consciousness, we have two theories and a math theorem that is the measure of the amount of information a configuration has as consciousness.
 
 <br /><br />
 
-The use of the plank length prevent this from happening.
+We don't know if consciousness is part of reality itself or if it emerges with the development of an organism and its metabolism as part of the brain.
 
 <br /><br />
 
-The zero dimension is also the existence of all possible states; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">dimension zero explained</a>.
+Scientifically, we know everything emerges from something more simple or abstract that creates complex systems between interacting parts called <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
 
 <br /><br />
 
-Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop. According to quantum physics.
+We can take emergence to its most extreme and think about the zero dimension; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">dimension zero explained</a>.
+
+<br /><br />
+
+Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity, which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop.
+
+<br /><br />
+
+The phenomenon of dividing by zero can be explained by understanding the concept of infinity. The result approaches infinity when we divide a number by a smaller and smaller number. In the case of dividing by zero, we are essentially dividing by an infinitely small number, which results in an infinitely large answer.
 
 <br /><br />
 
@@ -1441,7 +1446,15 @@ It is almost as if everything is a division by zero known as <a href="https://bi
 
 <br /><br />
 
-Both white holes and black holes are opposite to each other and begin at the singularity. It's just that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
+Both white holes and black holes are opposite to each other and begin at the singularity. It is as if the limit of this single quantum entangled state created the wave function of the universe and everything in it.
+
+<br /><br />
+
+The golden ratio does not only just express this multidimensional quantum matrix, but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>.
+
+<br /><br />
+
+It's just that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
 
 <br /><br />
 
@@ -1449,12 +1462,23 @@ The Fibonacci sequence creates the number phi (golden ratio), and our best theor
 
 <br /><br />
 
-According to our best formulas everything began at the singularly and is traceable to the singularity. History of the Universe:
-<a href="https://youtu.be/MOItjGpiAfo" target="_blank">was the universe born from nothing</a>.
+In theory, consciousness is related to how much information it can integrate or connect to reality, which is the golden ratio. This means that consciousness is an accumulation of self-organized energy and matter into conscious systems.
 
 <br /><br />
 
-It seams everything spans from this super force that spans from zero as the Fibonacci sequence. It does not matter if we are part of another universe or not as it seams there had to be an original nothing that span the sequence and made matter.
+In theory if consciousness is this intrinsic property than the whole universe could be conscious as well and we are smaller forms of consciousness awareness.
+
+<br /><br />
+
+You may also like the following: <a href="https://youtu.be/P8xDfOVLlHg&t=770" target="_blank">Universe is a single whole</a>.
+
+<br /><br />
+
+Everything remains connected to a single fabric or whole, and the states of all units depend on one another and interact and create emergent properties from this whole.
+
+<br /><br />
+
+It seems everything spans from this super force from zero as a single invisible unit, which you can call the Big Bang or whatever you like.
 
 <br /><br />
 
