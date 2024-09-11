@@ -1426,7 +1426,7 @@ Scientifically, we know everything emerges from something more simple or abstrac
 
 <br /><br />
 
-We can take emergence to its most extreme and think about the zero dimension; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">dimension zero explained</a>.
+We can take emergence to its most extreme and think about the zero dimension; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">zero dimension explained</a>.
 
 <br /><br />
 
@@ -1470,7 +1470,7 @@ In theory, consciousness is related to how much information it can integrate or 
 
 <br /><br />
 
-In theory if consciousness is this intrinsic property than the whole universe could be conscious as well and we are smaller forms of consciousness awareness.
+In theory if consciousness is this intrinsic property than the whole universe could be conscious as well and we are smaller forms of consciousness awareness; see <a href="https://youtu.be/8E333CdgS4g&t=120" target="_blank">Is Our Universe Conscious</a>.
 
 <br /><br />
 
@@ -1482,7 +1482,23 @@ Everything remains connected to a single fabric or whole, and the states of all 
 
 <br /><br />
 
-It seems everything spans from this super force from zero as a single invisible unit, which you can call the Big Bang or whatever you like.
+The separation between objects and particles may not exist, and all things are equal to zero as a single indivisible unit.
+
+<br /><br />
+
+Interestingly, we can form a quantum of light from a single whole unit in quantum fluctuations from zero out of the singularity. At the same time, energy conservation remains true, and all should add to zero.
+
+<br /><br />
+
+These quantum fluctuations can merge and branch, creating emergent properties and interactions, making galaxies and universes.
+
+<br /><br />
+
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit, which you can call the Big Bang.
+
+<br /><br />
+
+I will keep this section as simple as possible so everyone can understand it and leave out interpretations that delve into the concepts of multiverse theory.
 
 <br /><br />
 
