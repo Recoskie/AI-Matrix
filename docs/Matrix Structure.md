@@ -118,11 +118,7 @@ No matter how complex of a calculation or steps you write to output a result, th
 
 <br /><br />
 
-Anything we measure can be reduced back into math calculations or functions. Our brain typically does this sort of thing without us even realizing it.
-
-<br /><br />
-
-Our brain recalls these patterns and sequences from memory, allowing us to build thoughts, ideas, and brain function.
+Anything we measure can be reduced back into math calculations or functions.
 
 <br /><br />
 
@@ -143,15 +139,15 @@ All examples on this page can be modified, so you can change the examples to see
 
 <br />
 
-Let's start with a one-dimensional set, and show how it builds, and solves sequentially. Starting from here will help you see how it works.
+Let's start with a one-dimensional set and show how it builds and solves sequentially. Starting from here will help you see how it works.
 
 <br /><br />
 
-A one-dimensional set basically is counting by one per number, or by two per number.
+A one-dimensional set counts by one per number or by two per number.
 
 <br /><br />
 
-So lets build a one-dimensional set that is 7 more per number.
+So, let's build a one-dimensional set that is 7 more per number.
 
 <br /><br />
 
@@ -179,11 +175,11 @@ So lets build a one-dimensional set that is 7 more per number.
 
 <br /><br />
 
-This simple little code creates a set with the starting value of 1. Which you can change to anything by changing <h3>var start = 1;</h3> from 1 to any number you wish.
+This simple little code creates a set with a starting value of 1. You can change the starting value to anything by changing <h3>var start = 1;</h3> from 1 to any number you wish.
 
 <br /><br />
 
-The second loop adds 7 more to each value. Which you can change to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you like.
+The second loop adds 7 more to each value. You can change the added amount to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you want.
 
 <br /><br />
 
@@ -191,7 +187,7 @@ You can change the numbers to anything you like and run the code again to create
 
 <br /><br />
 
-Lastly the <h3>var end = 8;</h3> can be changed to a bigger number than 8. If you want to make the set longer.
+Lastly, the <h3>var end = 8;</h3> can be changed to a bigger number than 8 if you want to make the set longer.
 
 <br /><br />
 
@@ -199,7 +195,7 @@ The starting amount is always the first digit in the set.
 
 <br /><br />
 
-In the case of the example I gave you. We ended up with the following set starting with 1, and adding by 7 per value.
+In the case of the example I gave you. We ended up with the following set, starting with one and adding by 7 per value.
 
 <br /><br />
 
@@ -211,7 +207,7 @@ The starting amount is 1. This solves what the starting amount is.
 
 <br /><br />
 
-Then all you have to do is subtract the next number by the previous number.
+Then, all you have to do is subtract the next number from the previous number.
 
 <br /><br />
 
@@ -219,11 +215,11 @@ The next number after 1 is 8 so 8-1=7.
 
 <br /><br />
 
-You then move to the next number in the set which is 8. The number after 8 is 15. So 15-8=7.
+You then move to the next number in the set, 8. The number after 8 is 15. So 15-8=7.
 
 <br /><br />
 
-You do this with all numbers in the set. This solves the first-dimensional loop. As it solves the difference between the numbers per iteration.
+You do this with all the numbers in the set. This solves the first-dimensional loop as it solves the difference between the numbers per iteration.
 
 <br /><br />
 
@@ -237,7 +233,7 @@ You do this with all numbers in the set. This solves the first-dimensional loop.
 
 <br /><br />
 
-This gives us how much is added per value. The difference is the same across all numbers making a set of 7,7,7,7,7,7,7 per value.
+This gives us how much is added per value. The difference is the same across all numbers, making a set of 7,7,7,7,7,7,7 per value.
 
 <br /><br />
 
@@ -249,11 +245,11 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br />
 
-In the previous example it is quite easy to see that subtracting the next number into the previous number finds the first-dimension per added value.
+In the previous example, subtracting the next number from the previous number finds the first dimension per added value.
 
 <br /><br />
 
-So I will show you what happens when you add another dimension.
+So, I will show you what happens when you add another dimension.
 
 <br /><br />
 
@@ -288,17 +284,17 @@ So I will show you what happens when you add another dimension.
 
 <br /><br />
 
-In this example we create a square using a 2D set. Which is the calculation X<sup>2</sup>.
+In this example, we create a square using a 2D set, which is the calculation X<sup>2</sup>.
 
 <br /><br />
 
-We will talk about what a square actually is in the geometry section.
+In the geometry section, we will talk about what a square is.
 
 <br /><br />
 
 Our set is 0,1,4,9,16,25,36,49.
 
-So the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
+So, the first number in the set is 0. Which means the starting value is 0. <h3>var start = 0;</h3>
 
 Subtracting the next value into the previous value gives us.
 
@@ -314,9 +310,9 @@ Subtracting the next value into the previous value gives us.
 
 <br /><br />
 
-This gives us the set 1,3,5,7,9,11,13. The first result will be the first-dimension which is 1. <h3>var per1 = 1;</h3>
+This gives us the set 1,3,5,7,9,11,13. The first result will be the first dimension, which is 1. <h3>var per1 = 1;</h3>
 
-Subtracting the numbers 1,3,5,7,9,11,13. Going next number by previous number again.
+Subtracting the numbers 1,3,5,7,9,11,13. Going next number by the previous number again.
 
 <br /><br />
 
@@ -329,36 +325,36 @@ Subtracting the numbers 1,3,5,7,9,11,13. Going next number by previous number ag
 
 <br /><br />
 
-This solves the difference in the second-dimension. Which is 2 more. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
+This solves the difference in the second dimension. Which is two more. <h3>var per2 = 2;</h3> Doing the subtraction of 2,2,2,2,2,2 gives us 0,0,0,0,0 things left.
 
 <br /><br />
 
-The first number after each subtraction of all numbers is what the dimensional value is per iteration.
+After each subtraction of all numbers, the first value is the per iteration added amount.
 
 <br /><br />
 
-The starting value is very important as you could start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+The starting value is very important, as you can start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each amount per iteration by subtracting the next number into previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each amount per iteration by subtracting the next number into the previous and writing down the first number each time till left with 0.
 
 <br /><br />
 
 The first number without any subtraction will be the starting value.<br />
 The first number after the subtraction of all numbers will be per1.<br />
 The first number after the subtraction of all numbers again will be per2.<br />
-The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left in the third-dimension.
+The first number after the subtraction of all numbers again would be per3. Except we end up with 0,0,0,0,0 things left in the third dimension.
 
 <br /><br />
 
-You loose one number with each subtraction into all numbers, because there is no next value to subtract the previous value into at the end of the set.
+You lose one number with each subtraction into all numbers because there is no number to subtract the previous number into at the end of the set.
 
 <br /><br />
 
-So to solve a 5-dimensional pattern per iteration requires at least 6 numbers in a set including the starting value.
+So, to solve a five-dimensional pattern per iteration requires at least six numbers in a set, including the starting value.
 
 <br /><br />
 
-You can do the math your self and change per1, and per2 to what ever you like.
+You can do the math and change per1 and per2 to whatever you like.
 
 <br /><br />
 
@@ -366,13 +362,13 @@ You can do the math your self and change per1, and per2 to what ever you like.
 
 <br />
 
-I decided to create this section later to help anyone to understand dimensions geometrically.
+I decided to create this section later to help anyone understand geometric dimensions.
 
 <br /><br />
 
 <img style="float:left;" src="figs/fig0.jpg">
 
-The small number above x is how many times to multiply the number against itself per value.
+The small number above x is how many times the number is multiplied against itself per value.
 
 <br /><br />
 
@@ -380,7 +376,7 @@ The blue squares are the amount that existed before we moved to the next value. 
 
 <br /><br />
 
-In the first-dimension, we are only adding one new unit, which can be added together one unit at a time in a single loop. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
+In the first dimension, we are only adding one new unit, which can be added together one unit at a time. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
 
 <br /><br />
 
@@ -388,7 +384,7 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second-dimension, we have to add a one-dimensional pattern shown as the green squares per square that join at one unit.
+In the second dimension, we have to add two lines, shown as green squares, that join at the one unit.
 
 <br /><br />
 
@@ -404,7 +400,7 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-Each row is each square size leading to 5x5=25. The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but multiples the added units by 2 for both sides.
+Each row is a square size, leading to 5x5=25. The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but adds 2 units for both sides.
 
 <br /><br />
 
@@ -432,19 +428,19 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations, which makes it so we never have to use two loop iterations inside each other called sigma summations in math to add together such a result. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations, which makes it so we never have to use two loops inside each other (in math we express a one-dimensional sum as a sigma summation). Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, and at 5x5, we have 5 squares stacked on top of each other when we multiply by another 5. This means we have to add another one-dimensional loop outside the two loops to add each square layer, creating a 3D cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, and at 5x5, we have 5 squares stacked on top of each other when we multiply by another 5. This means we have to add another one-dimensional line to each layer. We can add a loop outside our two loops that adds two lines together to make our square into a cube. This creates a cube.
 
 <br /><br />
 
-Multiplying the cube by itself adds a new one-dimension loop outside the cube adding another per iteration amount.
+Multiplying the cube by itself adds a new one-dimensional loop/sum outside the cube, making a four-dimensional space of cubes, adding another per iteration amount to an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
 
 <br /><br />
 
-Multiplying is much faster than adding our result together. All forums of adding per amount per dimensional loop/sigma iteration can be reduced into simple fast calculations.
+Multiplying is much faster than adding our results together with loops. All forums of adding per amount per loop/sigma iteration inside one another per dimension can be reduced into simple, fast calculations no matter how many we have.
 
 <br /><br />
 
@@ -452,7 +448,7 @@ This allows us to replace loops within loops that add different amounts with a f
 
 <br /><br />
 
-Changing your per added amounts per loop inside each other is explained in the decoding dimensional iteration section.
+Changing the amounts you add per loop inside each other back into equations is explained in the decoding dimensional iteration section.
 
 <br /><br />
 
@@ -464,15 +460,11 @@ Higher dimensional sequences and counting of things exist all over in nature and
 
 <br />
 
-You can solve how much is added per dimension with each subtraction into all numbers.
+You can solve how much is added per dimension with each subtraction into all numbers, with the first number being the difference.
 
 <br /><br />
 
-With the first number being the difference.
-
-<br /><br />
-
-I will make it that you can create any 5D set you like in this code. At the end of the code. Each number is subtract into the previous.
+I will make it so that you can create any five-dimensional set you like in this code. At the end of the code, each number is subtracted from the previous one, and the first value after each subtraction should always be the number of units we added per dimension.
 
 <br /><br />
 
@@ -594,7 +586,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
 <br /><br />
 
-The first number after each subtraction is what each per iteration value is that produced the set. We also loose one number each time as there is no number to subtract the last value into. You can change each per amount to what ever you like. Or you can do the math your self.
+This code does the subtraction for you. You can change per1 to per5 and even start to whatever you like, even negative or fractional values. The first number after each subtraction is the iteration value that produced the set. We also lose one number each time as there is no number to subtract the last value into. You can change each amount to whatever you like. Or you can do the math yourself.
 
 <br /><br />
 
@@ -602,7 +594,7 @@ The first number after each subtraction is what each per iteration value is that
 
 <br />
 
-Instead of subtracting the next number from the previous with all numbers to find the per iteration amount of each loop, we can calculate them.
+Instead of subtracting the next number from the previous with all numbers to find the per iteration amount of each dimensional loop, we can calculate them.
 
 <br /><br />
 
@@ -614,7 +606,7 @@ The starting amount is always going to be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-We do not need to subtract all of the numbers to know what the first difference is as it is the second number minus the first number. We only subtracted the rest of the set as the differences are needed to reverse each loop.
+We do not need to subtract all the numbers to know the first difference, as it is the second number minus the first number. We only subtracted the rest of the set as the differences need to be reversed in each loop.
 
 <br /><br />
 
@@ -677,7 +669,7 @@ This removes repeated subtractions per row in the 5-dimensional set with the sub
 
 <br /><br />
 
-You can set each per iteration amount to whatever you like and the output will be exactly what you set them using the dimensional subtraction pattern.
+You can set each per iteration amount to whatever you like, and the output will be exactly the amount you set using the dimensional subtraction pattern.
 
 <br /><br />
 
@@ -802,11 +794,11 @@ The number of sides can be calculated by multiplying the number of dimensions by
 
 <br /><br />
 
-In math, this is called the factorial function in which 5! is the calculation 1x2x3x4x5 up to 5 giving us 120.
+In math, this is called the factorial function, in which 5! is the calculation of 1x2x3x4x5 up to 5, giving us 120.
 
 <br /><br />
 
-It is well known that a 4D shape is a tesseract with 24 sides, and may be <a href="https://youtu.be/WzC92VJJnvg?t=390" target="_blank">4D space time</a>.
+It is well known that a 4D shape is a tesseract with 24 sides and maybe <a href="https://youtu.be/WzC92VJJnvg?t=390" target="_blank">4D space time</a>.
 
 <br /><br />
 
@@ -861,7 +853,7 @@ Multiplying or dividing a single calculation is the same as dividing or multiply
 
 <br />
 
-If you want to get more complex you can multiply the square, and cube. Then add them together.
+If you want to get more complex, you can multiply the square and cube, then add them together.
 
 <br /><br />
 
@@ -875,7 +867,7 @@ If you want to get more complex you can multiply the square, and cube. Then add 
 
 <br />
 
-Now we add our multiplied iteration values together.
+Now, we add our multiplied iteration values together.
 
 <br /><br />
 
@@ -892,7 +884,7 @@ Try each of them if you like, or even combine and make up your own combinations.
 
 <br /><br />
 
-The same way you mix the relationships together to forum the iterations of your calculation. Is the same way you reverse them back into a math calculation.
+In the same way, you mix the relationships together to form the iterations of your calculation, which is going to be the same way you reverse them back into a math calculation.
 
 <br /><br />
 
@@ -985,15 +977,15 @@ After subtracting the numbers and solving each per iteration, each to the power 
 
 <br />
 
-As previously seen you can multiply, divide, add, and subtract each calculation using the iteration values to create any calculation you wish.
+As previously seen, you can multiply, divide, add, and subtract each calculation using the iteration values to create any desired calculation.
 
 <br /><br />
 
-In order to change each per iteration value back into a math calculation. You start with the last per iteration value. You divide the last value by 120 which is what x<sup>5</sup> is.
+In order to change each per iteration value back into a math calculation, you start with the last per iteration value. You divide the last value by 120 which is what x<sup>5</sup> is.
 
 <br /><br />
 
-If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you have to multiply each per value for x<sup>5</sup> by 2 doing.
+If it divides to 2, it is precisely x<sup>5</sup>x2. This means you have to multiply each per value for x<sup>5</sup> by 2.
 
 <br /><br />
 
@@ -1006,15 +998,15 @@ If it divides to 2. That means it is exactly x<sup>5</sup>*2. Which means you ha
 
 <br />
 
-You then subtract each of your per values by *2 of x<sup>5</sup>. This then de-mixes the fifth-dimensional calculation from each per value iteration.
+You then subtract each of your per values by x2 of x<sup>5</sup>. This then de-mixes the fifth-dimensional calculation from each per-value iteration.
 
 <br /><br />
 
-You repeat this process to de-mix every calculation combination of each per iteration value. Giving you what the size of each to the power of is.
+You repeat this process to de-mix every calculation combination of each per iteration value. Giving you the size of each to the power of is.
 
 <br /><br />
 
-Lets take the following mixed calculation for example.
+Let's take the following mixed calculation, for example.
 
 <br /><br />
 
@@ -1038,7 +1030,7 @@ This gives us the set 0,14,64,162,320,550,864,1274.
 
 <br /><br />
 
-By subtracting the values 0,14,64,162,320,550,864,1274 till we have 0. We can find each per iteration value as 0,14,36,12,0,0.
+By subtracting the values 0,14,64,162,320,550,864,1274 till we have 0, we can find each per iteration value as 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -1136,11 +1128,11 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
 
 <br /><br />
 
-Now this function will transform a set of numbers into what it took to produce the numbers. What you multiply each power by will be what gets decoded up to 5.
+Now, this function will transform a set of numbers into what it took to produce the numbers. What you multiply each power by will be what gets decoded up to 5 dimensions.
 
 <br /><br />
 
-Basically doing a faster forum of subtracting next numbers minus previous.
+Doing a faster form of subtracting next numbers minus previous ones.
 
 <br /><br />
 
@@ -1152,11 +1144,11 @@ Adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3
 
 <br /><br />
 
-Meaning you can build the subtraction pattern as big as you like to as high in dimension you need. The decoder at the end only needs to match each to the power of per iteration to de-mix.
+This means you can build the subtraction pattern as big as you like to as high in dimension as you need. The decoder at the end only needs to match each to the power of per iteration to de-mix.
 
 <br /><br />
 
-At the bottom we basically are taking each of these.
+At the bottom, we take each of these.
 
 <br /><br />
 
@@ -1282,7 +1274,7 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 <br /><br />
 
-We just basically switch the numbers that are used to decode the per iteration of each to the power to the decoder, and move the decoder to the subtraction pattern.
+We switch the numbers used to decode the per iteration of each to the power to the decoder, and move the decoder to the subtraction pattern.
 
 <br /><br />
 
@@ -1290,7 +1282,7 @@ We just basically switch the numbers that are used to decode the per iteration o
 
 <br />
 
-We can create tow matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
+We can create two matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
 
 <br /><br />
 
@@ -1298,11 +1290,11 @@ We can create tow matrices that are opposite to each other. They are a triangle 
 
 <br /><br />
 
-See <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. Also see <a href="https://youtu.be/d0Exnv8Ym7s?t=249" target="_blank">NOVA Fractals The Hidden Dimension</a>. These are good places to start if you do not understand what Fractals are.
+See <a href="https://youtu.be/qABFYiYqXSU?t=249" target="_blank">NOVA Fractals The Hidden Dimension</a>. Lastly <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle" target="_blank">Sierpinski triangle</a>. These are good places to start if you need help understanding what Fractals are and what the Sierpinski triangle is.
 
 <br /><br />
 
-The two matrices then can be combined as the following infinite fractal pattern. Solving both exponentially and sequentially in as high of dimension you wish to go. Equally across the set. In perfect equilibrium.
+The two matrices can then be combined in the following infinite fractal pattern. Solving both exponentially and sequentially in as high of dimension you wish to go. Equally across the set. In perfect equilibrium.
 
 <br /><br />
 
@@ -1330,7 +1322,7 @@ Which clearly explains what a point space is, and what higher dimensional math i
 
 <br /><br />
 
-Starting with circles. You can create a pattern of overlapping circles. The points can all be connected together to forum the tetrahedron in higher dimensions.
+Starting with circles, you can create a pattern of overlapping circles. The points can all be connected together to forum the tetrahedron in higher dimensions.
 
 <br /><br />
 
@@ -1338,7 +1330,7 @@ Starting with circles. You can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-In early history, we have similar patterns appearing in ancient pyramids that are very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. Which is a fun page and shows many different ways it was used and its appearance in early history.
+In early history, we have similar patterns appearing in ancient pyramids that are very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. This is a fun page that shows many different ways it was used and how it appeared in early history.
 
 <br /><br />
 
@@ -1382,7 +1374,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-Multidimensionally, as a point space, it looks more closely like this, which was creepily created by terra nova.
+Multidimensionally, as a point space, it looks more closely like this, which was creepily created by Terra Nova.
 
 <br /><br />
 
@@ -1406,7 +1398,7 @@ You can reverse the calculation of number values such as 3.1415926535... back in
 
 <br /><br />
 
-All numbers have a place and an expression and meaning to reality itself. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
+All numbers have a place, an expression, and meaning in reality. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
 
 <br /><br />
 
@@ -1486,7 +1478,7 @@ These quantum fluctuations can merge and branch, creating emergent properties an
 
 <br /><br />
 
-Everything spans from zero in quantum fluctuation and remains as a single invisible unit, which you can call the Big Bang.
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity, which you can call the Big Bang.
 
 <br /><br />
 
