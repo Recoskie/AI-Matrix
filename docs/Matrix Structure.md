@@ -1446,19 +1446,11 @@ It is almost as if everything is a division by zero known as <a href="https://bi
 
 <br /><br />
 
-Both white holes and black holes are opposite to each other and begin at the singularity. It is as if the limit of this single quantum entangled state created the wave function of the universe and everything in it.
+Both white holes and black holes are opposite to each other and begin at the singularity. The white hole is theorized to only exist at the beginning of a universe and is extremely rare.
 
 <br /><br />
 
-The white hole is theorized to only exist at the beginning of the universe, and are extremely rare.
-
-<br /><br />
-
-The golden ratio does not only just express this multidimensional quantum matrix, but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>. The golden ratio also exists in black holes.
-
-<br /><br />
-
-It's just that all our physics formulas about reality emerge from zero Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero to infinity.
+The golden ratio does not only express this multidimensional quantum matrix but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>. The golden ratio also exists in black holes.
 
 <br /><br />
 
@@ -1466,11 +1458,11 @@ The Fibonacci sequence creates the number phi (golden ratio), and our best theor
 
 <br /><br />
 
-In theory, consciousness is related to how much information it can integrate or connect to reality, which is the golden ratio. This means that consciousness is an accumulation of self-organized energy and matter into conscious systems.
+In theory, consciousness is related to how much information it can integrate or connect together. The golden ratio is a value in which each part is as close together as it can be in which each part connects or links together.
 
 <br /><br />
 
-In theory if consciousness is this intrinsic property than the whole universe could be conscious as well and we are smaller forms of consciousness awareness; see <a href="https://youtu.be/8E333CdgS4g&t=120" target="_blank">Is Our Universe Conscious</a>.
+In theory, if consciousness is this intrinsic property, then the whole universe could be infinitely conscious, and we are smaller forms of consciousness awareness; see <a href="https://youtu.be/8E333CdgS4g&t=120" target="_blank">Is Our Universe Conscious</a>.
 
 <br /><br />
 
@@ -1486,7 +1478,7 @@ The separation between objects and particles may not exist, and all things are e
 
 <br /><br />
 
-Interestingly, we can form a quantum of light from a single whole unit in quantum fluctuations from zero out of the singularity. At the same time, energy conservation remains true, and all should add to zero.
+Interestingly, we can form a quantum of light from a single whole unit in quantum fluctuations from zero out of the singularity. At the same time, energy conservation remains true, and all should add to zero. Conservation of energy states that energy can neither be created nor destroyed.
 
 <br /><br />
 
