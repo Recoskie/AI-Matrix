@@ -432,15 +432,15 @@ In math, we call these quadratic equations, which makes it so we never have to u
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, and at 5x5, we have 5 squares stacked on top of each other when we multiply by another 5. This means we have to add another one-dimensional line to each layer. We can add a loop outside our two loops that adds two lines together to make our square into a cube. This creates a cube.
+When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square as we add two lines that make our square. We can not account for these new units with two connecting lines. To show this, we could add another line that connects each square; we have to add another one-dimensional line to each layer outside our two lines, making the square into added units of itself per layer. Adding the third loop, we can add another stack of squares per square on top of each other into a cube with a connecting one-dimensional line per square layer. This creates a cube.
 
 <br /><br />
 
-Multiplying the cube by itself adds a new one-dimensional loop/sum outside the cube, making a four-dimensional space of cubes, adding another per iteration amount to an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
+Multiplying the cube by itself adds a new one-dimensional space outside the cube, making a four-dimensional space of cubes and adding another amount to add by on an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
 
 <br /><br />
 
-Multiplying is much faster than adding our results together with loops. All forums of adding per amount per loop/sigma iteration inside one another per dimension can be reduced into simple, fast calculations no matter how many we have.
+Multiplying is much faster than adding our results together with loops. All forums of adding per amount inside one another per dimension can be reduced into simple, fast calculations no matter how many we have.
 
 <br /><br />
 
@@ -452,7 +452,7 @@ Changing the amounts you add per loop inside each other back into equations is e
 
 <br /><br />
 
-Higher dimensional sequences and counting of things exist all over in nature and in the world around us.
+Higher dimensional sequences and counting of things exist in nature and the world around us.
 
 <br /><br />
 
@@ -586,7 +586,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
 <br /><br />
 
-This code does the subtraction for you. You can change per1 to per5 and even start to whatever you like, even negative or fractional values. The first number after each subtraction is the iteration value that produced the set. We also lose one number each time as there is no number to subtract the last value into. You can change each amount to whatever you like. Or you can do the math yourself.
+This code does the subtraction for you. You can change per1 to per5 and even change the value start to whatever you like, even negative or fractional values. The first number after each subtraction is the value that produced the set. We also lose one number each time as there is no number to subtract the last value into. You can change each amount to whatever you like. Or you can do the math yourself.
 
 <br /><br />
 
@@ -594,11 +594,11 @@ This code does the subtraction for you. You can change per1 to per5 and even sta
 
 <br />
 
-Instead of subtracting the next number from the previous with all numbers to find the per iteration amount of each dimensional loop, we can calculate them.
+Instead of subtracting the next number from the previous with all numbers to find the amount of each dimensional loop, we can calculate them.
 
 <br /><br />
 
-The starting amount is always going to be the first number in the set.
+The starting amount will always be the first number in the set.
 
 <br /><br />
 
@@ -615,11 +615,11 @@ s1 = s1 * 1;
 s2 = s2 - (s1 * 1);
 </pre>
 
-The value s2 matches the first per iteration amount in the second subtraction of all numbers.
+The value s2 matches the first per amount in the second subtraction of all numbers. Previously, in the geometry of higher dimensions, I showed how a square becomes the following sequence 1, 1+1, 1+1+1, 1+1+1+1 per row and how this continues to higher dimensions.
 
 <br /><br />
 
-Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 is per iteration.
+Instead of subtracting all numbers, we can use s1 and s2 to calculate the added amount. Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 is per amount.
 
 <br /><br />
 
@@ -634,11 +634,11 @@ s7 = s7 - (s1 * 1 + s2 * 6);
 s8 = s8 - (s1 * 1 + s2 * 7);
 </pre>
 
-The value s3 now matches the second per iteration amount in the second subtraction of all numbers.
+The value s3 now matches the third amount in the second subtraction of all numbers.
 
 <br /><br />
 
-Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculates what s3 is per iteration in a loop outside of s2 (square).
+Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculate what s3 is per amount outside of s2 (square) by adding the combined one-dimensional lines that made the square.
 
 <br /><br />
 
@@ -653,15 +653,15 @@ s7 = s7 - (s1 * 1 + s2 * 6 + s3 * 15);
 s8 = s8 - (s1 * 1 + s2 * 7 + s3 * 21);
 </pre>
 
-So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 = 4, 10, 20, 35.
+So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 = 4, 10, 20, 35 which are the added lines of the cubes.
 
 <br /><br />
 
-You can view it as taking away the iteration amount per row, but you can produce the same pattern from the 5-dimensional set with the subtraction example above by adding the number of times we subtract the same values per row.
+You can view it as taking away the amount added per dimension as we find each per added amount. Additionally, you can produce the same pattern from the 5-dimensional set with the subtraction example included at the end by adding up the number of times we subtracted the same values into themselves after each subtraction of all numbers per row.
 
 <br /><br />
 
-This removes repeated subtractions per row in the 5-dimensional set with the subtraction example included.
+This shortcut removes repeated subtractions per row.
 
 <br /><br />
 
@@ -669,7 +669,27 @@ This removes repeated subtractions per row in the 5-dimensional set with the sub
 
 <br /><br />
 
-You can set each per iteration amount to whatever you like, and the output will be exactly the amount you set using the dimensional subtraction pattern.
+As you can see in this image, the ones can be added together to form the counting numbers, and the counting numbers can be added together to make triangular numbers. Multiplying the counting numbers by 7 will create a sequence that counts by 7. Multiplying both the counting numbers by 1 and triangular numbers by 2 creates a square.
+
+<per>
+1x1 + 0x2 = 1
+2x1 + 1x2 = 4
+3x1 + 3x2 = 9
+4x1 + 6x2 = 16
+</per> 
+
+Multiplying the added amounts for the cube, which are 1, 6, and 6, to the counting, triangular and tetrahedral numbers make the cube.
+
+<per>
+1x1 + 0x6 + 0x6 = 1
+2x1 + 1x6 + 0x6 = 8
+3x1 + 3x6 + 1x6 = 27
+4x1 + 6x6 + 4x6 = 64
+</per>
+
+<br /><br />
+
+You can set each per added amount to whatever you like, and the output will be exactly the amount you set using the dimensional subtraction pattern.
 
 <br /><br />
 
@@ -741,7 +761,7 @@ You can set each per iteration amount to whatever you like, and the output will 
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction example without repeated subtractions, which can be shrunk into how many times it occurred per row.
+This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction without repeated subtractions, which are shrunk into how many times it occurred per row.
 
 <br /><br />
 
@@ -806,7 +826,7 @@ I will not discuss the relationship of all higher dimensions to reality as this 
 
 <br /><br />
 
-If you persist on learning what the higher dimensions are, then following video on engineering made easy may help <a href="https://youtu.be/UxubeeSqSmk?t=455" target="_blank">0D to 11D explained advanced</a>.
+If you persist on learning what the higher dimensions are, then the following video may help <a href="https://youtu.be/azpUG2GUzFI" target="_blank">0D to 11D explained advanced</a>.
 
 <br /><br />
 
@@ -878,14 +898,6 @@ Now, we add our multiplied iteration values together.
   </table>
 </div>
 
-<br />
-
-Try each of them if you like, or even combine and make up your own combinations.
-
-<br /><br />
-
-In the same way, you mix the relationships together to form the iterations of your calculation, which is going to be the same way you reverse them back into a math calculation.
-
 <br /><br />
 
 <code>
@@ -895,15 +907,15 @@ In the same way, you mix the relationships together to form the iterations of yo
 
   var start = 0;
 
-  var per1 = 1;
+  var per1 = 14;
 
-  var per2 = 30;
+  var per2 = 36;
 
-  var per3 = 150;
+  var per3 = 12;
 
-  var per4 = 240;
+  var per4 = 0;
 
-  var per5 = 120;
+  var per5 = 0;
 
   for( var i1 = 0; i1 < end; i1++ )
   {
@@ -936,23 +948,13 @@ In the same way, you mix the relationships together to form the iterations of yo
   }
 
   console.log(data);
-
-  var s1 = data[0], s2 = data[1], s3 = data[2], s4 = data[3], s5 = data[4], s6 = data[5], s7 = data[6], s8 = data[7];
-
-  //Each per value relative to number of subtraction.
-
-  var o = [];
-  o[0] = s1 * 1;
-  o[1] = s2 - (o[0] * 1);
-  o[2] = s3 - (o[0] * 1 + o[1] * 2);
-  o[3] = s4 - (o[0] * 1 + o[1] * 3 + o[2] * 3);
-  o[4] = s5 - (o[0] * 1 + o[1] * 4 + o[2] * 6 + o[3] * 4);
-  o[5] = s6 - (o[0] * 1 + o[1] * 5 + o[2] * 10 + o[3] * 10 + o[4] * 5);
-  o[6] = s7 - (o[0] * 1 + o[1] * 6 + o[2] * 15 + o[3] * 20 + o[4] * 15 + o[5] * 6);
-  o[7] = s8 - (o[0] * 1 + o[1] * 7 + o[2] * 21 + o[3] * 35 + o[4] * 35 + o[5] * 21 + o[6] * 7);
-
-  console.log("Decoded per Value = " + o + "");
 </code>
+
+Try each of them if you like, or even combine and make up your own combinations.
+
+<br /><br />
+
+In the same way, you mix the relationships together to form the iterations of your calculation, which is going to be the same way you reverse them back into a math calculation.
 
 <br /><br />
 
@@ -1066,7 +1068,7 @@ Working backwards like this lets us de-mix any calculation combination in much t
 
 <br /><br />
 
-In the new example code. We multiply by the power of by each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>. To any value you like.
+In the new example code, we multiply by the power of each d value. You can change each <h3>var d1 = 4;</h3> to <h3>var d5 = 1;</h3>. To any value you like.
 
 <br /><br />
 
@@ -1169,7 +1171,7 @@ Thus de-mixing each one as we divide by the last value and work our way backward
 
 <br /><br />
 
-You can expand this table to the power of 50 if you liked. If you wish to solve each per iteration up to 50. You would also need sets that are 51 numbers minium in length, or higher including the starting value. There is no limit in how many dimensions you can have.
+You can expand this table to the power of 50 if you like to solve each per iteration up to 50. You would also need sets of 51 numbers minimum in length or higher, including the starting value. There is no limit in how many dimensions you can have.
 
 <br /><br />
 
@@ -1274,7 +1276,7 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 <br /><br />
 
-We switch the numbers used to decode the per iteration of each to the power to the decoder, and move the decoder to the subtraction pattern.
+We switch the numbers used to decode the per iteration of each to the power to the decoder and move the decoder to the subtraction pattern.
 
 <br /><br />
 
@@ -1306,7 +1308,7 @@ When I view this shape, I understand that every math calculation you can dream u
 
 <br /><br />
 
-Additionally if you take circles and connect them in a point space. You then can create the same pattern.
+Additionally, if you connect circles in a point space, you can create the same pattern.
 
 <br /><br />
 
@@ -1318,11 +1320,11 @@ See <a href="https://youtu.be/vJi3_znm7ZE?t=803" target="_blank">Quantum Gravity
 
 <br /><br />
 
-Which clearly explains what a point space is, and what higher dimensional math is.
+Which clearly explains what a point space is and what higher dimensional math is.
 
 <br /><br />
 
-Starting with circles, you can create a pattern of overlapping circles. The points can all be connected together to forum the tetrahedron in higher dimensions.
+Starting with circles, you can create a pattern of overlapping circles. The points can all be connected to form the tetrahedron in higher dimensions.
 
 <br /><br />
 
