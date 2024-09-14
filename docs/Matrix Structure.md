@@ -671,21 +671,25 @@ This shortcut removes repeated subtractions per row.
 
 As you can see in this image, the ones can be added together to form the counting numbers, and the counting numbers can be added together to make triangular numbers. Multiplying the counting numbers by 7 will create a sequence that counts by 7. Multiplying both the counting numbers by 1 and triangular numbers by 2 creates a square.
 
-<per>
+<pre>
 1x1 + 0x2 = 1
 2x1 + 1x2 = 4
 3x1 + 3x2 = 9
 4x1 + 6x2 = 16
-</per> 
+</pre>
+
+<br /><br />
 
 Multiplying the added amounts for the cube, which are 1, 6, and 6, to the counting, triangular and tetrahedral numbers make the cube.
 
-<per>
+<br /><br />
+
+<pre>
 1x1 + 0x6 + 0x6 = 1
 2x1 + 1x6 + 0x6 = 8
 3x1 + 3x6 + 1x6 = 27
 4x1 + 6x6 + 4x6 = 64
-</per>
+</pre>
 
 <br /><br />
 
