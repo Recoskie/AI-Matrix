@@ -118,16 +118,11 @@ No matter how complex of a calculation or steps you write to output a result, th
 
 <br /><br />
 
-Anything we measure can be reduced back into math calculations or functions.
+I put together a basics document that demonstrates how information and data can be deconstructed into their basic elements, a process that quantum computing can expedite <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html" target="_blank">basics link</a>.
 
 <br /><br />
-
 
 This algorithm is a faster, accelerated version of reversing information and data to build advanced, accurate data models for AI.
-
-<br /><br />
-
-I put together a document that demonstrates how information and data can be deconstructed into their basic elements, a process that quantum computing can expedite <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html" target="_blank">basics link</a>.
 
 <br /><br />
 
@@ -143,7 +138,7 @@ Let's start with a one-dimensional set and show how it builds and solves sequent
 
 <br /><br />
 
-A one-dimensional set counts by one per number or by two per number.
+A one-dimensional set counts by one or by two per number.
 
 <br /><br />
 
@@ -179,11 +174,7 @@ This simple little code creates a set with a starting value of 1. You can change
 
 <br /><br />
 
-The second loop adds 7 more to each value. You can change the added amount to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you want.
-
-<br /><br />
-
-You can change the numbers to anything you like and run the code again to create any one-dimensional set.
+The second loop adds 7 more to each value. You can change the added amount to anything you like by changing <h3>var per1 = 7;</h3> from 7 to any number you want, then run the code again.
 
 <br /><br />
 
@@ -195,7 +186,7 @@ The starting amount is always the first digit in the set.
 
 <br /><br />
 
-In the case of the example I gave you. We ended up with the following set, starting with one and adding by 7 per value.
+In the case of the example I gave you, we ended up with the following set, starting with one and adding by 7 per value.
 
 <br /><br />
 
@@ -203,7 +194,7 @@ In the case of the example I gave you. We ended up with the following set, start
 
 <br /><br />
 
-The starting amount is 1. This solves what the starting amount is.
+The first number is 1, which solves the problem of the starting amount.
 
 <br /><br />
 
@@ -237,7 +228,7 @@ This gives us how much is added per value. The difference is the same across all
 
 <br /><br />
 
-Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set per value.
+Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0. Which means there is nothing left in the set.
 
 <br /><br />
 
@@ -249,7 +240,7 @@ In the previous example, subtracting the next number from the previous number fi
 
 <br /><br />
 
-So, I will show you what happens when you add another dimension.
+I will show you what happens when you add another loop outside our first loop.
 
 <br /><br />
 
@@ -284,7 +275,7 @@ So, I will show you what happens when you add another dimension.
 
 <br /><br />
 
-In this example, we create a square using a 2D set, which is the calculation X<sup>2</sup>.
+In this example, we create a square using a 2D set, which is the calculation X<sup>2</sup>, similar to stacking lines of added units on top of each other per value.
 
 <br /><br />
 
@@ -333,7 +324,7 @@ After each subtraction of all numbers, the first value is the per iteration adde
 
 <br /><br />
 
-The starting value is very important, as you can start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+The starting value is important; you can start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
 This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each amount per iteration by subtracting the next number into the previous and writing down the first number each time till left with 0.
 
@@ -362,7 +353,7 @@ You can do the math and change per1 and per2 to whatever you like.
 
 <br />
 
-I decided to create this section later to help anyone understand geometric dimensions.
+I decided to create this section later to help anyone understand the geometry of higher dimensions.
 
 <br /><br />
 
@@ -376,7 +367,7 @@ The blue squares are the amount that existed before we moved to the next value. 
 
 <br /><br />
 
-In the first dimension, we are only adding one new unit, which can be added together one unit at a time. We input 5 into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
+In the first dimension, we only add one new unit, which can be added together one unit at a time. We input five into our function, and we can add five sevens together if that is the size of the units, or we can just say x is multiplied by 7.
 
 <br /><br />
 
@@ -384,11 +375,11 @@ When we multiply the number by itself, we expand this pattern vertically and hor
 
 <br /><br />
 
-In the second dimension, we have to add two lines, shown as green squares, that join at the one unit.
+In the second dimension, we have to add two lines that add by one, shown as green squares that join at one unit.
 
 <br /><br />
 
-When we input 5 into our function, it adds it together as follows.
+When we input five into our function, it adds them together as follows:
 
 <br /><br />
 
@@ -400,7 +391,7 @@ When we input 5 into our function, it adds it together as follows.
 1+(1+1+1+1)*2 = 25 
 </pre>
 
-Each row is a square size, leading to 5x5=25. The first loop can add the single units at the start of each line, but now we must add another one-dimensional loop inside this loop that does the same thing in the () but adds 2 units for both sides.
+Each row is a square size, leading to 5x5=25. The first loop can only add a single unit at the start of each row, but now we must add another loop inside this loop that does the same thing in the () but adds 2 units for both sides per line.
 
 <br /><br />
 
@@ -412,7 +403,7 @@ x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
 
 <br /><br />
 
-Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
+Dividing it by 2 gives us a set that adds a one dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
 
 <br /><br />
 
@@ -428,23 +419,19 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations, which makes it so we never have to use two loops inside each other (in math we express a one-dimensional sum as a sigma summation). Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations, which makes it so we never have to use two loops inside each other (in math we express a one-dimensional sum as a sigma summation). In math, we show the two loops that create the quadratic as two sigma with the second inside the first. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-When we multiply the square against itself, then it is the same as adding a whole new square per square. At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square as we add two lines that make our square. We can not account for these new units with two connecting lines. To show this, we could add another line that connects each square; we have to add another one-dimensional line to each layer outside our two lines, making the square into added units of itself per layer. Adding the third loop, we can add another stack of squares per square on top of each other into a cube with a connecting one-dimensional line per square layer. This creates a cube.
+At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square as we add two lines that make our square using two loops. Adding the third loop, we can add another stack of squares per square on top of each other into a cube with connecting lines shown as the green squares that increase by one per cube.
 
 <br /><br />
 
-Multiplying the cube by itself adds a new one-dimensional space outside the cube, making a four-dimensional space of cubes and adding another amount to add by on an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
+Multiplying the cube by itself creates a four-dimensional space of cubes per cube and adds another amount to add by on an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
 
 <br /><br />
 
-Multiplying is much faster than adding our results together with loops. All forums of adding per amount inside one another per dimension can be reduced into simple, fast calculations no matter how many we have.
-
-<br /><br />
-
-This allows us to replace loops within loops that add different amounts with a fast calculation.
+Multiplying is much faster than adding our results together with loops. All forums of adding different amounts inside one another per loop can be reduced into simple, fast calculations no matter how many we have.
 
 <br /><br />
 
@@ -657,11 +644,11 @@ So then s4 is 1, 1+3, 1+3+6, 1+3+6+10, 1+3+6+10+15, 1+3+6+10+15+21 = 4, 10, 20, 
 
 <br /><br />
 
-You can view it as taking away the amount added per dimension as we find each per added amount. Additionally, you can produce the same pattern from the 5-dimensional set with the subtraction example included at the end by adding up the number of times we subtracted the same values into themselves after each subtraction of all numbers per row.
+You can view it as taking away the amount added per dimension as we find each per added amount. Additionally, you can produce the same pattern from the 5-dimensional set with the subtraction code example demonstrated earlier on this page by adding up the number of times we subtracted the same values into themselves after each subtraction of all numbers per row.
 
 <br /><br />
 
-This shortcut removes repeated subtractions per row.
+This shortcut removes repeated subtractions per row. In the next picture is an image of the values we multiplied by.
 
 <br /><br />
 
