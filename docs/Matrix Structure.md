@@ -383,17 +383,41 @@ When we input five into our function, it adds them together as follows:
 
 <br /><br />
 
-<pre>
+<pre>Green line to corner
 1+
-1+(1)*2 +
-1+(1+1)*2 +
-1+(1+1+1)*2 +
-1+(1+1+1+1)*2 = 25 
+1+(1) +
+1+(1+1) +
+1+(1+1+1) +
+1+(1+1+1+1)
 </pre>
 
-Each row is a square size, leading to 5x5=25. The first loop can only add a single unit at the start of each row, but now we must add another loop inside this loop that does the same thing in the () but adds 2 units for both sides per line.
+Each row leads to 5x5=25 using the green line to the corner. The first loop can only add a single unit at the start of each row as a one-dimensional line from blue sqaures to red square, but now we must add another one-dimensional line inside this loop that does the same thing in the () as we move down the line shown as the green squares.
 
 <br /><br />
+
+We can add the one-dimensional lines in () to make the following whole values.
+
+<br /><br />
+
+<pre>Green line to corner
+1+
+1+(1) +
+1+(2) +
+1+(3) +
+1+(4) 
+</pre>
+
+We have two green lines that join to the corner as we grow in size in two-dimensional space in which we only have to multiply the added line per unit by 2.
+
+<br /><br />
+
+<pre>Bottom and right side to corner
+1+
+1+(1)*2 +
+1+(2)*2 +
+1+(3)*2 +
+1+(4)*2 = 25
+</pre>
 
 The neat part is that we can take away the added unit in the square by subtracting it as
 
@@ -403,19 +427,19 @@ x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
 
 <br /><br />
 
-Dividing it by 2 gives us a set that adds a one dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
+Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
 
 <br /><br />
 
-(x<sup>2</sup>-x)&div;2=0,1,3,6,10, which is 0, 0+1, 0+1+2, 0+1+2+3, 0+1+2+3+4.
+(x<sup>2</sup>-x)÷2=0,1,3,6,10, which is 0, 0+1, 0+1+2, 0+1+2+3, 0+1+2+3+4.
 
 <br /><br />
 
-As objects fall, they get faster per second. To be exact, 33 feet more per second. We can add this together using two loops, or we can just multiply our equation by 33.
+As objects fall, they get faster per second. To be exact, 33 feet more per second. We can add this together using two loops or multiply our equation by 33.
 
 <br /><br />
 
-((x<sup>2</sup>-x)&div;2)*33=0,33,99,198,330, which is 0,0+33,0+33+66,0+33+66+99,0+33+66+99+132.
+((x<sup>2</sup>-x)÷2)*33=0,33,99,198,330, which is 0,0+33,0+33+66,0+33+66+99,0+33+66+99+132.
 
 <br /><br />
 
@@ -427,11 +451,51 @@ At 2x2, we have two squares stacked on top of each other when we multiply by 2 a
 
 <br /><br />
 
+A cube becomes the following continuation pattern in which we add the two-dimensional lines together.
+
+<br /><br />
+
+<pre>Cube from square expansion
+1+
+1+(1) +
+1+(2) + (1) +
+1+(3) + (1+2) +
+1+(4) + (1+2+3)
+</pre>
+
+Next, we change the numbers we added together per row into whole numbers.
+
+<br /><br />
+
+<pre>Cube from square expansion
+1+
+1+(1) +
+1+(2) + (1) +
+1+(3) + (3) +
+1+(4) + (6) 
+</pre>
+
+A cube has 6 sides, so the two-dimensional and three-dimensional lines are multiplied by 6.
+
+<br /><br />
+
+<pre>Cube from square expansion
+1+
+1+(1)*6 +
+1+(2)*6 + (1)*6 +
+1+(3)*6 + (3)*6 +
+1+(4)*6 + (6)*6 = 125
+</pre>
+
+Each row corsponds to the folowing values 1x1x1 = 1, 2x2x2 = 8, 3x3x3 = 27, 4x4x4 = 64, and 5x5x5 = 125. There is no possible way to add this together using only two loops, as we must add the two-dimensional lines together per row.
+
+<br /><br />
+
 Multiplying the cube by itself creates a four-dimensional space of cubes per cube and adds another amount to add by on an imaginary axis or line outside the cube. Four dimensions and higher are real, but we only perceive three dimensions visually with our eyes.
 
 <br /><br />
 
-Multiplying is much faster than adding our results together with loops. All forums of adding different amounts inside one another per loop can be reduced into simple, fast calculations no matter how many we have.
+Multiplying is much faster than adding our results together with loops nested inside one another per dimension. All forms of counting sequentially by different amounts per dimension per loop or sigma inside one another can be reduced into simple, fast calculations using multiplication no matter how many we have.
 
 <br /><br />
 
