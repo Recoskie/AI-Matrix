@@ -320,13 +320,13 @@ This solves the difference in the second dimension. Which is two more. <h3>var p
 
 <br /><br />
 
-After each subtraction of all numbers, the first value is the per iteration added amount.
+After each subtraction of all numbers, the first value is the per added amount of each loop put inside each other.
 
 <br /><br />
 
 The starting value is important; you can start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each amount per iteration by subtracting the next number into the previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each per amount added in each loop by subtracting the next number into the previous and writing down the first number each time till left with 0.
 
 <br /><br />
 
@@ -499,7 +499,7 @@ Multiplying is much faster than adding our results together with loops nested in
 
 <br /><br />
 
-Changing the amounts you add per loop inside each other back into equations is explained in the decoding dimensional iteration section.
+Changing the amounts you added per loop inside each other back into equations is explained in the decoding dimensional iteration section.
 
 <br /><br />
 
@@ -519,7 +519,7 @@ I will make it so that you can create any five-dimensional set you like in this 
 
 <br /><br />
 
-Each per iteration value is set to what x<sup>5</sup> is. You can change them to whatever you like, even negative or fractional values.
+Each per iteration value is set to what x<sup>5</sup> is.
 
 <br /><br />
 
@@ -637,7 +637,7 @@ Each per iteration value is set to what x<sup>5</sup> is. You can change them to
 
 <br /><br />
 
-This code does the subtraction for you. You can change per1 to per5 and even change the value start to whatever you like, even negative or fractional values. The first number after each subtraction is the value that produced the set. We also lose one number each time as there is no number to subtract the last value into. You can change each amount to whatever you like. Or you can do the math yourself.
+This code does the subtraction for you. You can change per1 to per5 and even change the start value to whatever you like; even negative or fractional values can be used. The first number after each subtraction is the value that produced the set. We also lose one number each time as there is no number to subtract the last value into. You can change each amount to whatever you like. Or you can do the math yourself.
 
 <br /><br />
 
@@ -822,7 +822,7 @@ This makes solving the starting value for each iteration much faster. This gives
 
 <br />
 
-Each dimension to the power of by it's self is as follows.
+Each dimension per added amount values are as follows.
 
 <br /><br />
 
@@ -847,9 +847,9 @@ The last per iteration value you get is the number of sides the dimensional shap
 
 <br /><br />
 
-x ends with 1 as it is a straight line.<br />
-x<sup>2</sup> ends with 2 as it is a square.<br />
-x<sup>3</sup> ends with 6 as it is a cube with six sides.<br />
+x ends with 1 as it is a straight line with one surface.<br />
+x<sup>2</sup> ends with 2 as it is a square with two sides/surfaces.<br />
+x<sup>3</sup> ends with 6 as it is a cube with six sides/surfaces.<br />
 x<sup>4</sup> ends with 24 as it has 24 sides in the fourth-dimension.<br />
 x<sup>5</sup> ends with 120 as it has 120 sides in the fifth-dimension.
 
@@ -887,11 +887,11 @@ If you persist on learning what the higher dimensions are, then the following vi
 
 <br />
 
-The per iteration amount for x<sup>2</sup> is 0,1,2,0,0,0 and the per iteration amount for x<sup>5</sup> is 0,1,30,150,240,120.
+The per added amounts for x<sup>2</sup> is 0,1,2,0,0,0 and the per added amounts for x<sup>5</sup> is 0,1,30,150,240,120.
 
 <br /><br />
 
-When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per iteration amounts together:
+When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per added amounts together:
 
 <br /><br />
 
@@ -913,7 +913,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 <br />
 
-Multiplying or dividing a single calculation is the same as dividing or multiplying it's single calculation per iteration values.
+Multiplying or dividing a single calculation is the same as dividing or multiplying its single calculation per iteration values.
 
 <br /><br />
 
@@ -1007,7 +1007,7 @@ Try each of them if you like, or even combine and make up your own combinations.
 
 <br /><br />
 
-In the same way, you mix the relationships together to form the iterations of your calculation, which is going to be the same way you reverse them back into a math calculation.
+In the same way, you mix the relationships together to form the iterations of your dimensional calculation is going to be the same way you reverse them back into a math calculation.
 
 <br /><br />
 
@@ -1036,7 +1036,7 @@ As previously seen, you can multiply, divide, add, and subtract each calculation
 
 <br /><br />
 
-In order to change each per iteration value back into a math calculation, you start with the last per iteration value. You divide the last value by 120 which is what x<sup>5</sup> is.
+In order to change each per iteration value back into a math calculation, you start with the last per iteration value. You divide the last value by 120, which is what x<sup>5</sup> is.
 
 <br /><br />
 
@@ -1057,7 +1057,7 @@ You then subtract each of your per values by x2 of x<sup>5</sup>. This then de-m
 
 <br /><br />
 
-You repeat this process to de-mix every calculation combination of each per iteration value. Giving you the size of each to the power of is.
+You repeat this process to de-mix every calculation combination of each per iteration value going backwards. Giving you the size of each to the power of is.
 
 <br /><br />
 
@@ -1077,7 +1077,7 @@ Let's take the following mixed calculation, for example.
 
 <br />
 
-In this example we multiply and add the square and cube together as 0,14,36,12,0,0.
+In this example, we multiply and add the square and cube to make it 0,14,36,12,0,0.
 
 <br /><br />
 
@@ -1101,7 +1101,7 @@ Dividing 12 by 6 is 2. Meaning multiplying x<sup>3</sup>*2 is 0*2=0,1*2=2,6*2=12
 
 <br /><br />
 
-We subtract 0,2,12,12,0,0 which is x<sup>3</sup>*2, from our per values 0,14,36,12,0,0. Making our current per values 0,12,24,0,0,0.
+We subtract 0,2,12,12,0,0, which is x<sup>3</sup>*2, from our per values 0,14,36,12,0,0. Making our current per values 0,12,24,0,0,0.
 
 <br /><br />
 
@@ -1195,7 +1195,7 @@ Doing a faster form of subtracting next numbers minus previous ones.
 
 <br /><br />
 
-Adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3=4, 3+3=6, 3+1=4 creates row 1,4,6,4,1.
+Adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3=4, 3+3=6, and 3+1=4 creates rows 1,4,6,4,1.
 
 <br /><br />
 
@@ -1220,11 +1220,11 @@ At the bottom, we take each of these.
 
 <br />
 
-Thus de-mixing each one as we divide by the last value and work our way backwards decoding each to the power of in the set.
+Thus, we de-mix each one as we divide by the last value and work backwards, decoding each to the power of in the set.
 
 <br /><br />
 
-You can expand this table to the power of 50 if you like to solve each per iteration up to 50. You would also need sets of 51 numbers minimum in length or higher, including the starting value. There is no limit in how many dimensions you can have.
+You can expand this table to the power of 50 if you like to solve each per-dimensional iteration up to 50. You would also need sets of 51 numbers minimum in length or higher, including the starting value. There is no limit to how many dimensions you can have.
 
 <br /><br />
 
@@ -1270,7 +1270,7 @@ We can solve things exponentially as.
 
 <br />
 
-As you can see, with 2^x, we are doubling per value. With 3^x, we are tripling. And so on. This forum of solving things is useful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
+As you can see, with 2^x, we are doubling per value. With 3^x, we are tripling. And so on. This forum for solving things is helpful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
 
 <br /><br />
 
@@ -1429,7 +1429,7 @@ We end up with a spiral that forms the matrix structure. This brings us to the f
 
 <br /><br />
 
-Multidimensionally, as a point space, it looks more closely like this, which was creepily created by Terra Nova.
+Multidimensionally, as a point space, it looks more closely like this, which Terra Nova creepily created.
 
 <br /><br />
 
@@ -1445,7 +1445,7 @@ Also, the Fibonacci sequence can help quantum computers remain quantum much long
 
 <br /><br />
 
-The golden ratio 1.618033988749894... is a simplified expression of this entire point space and the flower of life from zero dimension as a single number value that can be infinitely computed to higher accuracy.
+The golden ratio 1.618033988749894... is a simplified expression of this multidimensional point space and the flower of life from zero dimension as a single number value that can be infinitely computed to higher accuracy.
 
 <br /><br />
 
@@ -1453,7 +1453,7 @@ You can reverse the calculation of number values such as 3.1415926535... back in
 
 <br /><br />
 
-All numbers have a place, an expression, and meaning in reality. The number analytics library will go into detail and show the relationship of numbers to reality itself and how to use the quantum matrix to calculate any number value.
+All numbers have a place, an expression, and meaning in reality. The number analytics library will go into detail and show the relationship of numbers to reality and how to use the quantum matrix to calculate any number value.
 
 <br /><br />
 
@@ -1529,11 +1529,11 @@ Interestingly, we can form a quantum of light from a single whole unit in quantu
 
 <br /><br />
 
-These quantum fluctuations can merge and branch, creating emergent properties and interactions, making galaxies and universes.
+These quantum fluctuations can merge and branch, creating emergent properties and interactions, making galaxies and universes. In lab tests, we can create materials from only quantum of light.
 
 <br /><br />
 
-Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity, which you can call the Big Bang.
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity, which you can call the Big Bang. We might not even be the first universe; many more may have existed before us.
 
 <br /><br />
 
@@ -1541,7 +1541,7 @@ I will keep this section as simple as possible so everyone can understand it and
 
 <br /><br />
 
-This brings me to my favorite quote.
+This brings me to my favourite quote.
 
 <br /><br />
 
