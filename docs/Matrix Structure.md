@@ -114,10 +114,6 @@ image:
 
 <a id="intro" class="cmd"></a><h1>Introduction</h1>
 
-No matter how complex of a calculation or steps you write to output a result, the results can all be reduced back to what it takes to reproduce the measurements or results without knowing the steps.
-
-<br /><br />
-
 I put together a basics document that demonstrates how information and data can be deconstructed into their basic elements, a process that quantum computing can expedite <a href="https://recoskie.github.io/AI-Matrix/docs/Basics.html" target="_blank">basics link</a>.
 
 <br /><br />
@@ -194,7 +190,7 @@ In the case of the example I gave you, we ended up with the following set, start
 
 <br /><br />
 
-The first number is 1, which solves the problem of the starting amount.
+In math, we call these sigma summations. The first number is 1, which solves the problem of the starting amount for our sumitation.
 
 <br /><br />
 
@@ -202,15 +198,15 @@ Then, all you have to do is subtract the next number from the previous number.
 
 <br /><br />
 
-The next number after 1 is 8 so 8-1=7.
+The next number after 1 is 8, so 8-1=7.
 
 <br /><br />
 
-You then move to the next number in the set, 8. The number after 8 is 15. So 15-8=7.
+You then move to the next number in the set, moving from 1 to 8. The number after 8 is 15. So 15-8=7.
 
 <br /><br />
 
-You do this with all the numbers in the set. This solves the first-dimensional loop as it solves the difference between the numbers per iteration.
+You do this with all the numbers in the set. This solves the first-dimensional loop or sumitation as it solves the difference between the numbers per iteration.
 
 <br /><br />
 
@@ -236,7 +232,7 @@ Subtracting the set of 7,7,7,7,7,7,7 the same way will give a set of 0,0,0,0,0,0
 
 <br />
 
-In the previous example, subtracting the next number from the previous number finds the first dimension per added value.
+In the previous example, subtracting the next number from the previous number finds the added value.
 
 <br /><br />
 
@@ -324,9 +320,9 @@ After each subtraction of all numbers, the first value is the per added amount o
 
 <br /><br />
 
-The starting value is important; you can start anywhere in the two-dimensional square sequence. For example, you could start at <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
+It also does not matter if we start analyzing the set from the value 16 as we end up with the starting value of 16 as it still reduces to the following: <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. So the starting amount is then 16. You can solve each per amount added in each loop by subtracting the next number into the previous and writing down the first number each time till left with 0.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. This also applies to the first-dimensional set and higher-dimensional sets.
 
 <br /><br />
 
@@ -353,7 +349,7 @@ You can do the math and change per1 and per2 to whatever you like.
 
 <br />
 
-I decided to create this section later to help anyone understand the geometry of higher dimensions.
+I decided to create this section later to show the structure of higher dimensions.
 
 <br /><br />
 
@@ -391,7 +387,7 @@ When we input five into our function, it adds them together as follows:
 1+(1+1+1+1)
 </pre>
 
-Each row leads to 5x5=25 using the green line to the corner. The first loop can only add a single unit at the start of each row as a one-dimensional line from blue sqaures to red square, but now we must add another one-dimensional line inside this loop that does the same thing in the () as we move down the line shown as the green squares.
+Each row leads to 5x5=25 using the green line to the corner. The first loop can only add a single unit at the start of each row as a one-dimensional line from blue sqaures to red square, but now we must add another one-dimensional line inside this loop that does the same thing in the () per row as we move down the line shown as the green squares.
 
 <br /><br />
 
@@ -443,11 +439,11 @@ As objects fall, they get faster per second. To be exact, 33 feet more per secon
 
 <br /><br />
 
-In math, we call these quadratic equations, which makes it so we never have to use two loops inside each other (in math we express a one-dimensional sum as a sigma summation). In math, we show the two loops that create the quadratic as two sigma with the second inside the first. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
+In math, we call these quadratic equations, which means we never have to use two loops inside each other to add such values together. We show the two loops that create the quadratic as two sigma with the second inside the first. Quadratics are good at producing curves and showing an object's path when you throw it as it is pulled toward the earth.
 
 <br /><br />
 
-At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square as we add two lines that make our square using two loops. Adding the third loop, we can add another stack of squares per square on top of each other into a cube with connecting lines shown as the green squares that increase by one per cube.
+At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square, similar to how we have two lines that make our square using two loops. Adding the third loop, we can add another stack of squares per square on top of each other into a cube.
 
 <br /><br />
 
@@ -475,7 +471,7 @@ Next, we change the numbers we added together per row into whole numbers.
 1+(4) + (6) 
 </pre>
 
-A cube has 6 sides, so the two-dimensional and three-dimensional lines are multiplied by 6.
+A cube has 6 sides, so the two-dimensional and three-dimensional lines are multiplied by 6. This could be shown graphically by connecting green lines on 6 sides, but it is unnecessary as you should understand what is happening.
 
 <br /><br />
 
@@ -487,7 +483,7 @@ A cube has 6 sides, so the two-dimensional and three-dimensional lines are multi
 1+(4)*6 + (6)*6 = 125
 </pre>
 
-Each row corsponds to the folowing values 1x1x1 = 1, 2x2x2 = 8, 3x3x3 = 27, 4x4x4 = 64, and 5x5x5 = 125. There is no possible way to add this together using only two loops, as we must add the two-dimensional lines together per row.
+Each row corsponds to the folowing values 1x1x1 = 1, 2x2x2 = 8, 3x3x3 = 27, 4x4x4 = 64, and 5x5x5 = 125. There is no possible way to add this together using only two loops, as we must add the two-dimensional lines together per row to stack the squares in three-dimensional space.
 
 <br /><br />
 
@@ -495,7 +491,7 @@ Multiplying the cube by itself creates a four-dimensional space of cubes per cub
 
 <br /><br />
 
-Multiplying is much faster than adding our results together with loops nested inside one another per dimension. All forms of counting sequentially by different amounts per dimension per loop or sigma inside one another can be reduced into simple, fast calculations using multiplication no matter how many we have.
+Multiplying is much faster than adding our results together with loops nested inside one another per dimension. All forms of counting sequentially by different amounts per dimension can be reduced into simple, fast calculations using multiplication.
 
 <br /><br />
 
@@ -657,7 +653,7 @@ The starting amount will always be the first number in the set.
 s1 = s1 * 1;
 </pre>
 
-We do not need to subtract all the numbers to know the first difference, as it is the second number minus the first number. We only subtracted the rest of the set as the differences need to be reversed in each loop.
+We do not need to subtract all the numbers to know the first difference, as it is the second number minus the first number. We only subtracted the rest of the set as the differences need to be reversed in each loop well sumitation.
 
 <br /><br />
 
@@ -670,7 +666,7 @@ The value s2 matches the first per amount in the second subtraction of all numbe
 
 <br /><br />
 
-Instead of subtracting all numbers, we can use s1 and s2 to calculate the added amount. Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 is per amount.
+Instead of subtracting all numbers, we can use s1 and s2 to calculate the added amount. Multiplying s2 by 1, 1+1, 1+1+1, 1+1+1+1 per row calculates what s2 is per amount without subtracting the following values from the previous values.
 
 <br /><br />
 
@@ -689,7 +685,7 @@ The value s3 now matches the third amount in the second subtraction of all numbe
 
 <br /><br />
 
-Multiply s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculate what s3 is per amount outside of s2 (square) by adding the combined one-dimensional lines that made the square.
+Multiplying s3 by 1, 1+2, 1+2+3, 1+2+3+4 per row calculates what s3 is per amount outside of s2 (square) by adding the combined one-dimensional lines that made the square.
 
 <br /><br />
 
@@ -712,7 +708,7 @@ You can view it as taking away the amount added per dimension as we find each pe
 
 <br /><br />
 
-This shortcut removes repeated subtractions per row. In the next picture is an image of the values we multiplied by.
+This shortcut removes repeated subtractions. In the following picture is an image of the values we multiplied by.
 
 <br /><br />
 
@@ -887,19 +883,31 @@ If you persist on learning what the higher dimensions are, then the following vi
 
 <br />
 
-The per added amounts for x<sup>2</sup> is 0,1,2,0,0,0 and the per added amounts for x<sup>5</sup> is 0,1,30,150,240,120.
+When we add x<sup>2</sup>+x<sup>5</sup> together, we are adding the per-added amounts together.
 
 <br /><br />
 
-When we add x<sup>2</sup>+x<sup>5</sup> together we are adding the per added amounts together:
+We end up with the following set of numbers: 2, 36, 252, 1040, 3150, and 7812 using the added calculation.
 
 <br /><br />
 
-0+0, 1+1, 2+30, 0+150, 0+240, 0+120 is 0,2,32,150,240,120.
+When we subtract the values 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero, we find that start = 0, per1 = 2, per2 = 32, per3= 150, per4 = 240, per5 = 120.
 
 <br /><br />
 
-So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to zero to know what each per iteration amount is as it is the same as adding the two single calculations together. 
+The added amounts for x<sup>2</sup> is start = 0, per1 = 1, and per2 = 2, and the added amounts for x<sup>5</sup> is start = 0, per1 = 1, per2 = 30, per3 = 150, per4 = 240, per5 = 120.
+
+<br /><br />
+
+We we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 1+1, 2+30, 0+150, 0+240, 0+120 is start = 0, per1 = 2, per2 = 32, per3 = 150, per4 = 240, and per5 = 120.
+
+<br /><br />
+
+The added amounts for x<sup>2</sup> is 0,1,2,0,0,0 and the added amounts for x<sup>5</sup> is 0,1,30,150,240,120 are the same as the set 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero to find the resulting added amounts.
+
+<br /><br />
+
+So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set 0, 2, 36, 252, 1040, 3150, and 7812 to zero to know what each per iteration amount is as it is the same as adding the per iteration amounts together. 
 
 <br /><br />
 
@@ -913,7 +921,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set to z
 
 <br />
 
-Multiplying or dividing a single calculation is the same as dividing or multiplying its single calculation per iteration values.
+Multiplying or dividing a single calculation is the same as dividing or multiplying the per-iteration values.
 
 <br /><br />
 
@@ -1007,7 +1015,7 @@ Try each of them if you like, or even combine and make up your own combinations.
 
 <br /><br />
 
-In the same way, you mix the relationships together to form the iterations of your dimensional calculation is going to be the same way you reverse them back into a math calculation.
+In the same way, you mix the relationships to form the iterations of your dimensional calculation, we will reverse the per iteration amounts back into a math calculation in the next section.
 
 <br /><br />
 
@@ -1113,7 +1121,7 @@ Dividing 24 by 2 is 12. Meaning multiplying x<sup>2</sup>*12 is 0*12=0,1*12=12,1
 
 <br /><br />
 
-We subtract 0,12,24,0,0,0 which is x<sup>2</sup>*12, from our current per values 0,12,24,0,0,0. Making 0,0,0,0,0,0.
+We subtract 0,12,24,0,0,0, which is x<sup>2</sup>*12, from our current per values 0,12,24,0,0,0. Making 0,0,0,0,0,0.
 
 <br /><br />
 
@@ -1183,7 +1191,7 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
 
 <br /><br />
 
-Now, this function will transform a set of numbers into what it took to produce the numbers. What you multiply each power by will be what gets decoded up to 5 dimensions.
+Now, this function will transform a set of numbers into what it took to produce the numbers, no matter how complex a sequence is. What you multiply each power by will be what gets decoded up to 5 dimensions.
 
 <br /><br />
 
@@ -1232,11 +1240,11 @@ You can expand this table to the power of 50 if you like to solve each per-dimen
 
 <br />
 
-When we take everything and flip it upside down we then solve everything exponentially.
+We solve everything exponentially When we take it and flip it upside down.
 
 <br /><br />
 
-Instead of solving everything sequentially as.
+Instead of solving everything sequentially as
 
 <br /><br />
 
@@ -1337,7 +1345,7 @@ We switch the numbers used to decode the per iteration of each to the power to t
 
 <br />
 
-We can create two matrices that are opposite to each other. They are a triangle fractal known as Sierpinski triangle. Stored numerically dimensionally as pascals triangle to do the transformation.
+We can create two matrices that are opposite to each other. They are a triangle fractal known as the Sierpinski triangle and stored numerically dimensionally as a Pascal triangle to do the transformation.
 
 <br /><br />
 
@@ -1357,7 +1365,7 @@ The two matrices can then be combined in the following infinite fractal pattern.
 
 <br /><br />
 
-When I view this shape, I understand that every math calculation you can dream up is geometrically in there.
+When I view this shape, I understand that every math sequence or calculation you can dream up is geometrically in there.
 
 <br /><br />
 
@@ -1385,7 +1393,7 @@ Starting with circles, you can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-In early history, we have similar patterns appearing in ancient pyramids that are very much similar and is called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. This is a fun page that shows many different ways it was used and how it appeared in early history.
+In early history, similar patterns appeared in ancient pyramids, which are identical and called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. This is a fun page that shows many different ways it was used and how it appeared in early history.
 
 <br /><br />
 
@@ -1397,7 +1405,7 @@ The ratio between higher dimensions is the golden ratio see <a href="https://you
 
 <br /><br />
 
-This document covers the final structure of the dimensional quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
+This document covers the final structure of the dimensional quantum matrix in as simple of an explanation as possible, but at its center is a spiral relative to the Fibonacci = 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377 sequence spanning from zero. This natural formation creates the point space spanning to infinity into higher dimensions. Adding any previous number to the next makes the next number. Dividing the next number by the previous creates a very special number called the golden ratio; see <a href="https://theconversation.com/the-maths-behind-impossible-never-repeating-patterns-63801" target="_blank">quasicrystals</a>.
 
 <br /><br />
 
@@ -1533,11 +1541,11 @@ These quantum fluctuations can merge and branch, creating emergent properties an
 
 <br /><br />
 
-Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity, which you can call the Big Bang. We might not even be the first universe; many more may have existed before us.
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity which spans to what you would call the Big Bang. The singularity exists before the big bang. We might not even be the first universe; many more may have existed before us.
 
 <br /><br />
 
-I will keep this section as simple as possible so everyone can understand it and leave out interpretations that delve into the concepts of multiverse theory.
+We use the microwave background of the Big Bang to map our particular universe. We have a fairly good model, but sometimes, we have to change the model to match what we did not know could exist based on observation of our emergent universe. Sending the James Webb telescope into space allows us to analyze more of our universe in greater detail, giving us a more in-depth timeline of our emergent universe and everything in it.
 
 <br /><br />
 
