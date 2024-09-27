@@ -887,11 +887,11 @@ When we add x<sup>2</sup>+x<sup>5</sup> together, we are adding the per-added am
 
 <br /><br />
 
-We end up with the following set of numbers: 2, 36, 252, 1040, 3150, and 7812 using the added calculation.
+We end up with the following set of numbers: 2, 36, 252, 1040, 3150, and 7812 using the calculation.
 
 <br /><br />
 
-When we subtract the values 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero, we find that start = 0, per1 = 2, per2 = 32, per3= 150, per4 = 240, per5 = 120.
+When we subtract the values 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero, we find that it breaks down as start = 0, per1 = 2, per2 = 32, per3= 150, per4 = 240, per5 = 120.
 
 <br /><br />
 
@@ -899,11 +899,7 @@ The added amounts for x<sup>2</sup> is start = 0, per1 = 1, and per2 = 2, and th
 
 <br /><br />
 
-We we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 1+1, 2+30, 0+150, 0+240, 0+120 is start = 0, per1 = 2, per2 = 32, per3 = 150, per4 = 240, and per5 = 120.
-
-<br /><br />
-
-The added amounts for x<sup>2</sup> is 0,1,2,0,0,0 and the added amounts for x<sup>5</sup> is 0,1,30,150,240,120 are the same as the set 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero to find the resulting added amounts.
+If we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 1+1, 2+30, 0+150, 0+240, 0+120 we end up with start = 0, per1 = 2, per2 = 32, per3 = 150, per4 = 240, and per5 = 120, which is the same as the set of numbers that the calculation reduced back into.
 
 <br /><br />
 
