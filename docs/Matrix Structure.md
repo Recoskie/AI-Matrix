@@ -887,23 +887,23 @@ When we add x<sup>2</sup>+x<sup>5</sup> together, we are adding the per-added am
 
 <br /><br />
 
-We end up with the following set of numbers: 0, 2, 36, 252, 1040, 3150, and 7812 using the calculation.
+We end up with the following set of numbers: 0, 2, 36, 252, 1040, 3150, 7812 using the calculation.
 
 <br /><br />
 
-When we subtract the values 0, 2, 36, 252, 1040, 3150, and 7812 till left with all zero, we find that it breaks down as start = 0, per1 = 2, per2 = 32, per3= 150, per4 = 240, per5 = 120.
+When we subtract the values 0, 2, 36, 252, 1040, 3150, 7812 till left with all zero, we find that it breaks down as start = 0, per1 = 2, per2 = 32, per3= 150, per4 = 240, per5 = 120.
 
 <br /><br />
 
-The added amounts for x<sup>2</sup> is start = 0, per1 = 1, and per2 = 2, and the added amounts for x<sup>5</sup> is start = 0, per1 = 1, per2 = 30, per3 = 150, per4 = 240, per5 = 120.
+The added amounts for x<sup>2</sup> is start = 0, per1 = 1, per2 = 2, and the added amounts for x<sup>5</sup> is start = 0, per1 = 1, per2 = 30, per3 = 150, per4 = 240, per5 = 120.
 
 <br /><br />
 
-If we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 1+1, 2+30, 0+150, 0+240, 0+120 we end up with start = 0, per1 = 2, per2 = 32, per3 = 150, per4 = 240, and per5 = 120, which is the same as the set of numbers that the calculation reduced back into.
+If we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 1+1, 2+30, 0+150, 0+240, 0+120 we end up with start = 0, per1 = 2, per2 = 32, per3 = 150, per4 = 240, per5 = 120, which is the same as the set of numbers that the calculation reduced back into.
 
 <br /><br />
 
-So when we add x<sup>2</sup>+x<sup>5</sup>, we do not have to reduce the set 0, 2, 36, 252, 1040, 3150, and 7812 to zero to know what each added amount is as it is the same as adding the per-added amounts for x<sup>2</sup>, and x<sup>5</sup> together. 
+So when we add x<sup>2</sup>+x<sup>5</sup>, we do not have to reduce the set 0, 2, 36, 252, 1040, 3150, 7812 to zero to know what each added amount is as it is the same as adding the per-added amounts for x<sup>2</sup>, and x<sup>5</sup> together. 
 
 <br /><br />
 
@@ -1007,7 +1007,7 @@ Now, we add our multiplied per-iteration (added amounts) together.
   console.log(data);
 </code>
 
-<br />
+<br /><br />
 
 Try each one-dimensional to five-dimensional per added amount and multiply, add, or mix to make up your own dimensional calculations per added amount.
 
