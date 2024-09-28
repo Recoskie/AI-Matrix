@@ -337,7 +337,7 @@ You lose one number with each subtraction into all numbers because there is no n
 
 <br /><br />
 
-So, to solve a five-dimensional pattern per iteration requires at least six numbers in a set, including the starting value.
+So, to solve a five-dimensional pattern per iteration (per added amount) requires at least six numbers in a set, including the starting value.
 
 <br /><br />
 
@@ -387,7 +387,7 @@ When we input five into our function, it adds them together as follows:
 1+(1+1+1+1)
 </pre>
 
-Each row leads to 5x5=25 using the green line to the corner. The first loop can only add a single unit at the start of each row as a one-dimensional line from blue sqaures to red square, but now we must add another one-dimensional line inside this loop that does the same thing in the () per row as we move down the line shown as the green squares.
+Each row is the green line to the corner. The first loop can only add a single unit at the start of each row as a one-dimensional line from blue sqaures to red square, but now we must add another one-dimensional line inside this loop that does the same thing in the () per row as we move down the line shown as the green squares.
 
 <br /><br />
 
@@ -415,7 +415,7 @@ We have two green lines that join to the corner as we grow in size in two-dimens
 1+(4)*2 = 25
 </pre>
 
-The neat part is that we can take away the added unit in the square by subtracting it as
+Each row now leads to 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25. The neat part is that we can take away the added unit in the square by subtracting it as
 
 <br /><br />
 
