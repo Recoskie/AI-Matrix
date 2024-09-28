@@ -810,7 +810,7 @@ You can set each per added amount to whatever you like, and the output will be e
 
 <br /><br />
 
-This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction without repeated subtractions, which are shrunk into how many times it occurred per row.
+This makes solving the starting value for each iteration much faster. This gives us the same result as the 5-dimensional set with subtraction without repeated subtractions, which are shrunk into how many times it occurred per row in iteration.
 
 <br /><br />
 
@@ -818,7 +818,7 @@ This makes solving the starting value for each iteration much faster. This gives
 
 <br />
 
-Each dimension per added amount values are as follows.
+The per-added amount values up to the fifth dimension are as follows:
 
 <br /><br />
 
@@ -835,11 +835,11 @@ Each dimension per added amount values are as follows.
 
 <br />
 
-You can create this same table by multiplying values together and subtracting the set till you have zero left.
+You can create this table by multiplying values and subtracting the set until you have zero left.
 
 <br /><br />
 
-The last per iteration value you get is the number of sides the dimensional shape has.
+The last per-added amount you get is the number of sides the dimensional shape has.
 
 <br /><br />
 
@@ -875,7 +875,7 @@ I will not discuss the relationship of all higher dimensions to reality as this 
 
 <br /><br />
 
-If you persist on learning what the higher dimensions are, then the following video may help <a href="https://youtu.be/azpUG2GUzFI" target="_blank">0D to 11D explained advanced</a>.
+If you persist in learning what the higher dimensions are, then the following video may help <a href="https://youtu.be/azpUG2GUzFI" target="_blank">0D to 11D explained advanced</a>.
 
 <br /><br />
 
@@ -887,7 +887,7 @@ When we add x<sup>2</sup>+x<sup>5</sup> together, we are adding the per-added am
 
 <br /><br />
 
-We end up with the following set of numbers: 2, 36, 252, 1040, 3150, and 7812 using the calculation.
+We end up with the following set of numbers: 0, 2, 36, 252, 1040, 3150, and 7812 using the calculation.
 
 <br /><br />
 
@@ -903,7 +903,7 @@ If we add the added amounts for both x<sup>2</sup>+x<sup>5</sup> together, 0+0, 
 
 <br /><br />
 
-So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set 0, 2, 36, 252, 1040, 3150, and 7812 to zero to know what each per iteration amount is as it is the same as adding the per iteration amounts together. 
+So when we add x<sup>2</sup>+x<sup>5</sup>, we do not have to reduce the set 0, 2, 36, 252, 1040, 3150, and 7812 to zero to know what each added amount is as it is the same as adding the per-added amounts for x<sup>2</sup>, and x<sup>5</sup> together. 
 
 <br /><br />
 
@@ -917,7 +917,7 @@ So when we add x<sup>2</sup>+x<sup>5</sup> we do not have to reduce the set 0, 2
 
 <br />
 
-Multiplying or dividing a single calculation is the same as dividing or multiplying the per-iteration values.
+Multiplying or dividing a single calculation is the same as dividing or multiplying the per-added amounts.
 
 <br /><br />
 
@@ -944,7 +944,7 @@ If you want to get more complex, you can multiply the square and cube, then add 
 
 <br />
 
-Now, we add our multiplied iteration values together.
+Now, we add our multiplied per-iteration (added amounts) together.
 
 <br /><br />
 
@@ -1007,11 +1007,13 @@ Now, we add our multiplied iteration values together.
   console.log(data);
 </code>
 
-Try each of them if you like, or even combine and make up your own combinations.
+<br />
+
+Try each one-dimensional to five-dimensional per added amount and multiply, add, or mix to make up your own dimensional calculations per added amount.
 
 <br /><br />
 
-In the same way, you mix the relationships to form the iterations of your dimensional calculation, we will reverse the per iteration amounts back into a math calculation in the next section.
+The same way you mix the relationships to form the iterations of your dimensional calculation is going to be how we reverse the amounts back into a math calculation in the next section.
 
 <br /><br />
 
@@ -1019,7 +1021,7 @@ In the same way, you mix the relationships to form the iterations of your dimens
 
 <br />
 
-After subtracting the numbers and solving each per iteration, each to the power of up to 5 solves out as.
+After subtracting the numbers and solving each per added amount to the power of up to 5, it solves out as. Note that to the power of just means the number of times we multiply a value against itself. Basically, x<sup>2</sup> is x to the power of 2, or just simply x^2.
 
 <br /><br />
 
@@ -1036,11 +1038,11 @@ After subtracting the numbers and solving each per iteration, each to the power 
 
 <br />
 
-As previously seen, you can multiply, divide, add, and subtract each calculation using the iteration values to create any desired calculation.
+As previously seen, you can multiply, divide, add, and subtract each calculation using the iteration values (per added amounts) to create any desired calculation.
 
 <br /><br />
 
-In order to change each per iteration value back into a math calculation, you start with the last per iteration value. You divide the last value by 120, which is what x<sup>5</sup> is.
+In order to change each per iteration value (per added amounts) back into a math calculation, you start with the last per iteration (per added amount) value. You divide the last value by 120, which is what x<sup>5</sup> is.
 
 <br /><br />
 
@@ -1061,7 +1063,7 @@ You then subtract each of your per values by x2 of x<sup>5</sup>. This then de-m
 
 <br /><br />
 
-You repeat this process to de-mix every calculation combination of each per iteration value going backwards. Giving you the size of each to the power of is.
+You repeat this process to de-mix every calculation combination going backwards. Giving you the size of each to the power of is.
 
 <br /><br />
 
@@ -1081,7 +1083,7 @@ Let's take the following mixed calculation, for example.
 
 <br />
 
-In this example, we multiply and add the square and cube to make it 0,14,36,12,0,0.
+In this example, we multiply and add the square and cube to make it start = 0, per1 = 14, per2 = 36, per3 = 12, per4 = 0, and per5 = 0.
 
 <br /><br />
 
@@ -1089,15 +1091,15 @@ This gives us the set 0,14,64,162,320,550,864,1274.
 
 <br /><br />
 
-By subtracting the values 0,14,64,162,320,550,864,1274 till we have 0, we can find each per iteration value as 0,14,36,12,0,0.
+By subtracting the values 0,14,64,162,320,550,864,1274 till we have 0, we can find each per iteration value as start = 0, per1 = 14, per2 = 36, per3 = 12, per4 = 0, per5 = 0.
 
 <br /><br />
 
-Dividing 0 by 120 is 0. Meaning multiplying x<sup>5</sup>*0 is 0*0=0,1*0=0,30*0=0,150*0=0,240*0=0,120*0=0. Does nothing.
+Dividing 0 by 120 is 0. Meaning multiplying x<sup>5</sup>*0 is 0*0=0,1*0=0,30*0=0,150*0=0,240*0=0,120*0=0. Takes away nothing.
 
 <br /><br />
 
-Dividing 0 by 24 is 0. Meaning multiplying x<sup>4</sup>*0 is 0*0=0,1*0=0,14*0=0,36*0=0,24*0=0,0*0=0. Does nothing.
+Dividing 0 by 24 is 0. Meaning multiplying x<sup>4</sup>*0 is 0*0=0,1*0=0,14*0=0,36*0=0,24*0=0,0*0=0. Takes away nothing.
 
 <br /><br />
 
@@ -1109,7 +1111,7 @@ We subtract 0,2,12,12,0,0, which is x<sup>3</sup>*2, from our per values 0,14,36
 
 <br /><br />
 
-Current per values are now 0,12,24,0,0,0.
+Current per values are now start = 0, per1 = 12, per2 = 24,0,0,0.
 
 <br /><br />
 
@@ -1121,7 +1123,7 @@ We subtract 0,12,24,0,0,0, which is x<sup>2</sup>*12, from our current per value
 
 <br /><br />
 
-Working backwards like this lets us de-mix any calculation combination in much the same way as we can create such a calculation by mixing per iteration values together.
+Working backwards like this lets us de-mix any calculation combination in much the same way as we can create such a calculation by mixing per iteration values together (per added amounts together).
 
 <br /><br />
 
@@ -1187,7 +1189,7 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
 
 <br /><br />
 
-Now, this function will transform a set of numbers into what it took to produce the numbers, no matter how complex a sequence is. What you multiply each power by will be what gets decoded up to 5 dimensions.
+Now, this function will transform a set of numbers into what it took to produce the numbers, no matter how complex a sequence it is. What you multiply each power by will be what gets decoded up to 5 dimensions.
 
 <br /><br />
 
@@ -1224,7 +1226,7 @@ At the bottom, we take each of these.
 
 <br />
 
-Thus, we de-mix each one as we divide by the last value and work backwards, decoding each to the power of in the set.
+Thus, we de-mix each one as we divide by the last value and work backwards, decoding each to the power of in the set to match the per added amounts as a fast math calculation using only multiplication.
 
 <br /><br />
 
@@ -1257,7 +1259,7 @@ Instead of solving everything sequentially as
 
 <br />
 
-We can solve things exponentially as.
+We can solve things exponentially as
 
 <br /><br />
 
@@ -1274,7 +1276,7 @@ We can solve things exponentially as.
 
 <br />
 
-As you can see, with 2^x, we are doubling per value. With 3^x, we are tripling. And so on. This forum for solving things is helpful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
+As you can see, with 2^x, we are doubling per value as we are multiplying twos together when we use to the power of x. With 3^x, we are tripling. And so on. This forum for solving things is helpful for the growth and expansion of things. The expansion and branching of nodes. The spread of bacteria or viruses. The rate at which a person grows.
 
 <br /><br />
 
@@ -1333,7 +1335,7 @@ This will de-mix any tripling or doubling combinational pattern in the set. Even
 
 <br /><br />
 
-We switch the numbers used to decode the per iteration of each to the power to the decoder and move the decoder to the subtraction pattern.
+We switch the numbers used to decode the per iteration of each to the power of to the decoder and move the decoder to the subtraction pattern.
 
 <br /><br />
 
@@ -1361,7 +1363,7 @@ The two matrices can then be combined in the following infinite fractal pattern.
 
 <br /><br />
 
-When I view this shape, I understand that every math sequence or calculation you can dream up is geometrically in there.
+When I view this shape, I understand that every math sequence or calculation you can dream up is geometrically in there, including any higher dimensions and anything or everything possibly conceivable. You might find the following interesting on the level 7 civilization on the Kardashev scale, which delves into the concept of the omniverse and an infinite structure that contains everything <a href="https://youtu.be/jA0F4P8rLPQ?t=15" target="_blank">Kardashev scale level 7</a>.
 
 <br /><br />
 
