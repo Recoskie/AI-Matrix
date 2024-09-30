@@ -1185,7 +1185,7 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
   var t1 = o[0] / 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
-  console.log("Eqation = " + t1 + " x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
+  console.log("Eqation = " + t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
 </code>
 
 <br /><br />
@@ -1203,13 +1203,11 @@ The resulting equation uses ^4 to show that we multiply "x" four times together.
 1 + 1x1x21 +1x1x1x77 = 99
 1 + 2x2x21 + 2x2x2x77 = 701 </pre>
 
-<br /><br />
-
-We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per added amounts, then taking away the added amounts for each dimensional shape created by multiplication.
+We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per added amounts, then taking away the added amounts for each dimensional shapes per added amounts.
 
 <br /><br />
 
-In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers in higher dimensions; the per-added values can be found by subtracting the values in the sequence. The per added values can be translated back into what to multiply by each x<sup>1</sup> to x<sup>5</sup> to produce our set of numbers.
+In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers; the per-added values can be found by subtracting the values or using the dimensional subtraction pattern. The per-added values can be translated back into what to multiply by each x<sup>1</sup> to x<sup>5</sup> to produce our set of numbers.
 
 <br /><br />
 
@@ -1288,12 +1286,16 @@ In this next example, we move back to adding per-added amounts to produce a comp
   var t1 = o[0] / 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
-  console.log("Eqation = " + t1 + " x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
+  console.log("Eqation = " + t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
 </code>
 
 <br /><br />
 
-In this example, you can change the per-added values to anything. The equation at the end tells us what to multiply the x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers per added amounts per dimension. No matter what the per added amount are, they can be converted into fast multiplication rather than adding the values together.
+In this example, you can change the per-added values to anything. The equation at the end tells us what to multiply the x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers per-added amounts per dimension. No matter what the per-added amount are, they can be converted into fast multiplication rather than adding the values together.
+
+<br /><br />
+
+Additionally, if the set has three dimensions, then we end up with three per added amount values per dimension. This same rule applies even if we start analyzing our sequence, say 50 numbers in. We still end up with three values for per-added amounts. These three per-added amount values are all that are required to change the position we are at in the sequence back into an equation starting from x is 0 and adding by 1. The only difference is that the sequence will continue from 50 numbers in. If we put -50 in place of x, we can see what the -50 value was. This means we can find any sequence from anywhere in a sequence without knowing where it begins. This makes this an incredible way of analyzing and breaking down information.
 
 <br /><br />
 
@@ -1305,7 +1307,7 @@ Doing a faster form of subtracting next numbers minus previous ones.
 
 <br /><br />
 
-Adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3=4, 3+3=6, and 3+1=4 creates rows 1,4,6,4,1.
+Additionally, adding the previous and next numbers together in any row like 1,3,3,1, doing 1+3=4, 3+3=6, and 3+1=4 creates rows 1,4,6,4,1.
 
 <br /><br />
 
