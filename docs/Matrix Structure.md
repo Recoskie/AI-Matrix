@@ -316,13 +316,13 @@ This solves the difference in the second dimension. Which is two more. <h3>var p
 
 <br /><br />
 
-After each subtraction of all numbers, the first value is the per added amount of each loop put inside each other.
+After each subtraction of all numbers, the first value is the per-added amount of each loop put inside each other.
 
 <br /><br />
 
 It also does not matter if we start analyzing the set from the value 16 as we end up with the starting value of 16 as it still reduces to the following: <h3>var start=16;</h3> with <h3>var per1=9;</h3> and <h3>var per2=2;</h3>
 
-This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. This also applies to the first-dimensional set and higher-dimensional sets.
+This continues the pattern from 16 onward as 16,25,36,49,64,81,100,121. This also applies to the first-dimensional set and higher-dimensional sets. This makes solving dimensional sequences position-independent.
 
 <br /><br />
 
@@ -337,7 +337,7 @@ You lose one number with each subtraction into all numbers because there is no n
 
 <br /><br />
 
-So, to solve a five-dimensional pattern per iteration (per added amount) requires at least six numbers in a set, including the starting value.
+So, to solve a five-dimensional pattern per iteration (per-added amount) requires at least six numbers in a set, including the starting value.
 
 <br /><br />
 
@@ -415,15 +415,18 @@ We have two green lines that join to the corner as we grow in size in two-dimens
 1+(4)*2 = 25
 </pre>
 
-Each row now leads to 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25. The neat part is that we can take away the added unit in the square by subtracting it as
+Each row now leads to 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25. The neat part is that we can take away the added unit at the start of each line
 
 <br /><br />
 
 x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
+<pre>1x1-1=0
+2x2-2=2
+3x3-3=6</pre>
 
 <br /><br />
 
-Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per unit because of the two sides of the square.
+This removes the added unit, shown as the red square per square. Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per square because of the two sides.
 
 <br /><br />
 
@@ -459,7 +462,7 @@ A cube becomes the following continuation pattern in which we add the two-dimens
 1+(4) + (1+2+3)
 </pre>
 
-Next, we change the numbers we added together per row into whole numbers.
+Next, we change the numbers we added per row into whole numbers.
 
 <br /><br />
 
@@ -471,7 +474,7 @@ Next, we change the numbers we added together per row into whole numbers.
 1+(4) + (6) 
 </pre>
 
-A cube has 6 sides, so the two-dimensional and three-dimensional lines are multiplied by 6. This could be shown graphically by connecting green lines on 6 sides, but it is unnecessary as you should understand what is happening.
+A cube has six sides, so the two-dimensional and three-dimensional lines are multiplied by 6. This could be shown graphically by connecting green lines on six sides, but it is unnecessary as you should understand what is happening.
 
 <br /><br />
 
@@ -1194,7 +1197,7 @@ Now, this function will transform a set of numbers into what it took to produce 
 
 <br /><br />
 
-The resulting equation uses ^4 to show that we multiply "x" four times together. We also use * to show what to multiply by. Changing all x by one will reproduce the data from the analyzed data.
+The resulting equation can be used to reproduce the data from the analyzed data.
 
 <br /><br />
 
@@ -1203,11 +1206,11 @@ The resulting equation uses ^4 to show that we multiply "x" four times together.
 1 + 1x1x21 + 1x1x1x77 = 99
 1 + 2x2x21 + 2x2x2x77 = 701 </pre>
 
-We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per-added amounts, then taking away the added amounts for each dimensional shapes per-added amounts.
+We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per-added amounts, then taking away the added amounts for each dimensional shapes.
 
 <br /><br />
 
-In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers; the per-added values can be found by subtracting the values or using the dimensional subtraction pattern. The per-added values can be translated back into what to multiply each x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers.
+In this next example, we add per-added amounts to produce a complex sequence of numbers.
 
 <br /><br />
 
@@ -1295,7 +1298,7 @@ In this example, you can change the per-added values to anything. The equation a
 
 <br /><br />
 
-Additionally, if the set has three per-added amounts (three dimensions), we have 100 values for this sequence. Let's say we only use numbers 50 to 54 to find the three pre-added amount values. We end up with the same sequence, beginning at 50 numbers into the sequence and using three per-added amount values. These three per-added amount values are all that are required to change the position we are at in the sequence back into an equation starting from x is 0 and adding by 1. The only difference is that the sequence will continue from 50 numbers in. If we put -50 in place of x, we can see what the -50 value was. This means we can find any sequence from anywhere in a sequence without knowing where it begins or ends (or if it ever ends). This makes this an incredible way of analyzing and breaking information down. These same rules apply to any sequence with any number of dimensions.
+Additionally, if the set has three per-added amounts (three dimensions), we have 100 values for this sequence. Let's say we only use numbers 50 to 57 to find the three pre-added amount values. We end up with the same sequence, beginning at 50 numbers into the sequence and using three per-added amount values. These three per-added amount values are all that are required to change the position we are at in the sequence back into an equation starting from x is 0 and adding by 1. The only difference is that the sequence will continue from 50 numbers in. If we put -50 in place of x, we can see what the -50 value was. This means we can find any sequence from anywhere in a sequence without knowing where the sequence begins or ends (or if it ever ends). This makes this an incredible way of analyzing and breaking information down. These same rules apply to any sequence with any number of dimensions.
 
 <br /><br />
 
@@ -1438,7 +1441,7 @@ As you can see, with 2^x, we are doubling per value as we are multiplying twos t
 
 <br /><br />
 
-This will de-mix any tripling or doubling combinational pattern in the set. Even if you start in the middle of the set as this also is position independant, It will de-mix all combinations to what they are.
+This will de-mix any tripling or doubling combinational pattern in the set. Even if you start in the middle of the set, as this also is position independent, It will de-mix all combinations to what they are.
 
 <br /><br />
 
