@@ -415,16 +415,17 @@ We have two green lines that join to the corner as we grow in size in two-dimens
 1+(4)*2 = 25
 </pre>
 
-Each row now leads to 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25. The neat part is that we can take away the added unit at the start of each line
+Each row now leads to 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25. The neat part is that we can take away the added unit at the start of each line.
 
 <br /><br />
 
 x<sup>2</sup>-x=0,2,6,12,20 which is 0, 0+2, 0+2+4, 0+2+4+6, 0+2+4+6+8.
+
+<br /><br />
+
 <pre>1x1-1=0
 2x2-2=2
 3x3-3=6</pre>
-
-<br /><br />
 
 This removes the added unit, shown as the red square per square. Dividing it by 2 gives us a set that adds a one-dimensional sequence per value. It was only 2 in size per square because of the two sides.
 
@@ -446,7 +447,7 @@ In math, we call these quadratic equations, which means we never have to use two
 
 <br /><br />
 
-At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square, similar to how we have two lines that make our square using two loops. Adding the third loop, we can add another stack of squares per square on top of each other into a cube.
+At 2x2, we have two squares stacked on top of each other when we multiply by 2 again, making 2x2x2, and at 3x3x3, we have 3 squares stacked on top of each other. This adds a new square, similar to how we have two lines that make our square using two loops. Adding the third loop, we can add another square per square on top of each other into a cube.
 
 <br /><br />
 
@@ -1024,7 +1025,7 @@ The same way you mix the relationships to form the iterations of your dimensiona
 
 <br />
 
-After subtracting the numbers and solving each per added amount to the power of up to 5, it solves out as. Note that to the power of just means the number of times we multiply a value against itself. Basically, x<sup>2</sup> is x to the power of 2, or just simply x^2.
+After subtracting the numbers and solving each per added amount to the power of up to 5, it solves out as.
 
 <br /><br />
 
@@ -1038,6 +1039,10 @@ After subtracting the numbers and solving each per added amount to the power of 
     <tr><td>x<sup>5</sup></td><td>0</td><td>1</td><td>30</td><td>150</td><td>240</td><td>120</td><td>0,1,32,243,1024,3125,7776,16807</td></tr>
   </table>
 </div>
+
+<br />
+
+Note that to the power of means the number of times we multiply a value against itself. X <sup>2</sup> is x to the power of 2, or simply x^2.
 
 <br />
 
@@ -1339,7 +1344,7 @@ Thus, we de-mix each one as we divide by the last value and work backwards, deco
 
 <br /><br />
 
-You can expand this table to the power of 50 if you like to solve each per-dimensional iteration up to 50. You would also need sets of 51 numbers minimum in length or higher. Analyzing sequences this way is a position-independent meaning. You can solve any sequence at any position in a set. There is no limit to how many dimensions you can have.
+You can expand this table to the power of 50 if you like to solve each per-dimensional iteration up to 50. You would also need sets of 51 numbers minimum in length or higher. There is no limit to how many dimensions you can have. Analyzing sequences this way is position-independent meaning. You can solve any sequence at any position in a set.
 
 <br /><br />
 
@@ -1501,7 +1506,7 @@ Starting with circles, you can create a pattern of overlapping circles. The poin
 
 <br /><br />
 
-In early history, similar patterns appeared in ancient pyramids, which are identical and called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. This is a fun page that shows many different ways it was used and how it appeared in early history.
+In early history, similar patterns appeared in ancient pyramids, which are identical and called the flower of life pattern. See the <a href="http://www.ascensionnow.co.uk/star-tetrahedron-merkaba.html" target="_blank">Star tetrahedron</a>. This is a fun page that shows many different interpretations, how it was used, and how it appeared in early history.
 
 <br /><br />
 
