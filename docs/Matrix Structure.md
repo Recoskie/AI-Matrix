@@ -1185,7 +1185,7 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
   var t1 = o[0] / 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
-  console.log("Eqation = t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
+  console.log("Eqation = " + t1 + " x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
 </code>
 
 <br /><br />
@@ -1198,10 +1198,10 @@ The resulting equation uses ^4 to show that we multiply "x" four times together.
 
 <br /><br />
 
-<per>The example equation 1 + x^2*21 + x^3*77 changes into:
+<pre>The example equation 1 + x^2*21 + x^3*77 changes into:
 1 + 0x0x21 + 0x0x0x77 = 1
 1 + 1x1x21 +1x1x1x77 = 99
-1 + 2x2x21 + 2x2x2x77 = 701 </per>
+1 + 2x2x21 + 2x2x2x77 = 701 </pre>
 
 <br /><br />
 
@@ -1288,7 +1288,7 @@ In this next example, we move back to adding per-added amounts to produce a comp
   var t1 = o[0] / 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
-  console.log("Eqation = t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
+  console.log("Eqation = " + t1 + " x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
 </code>
 
 <br /><br />
@@ -1431,7 +1431,7 @@ As you can see, with 2^x, we are doubling per value as we are multiplying twos t
   var t1 = o[0] / 1; o[0] -= t1 * 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5] + "");
-  console.log("Equation = " + t1 + " + 2^x*" + t2 + " + 3^x*" + t3 + " + 4^x*" + t4 + " + 5^x*" + t5 + "");
+  console.log("Equation = 1^x*" + t1 + " + 2^x*" + t2 + " + 3^x*" + t3 + " + 4^x*" + t4 + " + 5^x*" + t5 + "");
 </code>
 
 <br /><br />
