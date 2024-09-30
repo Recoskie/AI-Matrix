@@ -1131,7 +1131,7 @@ In the new example code, we multiply by the power of each d value. You can chang
 
 <br /><br />
 
-You should see it de-mixes each to the power of perfectly. It also does not matter which position you start in the set per value.
+You should see it de-mixes each to the power of perfectly.
 
 <br />
 
@@ -1200,14 +1200,14 @@ The resulting equation uses ^4 to show that we multiply "x" four times together.
 
 <pre>The example equation 1 + x^2*21 + x^3*77 changes into:
 1 + 0x0x21 + 0x0x0x77 = 1
-1 + 1x1x21 +1x1x1x77 = 99
+1 + 1x1x21 + 1x1x1x77 = 99
 1 + 2x2x21 + 2x2x2x77 = 701 </pre>
 
-We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per added amounts, then taking away the added amounts for each dimensional shapes per added amounts.
+We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per-added amounts, then taking away the added amounts for each dimensional shapes per-added amounts.
 
 <br /><br />
 
-In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers; the per-added values can be found by subtracting the values or using the dimensional subtraction pattern. The per-added values can be translated back into what to multiply by each x<sup>1</sup> to x<sup>5</sup> to produce our set of numbers.
+In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers; the per-added values can be found by subtracting the values or using the dimensional subtraction pattern. The per-added values can be translated back into what to multiply each x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers.
 
 <br /><br />
 
@@ -1291,11 +1291,11 @@ In this next example, we move back to adding per-added amounts to produce a comp
 
 <br /><br />
 
-In this example, you can change the per-added values to anything. The equation at the end tells us what to multiply the x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers per-added amounts per dimension. No matter what the per-added amount are, they can be converted into fast multiplication rather than adding the values together.
+In this example, you can change the per-added values to anything. The equation at the end tells us what to multiply the x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers per-added amounts per dimension. No matter the per-added amount, they can be converted into fast multiplication rather than adding the values together.
 
 <br /><br />
 
-Additionally, if the set has three dimensions, then we end up with three per added amount values per dimension. This same rule applies even if we start analyzing our sequence, say 50 numbers in. We still end up with three values for per-added amounts. These three per-added amount values are all that are required to change the position we are at in the sequence back into an equation starting from x is 0 and adding by 1. The only difference is that the sequence will continue from 50 numbers in. If we put -50 in place of x, we can see what the -50 value was. This means we can find any sequence from anywhere in a sequence without knowing where it begins. This makes this an incredible way of analyzing and breaking down information.
+Additionally, if the set has three per-added amounts (three dimensions), we have 100 values for this sequence. Let's say we only use numbers 50 to 54 to find the three pre-added amount values. We end up with the same sequence, beginning at 50 numbers into the sequence and using three per-added amount values. These three per-added amount values are all that are required to change the position we are at in the sequence back into an equation starting from x is 0 and adding by 1. The only difference is that the sequence will continue from 50 numbers in. If we put -50 in place of x, we can see what the -50 value was. This means we can find any sequence from anywhere in a sequence without knowing where it begins or ends (or if it ever ends). This makes this an incredible way of analyzing and breaking information down. These same rules apply to any sequence with any number of dimensions.
 
 <br /><br />
 
@@ -1336,7 +1336,7 @@ Thus, we de-mix each one as we divide by the last value and work backwards, deco
 
 <br /><br />
 
-You can expand this table to the power of 50 if you like to solve each per-dimensional iteration up to 50. You would also need sets of 51 numbers minimum in length or higher, including the starting value. There is no limit to how many dimensions you can have.
+You can expand this table to the power of 50 if you like to solve each per-dimensional iteration up to 50. You would also need sets of 51 numbers minimum in length or higher. Analyzing sequences this way is a position-independent meaning. You can solve any sequence at any position in a set. There is no limit to how many dimensions you can have.
 
 <br /><br />
 
@@ -1438,7 +1438,7 @@ As you can see, with 2^x, we are doubling per value as we are multiplying twos t
 
 <br /><br />
 
-This will de-mix any tripling or doubling combinational pattern in the set. Even if you start in the middle of the set, It will de-mix all combinations to what they are.
+This will de-mix any tripling or doubling combinational pattern in the set. Even if you start in the middle of the set as this also is position independant, It will de-mix all combinations to what they are.
 
 <br /><br />
 
