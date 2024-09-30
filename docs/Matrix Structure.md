@@ -1185,11 +1185,115 @@ You should see it de-mixes each to the power of perfectly. It also does not matt
   var t1 = o[0] / 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
+  console.log("Eqation = t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
 </code>
 
 <br /><br />
 
-Now, this function will transform a set of numbers into what it took to produce the numbers, no matter how complex a sequence it is. What you multiply each power by will be what gets decoded up to 5 dimensions.
+Now, this function will transform a set of numbers into what it took to produce the numbers. What you multiply each x<sup>1</sup> to x<sup>5</sup> by with "d1" to "d5" will be what gets decoded up to 5 dimensions.
+
+<br /><br />
+
+The resulting equation uses ^4 to show that we multiply "x" four times together. We also use * to show what to multiply by. Changing all x by one will reproduce the data from the analyzed data.
+
+<br /><br />
+
+<per>The example equation 1 + x^2*21 + x^3*77 changes into:
+1 + 0x0x21 + 0x0x0x77 = 1
+1 + 1x1x21 +1x1x1x77 = 99
+1 + 2x2x21 + 2x2x2x77 = 701 </per>
+
+<br /><br />
+
+We have proved that we can convert any combination of x<sup>1</sup> to x<sup>5</sup> back into what it is by subtracting a set of numbers and finding its per added amounts, then taking away the added amounts for each dimensional shape created by multiplication.
+
+<br /><br />
+
+In this next example, we move back to adding per-added amounts to produce a complex sequence of numbers in higher dimensions; the per-added values can be found by subtracting the values in the sequence. The per added values can be translated back into what to multiply by each x<sup>1</sup> to x<sup>5</sup> to produce our set of numbers.
+
+<br /><br />
+
+<code>
+  var data = [];
+
+  var end = 8;
+
+  var start = 0;
+
+  var per1 = 14;
+
+  var per2 = 36;
+
+  var per3 = 12;
+
+  var per4 = 0;
+
+  var per5 = 0;
+
+  for( var i1 = 0; i1 < end; i1++ )
+  {
+    data[i1] = start;
+
+    for( var i2 = 0; i2 < i1; i2++ )
+    {
+      data[i1] += per1;
+
+      for( var i3 = 0; i3 < i2; i3++ )
+      {
+        data[i1] += per2;
+
+        for( var i4 = 0; i4 < i3; i4++ )
+        {
+          data[i1] += per3;
+
+          for( var i5 = 0; i5 < i4; i5++ )
+          {
+            data[i1] += per4;
+
+            for( var i6 = 0; i6 < i5; i6++ )
+            {
+              data[i1] += per5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  console.log(data);
+
+  var s1 = data[0], s2 = data[1], s3 = data[2], s4 = data[3], s5 = data[4], s6 = data[5], s7 = data[6], s8 = data[7];
+
+  //Each per value relative to number of subtraction.
+
+  var o = [];
+  o[0] = s1 * 1;
+  o[1] = s2 - (o[0] * 1);
+  o[2] = s3 - (o[0] * 1 + o[1] * 2);
+  o[3] = s4 - (o[0] * 1 + o[1] * 3 + o[2] * 3);
+  o[4] = s5 - (o[0] * 1 + o[1] * 4 + o[2] * 6 + o[3] * 4);
+  o[5] = s6 - (o[0] * 1 + o[1] * 5 + o[2] * 10 + o[3] * 10 + o[4] * 5);
+  o[6] = s7 - (o[0] * 1 + o[1] * 6 + o[2] * 15 + o[3] * 20 + o[4] * 15 + o[5] * 6);
+  o[7] = s8 - (o[0] * 1 + o[1] * 7 + o[2] * 21 + o[3] * 35 + o[4] * 35 + o[5] * 21 + o[6] * 7);
+
+  console.log("Decoded per Value = " + o + "");
+
+  //Now decode each value.
+
+  var t6 = o[5] / 120; o[5] -= t6 * 120; o[4] -= t6 * 240; o[3] -= t6 * 150; o[2] -= t6 * 30; o[1] -= t6 * 1;
+  var t5 = o[4] / 24; o[4] -= t5 * 24; o[3] -= t5 * 36; o[2] -= t5 * 14; o[1] -= t5 * 1;
+  var t4 = o[3] / 6; o[3] -= t4 * 6; o[2] -= t4 * 6; o[1] -= t4 * 1;
+  var t3 = o[2] / 2; o[2] -= t3 * 2; o[1] -= t3 * 1;
+  var t2 = o[1] / 1; o[1] -= t2 * 1;
+  var t1 = o[0] / 1;
+
+  console.log("Decoded values = " + [t1,t2,t3,t4,t5,t6] + "");
+  console.log("Eqation = t1 + " + x^1*" + t2 + " + x^2*" + t3 + " + x^3*" + t4 + " + x^4*" + t5 + " + x^5*" + t6 + "");
+</code>
+
+<br /><br />
+
+In this example, you can change the per-added values to anything. The equation at the end tells us what to multiply the x<sup>1</sup> to x<sup>5</sup> by to produce our set of numbers per added amounts per dimension. No matter what the per added amount are, they can be converted into fast multiplication rather than adding the values together.
 
 <br /><br />
 
@@ -1327,6 +1431,7 @@ As you can see, with 2^x, we are doubling per value as we are multiplying twos t
   var t1 = o[0] / 1; o[0] -= t1 * 1;
 
   console.log("Decoded values = " + [t1,t2,t3,t4,t5] + "");
+  console.log("Equation = " + t1 + " + 2^x*" + t2 + " + 3^x*" + t3 + " + 4^x*" + t4 + " + 5^x*" + t5 + "");
 </code>
 
 <br /><br />
