@@ -1538,7 +1538,7 @@ Both the top and bottom matrices rotate in opposite directions.
 
 <br /><br />
 
-<img src="https://cs.astronomy.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-00-51-JCP_5F00_blog/3835.Whirlpool-Golden-ratio.jpg" />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGHsZv6Vf-92QD9OUIxWeXLLVMECf982u3EcY7KiCBAHaavuOM6nPLkF0xTrzF-lWnDzJF0f2t0mo0OrIWDcDHnsae-APBKfIlProY0BpBtH4svqs6zxj5h3iZ9IPbnaUW1BDWb3IRqwk/s500/20150116-whirlpool_galaxy.jpg" />
 
 <br /><br />
 
