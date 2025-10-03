@@ -1582,11 +1582,11 @@ All numbers have a place, an expression, and meaning in reality. The number anal
 
 <br />
 
-To understand consciousness, we have two theories and a math theorem that is the measure of the amount of information a configuration has as consciousness.
+To understand consciousness, we have a math theorem that is the measure of the amount of information a configuration has as consciousness.
 
 <br /><br />
 
-We don't know if consciousness is part of reality itself or if it emerges with the development of an organism and its metabolism as part of the brain.
+Consciousness is a patterning of self organization and systems combining and becoming more self aware and complex over time as an whole at different scales.
 
 <br /><br />
 
@@ -1594,19 +1594,23 @@ Scientifically, we know everything emerges from something more simple or abstrac
 
 <br /><br />
 
+Kurzgesagt teaches you the very basics. We will need a bit of a more advanced understanding to begin to explain what consciousness is at smaller and larger scales.
+
+<br /><br />
+
 We can take emergence to its most extreme and think about the zero dimension; see the <a href="https://youtu.be/emlcwyvnsg0?t=238" target="_blank">zero dimension explained</a>.
 
 <br /><br />
 
-Nuclear energy is much smaller than Atomic energy and is more powerful than Atomic energy. The closer we get to absolute zero, the closer we get to infinity, which is the beginning of the universe. It is theorized that if we could go all the way to zero, we would tap into the universe's infinite energy. Zero can not exist without infinity; zero into itself is infinity in an endless feedback loop.
+Energy is neither created nor destroyed. It just is and sums to zero. The object that contains it all is called a singularity.
 
 <br /><br />
 
-The phenomenon of dividing by zero can be explained by understanding the concept of infinity. The result approaches infinity when we divide a number by a smaller and smaller number. In the case of dividing by zero, we are essentially dividing by an infinitely small number, which results in an infinitely large answer.
+<img src="https://study.com/cimages/multimages/16/ysinex.png" />
 
 <br /><br />
 
-It is almost as if everything is a division by zero known as <a href="https://bigthink.com/starts-with-a-bang/singularity-inside-black-hole" target="_blank">the singularity</a>.
+If we take a circle and split it into two halves, with one half representing the positive and the other half representing the negative, it adds to zero. This is the initial fluctuation that begins anything at all called a quantum fluctuation, still summing to zero.
 
 <br /><br />
 
@@ -1614,11 +1618,31 @@ It is almost as if everything is a division by zero known as <a href="https://bi
 
 <br /><br />
 
-Both white holes and black holes are opposite to each other and begin at the singularity. The white hole is theorized to only exist at the beginning of a universe and is extremely rare.
+Both white holes and black holes are opposite to each other and begin at the singularity.
 
 <br /><br />
 
-The golden ratio does not only express this multidimensional quantum matrix but also is: <a href="http://www.fibonaccilifechart.com/writings/the-purpose-of-life-and-golden-ratio-explained">A Principle of Energy Flow</a>. The golden ratio also exists in black holes.
+We can think of these two extreme points as mirroring binary digits 1 and 0 from the whole (the singularity) at the most abstract level. However, within this singularity exists every possibility.
+
+<br /><br />
+
+<img src="https://substackcdn.com/image/fetch/$s_!ngf-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0e5d953e-b3da-48ac-b9f6-a856193d6b53_1080x1300.png" />
+
+<br /><br />
+
+This zero, encapsulating 1 and 0, underlies the unfolding of reality from fluctuations at a singular point, embodying the wave function of the zero-point field that encompasses all known reality. Energy is neither created nor destroyed and equally sums to zero. All phenomena emerge from this void, akin to nothingness as infinite potential.
+
+<br /><br />
+
+We can select paths choosing between 0=L and 1=R, much like the branching of a tree. As we navigate selecting branches we can select a new L=0, or R=1 that gets added on in continuation while all adds to zero in balance in a perfect symmetry. We can generate all the information that comprises our current reality in simulation spanning from a whole that contains it all, or create any song or video.
+
+<br /><br />
+
+Our reality is a small place within this infinite expansion. Determining the exact path to our particular reality poses a highly complex problem. We use the microwave background of the Big Bang to map our particular universe. We have a fairly good model, but sometimes, we have to change the model to match what we did not know could exist based on observation of our emergent universe. Sending the James Webb telescope into space allows us to analyze more of our universe in greater detail, giving us a more in-depth timeline of our emergent universe and everything in it.
+
+<br /><br />
+
+Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the smallest scale, and that everything is in a small section in what we call here and now.
 
 <br /><br />
 
@@ -1626,11 +1650,19 @@ The Fibonacci sequence creates the number phi (golden ratio), and our best theor
 
 <br /><br />
 
-In theory, consciousness is related to how much information it can integrate or connect together. The golden ratio is a value in which each part is as close together as it can be in which each part connects or links together.
+As far as we know the most dense alignment of all possibilities is the flower of life patterning. The fibonacci spiral is a break in symmetry per step. Aligning the circles in the most dense way possible like a flower along the fibonacci spiral and connecting all the center points makes the tetrahedron repeatable to higher and higher dimensions, or E8. The golden ratio is the most dense system posable of all possibilities branched out infinitely.
 
 <br /><br />
 
-In theory, if consciousness is this intrinsic property, then the whole universe could be infinitely conscious, and we are smaller forms of consciousness awareness; see <a href="https://youtu.be/8E333CdgS4g&t=120" target="_blank">Is Our Universe Conscious</a>.
+The following video <a href="https://youtu.be/Sp9B7raW_O4" target="_blank">The Mathematics of Consciousness</a> dives even deeper into how it works.
+
+<br /><br />
+
+In theory, consciousness is related to how much information it can integrate or connect together. The singularity could be seen as the largest integrated system containing all things while the smaller entities in the system at smaller scales are conscious only within their environment and awareness level at different scales.
+
+<br /><br />
+
+In theory, if consciousness is this intrinsic property, then the whole universe could be infinitely conscious (What some scientists call mind at large), and we are smaller forms of consciousness awareness; see <a href="https://youtu.be/8E333CdgS4g&t=120" target="_blank">Is Our Universe Conscious</a>.
 
 <br /><br />
 
@@ -1642,35 +1674,16 @@ Everything remains connected to a single fabric or whole, and the states of all 
 
 <br /><br />
 
-The separation between objects and particles may not exist, and all things are equal to zero as a single indivisible unit.
+The separation between objects and particles may not exist as well, and all things are equal to zero as a single indivisible unit.
+
 
 <br /><br />
 
-Interestingly, we can form a quantum of light from a single whole unit in quantum fluctuations from zero out of the singularity. At the same time, energy conservation remains true, and all should add to zero. Conservation of energy states that energy can neither be created nor destroyed.
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity which spans to what you would call the Big Bang. The singularity exists before the big bang. There may be many more universe than just ours.
 
 <br /><br />
 
-These quantum fluctuations can merge and branch, creating emergent properties and interactions, making galaxies and universes. In lab tests, we can create materials from only quantum of light.
-
-<br /><br />
-
-Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity which spans to what you would call the Big Bang. The singularity exists before the big bang. We might not even be the first universe; many more may have existed before us.
-
-<br /><br />
-
-We use the microwave background of the Big Bang to map our particular universe. We have a fairly good model, but sometimes, we have to change the model to match what we did not know could exist based on observation of our emergent universe. Sending the James Webb telescope into space allows us to analyze more of our universe in greater detail, giving us a more in-depth timeline of our emergent universe and everything in it.
-
-<br /><br />
-
-This brings me to my favourite quote.
-
-<br /><br />
-
-<img src="https://4.bp.blogspot.com/-oX0t94Zviqs/XBz9bP0SCeI/AAAAAAAAKUU/ZSOZ8s6FxQchhtZ6A_cDBVdUYp42Dj41gCLcBGAs/s900/p618%2BEverything%2BIs%2BNothing%2BWith%2BA%2BTwist%2B%2528Infinity%2BSymbol%2529%2B-%2BInfinite%2BQuantum%2BZen%252C%2BSuccess%2BLife%2BQuotes.jpg" />
-
-<br /><br />
-
-Realize that everything connects to everything else (Leonardo da Vinci 1452-1519).
+There are fun experiments you can do by your self called the observer effect. There is a silent observer within your self that can see your own thoughts without reacting to them that feels silent like a nothing and at the same time is infinite potential. This act of self refection tells you that you are not just a mind reacting like a robot and that this observer outside your thoughts could be the singularity (Universal conciseness, or Mind at large) <a href="https://youtu.be/zfn2kFOeNKg?si=1HwA0W70RxdNyT3I" target="_blank">The observer and the observed</a>. This is a powerful realization reveals there is no self and there is only one singularity. The separation we see at lower scales of reality in matter to self and others are all the singularity bought down to a smaller scale or organization into an reality and a point of perception.
 
 <br /><br />
 
@@ -1678,7 +1691,15 @@ Alan watts combines both scientific understanding with what we already know abou
 
 <br /><br />
 
-<a href="https://youtu.be/ivurmn3hnwc" target="_blank">Nothingness - Alan Watts</a>.
+Realize that everything connects to everything else (Leonardo da Vinci 1452-1519).
+
+<br /><br />
+
+Everything links together like a chain to the singularity <a href="https://youtu.be/VGpj8fNms6A" target="_blank">emergent consciousness explained</a>.
+
+<br /><br />
+
+<a href="https://youtu.be/iRa0aiTRfV4" target="_blank">Nothing and Something go together as an whole - Alan Watts</a>.
 
 <br /><br />
 
