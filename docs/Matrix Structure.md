@@ -1638,15 +1638,15 @@ We can select paths choosing between 0=L and 1=R, much like the branching of a t
 
 <br /><br />
 
-Our reality is a small place within this infinite expansion. Determining the exact path to our particular reality poses a highly complex problem. We use the microwave background of the Big Bang to map our particular universe. We have a fairly good model, but sometimes, we have to change the model to match what we did not know could exist based on observation of our emergent universe. Sending the James Webb telescope into space allows us to analyze more of our universe in greater detail, giving us a more in-depth timeline of our emergent universe and everything in it.
+Our reality is a small place within this infinite expansion. Determining the exact path to our particular reality poses a highly complex problem. We use the microwave background of the Big Bang to map our particular universe. We have a fairly good model, but sometimes, we have to change the model to match what we did not know could exist based on observation of our emergent universe. Sending the James Webb telescope into space enables us to analyze a greater portion of our universe in greater detail, providing a more in-depth timeline of our emerging universe and everything within it.
 
 <br /><br />
 
-Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the smallest scale, and that everything is contained within a small section of what we call here and now.
+Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the smallest scale, revealing that everything is contained within a small section of what we call 'here and now'.
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware is how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
 
 <br /><br />
 
@@ -1676,10 +1676,9 @@ Everything remains connected to a single fabric or whole, and the states of all 
 
 The separation between objects and particles may not exist as well, and all things are equal to zero as a single indivisible unit.
 
-
 <br /><br />
 
-Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity which spans to what you would call the Big Bang. The singularity existed before the Big Bang. There may be many more universes than just ours.
+Everything spans from zero in quantum fluctuation and remains as a single invisible unit. It begins at a singularity which spans to what you call the Big Bang. The singularity existed before the Big Bang. There may be many more universes than just ours.
 
 <br /><br />
 
