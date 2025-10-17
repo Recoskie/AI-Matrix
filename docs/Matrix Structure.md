@@ -1586,15 +1586,11 @@ To understand consciousness, we have a mathematical theorem that measures the am
 
 <br /><br />
 
-Consciousness is a patterning of self-organization and systems that combine and become more self-aware and complex over time, as a whole, at different scales.
+As far as we know, consciousness may arise from the interactions of neurons in our brain that sum inputs to create an output, or it could exist at an even more fundamental scale, at the quantum level of the universe, where everything interacts and creates summed outputs.
 
 <br /><br />
 
 Scientifically, we know everything emerges from something simpler or abstract that creates complex systems between interacting parts called <a href="https://youtu.be/16W7c0mb-rE" target="_blank">emergence</a>.
-
-<br /><br />
-
-Kurzgesagt teaches you the very basics. We will need a more advanced understanding to begin explaining what consciousness is at both smaller and larger scales.
 
 <br /><br />
 
@@ -1642,15 +1638,15 @@ Our reality is a small place within this infinite expansion. Determining the exa
 
 <br /><br />
 
-Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the smallest scale, revealing that everything is contained within a small section of what we call 'here and now'.
-
-<br /><br />
-
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
+Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the quantum scale, revealing that everything is contained within a small section of what we call 'here and now'.
 
 <br /><br />
 
 As far as we know, the most dense alignment of all possibilities is the flower of life patterning. The Fibonacci spiral is a break in symmetry per step. Aligning the circles in the most dense way possible, like a flower along the Fibonacci spiral, and connecting all the center points makes the tetrahedron repeatable to higher and higher dimensions, or E8. The golden ratio is the most dense system possible of all possibilities, branched out infinitely.
+
+<br /><br />
+
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
 
 <br /><br />
 
