@@ -1606,7 +1606,7 @@ Energy is neither created nor destroyed. It just is and sums to zero. The object
 
 <br /><br />
 
-If we take a circle and split it into two halves, with one half representing the positive and the other half representing the negative, the sum of the two halves equals zero. This is the initial fluctuation that begins anything at all called a quantum fluctuation, still summing to zero.
+If we take a circle and split it into two halves, with one half representing the positive and the other half representing the negative, the sum of the two halves equals zero. This is the initial fluctuation that begins anything at all called a quantum fluctuation, still summing to zero. It is also measurable and is the frontier of zero-point energy. An infinite and renewable form of energy research, see <a href="https://youtu.be/xCxTSpI1K34" target="_blank">what if we harnessed zero point energy</a>. The following video goes even deeper in detail, and you also have to realize this is a collective endeavour, see <a href="https://youtu.be/UqNN-sQ0SAQ?t=1745" target="_blank">unlocking the quantum vacuum </a>. However, I recommended watching it from the start.
 
 <br /><br />
 
@@ -1638,7 +1638,7 @@ Our reality is a small place within this infinite expansion. Determining the exa
 
 <br /><br />
 
-Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the quantum scale, revealing that everything is contained within a small section of what we call 'here and now'.
+Mind benders explains this in detail in a concept called the <a href="https://youtu.be/Bskl4Ts3i7I">Library of Babel</a>. Which turns out to be the most accurate description of what reality is and how it emerges at the quantum scale in pure information, revealing that everything is contained within a small section of what we call "here and now".
 
 <br /><br />
 
@@ -1646,7 +1646,7 @@ As far as we know, the most dense alignment of all possibilities is the flower o
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a>.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a> since phi is a scale of irraduble combinationary information expanding to infinity as all possibilities. The higher the phi is, the more unique information there is in the system.
 
 <br /><br />
 
@@ -1678,15 +1678,15 @@ Everything spans from zero in quantum fluctuation and remains as a single invisi
 
 <br /><br />
 
-There is also the Casimir effect, in which we can detect particles popping in and out of existence from the zero-point quantum fluctuation, see <a href="https://youtu.be/e25fDVgUDmM?t=36" target="_blank"> Quantum mind zero point energy</a>, which does a good job at explaining the zero-point field energy that comprises reality.
+The zero-point quantum fluctuation may be summed together as a larger system, see <a href="https://youtu.be/e25fDVgUDmM?t=36" target="_blank">Quantum mind zero point energy</a>, which does a good job at explaining the zero-point field energy that comprises reality.
 
 <br /><br />
 
-The following explains what reality may actually be and when we understand it unified <a href="https://youtu.be/91D-g1R1gI0" target="_blank">11th dimension</a>.
+The following explains what reality may actually be and when we understand it <a href="https://youtu.be/91D-g1R1gI0" target="_blank">11th dimension</a>.
 
 <br /><br />
 
-There are fun experiments you can do by yourself, called the observer effect <a href="https://youtu.be/zfn2kFOeNKg?si=1HwA0W70RxdNyT3I" target="_blank">The observer and the observed</a>.
+There are fun experiments you can do by yourself, called the observer effect <a href="https://youtu.be/zfn2kFOeNKg" target="_blank">The observer and the observed</a>.
 
 <br /><br />
 
@@ -1707,3 +1707,4 @@ Everything links together like a chain to the singularity <a href="https://youtu
 <br /><br />
 
 <a href="https://youtu.be/fcPWU59Luoc" target="_blank">One Suchness - Alan Watts</a>.
+
