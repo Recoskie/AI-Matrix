@@ -1618,7 +1618,7 @@ Both white holes and black holes are opposite to each other and begin at the sin
 
 <br /><br />
 
-We can think of these two extreme points as mirroring binary digits 1 and 0 from the whole (the singularity) at the most abstract level. However, within this singularity exists every possibility.
+We can think of these two extreme points as mirroring binary digits 1 and 0 from the whole (the singularity) at the most abstract level. However, within this singularity exists every possibility as quantum information.
 
 <br /><br />
 
@@ -1678,7 +1678,15 @@ Everything spans from zero in quantum fluctuation and remains as a single invisi
 
 <br /><br />
 
-There are fun experiments you can do by yourself, called the observer effect. There is a silent observer within yourself that can see your own thoughts without reacting to them, one that feels like nothing and, at the same time, holds infinite potential. This act of self-reflection tells you that you are not just a mind reacting like a robot and that this observer outside your thoughts could be the singularity (Universal conciseness, or Mind at large) <a href="https://youtu.be/zfn2kFOeNKg?si=1HwA0W70RxdNyT3I" target="_blank">The observer and the observed</a>. This is a powerful realization that reveals there is no self and there is only one singularity. The separation we see at lower scales of reality, from matter to self and others, is all the singularity brought down to a smaller scale, organized into a reality and a point of perception.
+There is also the Casimir effect, in which we can detect particles popping in and out of existence from the zero-point quantum fluctuation, see <a href="https://youtu.be/e25fDVgUDmM?t=36" target="_blank"> Quantum mind zero point energy</a>, which does a good job at explaining the zero-point field energy that comprises reality.
+
+<br /><br />
+
+The following explains what reality may actually be and when we understand it unified <a href="https://youtu.be/91D-g1R1gI0" target="_blank">11th dimension</a>.
+
+<br /><br />
+
+There are fun experiments you can do by yourself, called the observer effect <a href="https://youtu.be/zfn2kFOeNKg?si=1HwA0W70RxdNyT3I" target="_blank">The observer and the observed</a>.
 
 <br /><br />
 
