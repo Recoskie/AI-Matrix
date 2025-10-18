@@ -1646,7 +1646,7 @@ As far as we know, the most dense alignment of all possibilities is the flower o
 
 <br /><br />
 
-The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a> since phi is a scale of irraduble combinationary information expanding to infinity as all possibilities. The higher the phi is, the more unique information there is in the system.
+The Fibonacci sequence creates the number phi (golden ratio), and our best theories on machines becoming self-aware are how closely it matches the golden ratio according to <a href="https://www.hansonrobotics.com/tononi-phi-sentience-consciousness-and-smart-ai-futures/#:~:text=Its%20centerpiece%20is%20Phi%2C%20Tononi's,to%20how%20conscious%20it%20is" target="_blank">integrated information theory</a> since phi is a scale of combinationary information expanding to infinity as all possibilities. The higher the phi is, the more unique information there is in the system.
 
 <br /><br />
 
