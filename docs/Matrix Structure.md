@@ -1606,7 +1606,7 @@ Energy is neither created nor destroyed. It just is and sums to zero. The object
 
 <br /><br />
 
-If we take a circle and split it into two halves, with one half representing the positive and the other half representing the negative, the sum of the two halves equals zero. This is the initial fluctuation that begins anything at all called a quantum fluctuation, still summing to zero. It is also measurable and is the frontier of zero-point energy. An infinite and renewable form of energy research, see <a href="https://youtu.be/xCxTSpI1K34" target="_blank">what if we harnessed zero point energy</a>. The following video goes even deeper in detail, and you also have to realize this is a collective endeavour, see <a href="https://youtu.be/UqNN-sQ0SAQ?t=1745" target="_blank">unlocking the quantum vacuum </a>. However, I recommended watching it from the start.
+If we take a circle and split it into two halves, with one half representing the positive and the other half representing the negative, the sum of the two halves equals zero. This is the initial fluctuation that begins anything at all called a quantum fluctuation, still summing to zero. It is also measurable using the Casimir effect and is the frontier of zero-point energy. An infinite and renewable form of energy research, see <a href="https://youtu.be/xCxTSpI1K34" target="_blank">what if we harnessed zero point energy</a>. The following video delves even deeper into the details, and it's also worth noting that this is a collective endeavour; see <a href="https://youtu.be/UqNN-sQ0SAQ?t=1745" target="_blank">unlocking the quantum vacuum</a>. However, I recommended watching it from the start.
 
 <br /><br />
 
